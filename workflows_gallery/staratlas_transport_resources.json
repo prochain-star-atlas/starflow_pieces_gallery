@@ -1,0 +1,5250 @@
+{
+    "workflowPieces": {
+      "53_85209645-015f-4bbd-9d79-f9b51d3fac53": {
+        "id": 53,
+        "name": "StarAtlasFleetStatusCheckPiece",
+        "description": "Check StarAtlas Status of Fleet",
+        "dependency": {
+          "dockerfile": "Dockerfile_1",
+          "requirements_file": null
+        },
+        "source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.36-group0",
+        "input_schema": {
+          "$defs": {
+            "FleetStatusEnum": {
+              "enum": [
+                "StarbaseLoadingBay",
+                "ReadyToExitWarp",
+                "MineAsteroid",
+                "MoveWarp",
+                "MoveSubwarp",
+                "Respawn",
+                "StarbaseUpgrade",
+                "Idle"
+              ],
+              "title": "FleetStatusEnum",
+              "type": "string"
+            }
+          },
+          "description": "StarAtlas Dock Piece Input Model",
+          "properties": {
+            "fleet_name": {
+              "default": "",
+              "description": "Fleet Name",
+              "title": "Fleet Name",
+              "type": "string"
+            },
+            "required_status": {
+              "allOf": [
+                {
+                  "$ref": "#/$defs/FleetStatusEnum"
+                }
+              ],
+              "default": "",
+              "description": "Fleet Status Required"
+            }
+          },
+          "title": "StarAtlasFleetStatusCheckPiece",
+          "type": "object"
+        },
+        "output_schema": {
+          "description": "Branch Piece Output Model",
+          "properties": {
+            "branch_main": {
+              "default": true,
+              "description": "Main branch selected",
+              "title": "Branch Main",
+              "type": "boolean"
+            }
+          },
+          "title": "BaseBranchOutputModel",
+          "type": "object"
+        },
+        "secrets_schema": null,
+        "container_resources": {
+          "requests": {
+            "cpu": 100,
+            "memory": 128
+          },
+          "limits": {
+            "cpu": 500,
+            "memory": 512
+          },
+          "use_gpu": false
+        },
+        "tags": [
+          "Star Atlas"
+        ],
+        "style": {
+          "module": "StarAtlasFleetStatusCheckPiece",
+          "label": "Status Check",
+          "nodeType": "default",
+          "nodeStyle": {
+            "backgroundColor": "#ebebeb"
+          },
+          "useIcon": true,
+          "iconClassName": "fa-solid:database",
+          "iconStyle": {
+            "cursor": "pointer"
+          }
+        },
+        "source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasFleetStatusCheckPiece",
+        "repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+        "repository_id": 7,
+        "branch_piece": true
+      },
+      "59_6340664b-b1bf-4d05-bf7e-f6e7a3f2f623": {
+        "id": 59,
+        "name": "StarAtlasFleetLocationCheckPiece",
+        "description": "Check Star Atlas Location of Fleet",
+        "dependency": {
+          "dockerfile": "Dockerfile_1",
+          "requirements_file": null
+        },
+        "source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.36-group0",
+        "input_schema": {
+          "description": "StarAtlas Dock Piece Input Model",
+          "properties": {
+            "fleet_name": {
+              "default": "",
+              "description": "Fleet Name",
+              "title": "Fleet Name",
+              "type": "string"
+            },
+            "destination_x": {
+              "default": 0,
+              "description": "Coordinate X target starbase",
+              "title": "Destination X",
+              "type": "integer"
+            },
+            "destination_y": {
+              "default": 0,
+              "description": "Coordinate Y target starbase",
+              "title": "Destination Y",
+              "type": "integer"
+            }
+          },
+          "title": "StarAtlasFleetLocationCheckPiece",
+          "type": "object"
+        },
+        "output_schema": {
+          "description": "Branch Piece Output Model",
+          "properties": {
+            "branch_main": {
+              "default": true,
+              "description": "Main branch selected",
+              "title": "Branch Main",
+              "type": "boolean"
+            }
+          },
+          "title": "BaseBranchOutputModel",
+          "type": "object"
+        },
+        "secrets_schema": null,
+        "container_resources": {
+          "requests": {
+            "cpu": 100,
+            "memory": 128
+          },
+          "limits": {
+            "cpu": 500,
+            "memory": 512
+          },
+          "use_gpu": false
+        },
+        "tags": [
+          "Star Atlas"
+        ],
+        "style": {
+          "module": "StarAtlasFleetLocationCheckPiece",
+          "label": "Location Check",
+          "nodeType": "default",
+          "nodeStyle": {
+            "backgroundColor": "#ebebeb"
+          },
+          "useIcon": true,
+          "iconClassName": "fa-solid:database",
+          "iconStyle": {
+            "cursor": "pointer"
+          }
+        },
+        "source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasFleetLocationCheckPiece",
+        "repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+        "repository_id": 7,
+        "branch_piece": true
+      },
+      "53_95e373a3-64b7-489d-bf5c-2ddaa10fa051": {
+        "id": 53,
+        "name": "StarAtlasFleetStatusCheckPiece",
+        "description": "Check StarAtlas Status of Fleet",
+        "dependency": {
+          "dockerfile": "Dockerfile_1",
+          "requirements_file": null
+        },
+        "source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.36-group0",
+        "input_schema": {
+          "$defs": {
+            "FleetStatusEnum": {
+              "enum": [
+                "StarbaseLoadingBay",
+                "ReadyToExitWarp",
+                "MineAsteroid",
+                "MoveWarp",
+                "MoveSubwarp",
+                "Respawn",
+                "StarbaseUpgrade",
+                "Idle"
+              ],
+              "title": "FleetStatusEnum",
+              "type": "string"
+            }
+          },
+          "description": "StarAtlas Dock Piece Input Model",
+          "properties": {
+            "fleet_name": {
+              "default": "",
+              "description": "Fleet Name",
+              "title": "Fleet Name",
+              "type": "string"
+            },
+            "required_status": {
+              "allOf": [
+                {
+                  "$ref": "#/$defs/FleetStatusEnum"
+                }
+              ],
+              "default": "",
+              "description": "Fleet Status Required"
+            }
+          },
+          "title": "StarAtlasFleetStatusCheckPiece",
+          "type": "object"
+        },
+        "output_schema": {
+          "description": "Branch Piece Output Model",
+          "properties": {
+            "branch_main": {
+              "default": true,
+              "description": "Main branch selected",
+              "title": "Branch Main",
+              "type": "boolean"
+            }
+          },
+          "title": "BaseBranchOutputModel",
+          "type": "object"
+        },
+        "secrets_schema": null,
+        "container_resources": {
+          "requests": {
+            "cpu": 100,
+            "memory": 128
+          },
+          "limits": {
+            "cpu": 500,
+            "memory": 512
+          },
+          "use_gpu": false
+        },
+        "tags": [
+          "Star Atlas"
+        ],
+        "style": {
+          "module": "StarAtlasFleetStatusCheckPiece",
+          "label": "Status Check",
+          "nodeType": "default",
+          "nodeStyle": {
+            "backgroundColor": "#ebebeb"
+          },
+          "useIcon": true,
+          "iconClassName": "fa-solid:database",
+          "iconStyle": {
+            "cursor": "pointer"
+          }
+        },
+        "source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasFleetStatusCheckPiece",
+        "repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+        "repository_id": 7,
+        "branch_piece": true
+      },
+      "53_e7bb3e85-ef6c-4aa9-9f6c-17e91b26a0d5": {
+        "id": 53,
+        "name": "StarAtlasFleetStatusCheckPiece",
+        "description": "Check StarAtlas Status of Fleet",
+        "dependency": {
+          "dockerfile": "Dockerfile_1",
+          "requirements_file": null
+        },
+        "source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.36-group0",
+        "input_schema": {
+          "$defs": {
+            "FleetStatusEnum": {
+              "enum": [
+                "StarbaseLoadingBay",
+                "ReadyToExitWarp",
+                "MineAsteroid",
+                "MoveWarp",
+                "MoveSubwarp",
+                "Respawn",
+                "StarbaseUpgrade",
+                "Idle"
+              ],
+              "title": "FleetStatusEnum",
+              "type": "string"
+            }
+          },
+          "description": "StarAtlas Dock Piece Input Model",
+          "properties": {
+            "fleet_name": {
+              "default": "",
+              "description": "Fleet Name",
+              "title": "Fleet Name",
+              "type": "string"
+            },
+            "required_status": {
+              "allOf": [
+                {
+                  "$ref": "#/$defs/FleetStatusEnum"
+                }
+              ],
+              "default": "",
+              "description": "Fleet Status Required"
+            }
+          },
+          "title": "StarAtlasFleetStatusCheckPiece",
+          "type": "object"
+        },
+        "output_schema": {
+          "description": "Branch Piece Output Model",
+          "properties": {
+            "branch_main": {
+              "default": true,
+              "description": "Main branch selected",
+              "title": "Branch Main",
+              "type": "boolean"
+            }
+          },
+          "title": "BaseBranchOutputModel",
+          "type": "object"
+        },
+        "secrets_schema": null,
+        "container_resources": {
+          "requests": {
+            "cpu": 100,
+            "memory": 128
+          },
+          "limits": {
+            "cpu": 500,
+            "memory": 512
+          },
+          "use_gpu": false
+        },
+        "tags": [
+          "Star Atlas"
+        ],
+        "style": {
+          "module": "StarAtlasFleetStatusCheckPiece",
+          "label": "Status Check",
+          "nodeType": "default",
+          "nodeStyle": {
+            "backgroundColor": "#ebebeb"
+          },
+          "useIcon": true,
+          "iconClassName": "fa-solid:database",
+          "iconStyle": {
+            "cursor": "pointer"
+          }
+        },
+        "source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasFleetStatusCheckPiece",
+        "repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+        "repository_id": 7,
+        "branch_piece": true
+      },
+      "53_f135bc5d-97d6-40bf-a686-aaf50b744b5f": {
+        "id": 53,
+        "name": "StarAtlasFleetStatusCheckPiece",
+        "description": "Check StarAtlas Status of Fleet",
+        "dependency": {
+          "dockerfile": "Dockerfile_1",
+          "requirements_file": null
+        },
+        "source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.36-group0",
+        "input_schema": {
+          "$defs": {
+            "FleetStatusEnum": {
+              "enum": [
+                "StarbaseLoadingBay",
+                "ReadyToExitWarp",
+                "MineAsteroid",
+                "MoveWarp",
+                "MoveSubwarp",
+                "Respawn",
+                "StarbaseUpgrade",
+                "Idle"
+              ],
+              "title": "FleetStatusEnum",
+              "type": "string"
+            }
+          },
+          "description": "StarAtlas Dock Piece Input Model",
+          "properties": {
+            "fleet_name": {
+              "default": "",
+              "description": "Fleet Name",
+              "title": "Fleet Name",
+              "type": "string"
+            },
+            "required_status": {
+              "allOf": [
+                {
+                  "$ref": "#/$defs/FleetStatusEnum"
+                }
+              ],
+              "default": "",
+              "description": "Fleet Status Required"
+            }
+          },
+          "title": "StarAtlasFleetStatusCheckPiece",
+          "type": "object"
+        },
+        "output_schema": {
+          "description": "Branch Piece Output Model",
+          "properties": {
+            "branch_main": {
+              "default": true,
+              "description": "Main branch selected",
+              "title": "Branch Main",
+              "type": "boolean"
+            }
+          },
+          "title": "BaseBranchOutputModel",
+          "type": "object"
+        },
+        "secrets_schema": null,
+        "container_resources": {
+          "requests": {
+            "cpu": 100,
+            "memory": 128
+          },
+          "limits": {
+            "cpu": 500,
+            "memory": 512
+          },
+          "use_gpu": false
+        },
+        "tags": [
+          "Star Atlas"
+        ],
+        "style": {
+          "module": "StarAtlasFleetStatusCheckPiece",
+          "label": "Status Check",
+          "nodeType": "default",
+          "nodeStyle": {
+            "backgroundColor": "#ebebeb"
+          },
+          "useIcon": true,
+          "iconClassName": "fa-solid:database",
+          "iconStyle": {
+            "cursor": "pointer"
+          }
+        },
+        "source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasFleetStatusCheckPiece",
+        "repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+        "repository_id": 7,
+        "branch_piece": true
+      },
+      "53_d071d22c-9f76-4ca2-86dd-602c20d60176": {
+        "id": 53,
+        "name": "StarAtlasFleetStatusCheckPiece",
+        "description": "Check StarAtlas Status of Fleet",
+        "dependency": {
+          "dockerfile": "Dockerfile_1",
+          "requirements_file": null
+        },
+        "source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.36-group0",
+        "input_schema": {
+          "$defs": {
+            "FleetStatusEnum": {
+              "enum": [
+                "StarbaseLoadingBay",
+                "ReadyToExitWarp",
+                "MineAsteroid",
+                "MoveWarp",
+                "MoveSubwarp",
+                "Respawn",
+                "StarbaseUpgrade",
+                "Idle"
+              ],
+              "title": "FleetStatusEnum",
+              "type": "string"
+            }
+          },
+          "description": "StarAtlas Dock Piece Input Model",
+          "properties": {
+            "fleet_name": {
+              "default": "",
+              "description": "Fleet Name",
+              "title": "Fleet Name",
+              "type": "string"
+            },
+            "required_status": {
+              "allOf": [
+                {
+                  "$ref": "#/$defs/FleetStatusEnum"
+                }
+              ],
+              "default": "",
+              "description": "Fleet Status Required"
+            }
+          },
+          "title": "StarAtlasFleetStatusCheckPiece",
+          "type": "object"
+        },
+        "output_schema": {
+          "description": "Branch Piece Output Model",
+          "properties": {
+            "branch_main": {
+              "default": true,
+              "description": "Main branch selected",
+              "title": "Branch Main",
+              "type": "boolean"
+            }
+          },
+          "title": "BaseBranchOutputModel",
+          "type": "object"
+        },
+        "secrets_schema": null,
+        "container_resources": {
+          "requests": {
+            "cpu": 100,
+            "memory": 128
+          },
+          "limits": {
+            "cpu": 500,
+            "memory": 512
+          },
+          "use_gpu": false
+        },
+        "tags": [
+          "Star Atlas"
+        ],
+        "style": {
+          "module": "StarAtlasFleetStatusCheckPiece",
+          "label": "Status Check",
+          "nodeType": "default",
+          "nodeStyle": {
+            "backgroundColor": "#ebebeb"
+          },
+          "useIcon": true,
+          "iconClassName": "fa-solid:database",
+          "iconStyle": {
+            "cursor": "pointer"
+          }
+        },
+        "source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasFleetStatusCheckPiece",
+        "repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+        "repository_id": 7,
+        "branch_piece": true
+      },
+      "53_b0e82d8c-c69e-4c61-8ee8-1139e03d77bd": {
+        "id": 53,
+        "name": "StarAtlasFleetStatusCheckPiece",
+        "description": "Check StarAtlas Status of Fleet",
+        "dependency": {
+          "dockerfile": "Dockerfile_1",
+          "requirements_file": null
+        },
+        "source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.36-group0",
+        "input_schema": {
+          "$defs": {
+            "FleetStatusEnum": {
+              "enum": [
+                "StarbaseLoadingBay",
+                "ReadyToExitWarp",
+                "MineAsteroid",
+                "MoveWarp",
+                "MoveSubwarp",
+                "Respawn",
+                "StarbaseUpgrade",
+                "Idle"
+              ],
+              "title": "FleetStatusEnum",
+              "type": "string"
+            }
+          },
+          "description": "StarAtlas Dock Piece Input Model",
+          "properties": {
+            "fleet_name": {
+              "default": "",
+              "description": "Fleet Name",
+              "title": "Fleet Name",
+              "type": "string"
+            },
+            "required_status": {
+              "allOf": [
+                {
+                  "$ref": "#/$defs/FleetStatusEnum"
+                }
+              ],
+              "default": "",
+              "description": "Fleet Status Required"
+            }
+          },
+          "title": "StarAtlasFleetStatusCheckPiece",
+          "type": "object"
+        },
+        "output_schema": {
+          "description": "Branch Piece Output Model",
+          "properties": {
+            "branch_main": {
+              "default": true,
+              "description": "Main branch selected",
+              "title": "Branch Main",
+              "type": "boolean"
+            }
+          },
+          "title": "BaseBranchOutputModel",
+          "type": "object"
+        },
+        "secrets_schema": null,
+        "container_resources": {
+          "requests": {
+            "cpu": 100,
+            "memory": 128
+          },
+          "limits": {
+            "cpu": 500,
+            "memory": 512
+          },
+          "use_gpu": false
+        },
+        "tags": [
+          "Star Atlas"
+        ],
+        "style": {
+          "module": "StarAtlasFleetStatusCheckPiece",
+          "label": "Status Check",
+          "nodeType": "default",
+          "nodeStyle": {
+            "backgroundColor": "#ebebeb"
+          },
+          "useIcon": true,
+          "iconClassName": "fa-solid:database",
+          "iconStyle": {
+            "cursor": "pointer"
+          }
+        },
+        "source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasFleetStatusCheckPiece",
+        "repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+        "repository_id": 7,
+        "branch_piece": true
+      },
+      "66_8ed70df0-84ff-4f1e-977c-6da346358dc0": {
+        "id": 66,
+        "name": "StarAtlasDockPiece",
+        "description": "StarAtlas Docking Fleet",
+        "dependency": {
+          "dockerfile": "Dockerfile_1",
+          "requirements_file": null
+        },
+        "source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.36-group0",
+        "input_schema": {
+          "description": "StarAtlas Dock Piece Input Model",
+          "properties": {
+            "fleet_name": {
+              "default": "",
+              "description": "Fleet Name",
+              "title": "Fleet Name",
+              "type": "string"
+            },
+            "destination_x": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Destination X",
+              "type": "integer"
+            },
+            "destination_y": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Destination Y",
+              "type": "integer"
+            }
+          },
+          "title": "StarAtlasDockPiece",
+          "type": "object"
+        },
+        "output_schema": {
+          "description": "StarAtlas Dock Piece Output Model",
+          "properties": {
+            "fleet_name": {
+              "default": "",
+              "description": "Fleet Name",
+              "title": "Fleet Name",
+              "type": "string"
+            },
+            "destination_x": {
+              "description": "Dock executed on X",
+              "title": "Destination X",
+              "type": "integer"
+            },
+            "destination_y": {
+              "description": "Dock executed on Y",
+              "title": "Destination Y",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "destination_x",
+            "destination_y"
+          ],
+          "title": "OutputModel",
+          "type": "object"
+        },
+        "secrets_schema": null,
+        "container_resources": {
+          "requests": {
+            "cpu": 100,
+            "memory": 128
+          },
+          "limits": {
+            "cpu": 500,
+            "memory": 512
+          },
+          "use_gpu": false
+        },
+        "tags": [
+          "Star Atlas"
+        ],
+        "style": {
+          "module": "StarAtlasDockPiece",
+          "label": "Dock",
+          "nodeType": "default",
+          "nodeStyle": {
+            "backgroundColor": "#ebebeb"
+          },
+          "useIcon": true,
+          "iconClassName": "fa-solid:database",
+          "iconStyle": {
+            "cursor": "pointer"
+          }
+        },
+        "source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasDockPiece",
+        "repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+        "repository_id": 7,
+        "branch_piece": false
+      },
+      "54_6d19e4d5-9bb0-4f92-b28a-1b6e0c07a127": {
+        "id": 54,
+        "name": "StarAtlasLoadCargoPiece",
+        "description": "StarAtlas Loading Cargo to Fleet",
+        "dependency": {
+          "dockerfile": "Dockerfile_1",
+          "requirements_file": null
+        },
+        "source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.36-group0",
+        "input_schema": {
+          "description": "StarAtlas Load Cargo Piece Input Model",
+          "properties": {
+            "fleet_name": {
+              "default": "",
+              "description": "Fleet Name",
+              "title": "Fleet Name",
+              "type": "string"
+            },
+            "resource_mint": {
+              "default": "",
+              "description": "Resource to Load Cargo",
+              "title": "Resource Mint",
+              "type": "string"
+            },
+            "amount": {
+              "default": "",
+              "description": "Amount of Resource",
+              "title": "Amount",
+              "type": "integer"
+            },
+            "destination_x": {
+              "default": 0,
+              "description": "Coordinate X target starbase",
+              "title": "Destination X",
+              "type": "integer"
+            },
+            "destination_y": {
+              "default": 0,
+              "description": "Coordinate Y target starbase",
+              "title": "Destination Y",
+              "type": "integer"
+            }
+          },
+          "title": "StarAtlasLoadCargoPiece",
+          "type": "object"
+        },
+        "output_schema": {
+          "description": "StarAtlas Load Cargo Piece Output Model",
+          "properties": {
+            "resource_mint_loaded": {
+              "description": "Amount Resource loaded",
+              "title": "Resource Mint Loaded",
+              "type": "integer"
+            },
+            "amount_loaded": {
+              "description": "Amount Resource loaded",
+              "title": "Amount Loaded",
+              "type": "integer"
+            },
+            "destination_x": {
+              "description": "Load Cargo executed on X",
+              "title": "Destination X",
+              "type": "integer"
+            },
+            "destination_y": {
+              "description": "Load Cargo executed on Y",
+              "title": "Destination Y",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "resource_mint_loaded",
+            "amount_loaded",
+            "destination_x",
+            "destination_y"
+          ],
+          "title": "OutputModel",
+          "type": "object"
+        },
+        "secrets_schema": null,
+        "container_resources": {
+          "requests": {
+            "cpu": 100,
+            "memory": 128
+          },
+          "limits": {
+            "cpu": 500,
+            "memory": 512
+          },
+          "use_gpu": false
+        },
+        "tags": [
+          "Star Atlas"
+        ],
+        "style": {
+          "module": "StarAtlasLoadCargoPiece",
+          "label": "Load Cargo",
+          "nodeType": "default",
+          "nodeStyle": {
+            "backgroundColor": "#ebebeb"
+          },
+          "useIcon": true,
+          "iconClassName": "fa-solid:database",
+          "iconStyle": {
+            "cursor": "pointer"
+          }
+        },
+        "source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasLoadCargoPiece",
+        "repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+        "repository_id": 7,
+        "branch_piece": false
+      },
+      "65_e53e6c37-4921-4ae9-82ac-f268fc2126be": {
+        "id": 65,
+        "name": "StarAtlasUndockPiece",
+        "description": "StarAtlas Undocking a Fleet",
+        "dependency": {
+          "dockerfile": "Dockerfile_1",
+          "requirements_file": null
+        },
+        "source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.36-group0",
+        "input_schema": {
+          "description": "StarAtlas Dock Piece Input Model",
+          "properties": {
+            "fleet_name": {
+              "default": "",
+              "description": "Fleet Name",
+              "title": "Fleet Name",
+              "type": "string"
+            },
+            "destination_x": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Destination X",
+              "type": "integer"
+            },
+            "destination_y": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Destination Y",
+              "type": "integer"
+            }
+          },
+          "title": "StarAtlasUndockPiece",
+          "type": "object"
+        },
+        "output_schema": {
+          "description": "StarAtlas Dock Piece Output Model",
+          "properties": {
+            "fleet_name": {
+              "default": "",
+              "description": "Fleet Name",
+              "title": "Fleet Name",
+              "type": "string"
+            },
+            "destination_x": {
+              "description": "Dock executed on X",
+              "title": "Destination X",
+              "type": "integer"
+            },
+            "destination_y": {
+              "description": "Dock executed on Y",
+              "title": "Destination Y",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "destination_x",
+            "destination_y"
+          ],
+          "title": "OutputModel",
+          "type": "object"
+        },
+        "secrets_schema": null,
+        "container_resources": {
+          "requests": {
+            "cpu": 100,
+            "memory": 128
+          },
+          "limits": {
+            "cpu": 500,
+            "memory": 512
+          },
+          "use_gpu": false
+        },
+        "tags": [
+          "Star Atlas"
+        ],
+        "style": {
+          "module": "StarAtlasUndockPiece",
+          "label": "Undock",
+          "nodeType": "default",
+          "nodeStyle": {
+            "backgroundColor": "#ebebeb"
+          },
+          "useIcon": true,
+          "iconClassName": "fa-solid:database",
+          "iconStyle": {
+            "cursor": "pointer"
+          }
+        },
+        "source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasUndockPiece",
+        "repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+        "repository_id": 7,
+        "branch_piece": false
+      },
+      "52_0896a285-36e1-4101-894f-90c62ce23c6e": {
+        "id": 52,
+        "name": "StarAtlasSubwarpPiece",
+        "description": "StarAtlas Subwarping a Fleet",
+        "dependency": {
+          "dockerfile": "Dockerfile_1",
+          "requirements_file": null
+        },
+        "source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.36-group0",
+        "input_schema": {
+          "description": "StarAtlas Subwarp Piece Input Model",
+          "properties": {
+            "fleet_name": {
+              "default": "",
+              "description": "Fleet Name",
+              "title": "Fleet Name",
+              "type": "string"
+            },
+            "destination_x": {
+              "default": 0,
+              "description": "Subwarp to coordinate X",
+              "title": "Destination X",
+              "type": "integer"
+            },
+            "destination_y": {
+              "default": 0,
+              "description": "Subwarp to coordinate Y",
+              "title": "Destination Y",
+              "type": "integer"
+            }
+          },
+          "title": "StarAtlasSubwarpPiece",
+          "type": "object"
+        },
+        "output_schema": {
+          "description": "StarAtlas Subwarp Piece Output Model",
+          "properties": {
+            "fleet_name": {
+              "default": "",
+              "description": "Fleet Name",
+              "title": "Fleet Name",
+              "type": "string"
+            },
+            "destination_x": {
+              "description": "Subwarped to X",
+              "title": "Destination X",
+              "type": "integer"
+            },
+            "destination_y": {
+              "description": "Subwarped to Y",
+              "title": "Destination Y",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "destination_x",
+            "destination_y"
+          ],
+          "title": "OutputModel",
+          "type": "object"
+        },
+        "secrets_schema": null,
+        "container_resources": {
+          "requests": {
+            "cpu": 100,
+            "memory": 128
+          },
+          "limits": {
+            "cpu": 500,
+            "memory": 512
+          },
+          "use_gpu": false
+        },
+        "tags": [
+          "Star Atlas"
+        ],
+        "style": {
+          "module": "StarAtlasSubwarpPiece",
+          "label": "Subwarp",
+          "nodeType": "default",
+          "nodeStyle": {
+            "backgroundColor": "#ebebeb"
+          },
+          "useIcon": true,
+          "iconClassName": "fa-solid:database",
+          "iconStyle": {
+            "cursor": "pointer"
+          }
+        },
+        "source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasSubwarpPiece",
+        "repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+        "repository_id": 7,
+        "branch_piece": false
+      },
+      "63_814377e9-4b02-40a4-9f1d-67511bc15a92": {
+        "id": 63,
+        "name": "LogPiece",
+        "description": "A Piece that logs its inputs.",
+        "dependency": {
+          "dockerfile": "Dockerfile_1",
+          "requirements_file": null
+        },
+        "source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.36-group0",
+        "input_schema": {
+          "description": "LogPiece Input Model",
+          "properties": {
+            "input_str": {
+              "default": "default value",
+              "description": "Input string to be logged.",
+              "title": "Input Str",
+              "type": "string"
+            }
+          },
+          "title": "LogPiece",
+          "type": "object"
+        },
+        "output_schema": {
+          "description": "LogPiece Output Model",
+          "properties": {
+            "output_log": {
+              "description": "All values logged.",
+              "title": "Output Log",
+              "type": "string"
+            }
+          },
+          "required": [
+            "output_log"
+          ],
+          "title": "OutputModel",
+          "type": "object"
+        },
+        "secrets_schema": null,
+        "container_resources": {
+          "requests": {
+            "cpu": 100,
+            "memory": 128
+          },
+          "limits": {
+            "cpu": 100,
+            "memory": 128
+          },
+          "use_gpu": false
+        },
+        "tags": [
+          "default",
+          "log"
+        ],
+        "style": {
+          "module": "LogPiece",
+          "label": "Log",
+          "nodeType": "default",
+          "nodeStyle": {
+            "backgroundColor": "#ebebeb"
+          },
+          "useIcon": true,
+          "iconClassName": "fa-solid:file-alt",
+          "iconStyle": {
+            "cursor": "pointer"
+          }
+        },
+        "source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/LogPiece",
+        "repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+        "repository_id": 7,
+        "branch_piece": false
+      },
+      "63_82efbeb7-e08d-4857-a1e8-128126decafd": {
+        "id": 63,
+        "name": "LogPiece",
+        "description": "A Piece that logs its inputs.",
+        "dependency": {
+          "dockerfile": "Dockerfile_1",
+          "requirements_file": null
+        },
+        "source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.36-group0",
+        "input_schema": {
+          "description": "LogPiece Input Model",
+          "properties": {
+            "input_str": {
+              "default": "default value",
+              "description": "Input string to be logged.",
+              "title": "Input Str",
+              "type": "string"
+            }
+          },
+          "title": "LogPiece",
+          "type": "object"
+        },
+        "output_schema": {
+          "description": "LogPiece Output Model",
+          "properties": {
+            "output_log": {
+              "description": "All values logged.",
+              "title": "Output Log",
+              "type": "string"
+            }
+          },
+          "required": [
+            "output_log"
+          ],
+          "title": "OutputModel",
+          "type": "object"
+        },
+        "secrets_schema": null,
+        "container_resources": {
+          "requests": {
+            "cpu": 100,
+            "memory": 128
+          },
+          "limits": {
+            "cpu": 100,
+            "memory": 128
+          },
+          "use_gpu": false
+        },
+        "tags": [
+          "default",
+          "log"
+        ],
+        "style": {
+          "module": "LogPiece",
+          "label": "Log",
+          "nodeType": "default",
+          "nodeStyle": {
+            "backgroundColor": "#ebebeb"
+          },
+          "useIcon": true,
+          "iconClassName": "fa-solid:file-alt",
+          "iconStyle": {
+            "cursor": "pointer"
+          }
+        },
+        "source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/LogPiece",
+        "repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+        "repository_id": 7,
+        "branch_piece": false
+      },
+      "63_b8bfda81-d890-43c6-839c-e5b2579c7d9c": {
+        "id": 63,
+        "name": "LogPiece",
+        "description": "A Piece that logs its inputs.",
+        "dependency": {
+          "dockerfile": "Dockerfile_1",
+          "requirements_file": null
+        },
+        "source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.36-group0",
+        "input_schema": {
+          "description": "LogPiece Input Model",
+          "properties": {
+            "input_str": {
+              "default": "default value",
+              "description": "Input string to be logged.",
+              "title": "Input Str",
+              "type": "string"
+            }
+          },
+          "title": "LogPiece",
+          "type": "object"
+        },
+        "output_schema": {
+          "description": "LogPiece Output Model",
+          "properties": {
+            "output_log": {
+              "description": "All values logged.",
+              "title": "Output Log",
+              "type": "string"
+            }
+          },
+          "required": [
+            "output_log"
+          ],
+          "title": "OutputModel",
+          "type": "object"
+        },
+        "secrets_schema": null,
+        "container_resources": {
+          "requests": {
+            "cpu": 100,
+            "memory": 128
+          },
+          "limits": {
+            "cpu": 100,
+            "memory": 128
+          },
+          "use_gpu": false
+        },
+        "tags": [
+          "default",
+          "log"
+        ],
+        "style": {
+          "module": "LogPiece",
+          "label": "Log",
+          "nodeType": "default",
+          "nodeStyle": {
+            "backgroundColor": "#ebebeb"
+          },
+          "useIcon": true,
+          "iconClassName": "fa-solid:file-alt",
+          "iconStyle": {
+            "cursor": "pointer"
+          }
+        },
+        "source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/LogPiece",
+        "repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+        "repository_id": 7,
+        "branch_piece": false
+      },
+      "59_e59b7666-9d63-45f4-84dc-4ad60675a5f9": {
+        "id": 59,
+        "name": "StarAtlasFleetLocationCheckPiece",
+        "description": "Check Star Atlas Location of Fleet",
+        "dependency": {
+          "dockerfile": "Dockerfile_1",
+          "requirements_file": null
+        },
+        "source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.36-group0",
+        "input_schema": {
+          "description": "StarAtlas Dock Piece Input Model",
+          "properties": {
+            "fleet_name": {
+              "default": "",
+              "description": "Fleet Name",
+              "title": "Fleet Name",
+              "type": "string"
+            },
+            "destination_x": {
+              "default": 0,
+              "description": "Coordinate X target starbase",
+              "title": "Destination X",
+              "type": "integer"
+            },
+            "destination_y": {
+              "default": 0,
+              "description": "Coordinate Y target starbase",
+              "title": "Destination Y",
+              "type": "integer"
+            }
+          },
+          "title": "StarAtlasFleetLocationCheckPiece",
+          "type": "object"
+        },
+        "output_schema": {
+          "description": "Branch Piece Output Model",
+          "properties": {
+            "branch_main": {
+              "default": true,
+              "description": "Main branch selected",
+              "title": "Branch Main",
+              "type": "boolean"
+            }
+          },
+          "title": "BaseBranchOutputModel",
+          "type": "object"
+        },
+        "secrets_schema": null,
+        "container_resources": {
+          "requests": {
+            "cpu": 100,
+            "memory": 128
+          },
+          "limits": {
+            "cpu": 500,
+            "memory": 512
+          },
+          "use_gpu": false
+        },
+        "tags": [
+          "Star Atlas"
+        ],
+        "style": {
+          "module": "StarAtlasFleetLocationCheckPiece",
+          "label": "Location Check",
+          "nodeType": "default",
+          "nodeStyle": {
+            "backgroundColor": "#ebebeb"
+          },
+          "useIcon": true,
+          "iconClassName": "fa-solid:database",
+          "iconStyle": {
+            "cursor": "pointer"
+          }
+        },
+        "source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasFleetLocationCheckPiece",
+        "repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+        "repository_id": 7,
+        "branch_piece": true
+      },
+      "65_844d40fa-22e2-43da-8ee9-8d75fbf49086": {
+        "id": 65,
+        "name": "StarAtlasUndockPiece",
+        "description": "StarAtlas Undocking a Fleet",
+        "dependency": {
+          "dockerfile": "Dockerfile_1",
+          "requirements_file": null
+        },
+        "source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.36-group0",
+        "input_schema": {
+          "description": "StarAtlas Dock Piece Input Model",
+          "properties": {
+            "fleet_name": {
+              "default": "",
+              "description": "Fleet Name",
+              "title": "Fleet Name",
+              "type": "string"
+            },
+            "destination_x": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Destination X",
+              "type": "integer"
+            },
+            "destination_y": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Destination Y",
+              "type": "integer"
+            }
+          },
+          "title": "StarAtlasUndockPiece",
+          "type": "object"
+        },
+        "output_schema": {
+          "description": "StarAtlas Dock Piece Output Model",
+          "properties": {
+            "fleet_name": {
+              "default": "",
+              "description": "Fleet Name",
+              "title": "Fleet Name",
+              "type": "string"
+            },
+            "destination_x": {
+              "description": "Dock executed on X",
+              "title": "Destination X",
+              "type": "integer"
+            },
+            "destination_y": {
+              "description": "Dock executed on Y",
+              "title": "Destination Y",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "destination_x",
+            "destination_y"
+          ],
+          "title": "OutputModel",
+          "type": "object"
+        },
+        "secrets_schema": null,
+        "container_resources": {
+          "requests": {
+            "cpu": 100,
+            "memory": 128
+          },
+          "limits": {
+            "cpu": 500,
+            "memory": 512
+          },
+          "use_gpu": false
+        },
+        "tags": [
+          "Star Atlas"
+        ],
+        "style": {
+          "module": "StarAtlasUndockPiece",
+          "label": "Undock",
+          "nodeType": "default",
+          "nodeStyle": {
+            "backgroundColor": "#ebebeb"
+          },
+          "useIcon": true,
+          "iconClassName": "fa-solid:database",
+          "iconStyle": {
+            "cursor": "pointer"
+          }
+        },
+        "source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasUndockPiece",
+        "repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+        "repository_id": 7,
+        "branch_piece": false
+      },
+      "65_1772e6c0-d5d3-41d9-984c-97d981220a25": {
+        "id": 65,
+        "name": "StarAtlasUndockPiece",
+        "description": "StarAtlas Undocking a Fleet",
+        "dependency": {
+          "dockerfile": "Dockerfile_1",
+          "requirements_file": null
+        },
+        "source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.36-group0",
+        "input_schema": {
+          "description": "StarAtlas Dock Piece Input Model",
+          "properties": {
+            "fleet_name": {
+              "default": "",
+              "description": "Fleet Name",
+              "title": "Fleet Name",
+              "type": "string"
+            },
+            "destination_x": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Destination X",
+              "type": "integer"
+            },
+            "destination_y": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Destination Y",
+              "type": "integer"
+            }
+          },
+          "title": "StarAtlasUndockPiece",
+          "type": "object"
+        },
+        "output_schema": {
+          "description": "StarAtlas Dock Piece Output Model",
+          "properties": {
+            "fleet_name": {
+              "default": "",
+              "description": "Fleet Name",
+              "title": "Fleet Name",
+              "type": "string"
+            },
+            "destination_x": {
+              "description": "Dock executed on X",
+              "title": "Destination X",
+              "type": "integer"
+            },
+            "destination_y": {
+              "description": "Dock executed on Y",
+              "title": "Destination Y",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "destination_x",
+            "destination_y"
+          ],
+          "title": "OutputModel",
+          "type": "object"
+        },
+        "secrets_schema": null,
+        "container_resources": {
+          "requests": {
+            "cpu": 100,
+            "memory": 128
+          },
+          "limits": {
+            "cpu": 500,
+            "memory": 512
+          },
+          "use_gpu": false
+        },
+        "tags": [
+          "Star Atlas"
+        ],
+        "style": {
+          "module": "StarAtlasUndockPiece",
+          "label": "Undock",
+          "nodeType": "default",
+          "nodeStyle": {
+            "backgroundColor": "#ebebeb"
+          },
+          "useIcon": true,
+          "iconClassName": "fa-solid:database",
+          "iconStyle": {
+            "cursor": "pointer"
+          }
+        },
+        "source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasUndockPiece",
+        "repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+        "repository_id": 7,
+        "branch_piece": false
+      },
+      "66_8afa2fa3-ad8e-45a7-93a7-92273874314a": {
+        "id": 66,
+        "name": "StarAtlasDockPiece",
+        "description": "StarAtlas Docking Fleet",
+        "dependency": {
+          "dockerfile": "Dockerfile_1",
+          "requirements_file": null
+        },
+        "source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.36-group0",
+        "input_schema": {
+          "description": "StarAtlas Dock Piece Input Model",
+          "properties": {
+            "fleet_name": {
+              "default": "",
+              "description": "Fleet Name",
+              "title": "Fleet Name",
+              "type": "string"
+            },
+            "destination_x": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Destination X",
+              "type": "integer"
+            },
+            "destination_y": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Destination Y",
+              "type": "integer"
+            }
+          },
+          "title": "StarAtlasDockPiece",
+          "type": "object"
+        },
+        "output_schema": {
+          "description": "StarAtlas Dock Piece Output Model",
+          "properties": {
+            "fleet_name": {
+              "default": "",
+              "description": "Fleet Name",
+              "title": "Fleet Name",
+              "type": "string"
+            },
+            "destination_x": {
+              "description": "Dock executed on X",
+              "title": "Destination X",
+              "type": "integer"
+            },
+            "destination_y": {
+              "description": "Dock executed on Y",
+              "title": "Destination Y",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "destination_x",
+            "destination_y"
+          ],
+          "title": "OutputModel",
+          "type": "object"
+        },
+        "secrets_schema": null,
+        "container_resources": {
+          "requests": {
+            "cpu": 100,
+            "memory": 128
+          },
+          "limits": {
+            "cpu": 500,
+            "memory": 512
+          },
+          "use_gpu": false
+        },
+        "tags": [
+          "Star Atlas"
+        ],
+        "style": {
+          "module": "StarAtlasDockPiece",
+          "label": "Dock",
+          "nodeType": "default",
+          "nodeStyle": {
+            "backgroundColor": "#ebebeb"
+          },
+          "useIcon": true,
+          "iconClassName": "fa-solid:database",
+          "iconStyle": {
+            "cursor": "pointer"
+          }
+        },
+        "source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasDockPiece",
+        "repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+        "repository_id": 7,
+        "branch_piece": false
+      },
+      "55_d3531b3a-1b9c-4a3f-978e-b825b72514df": {
+        "id": 55,
+        "name": "StarAtlasUnloadCargoPiece",
+        "description": "Star Atlas Unloading Cargo from Fleet",
+        "dependency": {
+          "dockerfile": "Dockerfile_1",
+          "requirements_file": null
+        },
+        "source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.36-group0",
+        "input_schema": {
+          "description": "StarAtlas Unload Cargo Piece Input Model",
+          "properties": {
+            "fleet_name": {
+              "default": "",
+              "description": "Fleet Name",
+              "title": "Fleet Name",
+              "type": "string"
+            },
+            "resource_mint": {
+              "default": "",
+              "description": "Resource to Load Cargo",
+              "title": "Resource Mint",
+              "type": "string"
+            },
+            "amount": {
+              "default": "",
+              "description": "Amount of Resource",
+              "title": "Amount",
+              "type": "integer"
+            },
+            "destination_x": {
+              "default": 0,
+              "description": "Coordinate X target starbase",
+              "title": "Destination X",
+              "type": "integer"
+            },
+            "destination_y": {
+              "default": 0,
+              "description": "Coordinate Y target starbase",
+              "title": "Destination Y",
+              "type": "integer"
+            }
+          },
+          "title": "StarAtlasUnloadCargoPiece",
+          "type": "object"
+        },
+        "output_schema": {
+          "description": "StarAtlas Unload Cargo Piece Output Model",
+          "properties": {
+            "resource_mint_unloaded": {
+              "description": "Amount Resource loaded",
+              "title": "Resource Mint Unloaded",
+              "type": "string"
+            },
+            "amount_unloaded": {
+              "description": "Amount Resource loaded",
+              "title": "Amount Unloaded",
+              "type": "integer"
+            },
+            "destination_x": {
+              "description": "Load Cargo executed on X",
+              "title": "Destination X",
+              "type": "integer"
+            },
+            "destination_y": {
+              "description": "Load Cargo executed on Y",
+              "title": "Destination Y",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "resource_mint_unloaded",
+            "amount_unloaded",
+            "destination_x",
+            "destination_y"
+          ],
+          "title": "OutputModel",
+          "type": "object"
+        },
+        "secrets_schema": null,
+        "container_resources": {
+          "requests": {
+            "cpu": 100,
+            "memory": 128
+          },
+          "limits": {
+            "cpu": 500,
+            "memory": 512
+          },
+          "use_gpu": false
+        },
+        "tags": [
+          "Star Atlas"
+        ],
+        "style": {
+          "module": "StarAtlasUnloadCargoPiece",
+          "label": "Unload Cargo",
+          "nodeType": "default",
+          "nodeStyle": {
+            "backgroundColor": "#ebebeb"
+          },
+          "useIcon": true,
+          "iconClassName": "fa-solid:database",
+          "iconStyle": {
+            "cursor": "pointer"
+          }
+        },
+        "source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasUnloadCargoPiece",
+        "repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+        "repository_id": 7,
+        "branch_piece": false
+      },
+      "65_1c11f932-e239-4bc7-9d75-77516369c959": {
+        "id": 65,
+        "name": "StarAtlasUndockPiece",
+        "description": "StarAtlas Undocking a Fleet",
+        "dependency": {
+          "dockerfile": "Dockerfile_1",
+          "requirements_file": null
+        },
+        "source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.36-group0",
+        "input_schema": {
+          "description": "StarAtlas Dock Piece Input Model",
+          "properties": {
+            "fleet_name": {
+              "default": "",
+              "description": "Fleet Name",
+              "title": "Fleet Name",
+              "type": "string"
+            },
+            "destination_x": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Destination X",
+              "type": "integer"
+            },
+            "destination_y": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Destination Y",
+              "type": "integer"
+            }
+          },
+          "title": "StarAtlasUndockPiece",
+          "type": "object"
+        },
+        "output_schema": {
+          "description": "StarAtlas Dock Piece Output Model",
+          "properties": {
+            "fleet_name": {
+              "default": "",
+              "description": "Fleet Name",
+              "title": "Fleet Name",
+              "type": "string"
+            },
+            "destination_x": {
+              "description": "Dock executed on X",
+              "title": "Destination X",
+              "type": "integer"
+            },
+            "destination_y": {
+              "description": "Dock executed on Y",
+              "title": "Destination Y",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "destination_x",
+            "destination_y"
+          ],
+          "title": "OutputModel",
+          "type": "object"
+        },
+        "secrets_schema": null,
+        "container_resources": {
+          "requests": {
+            "cpu": 100,
+            "memory": 128
+          },
+          "limits": {
+            "cpu": 500,
+            "memory": 512
+          },
+          "use_gpu": false
+        },
+        "tags": [
+          "Star Atlas"
+        ],
+        "style": {
+          "module": "StarAtlasUndockPiece",
+          "label": "Undock",
+          "nodeType": "default",
+          "nodeStyle": {
+            "backgroundColor": "#ebebeb"
+          },
+          "useIcon": true,
+          "iconClassName": "fa-solid:database",
+          "iconStyle": {
+            "cursor": "pointer"
+          }
+        },
+        "source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasUndockPiece",
+        "repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+        "repository_id": 7,
+        "branch_piece": false
+      },
+      "52_751c490a-81a8-49ab-b1c0-c182ae90361f": {
+        "id": 52,
+        "name": "StarAtlasSubwarpPiece",
+        "description": "StarAtlas Subwarping a Fleet",
+        "dependency": {
+          "dockerfile": "Dockerfile_1",
+          "requirements_file": null
+        },
+        "source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.36-group0",
+        "input_schema": {
+          "description": "StarAtlas Subwarp Piece Input Model",
+          "properties": {
+            "fleet_name": {
+              "default": "",
+              "description": "Fleet Name",
+              "title": "Fleet Name",
+              "type": "string"
+            },
+            "destination_x": {
+              "default": 0,
+              "description": "Subwarp to coordinate X",
+              "title": "Destination X",
+              "type": "integer"
+            },
+            "destination_y": {
+              "default": 0,
+              "description": "Subwarp to coordinate Y",
+              "title": "Destination Y",
+              "type": "integer"
+            }
+          },
+          "title": "StarAtlasSubwarpPiece",
+          "type": "object"
+        },
+        "output_schema": {
+          "description": "StarAtlas Subwarp Piece Output Model",
+          "properties": {
+            "fleet_name": {
+              "default": "",
+              "description": "Fleet Name",
+              "title": "Fleet Name",
+              "type": "string"
+            },
+            "destination_x": {
+              "description": "Subwarped to X",
+              "title": "Destination X",
+              "type": "integer"
+            },
+            "destination_y": {
+              "description": "Subwarped to Y",
+              "title": "Destination Y",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "destination_x",
+            "destination_y"
+          ],
+          "title": "OutputModel",
+          "type": "object"
+        },
+        "secrets_schema": null,
+        "container_resources": {
+          "requests": {
+            "cpu": 100,
+            "memory": 128
+          },
+          "limits": {
+            "cpu": 500,
+            "memory": 512
+          },
+          "use_gpu": false
+        },
+        "tags": [
+          "Star Atlas"
+        ],
+        "style": {
+          "module": "StarAtlasSubwarpPiece",
+          "label": "Subwarp",
+          "nodeType": "default",
+          "nodeStyle": {
+            "backgroundColor": "#ebebeb"
+          },
+          "useIcon": true,
+          "iconClassName": "fa-solid:database",
+          "iconStyle": {
+            "cursor": "pointer"
+          }
+        },
+        "source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasSubwarpPiece",
+        "repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+        "repository_id": 7,
+        "branch_piece": false
+      },
+      "319_95655bdb-cbe1-4a65-be8f-6fee7073b8f4": {
+        "id": 319,
+        "name": "StarAtlasExitWarpPiece",
+        "description": "StarAtlas Exit Warp a Fleet",
+        "dependency": {
+          "dockerfile": "Dockerfile_1",
+          "requirements_file": null
+        },
+        "source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.36-group0",
+        "input_schema": {
+          "description": "StarAtlas Subwarp Piece Input Model",
+          "properties": {
+            "fleet_name": {
+              "default": "",
+              "description": "Fleet Name",
+              "title": "Fleet Name",
+              "type": "string"
+            }
+          },
+          "title": "StarAtlasExitWarpPiece",
+          "type": "object"
+        },
+        "output_schema": {
+          "description": "StarAtlas Subwarp Piece Output Model",
+          "properties": {
+            "fleet_name": {
+              "default": "",
+              "description": "Fleet Name",
+              "title": "Fleet Name",
+              "type": "string"
+            },
+            "destination_x": {
+              "description": "Subwarped to X",
+              "title": "Destination X",
+              "type": "integer"
+            },
+            "destination_y": {
+              "description": "Subwarped to Y",
+              "title": "Destination Y",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "destination_x",
+            "destination_y"
+          ],
+          "title": "OutputModel",
+          "type": "object"
+        },
+        "secrets_schema": null,
+        "container_resources": {
+          "requests": {
+            "cpu": 100,
+            "memory": 128
+          },
+          "limits": {
+            "cpu": 500,
+            "memory": 512
+          },
+          "use_gpu": false
+        },
+        "tags": [
+          "Star Atlas"
+        ],
+        "style": {
+          "module": "StarAtlasExitWarpPiece",
+          "label": "Exit Warp",
+          "nodeType": "default",
+          "nodeStyle": {
+            "backgroundColor": "#ebebeb"
+          },
+          "useIcon": true,
+          "iconClassName": "fa-solid:database",
+          "iconStyle": {
+            "cursor": "pointer"
+          }
+        },
+        "source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasExitWarpPiece",
+        "repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+        "repository_id": 16,
+        "branch_piece": false
+      },
+      "318_e6d43a64-39bf-4ffd-887a-5e4dd290df06": {
+        "id": 318,
+        "name": "StarAtlasStatFutureMovementPiece",
+        "description": "Star Atlas Statistic Future Movement",
+        "dependency": {
+          "dockerfile": "Dockerfile_1",
+          "requirements_file": null
+        },
+        "source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.36-group0",
+        "input_schema": {
+          "description": "StarAtlas Mining Piece Input Model",
+          "properties": {
+            "fleet_name": {
+              "default": "",
+              "description": "Fleet Name",
+              "title": "Fleet Name",
+              "type": "string"
+            },
+            "position_x": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Position X",
+              "type": "integer"
+            },
+            "position_y": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Position Y",
+              "type": "integer"
+            },
+            "destination_x": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Destination X",
+              "type": "integer"
+            },
+            "destination_y": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Destination Y",
+              "type": "integer"
+            }
+          },
+          "title": "StarAtlasStatFutureMovementPiece",
+          "type": "object"
+        },
+        "output_schema": {
+          "description": "StarAtlas Mining Piece Output Model",
+          "properties": {
+            "fleet_name": {
+              "default": "",
+              "description": "Fleet Name",
+              "title": "Fleet Name",
+              "type": "string"
+            },
+            "position_x": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Position X",
+              "type": "integer"
+            },
+            "position_y": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Position Y",
+              "type": "integer"
+            },
+            "destination_x": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Destination X",
+              "type": "integer"
+            },
+            "destination_y": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Destination Y",
+              "type": "integer"
+            },
+            "distance_calculated": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Distance Calculated",
+              "type": "integer"
+            },
+            "subwarp_fuel_required": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Subwarp Fuel Required",
+              "type": "integer"
+            },
+            "subwarp_time_calculated": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Subwarp Time Calculated",
+              "type": "number"
+            },
+            "subwarp_time_minutes_calculated": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Subwarp Time Minutes Calculated",
+              "type": "number"
+            },
+            "warp_fuel_required": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Warp Fuel Required",
+              "type": "integer"
+            },
+            "warp_time_calculated": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Warp Time Calculated",
+              "type": "number"
+            },
+            "warp_time_minutes_calculated": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Warp Time Minutes Calculated",
+              "type": "number"
+            },
+            "warp_time_with_cooldown_calculated": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Warp Time With Cooldown Calculated",
+              "type": "number"
+            },
+            "warp_time_with_cooldown_minutes_calculated": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Warp Time With Cooldown Minutes Calculated",
+              "type": "number"
+            }
+          },
+          "title": "OutputModel",
+          "type": "object"
+        },
+        "secrets_schema": null,
+        "container_resources": {
+          "requests": {
+            "cpu": 100,
+            "memory": 128
+          },
+          "limits": {
+            "cpu": 500,
+            "memory": 512
+          },
+          "use_gpu": false
+        },
+        "tags": [
+          "Star Atlas"
+        ],
+        "style": {
+          "module": "StarAtlasStatFutureMovementPiece",
+          "label": "Future Stat Move",
+          "nodeType": "default",
+          "nodeStyle": {
+            "backgroundColor": "#ebebeb"
+          },
+          "useIcon": true,
+          "iconClassName": "fa-solid:database",
+          "iconStyle": {
+            "cursor": "pointer"
+          }
+        },
+        "source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasStatFutureMovementPiece",
+        "repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+        "repository_id": 16,
+        "branch_piece": false
+      },
+      "312_3b653d76-2281-4242-8e33-d9d19725463b": {
+        "id": 312,
+        "name": "StarAtlasFleetCargoCheckPiece",
+        "description": "Check StarAtlas Cargo of Fleet",
+        "dependency": {
+          "dockerfile": "Dockerfile_1",
+          "requirements_file": null
+        },
+        "source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.36-group0",
+        "input_schema": {
+          "description": "Star Atlas Fleet Cargo Check Piece Input Model",
+          "properties": {
+            "fleet_name": {
+              "default": "",
+              "description": "Fleet Name",
+              "title": "Fleet Name",
+              "type": "string"
+            },
+            "resource_mint": {
+              "default": "",
+              "description": "Resource to request amount",
+              "title": "Resource Mint",
+              "type": "string"
+            },
+            "resource_amount": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": "",
+              "description": "Resource Amount In Fleet",
+              "title": "Resource Amount"
+            },
+            "fuel_amount": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": "",
+              "description": "Resource Amount In Fleet",
+              "title": "Fuel Amount"
+            },
+            "ammo_amount": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": "",
+              "description": "Resource Amount In Fleet",
+              "title": "Ammo Amount"
+            }
+          },
+          "title": "StarAtlasFleetCargoCheckPiece",
+          "type": "object"
+        },
+        "output_schema": {
+          "description": "Branch Piece Output Model",
+          "properties": {
+            "branch_main": {
+              "default": true,
+              "description": "Main branch selected",
+              "title": "Branch Main",
+              "type": "boolean"
+            }
+          },
+          "title": "BaseBranchOutputModel",
+          "type": "object"
+        },
+        "secrets_schema": null,
+        "container_resources": {
+          "requests": {
+            "cpu": 100,
+            "memory": 128
+          },
+          "limits": {
+            "cpu": 500,
+            "memory": 512
+          },
+          "use_gpu": false
+        },
+        "tags": [
+          "Star Atlas"
+        ],
+        "style": {
+          "module": "StarAtlasFleetCargoCheckPiece",
+          "label": "Cargo Check",
+          "nodeType": "default",
+          "nodeStyle": {
+            "backgroundColor": "#ebebeb"
+          },
+          "useIcon": true,
+          "iconClassName": "fa-solid:database",
+          "iconStyle": {
+            "cursor": "pointer"
+          }
+        },
+        "source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasFleetCargoCheckPiece",
+        "repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+        "repository_id": 16,
+        "branch_piece": true
+      },
+      "318_5d129429-0dce-4d44-a709-de2618c40fa9": {
+        "id": 318,
+        "name": "StarAtlasStatFutureMovementPiece",
+        "description": "Star Atlas Statistic Future Movement",
+        "dependency": {
+          "dockerfile": "Dockerfile_1",
+          "requirements_file": null
+        },
+        "source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.36-group0",
+        "input_schema": {
+          "description": "StarAtlas Mining Piece Input Model",
+          "properties": {
+            "fleet_name": {
+              "default": "",
+              "description": "Fleet Name",
+              "title": "Fleet Name",
+              "type": "string"
+            },
+            "position_x": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Position X",
+              "type": "integer"
+            },
+            "position_y": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Position Y",
+              "type": "integer"
+            },
+            "destination_x": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Destination X",
+              "type": "integer"
+            },
+            "destination_y": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Destination Y",
+              "type": "integer"
+            }
+          },
+          "title": "StarAtlasStatFutureMovementPiece",
+          "type": "object"
+        },
+        "output_schema": {
+          "description": "StarAtlas Mining Piece Output Model",
+          "properties": {
+            "fleet_name": {
+              "default": "",
+              "description": "Fleet Name",
+              "title": "Fleet Name",
+              "type": "string"
+            },
+            "position_x": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Position X",
+              "type": "integer"
+            },
+            "position_y": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Position Y",
+              "type": "integer"
+            },
+            "destination_x": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Destination X",
+              "type": "integer"
+            },
+            "destination_y": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Destination Y",
+              "type": "integer"
+            },
+            "distance_calculated": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Distance Calculated",
+              "type": "integer"
+            },
+            "subwarp_fuel_required": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Subwarp Fuel Required",
+              "type": "integer"
+            },
+            "subwarp_time_calculated": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Subwarp Time Calculated",
+              "type": "number"
+            },
+            "subwarp_time_minutes_calculated": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Subwarp Time Minutes Calculated",
+              "type": "number"
+            },
+            "warp_fuel_required": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Warp Fuel Required",
+              "type": "integer"
+            },
+            "warp_time_calculated": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Warp Time Calculated",
+              "type": "number"
+            },
+            "warp_time_minutes_calculated": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Warp Time Minutes Calculated",
+              "type": "number"
+            },
+            "warp_time_with_cooldown_calculated": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Warp Time With Cooldown Calculated",
+              "type": "number"
+            },
+            "warp_time_with_cooldown_minutes_calculated": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Warp Time With Cooldown Minutes Calculated",
+              "type": "number"
+            }
+          },
+          "title": "OutputModel",
+          "type": "object"
+        },
+        "secrets_schema": null,
+        "container_resources": {
+          "requests": {
+            "cpu": 100,
+            "memory": 128
+          },
+          "limits": {
+            "cpu": 500,
+            "memory": 512
+          },
+          "use_gpu": false
+        },
+        "tags": [
+          "Star Atlas"
+        ],
+        "style": {
+          "module": "StarAtlasStatFutureMovementPiece",
+          "label": "Future Stat Move",
+          "nodeType": "default",
+          "nodeStyle": {
+            "backgroundColor": "#ebebeb"
+          },
+          "useIcon": true,
+          "iconClassName": "fa-solid:database",
+          "iconStyle": {
+            "cursor": "pointer"
+          }
+        },
+        "source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasStatFutureMovementPiece",
+        "repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+        "repository_id": 16,
+        "branch_piece": false
+      },
+      "296_9dd1d976-5d5d-42a2-a4aa-84e4b22fa09f": {
+        "id": 296,
+        "name": "StarAtlasLoadFuelPiece",
+        "description": "StarAtlas Loading Fuel to Fleet",
+        "dependency": {
+          "dockerfile": "Dockerfile_1",
+          "requirements_file": null
+        },
+        "source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.36-group0",
+        "input_schema": {
+          "description": "Star Atlas Load Fuel Piece Input Model",
+          "properties": {
+            "fleet_name": {
+              "default": "",
+              "description": "Fleet Name",
+              "title": "Fleet Name",
+              "type": "string"
+            },
+            "amount": {
+              "default": "",
+              "description": "Amount of Resource",
+              "title": "Amount",
+              "type": "integer"
+            },
+            "destination_x": {
+              "default": 0,
+              "description": "Coordinate X target starbase",
+              "title": "Destination X",
+              "type": "integer"
+            },
+            "destination_y": {
+              "default": 0,
+              "description": "Coordinate Y target starbase",
+              "title": "Destination Y",
+              "type": "integer"
+            }
+          },
+          "title": "StarAtlasLoadFuelPiece",
+          "type": "object"
+        },
+        "output_schema": {
+          "description": "Star Atlas Load Fuel Piece Output Model",
+          "properties": {
+            "amount_loaded": {
+              "description": "Amount Resource loaded",
+              "title": "Amount Loaded",
+              "type": "integer"
+            },
+            "destination_x": {
+              "description": "Load Cargo executed on X",
+              "title": "Destination X",
+              "type": "integer"
+            },
+            "destination_y": {
+              "description": "Load Cargo executed on Y",
+              "title": "Destination Y",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "amount_loaded",
+            "destination_x",
+            "destination_y"
+          ],
+          "title": "OutputModel",
+          "type": "object"
+        },
+        "secrets_schema": null,
+        "container_resources": {
+          "requests": {
+            "cpu": 100,
+            "memory": 128
+          },
+          "limits": {
+            "cpu": 500,
+            "memory": 512
+          },
+          "use_gpu": false
+        },
+        "tags": [
+          "Star Atlas"
+        ],
+        "style": {
+          "module": "StarAtlasLoadFuelPiece",
+          "label": "Load Fuel",
+          "nodeType": "default",
+          "nodeStyle": {
+            "backgroundColor": "#ebebeb"
+          },
+          "useIcon": true,
+          "iconClassName": "fa-solid:database",
+          "iconStyle": {
+            "cursor": "pointer"
+          }
+        },
+        "source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasLoadFuelPiece",
+        "repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+        "repository_id": 16,
+        "branch_piece": false
+      },
+      "326_3fbc3b40-f250-4761-b34d-ef1f6468272a": {
+        "id": 326,
+        "name": "MathArithmeticPiece",
+        "description": "A MathArithmeticPiece Piece.",
+        "dependency": {
+          "dockerfile": "Dockerfile_1",
+          "requirements_file": null
+        },
+        "source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.36-group0",
+        "input_schema": {
+          "$defs": {
+            "InputEnum": {
+              "enum": [
+                "addition",
+                "substract",
+                "multiply",
+                "divide"
+              ],
+              "title": "InputEnum",
+              "type": "string"
+            }
+          },
+          "description": "MathArithmeticPiece Input Model",
+          "properties": {
+            "left_input_int": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": 0,
+              "description": "Left Input Int.",
+              "title": "Left Input Int"
+            },
+            "right_input_int": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": 0,
+              "description": "Right Input Int.",
+              "title": "Right Input Int"
+            },
+            "left_input_float": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": 0,
+              "description": "Left Input Float.",
+              "title": "Left Input Float"
+            },
+            "right_input_float": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": 0,
+              "description": "Right Input Float.",
+              "title": "Right Input Float"
+            },
+            "operation_enum": {
+              "allOf": [
+                {
+                  "$ref": "#/$defs/InputEnum"
+                }
+              ],
+              "default": "addition",
+              "description": "Input addition."
+            }
+          },
+          "title": "MathArithmeticPiece",
+          "type": "object"
+        },
+        "output_schema": {
+          "description": "MathArithmeticPiece Output Model",
+          "properties": {
+            "result_output_float": {
+              "description": "Result from operation.",
+              "title": "Result Output Float",
+              "type": "number"
+            },
+            "result_output_int": {
+              "description": "Result from operation.",
+              "title": "Result Output Int",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "result_output_float",
+            "result_output_int"
+          ],
+          "title": "OutputModel",
+          "type": "object"
+        },
+        "secrets_schema": null,
+        "container_resources": {
+          "requests": {
+            "cpu": 100,
+            "memory": 128
+          },
+          "limits": {
+            "cpu": 100,
+            "memory": 128
+          },
+          "use_gpu": false
+        },
+        "tags": [
+          "default",
+          "mathematics"
+        ],
+        "style": {
+          "module": "MathArithmeticPiece",
+          "label": "Math Logic",
+          "nodeType": "default",
+          "nodeStyle": {
+            "backgroundColor": "#ebebeb"
+          },
+          "useIcon": true,
+          "iconClassName": "fa-solid:file-alt",
+          "iconStyle": {
+            "cursor": "pointer"
+          }
+        },
+        "source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/MathArithmeticPiece",
+        "repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+        "repository_id": 17,
+        "branch_piece": false
+      },
+      "434_c304f213-d9ab-4d7e-b0d2-2c692cc7ac1b": {
+        "id": 434,
+        "name": "StarAtlasUndockPiece",
+        "description": "StarAtlas Undocking a Fleet",
+        "dependency": {
+          "dockerfile": "Dockerfile_1",
+          "requirements_file": null
+        },
+        "source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.36-group0",
+        "input_schema": {
+          "description": "StarAtlas Dock Piece Input Model",
+          "properties": {
+            "fleet_name": {
+              "default": "",
+              "description": "Fleet Name",
+              "title": "Fleet Name",
+              "type": "string"
+            },
+            "destination_x": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Destination X",
+              "type": "integer"
+            },
+            "destination_y": {
+              "default": 0,
+              "description": "Number of seconds to sleep",
+              "title": "Destination Y",
+              "type": "integer"
+            }
+          },
+          "title": "StarAtlasUndockPiece",
+          "type": "object"
+        },
+        "output_schema": {
+          "description": "StarAtlas Dock Piece Output Model",
+          "properties": {
+            "fleet_name": {
+              "default": "",
+              "description": "Fleet Name",
+              "title": "Fleet Name",
+              "type": "string"
+            },
+            "destination_x": {
+              "description": "Dock executed on X",
+              "title": "Destination X",
+              "type": "integer"
+            },
+            "destination_y": {
+              "description": "Dock executed on Y",
+              "title": "Destination Y",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "destination_x",
+            "destination_y"
+          ],
+          "title": "OutputModel",
+          "type": "object"
+        },
+        "secrets_schema": null,
+        "container_resources": {
+          "requests": {
+            "cpu": 100,
+            "memory": 128
+          },
+          "limits": {
+            "cpu": 500,
+            "memory": 512
+          },
+          "use_gpu": false
+        },
+        "tags": [
+          "Star Atlas"
+        ],
+        "style": {
+          "module": "StarAtlasUndockPiece",
+          "label": "Undock",
+          "nodeType": "default",
+          "nodeStyle": {
+            "backgroundColor": "#ebebeb"
+          },
+          "useIcon": true,
+          "iconClassName": "fa-solid:database",
+          "iconStyle": {
+            "cursor": "pointer"
+          }
+        },
+        "source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasUndockPiece",
+        "repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+        "repository_id": 20,
+        "branch_piece": false
+      },
+      "415_c946cbfe-bc26-43d1-8161-94b5c1d6e757": {
+        "id": 415,
+        "name": "MathArithmeticPiece",
+        "description": "A MathArithmeticPiece Piece.",
+        "dependency": {
+          "dockerfile": "Dockerfile_1",
+          "requirements_file": null
+        },
+        "source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.36-group0",
+        "input_schema": {
+          "$defs": {
+            "InputEnum": {
+              "enum": [
+                "addition",
+                "substract",
+                "multiply",
+                "divide"
+              ],
+              "title": "InputEnum",
+              "type": "string"
+            }
+          },
+          "description": "MathArithmeticPiece Input Model",
+          "properties": {
+            "left_input_int": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": 0,
+              "description": "Left Input Int.",
+              "title": "Left Input Int"
+            },
+            "right_input_int": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": 0,
+              "description": "Right Input Int.",
+              "title": "Right Input Int"
+            },
+            "left_input_float": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": 0,
+              "description": "Left Input Float.",
+              "title": "Left Input Float"
+            },
+            "right_input_float": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": 0,
+              "description": "Right Input Float.",
+              "title": "Right Input Float"
+            },
+            "operation_enum": {
+              "allOf": [
+                {
+                  "$ref": "#/$defs/InputEnum"
+                }
+              ],
+              "default": "addition",
+              "description": "Input addition."
+            }
+          },
+          "title": "MathArithmeticPiece",
+          "type": "object"
+        },
+        "output_schema": {
+          "description": "MathArithmeticPiece Output Model",
+          "properties": {
+            "result_output_float": {
+              "description": "Result from operation.",
+              "title": "Result Output Float",
+              "type": "number"
+            },
+            "result_output_int": {
+              "description": "Result from operation.",
+              "title": "Result Output Int",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "result_output_float",
+            "result_output_int"
+          ],
+          "title": "OutputModel",
+          "type": "object"
+        },
+        "secrets_schema": null,
+        "container_resources": {
+          "requests": {
+            "cpu": 100,
+            "memory": 128
+          },
+          "limits": {
+            "cpu": 100,
+            "memory": 128
+          },
+          "use_gpu": false
+        },
+        "tags": [
+          "default",
+          "mathematics"
+        ],
+        "style": {
+          "module": "MathArithmeticPiece",
+          "label": "Math Logic",
+          "nodeType": "default",
+          "nodeStyle": {
+            "backgroundColor": "#ebebeb"
+          },
+          "useIcon": true,
+          "iconClassName": "fa-solid:file-alt",
+          "iconStyle": {
+            "cursor": "pointer"
+          }
+        },
+        "source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/MathArithmeticPiece",
+        "repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+        "repository_id": 20,
+        "branch_piece": false
+      }
+    },
+    "workflowPiecesData": {
+      "53_85209645-015f-4bbd-9d79-f9b51d3fac53": {
+        "storage": {
+          "storageAccessMode": "Read/Write"
+        },
+        "containerResources": {
+          "cpu": 500,
+          "memory": 512,
+          "useGpu": false
+        },
+        "inputs": {
+          "fleet_name": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": "easy"
+          },
+          "required_status": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": "Idle"
+          }
+        }
+      },
+      "59_6340664b-b1bf-4d05-bf7e-f6e7a3f2f623": {
+        "storage": {
+          "storageAccessMode": "Read/Write"
+        },
+        "containerResources": {
+          "cpu": 500,
+          "memory": 512,
+          "useGpu": false
+        },
+        "inputs": {
+          "fleet_name": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": "easy"
+          },
+          "destination_x": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": -40
+          },
+          "destination_y": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": 30
+          }
+        }
+      },
+      "53_95e373a3-64b7-489d-bf5c-2ddaa10fa051": {
+        "storage": {
+          "storageAccessMode": "Read/Write"
+        },
+        "containerResources": {
+          "cpu": 500,
+          "memory": 512,
+          "useGpu": false
+        },
+        "inputs": {
+          "fleet_name": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": "easy"
+          },
+          "required_status": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": "StarbaseLoadingBay"
+          }
+        }
+      },
+      "53_e7bb3e85-ef6c-4aa9-9f6c-17e91b26a0d5": {
+        "storage": {
+          "storageAccessMode": "Read/Write"
+        },
+        "containerResources": {
+          "cpu": 500,
+          "memory": 512,
+          "useGpu": false
+        },
+        "inputs": {
+          "fleet_name": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": "easy"
+          },
+          "required_status": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": "MineAsteroid"
+          }
+        }
+      },
+      "53_f135bc5d-97d6-40bf-a686-aaf50b744b5f": {
+        "storage": {
+          "storageAccessMode": "Read/Write"
+        },
+        "containerResources": {
+          "cpu": 500,
+          "memory": 512,
+          "useGpu": false
+        },
+        "inputs": {
+          "fleet_name": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": "easy"
+          },
+          "required_status": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": "ReadyToExitWarp"
+          }
+        }
+      },
+      "53_d071d22c-9f76-4ca2-86dd-602c20d60176": {
+        "storage": {
+          "storageAccessMode": "Read/Write"
+        },
+        "containerResources": {
+          "cpu": 500,
+          "memory": 512,
+          "useGpu": false
+        },
+        "inputs": {
+          "fleet_name": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": "easy"
+          },
+          "required_status": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": "MoveWarp"
+          }
+        }
+      },
+      "53_b0e82d8c-c69e-4c61-8ee8-1139e03d77bd": {
+        "storage": {
+          "storageAccessMode": "Read/Write"
+        },
+        "containerResources": {
+          "cpu": 500,
+          "memory": 512,
+          "useGpu": false
+        },
+        "inputs": {
+          "fleet_name": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": "easy"
+          },
+          "required_status": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": "MoveSubwarp"
+          }
+        }
+      },
+      "66_8ed70df0-84ff-4f1e-977c-6da346358dc0": {
+        "storage": {
+          "storageAccessMode": "Read/Write"
+        },
+        "containerResources": {
+          "cpu": 500,
+          "memory": 512,
+          "useGpu": false
+        },
+        "inputs": {
+          "fleet_name": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": "easy"
+          },
+          "destination_x": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": -40
+          },
+          "destination_y": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": 30
+          }
+        }
+      },
+      "54_6d19e4d5-9bb0-4f92-b28a-1b6e0c07a127": {
+        "storage": {
+          "storageAccessMode": "Read/Write"
+        },
+        "containerResources": {
+          "cpu": 500,
+          "memory": 512,
+          "useGpu": false
+        },
+        "inputs": {
+          "fleet_name": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": "easy"
+          },
+          "resource_mint": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": "foodQJAztMzX1DKpLaiounNe2BDMds5RNuPC6jsNrDG"
+          },
+          "amount": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": 100
+          },
+          "destination_x": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": -40
+          },
+          "destination_y": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": 30
+          }
+        }
+      },
+      "65_e53e6c37-4921-4ae9-82ac-f268fc2126be": {
+        "storage": {
+          "storageAccessMode": "Read/Write"
+        },
+        "containerResources": {
+          "cpu": 500,
+          "memory": 512,
+          "useGpu": false
+        },
+        "inputs": {
+          "fleet_name": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": "easy"
+          },
+          "destination_x": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": -40
+          },
+          "destination_y": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": 30
+          }
+        }
+      },
+      "52_0896a285-36e1-4101-894f-90c62ce23c6e": {
+        "storage": {
+          "storageAccessMode": "Read/Write"
+        },
+        "containerResources": {
+          "cpu": 500,
+          "memory": 512,
+          "useGpu": false
+        },
+        "inputs": {
+          "fleet_name": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": "easy"
+          },
+          "destination_x": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": -47
+          },
+          "destination_y": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": 30
+          }
+        }
+      },
+      "63_814377e9-4b02-40a4-9f1d-67511bc15a92": {
+        "storage": {
+          "storageAccessMode": "Read/Write"
+        },
+        "containerResources": {
+          "cpu": 100,
+          "memory": 128,
+          "useGpu": false
+        },
+        "inputs": {
+          "input_str": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": "Mine Asteroid"
+          }
+        }
+      },
+      "63_82efbeb7-e08d-4857-a1e8-128126decafd": {
+        "storage": {
+          "storageAccessMode": "Read/Write"
+        },
+        "containerResources": {
+          "cpu": 100,
+          "memory": 128,
+          "useGpu": false
+        },
+        "inputs": {
+          "input_str": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": "Move Warp"
+          }
+        }
+      },
+      "63_b8bfda81-d890-43c6-839c-e5b2579c7d9c": {
+        "storage": {
+          "storageAccessMode": "Read/Write"
+        },
+        "containerResources": {
+          "cpu": 100,
+          "memory": 128,
+          "useGpu": false
+        },
+        "inputs": {
+          "input_str": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": "Move SubWarp"
+          }
+        }
+      },
+      "59_e59b7666-9d63-45f4-84dc-4ad60675a5f9": {
+        "storage": {
+          "storageAccessMode": "Read/Write"
+        },
+        "containerResources": {
+          "cpu": 500,
+          "memory": 512,
+          "useGpu": false
+        },
+        "inputs": {
+          "fleet_name": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": "easy"
+          },
+          "destination_x": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": -40
+          },
+          "destination_y": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": 30
+          }
+        }
+      },
+      "65_844d40fa-22e2-43da-8ee9-8d75fbf49086": {
+        "storage": {
+          "storageAccessMode": "Read/Write"
+        },
+        "containerResources": {
+          "cpu": 500,
+          "memory": 512,
+          "useGpu": false
+        },
+        "inputs": {
+          "fleet_name": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": "easy"
+          },
+          "destination_x": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": -40
+          },
+          "destination_y": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": 30
+          }
+        }
+      },
+      "65_1772e6c0-d5d3-41d9-984c-97d981220a25": {
+        "storage": {
+          "storageAccessMode": "Read/Write"
+        },
+        "containerResources": {
+          "cpu": 500,
+          "memory": 512,
+          "useGpu": false
+        },
+        "inputs": {
+          "fleet_name": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": "easy"
+          },
+          "destination_x": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": -47
+          },
+          "destination_y": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": 30
+          }
+        }
+      },
+      "66_8afa2fa3-ad8e-45a7-93a7-92273874314a": {
+        "storage": {
+          "storageAccessMode": "Read/Write"
+        },
+        "containerResources": {
+          "cpu": 500,
+          "memory": 512,
+          "useGpu": false
+        },
+        "inputs": {
+          "fleet_name": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": "easy"
+          },
+          "destination_x": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": -47
+          },
+          "destination_y": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": 30
+          }
+        }
+      },
+      "55_d3531b3a-1b9c-4a3f-978e-b825b72514df": {
+        "storage": {
+          "storageAccessMode": "Read/Write"
+        },
+        "containerResources": {
+          "cpu": 500,
+          "memory": 512,
+          "useGpu": false
+        },
+        "inputs": {
+          "fleet_name": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": "easy"
+          },
+          "resource_mint": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": "foodQJAztMzX1DKpLaiounNe2BDMds5RNuPC6jsNrDG"
+          },
+          "amount": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": 100
+          },
+          "destination_x": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": -47
+          },
+          "destination_y": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": 30
+          }
+        }
+      },
+      "65_1c11f932-e239-4bc7-9d75-77516369c959": {
+        "storage": {
+          "storageAccessMode": "Read/Write"
+        },
+        "containerResources": {
+          "cpu": 500,
+          "memory": 512,
+          "useGpu": false
+        },
+        "inputs": {
+          "fleet_name": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": "easy"
+          },
+          "destination_x": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": -47
+          },
+          "destination_y": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": 30
+          }
+        }
+      },
+      "52_751c490a-81a8-49ab-b1c0-c182ae90361f": {
+        "storage": {
+          "storageAccessMode": "Read/Write"
+        },
+        "containerResources": {
+          "cpu": 500,
+          "memory": 512,
+          "useGpu": false
+        },
+        "inputs": {
+          "fleet_name": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": "easy"
+          },
+          "destination_x": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": -40
+          },
+          "destination_y": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": 30
+          }
+        }
+      },
+      "319_95655bdb-cbe1-4a65-be8f-6fee7073b8f4": {
+        "storage": {
+          "storageAccessMode": "Read/Write"
+        },
+        "containerResources": {
+          "cpu": 500,
+          "memory": 512,
+          "useGpu": false
+        },
+        "inputs": {
+          "fleet_name": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": "easy"
+          }
+        }
+      },
+      "318_e6d43a64-39bf-4ffd-887a-5e4dd290df06": {
+        "storage": {
+          "storageAccessMode": "Read/Write"
+        },
+        "containerResources": {
+          "cpu": 500,
+          "memory": 512,
+          "useGpu": false
+        },
+        "inputs": {
+          "fleet_name": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": "easy"
+          },
+          "position_x": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": -40
+          },
+          "position_y": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": 30
+          },
+          "destination_x": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": -47
+          },
+          "destination_y": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": 30
+          }
+        }
+      },
+      "312_3b653d76-2281-4242-8e33-d9d19725463b": {
+        "storage": {
+          "storageAccessMode": "Read/Write"
+        },
+        "containerResources": {
+          "cpu": 500,
+          "memory": 512,
+          "useGpu": false
+        },
+        "inputs": {
+          "fleet_name": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": "easy"
+          },
+          "resource_mint": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": ""
+          },
+          "resource_amount": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": null
+          },
+          "fuel_amount": {
+            "fromUpstream": true,
+            "upstreamId": "MathArithm_3fbc3b40f2504761b34def1f6468272a",
+            "upstreamArgument": "result_output_int",
+            "upstreamValue": "MathArithmeticPiece (3fbc3b40) - Result Output Int",
+            "value": null
+          },
+          "ammo_amount": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": null
+          }
+        }
+      },
+      "318_5d129429-0dce-4d44-a709-de2618c40fa9": {
+        "storage": {
+          "storageAccessMode": "Read/Write"
+        },
+        "containerResources": {
+          "cpu": 500,
+          "memory": 512,
+          "useGpu": false
+        },
+        "inputs": {
+          "fleet_name": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": "easy"
+          },
+          "position_x": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": -40
+          },
+          "position_y": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": 30
+          },
+          "destination_x": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": -47
+          },
+          "destination_y": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": 30
+          }
+        }
+      },
+      "296_9dd1d976-5d5d-42a2-a4aa-84e4b22fa09f": {
+        "storage": {
+          "storageAccessMode": "Read/Write"
+        },
+        "containerResources": {
+          "cpu": 500,
+          "memory": 512,
+          "useGpu": false
+        },
+        "inputs": {
+          "fleet_name": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": "easy"
+          },
+          "amount": {
+            "fromUpstream": true,
+            "upstreamId": "MathArithm_c946cbfebc2643d1816194b5c1d6e757",
+            "upstreamArgument": "result_output_int",
+            "upstreamValue": "MathArithmeticPiece (c946cbfe) - Result Output Int",
+            "value": null
+          },
+          "destination_x": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": -40
+          },
+          "destination_y": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": 30
+          }
+        }
+      },
+      "326_3fbc3b40-f250-4761-b34d-ef1f6468272a": {
+        "storage": {
+          "storageAccessMode": "Read/Write"
+        },
+        "containerResources": {
+          "cpu": 100,
+          "memory": 128,
+          "useGpu": false
+        },
+        "inputs": {
+          "left_input_int": {
+            "fromUpstream": true,
+            "upstreamId": "StarAtlasS_e6d43a6439bf4ffd887a5e4dd290df06",
+            "upstreamArgument": "subwarp_fuel_required",
+            "upstreamValue": "StarAtlasStatFutureMovementPiece (e6d43a64) - Subwarp Fuel Required",
+            "value": 0
+          },
+          "right_input_int": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": 1000
+          },
+          "left_input_float": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": 0
+          },
+          "right_input_float": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": 0
+          },
+          "operation_enum": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": "addition"
+          }
+        }
+      },
+      "434_c304f213-d9ab-4d7e-b0d2-2c692cc7ac1b": {
+        "storage": {
+          "storageAccessMode": "Read/Write"
+        },
+        "containerResources": {
+          "cpu": 500,
+          "memory": 512,
+          "useGpu": false
+        },
+        "inputs": {
+          "fleet_name": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": "easy"
+          },
+          "destination_x": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": -40
+          },
+          "destination_y": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": 30
+          }
+        }
+      },
+      "415_c946cbfe-bc26-43d1-8161-94b5c1d6e757": {
+        "storage": {
+          "storageAccessMode": "Read/Write"
+        },
+        "containerResources": {
+          "cpu": 100,
+          "memory": 128,
+          "useGpu": false
+        },
+        "inputs": {
+          "left_input_int": {
+            "fromUpstream": true,
+            "upstreamId": "StarAtlasS_5d1294290dce4d44a709de2618c40fa9",
+            "upstreamArgument": "subwarp_fuel_required",
+            "upstreamValue": "StarAtlasStatFutureMovementPiece (5d129429) - Subwarp Fuel Required",
+            "value": 0
+          },
+          "right_input_int": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": 500
+          },
+          "left_input_float": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": 0
+          },
+          "right_input_float": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": 0
+          },
+          "operation_enum": {
+            "fromUpstream": false,
+            "upstreamId": "",
+            "upstreamArgument": "",
+            "upstreamValue": "",
+            "value": "addition"
+          }
+        }
+      }
+    },
+    "workflowNodes": [
+      {
+        "id": "53_85209645-015f-4bbd-9d79-f9b51d3fac53",
+        "type": "CustomNode",
+        "position": {
+          "x": -983.9377255325817,
+          "y": -3.6024522351592623
+        },
+        "data": {
+          "name": "StarAtlasFleetStatusCheckPiece",
+          "style": {
+            "module": "StarAtlasFleetStatusCheckPiece",
+            "label": "Status Check",
+            "nodeType": "default",
+            "nodeStyle": {
+              "backgroundColor": "#ebebeb"
+            },
+            "useIcon": true,
+            "iconClassName": "fa-solid:database",
+            "iconStyle": {
+              "cursor": "pointer"
+            }
+          },
+          "validationError": false,
+          "orientation": "horizontal",
+          "branch_piece": true
+        },
+        "width": 150,
+        "height": 70,
+        "selected": false,
+        "positionAbsolute": {
+          "x": -983.9377255325817,
+          "y": -3.6024522351592623
+        },
+        "dragging": false
+      },
+      {
+        "id": "59_6340664b-b1bf-4d05-bf7e-f6e7a3f2f623",
+        "type": "CustomNode",
+        "position": {
+          "x": -631.216356571925,
+          "y": -222.41229750419248
+        },
+        "data": {
+          "name": "StarAtlasFleetLocationCheckPiece",
+          "style": {
+            "module": "StarAtlasFleetLocationCheckPiece",
+            "label": "Location Check",
+            "nodeType": "default",
+            "nodeStyle": {
+              "backgroundColor": "#ebebeb"
+            },
+            "useIcon": true,
+            "iconClassName": "fa-solid:database",
+            "iconStyle": {
+              "cursor": "pointer"
+            }
+          },
+          "validationError": false,
+          "orientation": "horizontal",
+          "branch_piece": true
+        },
+        "width": 150,
+        "height": 70,
+        "selected": false,
+        "positionAbsolute": {
+          "x": -631.216356571925,
+          "y": -222.41229750419248
+        },
+        "dragging": false
+      },
+      {
+        "id": "53_95e373a3-64b7-489d-bf5c-2ddaa10fa051",
+        "type": "CustomNode",
+        "position": {
+          "x": -596.0875437593234,
+          "y": 223.8467284351339
+        },
+        "data": {
+          "name": "StarAtlasFleetStatusCheckPiece",
+          "style": {
+            "module": "StarAtlasFleetStatusCheckPiece",
+            "label": "Status Check",
+            "nodeType": "default",
+            "nodeStyle": {
+              "backgroundColor": "#ebebeb"
+            },
+            "useIcon": true,
+            "iconClassName": "fa-solid:database",
+            "iconStyle": {
+              "cursor": "pointer"
+            }
+          },
+          "validationError": false,
+          "orientation": "horizontal",
+          "branch_piece": true
+        },
+        "width": 150,
+        "height": 70,
+        "selected": false,
+        "positionAbsolute": {
+          "x": -596.0875437593234,
+          "y": 223.8467284351339
+        },
+        "dragging": false
+      },
+      {
+        "id": "53_e7bb3e85-ef6c-4aa9-9f6c-17e91b26a0d5",
+        "type": "CustomNode",
+        "position": {
+          "x": -72.9800214867962,
+          "y": 574.093189838325
+        },
+        "data": {
+          "name": "StarAtlasFleetStatusCheckPiece",
+          "style": {
+            "module": "StarAtlasFleetStatusCheckPiece",
+            "label": "Status Check",
+            "nodeType": "default",
+            "nodeStyle": {
+              "backgroundColor": "#ebebeb"
+            },
+            "useIcon": true,
+            "iconClassName": "fa-solid:database",
+            "iconStyle": {
+              "cursor": "pointer"
+            }
+          },
+          "validationError": false,
+          "orientation": "horizontal",
+          "branch_piece": true
+        },
+        "width": 150,
+        "height": 70,
+        "selected": false,
+        "positionAbsolute": {
+          "x": -72.9800214867962,
+          "y": 574.093189838325
+        },
+        "dragging": false
+      },
+      {
+        "id": "53_f135bc5d-97d6-40bf-a686-aaf50b744b5f",
+        "type": "CustomNode",
+        "position": {
+          "x": -337.8681025669675,
+          "y": 426.55432617143686
+        },
+        "data": {
+          "name": "StarAtlasFleetStatusCheckPiece",
+          "style": {
+            "module": "StarAtlasFleetStatusCheckPiece",
+            "label": "Status Check",
+            "nodeType": "default",
+            "nodeStyle": {
+              "backgroundColor": "#ebebeb"
+            },
+            "useIcon": true,
+            "iconClassName": "fa-solid:database",
+            "iconStyle": {
+              "cursor": "pointer"
+            }
+          },
+          "validationError": false,
+          "orientation": "horizontal",
+          "branch_piece": true
+        },
+        "width": 150,
+        "height": 70,
+        "selected": false,
+        "positionAbsolute": {
+          "x": -337.8681025669675,
+          "y": 426.55432617143686
+        },
+        "dragging": false
+      },
+      {
+        "id": "53_d071d22c-9f76-4ca2-86dd-602c20d60176",
+        "type": "CustomNode",
+        "position": {
+          "x": 230.7784667346658,
+          "y": 653.9951047956314
+        },
+        "data": {
+          "name": "StarAtlasFleetStatusCheckPiece",
+          "style": {
+            "module": "StarAtlasFleetStatusCheckPiece",
+            "label": "Status Check",
+            "nodeType": "default",
+            "nodeStyle": {
+              "backgroundColor": "#ebebeb"
+            },
+            "useIcon": true,
+            "iconClassName": "fa-solid:database",
+            "iconStyle": {
+              "cursor": "pointer"
+            }
+          },
+          "validationError": false,
+          "orientation": "horizontal",
+          "branch_piece": true
+        },
+        "width": 150,
+        "height": 70,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 230.7784667346658,
+          "y": 653.9951047956314
+        },
+        "dragging": false
+      },
+      {
+        "id": "53_b0e82d8c-c69e-4c61-8ee8-1139e03d77bd",
+        "type": "CustomNode",
+        "position": {
+          "x": 569.271038623231,
+          "y": 745.7732420356471
+        },
+        "data": {
+          "name": "StarAtlasFleetStatusCheckPiece",
+          "style": {
+            "module": "StarAtlasFleetStatusCheckPiece",
+            "label": "Status Check",
+            "nodeType": "default",
+            "nodeStyle": {
+              "backgroundColor": "#ebebeb"
+            },
+            "useIcon": true,
+            "iconClassName": "fa-solid:database",
+            "iconStyle": {
+              "cursor": "pointer"
+            }
+          },
+          "validationError": false,
+          "orientation": "horizontal",
+          "branch_piece": true
+        },
+        "width": 150,
+        "height": 70,
+        "selected": true,
+        "positionAbsolute": {
+          "x": 569.271038623231,
+          "y": 745.7732420356471
+        },
+        "dragging": false
+      },
+      {
+        "id": "66_8ed70df0-84ff-4f1e-977c-6da346358dc0",
+        "type": "CustomNode",
+        "position": {
+          "x": -387.1676188239185,
+          "y": -426.04315981815074
+        },
+        "data": {
+          "name": "StarAtlasDockPiece",
+          "style": {
+            "module": "StarAtlasDockPiece",
+            "label": "Dock",
+            "nodeType": "default",
+            "nodeStyle": {
+              "backgroundColor": "#ebebeb"
+            },
+            "useIcon": true,
+            "iconClassName": "fa-solid:database",
+            "iconStyle": {
+              "cursor": "pointer"
+            }
+          },
+          "validationError": false,
+          "orientation": "horizontal",
+          "branch_piece": false
+        },
+        "width": 150,
+        "height": 70,
+        "selected": false,
+        "positionAbsolute": {
+          "x": -387.1676188239185,
+          "y": -426.04315981815074
+        },
+        "dragging": false
+      },
+      {
+        "id": "54_6d19e4d5-9bb0-4f92-b28a-1b6e0c07a127",
+        "type": "CustomNode",
+        "position": {
+          "x": 554.6216076981631,
+          "y": -629.5263853433246
+        },
+        "data": {
+          "name": "StarAtlasLoadCargoPiece",
+          "style": {
+            "module": "StarAtlasLoadCargoPiece",
+            "label": "Load Cargo",
+            "nodeType": "default",
+            "nodeStyle": {
+              "backgroundColor": "#ebebeb"
+            },
+            "useIcon": true,
+            "iconClassName": "fa-solid:database",
+            "iconStyle": {
+              "cursor": "pointer"
+            }
+          },
+          "validationError": false,
+          "orientation": "horizontal",
+          "branch_piece": false
+        },
+        "width": 150,
+        "height": 70,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 554.6216076981631,
+          "y": -629.5263853433246
+        },
+        "dragging": false
+      },
+      {
+        "id": "65_e53e6c37-4921-4ae9-82ac-f268fc2126be",
+        "type": "CustomNode",
+        "position": {
+          "x": 826.8549554917263,
+          "y": -624.1263062921734
+        },
+        "data": {
+          "name": "StarAtlasUndockPiece",
+          "style": {
+            "module": "StarAtlasUndockPiece",
+            "label": "Undock",
+            "nodeType": "default",
+            "nodeStyle": {
+              "backgroundColor": "#ebebeb"
+            },
+            "useIcon": true,
+            "iconClassName": "fa-solid:database",
+            "iconStyle": {
+              "cursor": "pointer"
+            }
+          },
+          "validationError": false,
+          "orientation": "horizontal",
+          "branch_piece": false
+        },
+        "width": 150,
+        "height": 70,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 826.8549554917263,
+          "y": -624.1263062921734
+        },
+        "dragging": false
+      },
+      {
+        "id": "52_0896a285-36e1-4101-894f-90c62ce23c6e",
+        "type": "CustomNode",
+        "position": {
+          "x": 1153.7289300339694,
+          "y": -636.9247902655495
+        },
+        "data": {
+          "name": "StarAtlasSubwarpPiece",
+          "style": {
+            "module": "StarAtlasSubwarpPiece",
+            "label": "Subwarp",
+            "nodeType": "default",
+            "nodeStyle": {
+              "backgroundColor": "#ebebeb"
+            },
+            "useIcon": true,
+            "iconClassName": "fa-solid:database",
+            "iconStyle": {
+              "cursor": "pointer"
+            }
+          },
+          "validationError": false,
+          "orientation": "horizontal",
+          "branch_piece": false
+        },
+        "width": 150,
+        "height": 70,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 1153.7289300339694,
+          "y": -636.9247902655495
+        },
+        "dragging": false
+      },
+      {
+        "id": "63_814377e9-4b02-40a4-9f1d-67511bc15a92",
+        "type": "CustomNode",
+        "position": {
+          "x": 301.14918353155247,
+          "y": 448.79003571257306
+        },
+        "data": {
+          "name": "LogPiece",
+          "style": {
+            "module": "LogPiece",
+            "label": "Log",
+            "nodeType": "default",
+            "nodeStyle": {
+              "backgroundColor": "#ebebeb"
+            },
+            "useIcon": true,
+            "iconClassName": "fa-solid:file-alt",
+            "iconStyle": {
+              "cursor": "pointer"
+            }
+          },
+          "validationError": false,
+          "orientation": "horizontal",
+          "branch_piece": false
+        },
+        "width": 150,
+        "height": 70,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 301.14918353155247,
+          "y": 448.79003571257306
+        },
+        "dragging": false
+      },
+      {
+        "id": "63_82efbeb7-e08d-4857-a1e8-128126decafd",
+        "type": "CustomNode",
+        "position": {
+          "x": 626.5281736645975,
+          "y": 541.0039162289812
+        },
+        "data": {
+          "name": "LogPiece",
+          "style": {
+            "module": "LogPiece",
+            "label": "Log",
+            "nodeType": "default",
+            "nodeStyle": {
+              "backgroundColor": "#ebebeb"
+            },
+            "useIcon": true,
+            "iconClassName": "fa-solid:file-alt",
+            "iconStyle": {
+              "cursor": "pointer"
+            }
+          },
+          "validationError": false,
+          "orientation": "horizontal",
+          "branch_piece": false
+        },
+        "width": 150,
+        "height": 70,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 626.5281736645975,
+          "y": 541.0039162289812
+        },
+        "dragging": false
+      },
+      {
+        "id": "63_b8bfda81-d890-43c6-839c-e5b2579c7d9c",
+        "type": "CustomNode",
+        "position": {
+          "x": 931.9071637976426,
+          "y": 672.3678912915607
+        },
+        "data": {
+          "name": "LogPiece",
+          "style": {
+            "module": "LogPiece",
+            "label": "Log",
+            "nodeType": "default",
+            "nodeStyle": {
+              "backgroundColor": "#ebebeb"
+            },
+            "useIcon": true,
+            "iconClassName": "fa-solid:file-alt",
+            "iconStyle": {
+              "cursor": "pointer"
+            }
+          },
+          "validationError": false,
+          "orientation": "horizontal",
+          "branch_piece": false
+        },
+        "width": 150,
+        "height": 70,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 931.9071637976426,
+          "y": 672.3678912915607
+        },
+        "dragging": false
+      },
+      {
+        "id": "59_e59b7666-9d63-45f4-84dc-4ad60675a5f9",
+        "type": "CustomNode",
+        "position": {
+          "x": -96.09283620235738,
+          "y": 86.36789129156068
+        },
+        "data": {
+          "name": "StarAtlasFleetLocationCheckPiece",
+          "style": {
+            "module": "StarAtlasFleetLocationCheckPiece",
+            "label": "Location Check",
+            "nodeType": "default",
+            "nodeStyle": {
+              "backgroundColor": "#ebebeb"
+            },
+            "useIcon": true,
+            "iconClassName": "fa-solid:database",
+            "iconStyle": {
+              "cursor": "pointer"
+            }
+          },
+          "validationError": false,
+          "orientation": "horizontal",
+          "branch_piece": true
+        },
+        "width": 150,
+        "height": 70,
+        "selected": false,
+        "positionAbsolute": {
+          "x": -96.09283620235738,
+          "y": 86.36789129156068
+        },
+        "dragging": false
+      },
+      {
+        "id": "65_844d40fa-22e2-43da-8ee9-8d75fbf49086",
+        "type": "CustomNode",
+        "position": {
+          "x": 163.90716379764262,
+          "y": 20.36789129156068
+        },
+        "data": {
+          "name": "StarAtlasUndockPiece",
+          "style": {
+            "module": "StarAtlasUndockPiece",
+            "label": "Undock",
+            "nodeType": "default",
+            "nodeStyle": {
+              "backgroundColor": "#ebebeb"
+            },
+            "useIcon": true,
+            "iconClassName": "fa-solid:database",
+            "iconStyle": {
+              "cursor": "pointer"
+            }
+          },
+          "validationError": false,
+          "orientation": "horizontal",
+          "branch_piece": false
+        },
+        "width": 150,
+        "height": 70,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 163.90716379764262,
+          "y": 20.36789129156068
+        },
+        "dragging": false
+      },
+      {
+        "id": "65_1772e6c0-d5d3-41d9-984c-97d981220a25",
+        "type": "CustomNode",
+        "position": {
+          "x": 163.90716379764262,
+          "y": 170.36789129156068
+        },
+        "data": {
+          "name": "StarAtlasUndockPiece",
+          "style": {
+            "module": "StarAtlasUndockPiece",
+            "label": "Undock",
+            "nodeType": "default",
+            "nodeStyle": {
+              "backgroundColor": "#ebebeb"
+            },
+            "useIcon": true,
+            "iconClassName": "fa-solid:database",
+            "iconStyle": {
+              "cursor": "pointer"
+            }
+          },
+          "validationError": false,
+          "orientation": "horizontal",
+          "branch_piece": false
+        },
+        "width": 150,
+        "height": 70,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 163.90716379764262,
+          "y": 170.36789129156068
+        },
+        "dragging": false
+      },
+      {
+        "id": "66_8afa2fa3-ad8e-45a7-93a7-92273874314a",
+        "type": "CustomNode",
+        "position": {
+          "x": 6.6913923578052845,
+          "y": -253.36756636883104
+        },
+        "data": {
+          "name": "StarAtlasDockPiece",
+          "style": {
+            "module": "StarAtlasDockPiece",
+            "label": "Dock",
+            "nodeType": "default",
+            "nodeStyle": {
+              "backgroundColor": "#ebebeb"
+            },
+            "useIcon": true,
+            "iconClassName": "fa-solid:database",
+            "iconStyle": {
+              "cursor": "pointer"
+            }
+          },
+          "validationError": false,
+          "orientation": "horizontal",
+          "branch_piece": false
+        },
+        "width": 150,
+        "height": 70,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 6.6913923578052845,
+          "y": -253.36756636883104
+        },
+        "dragging": false
+      },
+      {
+        "id": "55_d3531b3a-1b9c-4a3f-978e-b825b72514df",
+        "type": "CustomNode",
+        "position": {
+          "x": 384.19233781951993,
+          "y": -243.36756636883104
+        },
+        "data": {
+          "name": "StarAtlasUnloadCargoPiece",
+          "style": {
+            "module": "StarAtlasUnloadCargoPiece",
+            "label": "Unload Cargo",
+            "nodeType": "default",
+            "nodeStyle": {
+              "backgroundColor": "#ebebeb"
+            },
+            "useIcon": true,
+            "iconClassName": "fa-solid:database",
+            "iconStyle": {
+              "cursor": "pointer"
+            }
+          },
+          "validationError": false,
+          "orientation": "horizontal",
+          "branch_piece": false
+        },
+        "width": 150,
+        "height": 70,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 384.19233781951993,
+          "y": -243.36756636883104
+        },
+        "dragging": false
+      },
+      {
+        "id": "65_1c11f932-e239-4bc7-9d75-77516369c959",
+        "type": "CustomNode",
+        "position": {
+          "x": 694.7927160042059,
+          "y": -228.25311857539424
+        },
+        "data": {
+          "name": "StarAtlasUndockPiece",
+          "style": {
+            "module": "StarAtlasUndockPiece",
+            "label": "Undock",
+            "nodeType": "default",
+            "nodeStyle": {
+              "backgroundColor": "#ebebeb"
+            },
+            "useIcon": true,
+            "iconClassName": "fa-solid:database",
+            "iconStyle": {
+              "cursor": "pointer"
+            }
+          },
+          "validationError": false,
+          "orientation": "horizontal",
+          "branch_piece": false
+        },
+        "width": 150,
+        "height": 70,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 694.7927160042059,
+          "y": -228.25311857539424
+        },
+        "dragging": false
+      },
+      {
+        "id": "52_751c490a-81a8-49ab-b1c0-c182ae90361f",
+        "type": "CustomNode",
+        "position": {
+          "x": 1020.2073528899855,
+          "y": -223.91728273031663
+        },
+        "data": {
+          "name": "StarAtlasSubwarpPiece",
+          "style": {
+            "module": "StarAtlasSubwarpPiece",
+            "label": "Subwarp",
+            "nodeType": "default",
+            "nodeStyle": {
+              "backgroundColor": "#ebebeb"
+            },
+            "useIcon": true,
+            "iconClassName": "fa-solid:database",
+            "iconStyle": {
+              "cursor": "pointer"
+            }
+          },
+          "validationError": false,
+          "orientation": "horizontal",
+          "branch_piece": false
+        },
+        "width": 150,
+        "height": 70,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 1020.2073528899855,
+          "y": -223.91728273031663
+        },
+        "dragging": false
+      },
+      {
+        "id": "319_95655bdb-cbe1-4a65-be8f-6fee7073b8f4",
+        "type": "CustomNode",
+        "position": {
+          "x": -2.577203993519049,
+          "y": 366.5837188898824
+        },
+        "data": {
+          "name": "StarAtlasExitWarpPiece",
+          "style": {
+            "module": "StarAtlasExitWarpPiece",
+            "label": "Exit Warp",
+            "nodeType": "default",
+            "nodeStyle": {
+              "backgroundColor": "#ebebeb"
+            },
+            "useIcon": true,
+            "iconClassName": "fa-solid:database",
+            "iconStyle": {
+              "cursor": "pointer"
+            }
+          },
+          "validationError": false,
+          "orientation": "horizontal",
+          "branch_piece": false
+        },
+        "width": 150,
+        "height": 70,
+        "selected": false,
+        "positionAbsolute": {
+          "x": -2.577203993519049,
+          "y": 366.5837188898824
+        },
+        "dragging": false
+      },
+      {
+        "id": "318_e6d43a64-39bf-4ffd-887a-5e4dd290df06",
+        "type": "CustomNode",
+        "position": {
+          "x": -234.0778305756432,
+          "y": -594.1844739360315
+        },
+        "data": {
+          "name": "StarAtlasStatFutureMovementPiece",
+          "style": {
+            "module": "StarAtlasStatFutureMovementPiece",
+            "label": "Future Stat Move",
+            "nodeType": "default",
+            "nodeStyle": {
+              "backgroundColor": "#ebebeb"
+            },
+            "useIcon": true,
+            "iconClassName": "fa-solid:database",
+            "iconStyle": {
+              "cursor": "pointer"
+            }
+          },
+          "validationError": false,
+          "orientation": "horizontal",
+          "branch_piece": false
+        },
+        "width": 150,
+        "height": 70,
+        "selected": false,
+        "positionAbsolute": {
+          "x": -234.0778305756432,
+          "y": -594.1844739360315
+        },
+        "dragging": false
+      },
+      {
+        "id": "312_3b653d76-2281-4242-8e33-d9d19725463b",
+        "type": "CustomNode",
+        "position": {
+          "x": 222.53138682112228,
+          "y": -592.6327096259192
+        },
+        "data": {
+          "name": "StarAtlasFleetCargoCheckPiece",
+          "style": {
+            "module": "StarAtlasFleetCargoCheckPiece",
+            "label": "Cargo Check",
+            "nodeType": "default",
+            "nodeStyle": {
+              "backgroundColor": "#ebebeb"
+            },
+            "useIcon": true,
+            "iconClassName": "fa-solid:database",
+            "iconStyle": {
+              "cursor": "pointer"
+            }
+          },
+          "validationError": false,
+          "orientation": "horizontal",
+          "branch_piece": true
+        },
+        "width": 150,
+        "height": 70,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 222.53138682112228,
+          "y": -592.6327096259192
+        },
+        "dragging": false
+      },
+      {
+        "id": "318_5d129429-0dce-4d44-a709-de2618c40fa9",
+        "type": "CustomNode",
+        "position": {
+          "x": 467.34019076480615,
+          "y": -436.8705132790796
+        },
+        "data": {
+          "name": "StarAtlasStatFutureMovementPiece",
+          "style": {
+            "module": "StarAtlasStatFutureMovementPiece",
+            "label": "Future Stat Move",
+            "nodeType": "default",
+            "nodeStyle": {
+              "backgroundColor": "#ebebeb"
+            },
+            "useIcon": true,
+            "iconClassName": "fa-solid:database",
+            "iconStyle": {
+              "cursor": "pointer"
+            }
+          },
+          "validationError": false,
+          "orientation": "horizontal",
+          "branch_piece": false
+        },
+        "width": 150,
+        "height": 70,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 467.34019076480615,
+          "y": -436.8705132790796
+        },
+        "dragging": false
+      },
+      {
+        "id": "296_9dd1d976-5d5d-42a2-a4aa-84e4b22fa09f",
+        "type": "CustomNode",
+        "position": {
+          "x": 982.3306866102354,
+          "y": -444.5673987357951
+        },
+        "data": {
+          "name": "StarAtlasLoadFuelPiece",
+          "style": {
+            "module": "StarAtlasLoadFuelPiece",
+            "label": "Load Fuel",
+            "nodeType": "default",
+            "nodeStyle": {
+              "backgroundColor": "#ebebeb"
+            },
+            "useIcon": true,
+            "iconClassName": "fa-solid:database",
+            "iconStyle": {
+              "cursor": "pointer"
+            }
+          },
+          "validationError": false,
+          "orientation": "horizontal",
+          "branch_piece": false
+        },
+        "width": 150,
+        "height": 70,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 982.3306866102354,
+          "y": -444.5673987357951
+        },
+        "dragging": false
+      },
+      {
+        "id": "326_3fbc3b40-f250-4761-b34d-ef1f6468272a",
+        "type": "CustomNode",
+        "position": {
+          "x": -23.644202905640157,
+          "y": -611.9321359463893
+        },
+        "data": {
+          "name": "MathArithmeticPiece",
+          "style": {
+            "module": "MathArithmeticPiece",
+            "label": "Math Logic",
+            "nodeType": "default",
+            "nodeStyle": {
+              "backgroundColor": "#ebebeb"
+            },
+            "useIcon": true,
+            "iconClassName": "fa-solid:file-alt",
+            "iconStyle": {
+              "cursor": "pointer"
+            }
+          },
+          "validationError": false,
+          "orientation": "horizontal",
+          "branch_piece": false
+        },
+        "width": 150,
+        "height": 70,
+        "selected": false,
+        "positionAbsolute": {
+          "x": -23.644202905640157,
+          "y": -611.9321359463893
+        },
+        "dragging": false
+      },
+      {
+        "id": "434_c304f213-d9ab-4d7e-b0d2-2c692cc7ac1b",
+        "type": "CustomNode",
+        "position": {
+          "x": 1269.7256581109093,
+          "y": -457.2900873465845
+        },
+        "data": {
+          "name": "StarAtlasUndockPiece",
+          "style": {
+            "module": "StarAtlasUndockPiece",
+            "label": "Undock",
+            "nodeType": "default",
+            "nodeStyle": {
+              "backgroundColor": "#ebebeb"
+            },
+            "useIcon": true,
+            "iconClassName": "fa-solid:database",
+            "iconStyle": {
+              "cursor": "pointer"
+            }
+          },
+          "validationError": false,
+          "orientation": "horizontal",
+          "branch_piece": false
+        },
+        "width": 150,
+        "height": 70,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 1269.7256581109093,
+          "y": -457.2900873465845
+        },
+        "dragging": false
+      },
+      {
+        "id": "415_c946cbfe-bc26-43d1-8161-94b5c1d6e757",
+        "type": "CustomNode",
+        "position": {
+          "x": 707.3909359298008,
+          "y": -426.04926944763395
+        },
+        "data": {
+          "name": "MathArithmeticPiece",
+          "style": {
+            "module": "MathArithmeticPiece",
+            "label": "Math Logic",
+            "nodeType": "default",
+            "nodeStyle": {
+              "backgroundColor": "#ebebeb"
+            },
+            "useIcon": true,
+            "iconClassName": "fa-solid:file-alt",
+            "iconStyle": {
+              "cursor": "pointer"
+            }
+          },
+          "validationError": false,
+          "orientation": "horizontal",
+          "branch_piece": false
+        },
+        "width": 150,
+        "height": 70,
+        "selected": false,
+        "positionAbsolute": {
+          "x": 707.3909359298008,
+          "y": -426.04926944763395
+        },
+        "dragging": false
+      }
+    ],
+    "workflowEdges": [
+      {
+        "source": "53_85209645-015f-4bbd-9d79-f9b51d3fac53",
+        "sourceHandle": "source-53_85209645-015f-4bbd-9d79-f9b51d3fac53",
+        "target": "59_6340664b-b1bf-4d05-bf7e-f6e7a3f2f623",
+        "targetHandle": "target-59_6340664b-b1bf-4d05-bf7e-f6e7a3f2f623",
+        "id": "reactflow__edge-53_85209645-015f-4bbd-9d79-f9b51d3fac53source-53_85209645-015f-4bbd-9d79-f9b51d3fac53-59_6340664b-b1bf-4d05-bf7e-f6e7a3f2f623target-59_6340664b-b1bf-4d05-bf7e-f6e7a3f2f623",
+        "markerEnd": {
+          "type": "arrowclosed",
+          "width": 20,
+          "height": 20
+        },
+        "selected": false
+      },
+      {
+        "source": "53_85209645-015f-4bbd-9d79-f9b51d3fac53",
+        "sourceHandle": "source-else-53_85209645-015f-4bbd-9d79-f9b51d3fac53",
+        "target": "53_95e373a3-64b7-489d-bf5c-2ddaa10fa051",
+        "targetHandle": "target-53_95e373a3-64b7-489d-bf5c-2ddaa10fa051",
+        "id": "reactflow__edge-53_85209645-015f-4bbd-9d79-f9b51d3fac53source-else-53_85209645-015f-4bbd-9d79-f9b51d3fac53-53_95e373a3-64b7-489d-bf5c-2ddaa10fa051target-53_95e373a3-64b7-489d-bf5c-2ddaa10fa051",
+        "markerEnd": {
+          "type": "arrowclosed",
+          "width": 20,
+          "height": 20
+        }
+      },
+      {
+        "source": "53_d071d22c-9f76-4ca2-86dd-602c20d60176",
+        "sourceHandle": "source-else-53_d071d22c-9f76-4ca2-86dd-602c20d60176",
+        "target": "53_b0e82d8c-c69e-4c61-8ee8-1139e03d77bd",
+        "targetHandle": "target-53_b0e82d8c-c69e-4c61-8ee8-1139e03d77bd",
+        "id": "reactflow__edge-53_d071d22c-9f76-4ca2-86dd-602c20d60176source-else-53_d071d22c-9f76-4ca2-86dd-602c20d60176-53_b0e82d8c-c69e-4c61-8ee8-1139e03d77bdtarget-53_b0e82d8c-c69e-4c61-8ee8-1139e03d77bd",
+        "markerEnd": {
+          "type": "arrowclosed",
+          "width": 20,
+          "height": 20
+        }
+      },
+      {
+        "source": "59_6340664b-b1bf-4d05-bf7e-f6e7a3f2f623",
+        "sourceHandle": "source-59_6340664b-b1bf-4d05-bf7e-f6e7a3f2f623",
+        "target": "66_8ed70df0-84ff-4f1e-977c-6da346358dc0",
+        "targetHandle": "target-66_8ed70df0-84ff-4f1e-977c-6da346358dc0",
+        "id": "reactflow__edge-59_6340664b-b1bf-4d05-bf7e-f6e7a3f2f623source-59_6340664b-b1bf-4d05-bf7e-f6e7a3f2f623-66_8ed70df0-84ff-4f1e-977c-6da346358dc0target-66_8ed70df0-84ff-4f1e-977c-6da346358dc0",
+        "markerEnd": {
+          "type": "arrowclosed",
+          "width": 20,
+          "height": 20
+        }
+      },
+      {
+        "source": "54_6d19e4d5-9bb0-4f92-b28a-1b6e0c07a127",
+        "sourceHandle": "source-54_6d19e4d5-9bb0-4f92-b28a-1b6e0c07a127",
+        "target": "65_e53e6c37-4921-4ae9-82ac-f268fc2126be",
+        "targetHandle": "target-65_e53e6c37-4921-4ae9-82ac-f268fc2126be",
+        "id": "reactflow__edge-54_6d19e4d5-9bb0-4f92-b28a-1b6e0c07a127source-54_6d19e4d5-9bb0-4f92-b28a-1b6e0c07a127-65_e53e6c37-4921-4ae9-82ac-f268fc2126betarget-65_e53e6c37-4921-4ae9-82ac-f268fc2126be",
+        "markerEnd": {
+          "type": "arrowclosed",
+          "width": 20,
+          "height": 20
+        }
+      },
+      {
+        "source": "65_e53e6c37-4921-4ae9-82ac-f268fc2126be",
+        "sourceHandle": "source-65_e53e6c37-4921-4ae9-82ac-f268fc2126be",
+        "target": "52_0896a285-36e1-4101-894f-90c62ce23c6e",
+        "targetHandle": "target-52_0896a285-36e1-4101-894f-90c62ce23c6e",
+        "id": "reactflow__edge-65_e53e6c37-4921-4ae9-82ac-f268fc2126besource-65_e53e6c37-4921-4ae9-82ac-f268fc2126be-52_0896a285-36e1-4101-894f-90c62ce23c6etarget-52_0896a285-36e1-4101-894f-90c62ce23c6e",
+        "markerEnd": {
+          "type": "arrowclosed",
+          "width": 20,
+          "height": 20
+        }
+      },
+      {
+        "source": "53_d071d22c-9f76-4ca2-86dd-602c20d60176",
+        "sourceHandle": "source-53_d071d22c-9f76-4ca2-86dd-602c20d60176",
+        "target": "63_82efbeb7-e08d-4857-a1e8-128126decafd",
+        "targetHandle": "target-63_82efbeb7-e08d-4857-a1e8-128126decafd",
+        "id": "reactflow__edge-53_d071d22c-9f76-4ca2-86dd-602c20d60176source-53_d071d22c-9f76-4ca2-86dd-602c20d60176-63_82efbeb7-e08d-4857-a1e8-128126decafdtarget-63_82efbeb7-e08d-4857-a1e8-128126decafd",
+        "markerEnd": {
+          "type": "arrowclosed",
+          "width": 20,
+          "height": 20
+        }
+      },
+      {
+        "source": "53_b0e82d8c-c69e-4c61-8ee8-1139e03d77bd",
+        "sourceHandle": "source-53_b0e82d8c-c69e-4c61-8ee8-1139e03d77bd",
+        "target": "63_b8bfda81-d890-43c6-839c-e5b2579c7d9c",
+        "targetHandle": "target-63_b8bfda81-d890-43c6-839c-e5b2579c7d9c",
+        "id": "reactflow__edge-53_b0e82d8c-c69e-4c61-8ee8-1139e03d77bdsource-53_b0e82d8c-c69e-4c61-8ee8-1139e03d77bd-63_b8bfda81-d890-43c6-839c-e5b2579c7d9ctarget-63_b8bfda81-d890-43c6-839c-e5b2579c7d9c",
+        "markerEnd": {
+          "type": "arrowclosed",
+          "width": 20,
+          "height": 20
+        }
+      },
+      {
+        "source": "53_95e373a3-64b7-489d-bf5c-2ddaa10fa051",
+        "sourceHandle": "source-53_95e373a3-64b7-489d-bf5c-2ddaa10fa051",
+        "target": "59_e59b7666-9d63-45f4-84dc-4ad60675a5f9",
+        "targetHandle": "target-59_e59b7666-9d63-45f4-84dc-4ad60675a5f9",
+        "id": "reactflow__edge-53_95e373a3-64b7-489d-bf5c-2ddaa10fa051source-53_95e373a3-64b7-489d-bf5c-2ddaa10fa051-59_e59b7666-9d63-45f4-84dc-4ad60675a5f9target-59_e59b7666-9d63-45f4-84dc-4ad60675a5f9",
+        "markerEnd": {
+          "type": "arrowclosed",
+          "width": 20,
+          "height": 20
+        }
+      },
+      {
+        "source": "59_e59b7666-9d63-45f4-84dc-4ad60675a5f9",
+        "sourceHandle": "source-59_e59b7666-9d63-45f4-84dc-4ad60675a5f9",
+        "target": "65_844d40fa-22e2-43da-8ee9-8d75fbf49086",
+        "targetHandle": "target-65_844d40fa-22e2-43da-8ee9-8d75fbf49086",
+        "id": "reactflow__edge-59_e59b7666-9d63-45f4-84dc-4ad60675a5f9source-59_e59b7666-9d63-45f4-84dc-4ad60675a5f9-65_844d40fa-22e2-43da-8ee9-8d75fbf49086target-65_844d40fa-22e2-43da-8ee9-8d75fbf49086",
+        "markerEnd": {
+          "type": "arrowclosed",
+          "width": 20,
+          "height": 20
+        }
+      },
+      {
+        "source": "59_e59b7666-9d63-45f4-84dc-4ad60675a5f9",
+        "sourceHandle": "source-else-59_e59b7666-9d63-45f4-84dc-4ad60675a5f9",
+        "target": "65_1772e6c0-d5d3-41d9-984c-97d981220a25",
+        "targetHandle": "target-65_1772e6c0-d5d3-41d9-984c-97d981220a25",
+        "id": "reactflow__edge-59_e59b7666-9d63-45f4-84dc-4ad60675a5f9source-else-59_e59b7666-9d63-45f4-84dc-4ad60675a5f9-65_1772e6c0-d5d3-41d9-984c-97d981220a25target-65_1772e6c0-d5d3-41d9-984c-97d981220a25",
+        "markerEnd": {
+          "type": "arrowclosed",
+          "width": 20,
+          "height": 20
+        }
+      },
+      {
+        "source": "59_6340664b-b1bf-4d05-bf7e-f6e7a3f2f623",
+        "sourceHandle": "source-else-59_6340664b-b1bf-4d05-bf7e-f6e7a3f2f623",
+        "target": "66_8afa2fa3-ad8e-45a7-93a7-92273874314a",
+        "targetHandle": "target-66_8afa2fa3-ad8e-45a7-93a7-92273874314a",
+        "id": "reactflow__edge-59_6340664b-b1bf-4d05-bf7e-f6e7a3f2f623source-else-59_6340664b-b1bf-4d05-bf7e-f6e7a3f2f623-66_8afa2fa3-ad8e-45a7-93a7-92273874314atarget-66_8afa2fa3-ad8e-45a7-93a7-92273874314a",
+        "markerEnd": {
+          "type": "arrowclosed",
+          "width": 20,
+          "height": 20
+        }
+      },
+      {
+        "source": "66_8afa2fa3-ad8e-45a7-93a7-92273874314a",
+        "sourceHandle": "source-66_8afa2fa3-ad8e-45a7-93a7-92273874314a",
+        "target": "55_d3531b3a-1b9c-4a3f-978e-b825b72514df",
+        "targetHandle": "target-55_d3531b3a-1b9c-4a3f-978e-b825b72514df",
+        "id": "reactflow__edge-66_8afa2fa3-ad8e-45a7-93a7-92273874314asource-66_8afa2fa3-ad8e-45a7-93a7-92273874314a-55_d3531b3a-1b9c-4a3f-978e-b825b72514dftarget-55_d3531b3a-1b9c-4a3f-978e-b825b72514df",
+        "markerEnd": {
+          "type": "arrowclosed",
+          "width": 20,
+          "height": 20
+        }
+      },
+      {
+        "source": "55_d3531b3a-1b9c-4a3f-978e-b825b72514df",
+        "sourceHandle": "source-55_d3531b3a-1b9c-4a3f-978e-b825b72514df",
+        "target": "65_1c11f932-e239-4bc7-9d75-77516369c959",
+        "targetHandle": "target-65_1c11f932-e239-4bc7-9d75-77516369c959",
+        "id": "reactflow__edge-55_d3531b3a-1b9c-4a3f-978e-b825b72514dfsource-55_d3531b3a-1b9c-4a3f-978e-b825b72514df-65_1c11f932-e239-4bc7-9d75-77516369c959target-65_1c11f932-e239-4bc7-9d75-77516369c959",
+        "markerEnd": {
+          "type": "arrowclosed",
+          "width": 20,
+          "height": 20
+        }
+      },
+      {
+        "source": "65_1c11f932-e239-4bc7-9d75-77516369c959",
+        "sourceHandle": "source-65_1c11f932-e239-4bc7-9d75-77516369c959",
+        "target": "52_751c490a-81a8-49ab-b1c0-c182ae90361f",
+        "targetHandle": "target-52_751c490a-81a8-49ab-b1c0-c182ae90361f",
+        "id": "reactflow__edge-65_1c11f932-e239-4bc7-9d75-77516369c959source-65_1c11f932-e239-4bc7-9d75-77516369c959-52_751c490a-81a8-49ab-b1c0-c182ae90361ftarget-52_751c490a-81a8-49ab-b1c0-c182ae90361f",
+        "markerEnd": {
+          "type": "arrowclosed",
+          "width": 20,
+          "height": 20
+        }
+      },
+      {
+        "source": "53_95e373a3-64b7-489d-bf5c-2ddaa10fa051",
+        "sourceHandle": "source-else-53_95e373a3-64b7-489d-bf5c-2ddaa10fa051",
+        "target": "53_f135bc5d-97d6-40bf-a686-aaf50b744b5f",
+        "targetHandle": "target-53_f135bc5d-97d6-40bf-a686-aaf50b744b5f",
+        "id": "reactflow__edge-53_95e373a3-64b7-489d-bf5c-2ddaa10fa051source-else-53_95e373a3-64b7-489d-bf5c-2ddaa10fa051-53_f135bc5d-97d6-40bf-a686-aaf50b744b5ftarget-53_f135bc5d-97d6-40bf-a686-aaf50b744b5f",
+        "markerEnd": {
+          "type": "arrowclosed",
+          "width": 20,
+          "height": 20
+        }
+      },
+      {
+        "source": "53_f135bc5d-97d6-40bf-a686-aaf50b744b5f",
+        "sourceHandle": "source-else-53_f135bc5d-97d6-40bf-a686-aaf50b744b5f",
+        "target": "53_e7bb3e85-ef6c-4aa9-9f6c-17e91b26a0d5",
+        "targetHandle": "target-53_e7bb3e85-ef6c-4aa9-9f6c-17e91b26a0d5",
+        "id": "reactflow__edge-53_f135bc5d-97d6-40bf-a686-aaf50b744b5fsource-else-53_f135bc5d-97d6-40bf-a686-aaf50b744b5f-53_e7bb3e85-ef6c-4aa9-9f6c-17e91b26a0d5target-53_e7bb3e85-ef6c-4aa9-9f6c-17e91b26a0d5",
+        "markerEnd": {
+          "type": "arrowclosed",
+          "width": 20,
+          "height": 20
+        }
+      },
+      {
+        "source": "53_e7bb3e85-ef6c-4aa9-9f6c-17e91b26a0d5",
+        "sourceHandle": "source-53_e7bb3e85-ef6c-4aa9-9f6c-17e91b26a0d5",
+        "target": "63_814377e9-4b02-40a4-9f1d-67511bc15a92",
+        "targetHandle": "target-63_814377e9-4b02-40a4-9f1d-67511bc15a92",
+        "id": "reactflow__edge-53_e7bb3e85-ef6c-4aa9-9f6c-17e91b26a0d5source-53_e7bb3e85-ef6c-4aa9-9f6c-17e91b26a0d5-63_814377e9-4b02-40a4-9f1d-67511bc15a92target-63_814377e9-4b02-40a4-9f1d-67511bc15a92",
+        "markerEnd": {
+          "type": "arrowclosed",
+          "width": 20,
+          "height": 20
+        }
+      },
+      {
+        "source": "53_e7bb3e85-ef6c-4aa9-9f6c-17e91b26a0d5",
+        "sourceHandle": "source-else-53_e7bb3e85-ef6c-4aa9-9f6c-17e91b26a0d5",
+        "target": "53_d071d22c-9f76-4ca2-86dd-602c20d60176",
+        "targetHandle": "target-53_d071d22c-9f76-4ca2-86dd-602c20d60176",
+        "id": "reactflow__edge-53_e7bb3e85-ef6c-4aa9-9f6c-17e91b26a0d5source-else-53_e7bb3e85-ef6c-4aa9-9f6c-17e91b26a0d5-53_d071d22c-9f76-4ca2-86dd-602c20d60176target-53_d071d22c-9f76-4ca2-86dd-602c20d60176",
+        "markerEnd": {
+          "type": "arrowclosed",
+          "width": 20,
+          "height": 20
+        }
+      },
+      {
+        "source": "53_f135bc5d-97d6-40bf-a686-aaf50b744b5f",
+        "sourceHandle": "source-53_f135bc5d-97d6-40bf-a686-aaf50b744b5f",
+        "target": "319_95655bdb-cbe1-4a65-be8f-6fee7073b8f4",
+        "targetHandle": "target-319_95655bdb-cbe1-4a65-be8f-6fee7073b8f4",
+        "id": "reactflow__edge-53_f135bc5d-97d6-40bf-a686-aaf50b744b5fsource-53_f135bc5d-97d6-40bf-a686-aaf50b744b5f-319_95655bdb-cbe1-4a65-be8f-6fee7073b8f4target-319_95655bdb-cbe1-4a65-be8f-6fee7073b8f4",
+        "markerEnd": {
+          "type": "arrowclosed",
+          "width": 20,
+          "height": 20
+        }
+      },
+      {
+        "source": "66_8ed70df0-84ff-4f1e-977c-6da346358dc0",
+        "sourceHandle": "source-66_8ed70df0-84ff-4f1e-977c-6da346358dc0",
+        "target": "318_e6d43a64-39bf-4ffd-887a-5e4dd290df06",
+        "targetHandle": "target-318_e6d43a64-39bf-4ffd-887a-5e4dd290df06",
+        "id": "reactflow__edge-66_8ed70df0-84ff-4f1e-977c-6da346358dc0source-66_8ed70df0-84ff-4f1e-977c-6da346358dc0-318_e6d43a64-39bf-4ffd-887a-5e4dd290df06target-318_e6d43a64-39bf-4ffd-887a-5e4dd290df06",
+        "markerEnd": {
+          "type": "arrowclosed",
+          "width": 20,
+          "height": 20
+        }
+      },
+      {
+        "source": "312_3b653d76-2281-4242-8e33-d9d19725463b",
+        "sourceHandle": "source-312_3b653d76-2281-4242-8e33-d9d19725463b",
+        "target": "54_6d19e4d5-9bb0-4f92-b28a-1b6e0c07a127",
+        "targetHandle": "target-54_6d19e4d5-9bb0-4f92-b28a-1b6e0c07a127",
+        "id": "reactflow__edge-312_3b653d76-2281-4242-8e33-d9d19725463bsource-312_3b653d76-2281-4242-8e33-d9d19725463b-54_6d19e4d5-9bb0-4f92-b28a-1b6e0c07a127target-54_6d19e4d5-9bb0-4f92-b28a-1b6e0c07a127",
+        "markerEnd": {
+          "type": "arrowclosed",
+          "width": 20,
+          "height": 20
+        }
+      },
+      {
+        "source": "312_3b653d76-2281-4242-8e33-d9d19725463b",
+        "sourceHandle": "source-else-312_3b653d76-2281-4242-8e33-d9d19725463b",
+        "target": "318_5d129429-0dce-4d44-a709-de2618c40fa9",
+        "targetHandle": "target-318_5d129429-0dce-4d44-a709-de2618c40fa9",
+        "id": "reactflow__edge-312_3b653d76-2281-4242-8e33-d9d19725463bsource-else-312_3b653d76-2281-4242-8e33-d9d19725463b-318_5d129429-0dce-4d44-a709-de2618c40fa9target-318_5d129429-0dce-4d44-a709-de2618c40fa9",
+        "markerEnd": {
+          "type": "arrowclosed",
+          "width": 20,
+          "height": 20
+        }
+      },
+      {
+        "source": "318_e6d43a64-39bf-4ffd-887a-5e4dd290df06",
+        "sourceHandle": "source-318_e6d43a64-39bf-4ffd-887a-5e4dd290df06",
+        "target": "326_3fbc3b40-f250-4761-b34d-ef1f6468272a",
+        "targetHandle": "target-326_3fbc3b40-f250-4761-b34d-ef1f6468272a",
+        "id": "reactflow__edge-318_e6d43a64-39bf-4ffd-887a-5e4dd290df06source-318_e6d43a64-39bf-4ffd-887a-5e4dd290df06-326_3fbc3b40-f250-4761-b34d-ef1f6468272atarget-326_3fbc3b40-f250-4761-b34d-ef1f6468272a",
+        "markerEnd": {
+          "type": "arrowclosed",
+          "width": 20,
+          "height": 20
+        }
+      },
+      {
+        "source": "326_3fbc3b40-f250-4761-b34d-ef1f6468272a",
+        "sourceHandle": "source-326_3fbc3b40-f250-4761-b34d-ef1f6468272a",
+        "target": "312_3b653d76-2281-4242-8e33-d9d19725463b",
+        "targetHandle": "target-312_3b653d76-2281-4242-8e33-d9d19725463b",
+        "id": "reactflow__edge-326_3fbc3b40-f250-4761-b34d-ef1f6468272asource-326_3fbc3b40-f250-4761-b34d-ef1f6468272a-312_3b653d76-2281-4242-8e33-d9d19725463btarget-312_3b653d76-2281-4242-8e33-d9d19725463b",
+        "markerEnd": {
+          "type": "arrowclosed",
+          "width": 20,
+          "height": 20
+        }
+      },
+      {
+        "source": "296_9dd1d976-5d5d-42a2-a4aa-84e4b22fa09f",
+        "sourceHandle": "source-296_9dd1d976-5d5d-42a2-a4aa-84e4b22fa09f",
+        "target": "434_c304f213-d9ab-4d7e-b0d2-2c692cc7ac1b",
+        "targetHandle": "target-434_c304f213-d9ab-4d7e-b0d2-2c692cc7ac1b",
+        "id": "reactflow__edge-296_9dd1d976-5d5d-42a2-a4aa-84e4b22fa09fsource-296_9dd1d976-5d5d-42a2-a4aa-84e4b22fa09f-434_c304f213-d9ab-4d7e-b0d2-2c692cc7ac1btarget-434_c304f213-d9ab-4d7e-b0d2-2c692cc7ac1b",
+        "markerEnd": {
+          "type": "arrowclosed",
+          "width": 20,
+          "height": 20
+        }
+      },
+      {
+        "source": "318_5d129429-0dce-4d44-a709-de2618c40fa9",
+        "sourceHandle": "source-318_5d129429-0dce-4d44-a709-de2618c40fa9",
+        "target": "415_c946cbfe-bc26-43d1-8161-94b5c1d6e757",
+        "targetHandle": "target-415_c946cbfe-bc26-43d1-8161-94b5c1d6e757",
+        "id": "reactflow__edge-318_5d129429-0dce-4d44-a709-de2618c40fa9source-318_5d129429-0dce-4d44-a709-de2618c40fa9-415_c946cbfe-bc26-43d1-8161-94b5c1d6e757target-415_c946cbfe-bc26-43d1-8161-94b5c1d6e757",
+        "markerEnd": {
+          "type": "arrowclosed",
+          "width": 20,
+          "height": 20
+        }
+      },
+      {
+        "source": "415_c946cbfe-bc26-43d1-8161-94b5c1d6e757",
+        "sourceHandle": "source-415_c946cbfe-bc26-43d1-8161-94b5c1d6e757",
+        "target": "296_9dd1d976-5d5d-42a2-a4aa-84e4b22fa09f",
+        "targetHandle": "target-296_9dd1d976-5d5d-42a2-a4aa-84e4b22fa09f",
+        "id": "reactflow__edge-415_c946cbfe-bc26-43d1-8161-94b5c1d6e757source-415_c946cbfe-bc26-43d1-8161-94b5c1d6e757-296_9dd1d976-5d5d-42a2-a4aa-84e4b22fa09ftarget-296_9dd1d976-5d5d-42a2-a4aa-84e4b22fa09f",
+        "markerEnd": {
+          "type": "arrowclosed",
+          "width": 20,
+          "height": 20
+        }
+      }
+    ]
+  }

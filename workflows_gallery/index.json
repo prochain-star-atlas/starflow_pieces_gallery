@@ -1,0 +1,10 @@
+[
+  {
+    "title": "Star Atlas Transport Resources",
+    "description":
+      "Transport Resources between two planets with fuel calculation",
+    "jsonFile": "staratlas_transport_resources.json",
+    "levelTag": "Advanced",
+    "availableOnDemo": true
+  }
+]

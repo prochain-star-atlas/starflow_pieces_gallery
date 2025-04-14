@@ -1,0 +1,46 @@
+name: Update gallery JSON file
+on:
+  push:
+    branches:
+      - '*'
+    paths:
+      - repositories.json
+
+  pull_request:
+    branches:
+      - '*'
+
+jobs:
+  gallery:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run gallery_generator.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python src/gallery_generator.py
+
+      - name: Commit files
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          GIT_STATUS=$(git status -s)
+          [[ ! -z "$GIT_STATUS" ]] && git add gallery.json && git commit -m "auto-generate-gallery" -a || echo "No changes to commit"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          branch: ${{ github.head_ref }}
