@@ -4720,14 +4720,14 @@
 					"upstreamId": "",
 					"upstreamArgument": "",
 					"upstreamValue": "",
-					"value": 0
+					"value": -40
 				},
 				"destination_y": {
 					"fromUpstream": false,
 					"upstreamId": "",
 					"upstreamArgument": "",
 					"upstreamValue": "",
-					"value": 0
+					"value": 30
 				}
 			}
 		}
@@ -4839,7 +4839,7 @@
 		"type": "CustomNode",
 		"position": {
 			"x": -402.5706503207237,
-			"y": 396.02052781430723
+			"y": 394.22627582248344
 		},
 		"data": {
 			"name": "StarAtlasFleetStatusCheckPiece",
@@ -4865,7 +4865,7 @@
 		"selected": false,
 		"positionAbsolute": {
 			"x": -402.5706503207237,
-			"y": 396.02052781430723
+			"y": 394.22627582248344
 		},
 		"dragging": false
 	}, {
@@ -5348,8 +5348,8 @@
 		"id": "474_bfc33337-87aa-43c8-b636-75ca5affef1b",
 		"type": "CustomNode",
 		"position": {
-			"x": -55.75108575733137,
-			"y": -515.5452188132356
+			"x": -59.33958974097877,
+			"y": -519.133722796883
 		},
 		"data": {
 			"name": "StarAtlasStatFutureMiningPiece",
@@ -5374,8 +5374,8 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": -55.75108575733137,
-			"y": -515.5452188132356
+			"x": -59.33958974097877,
+			"y": -519.133722796883
 		},
 		"dragging": false
 	}, {
@@ -5791,7 +5791,7 @@
 		"type": "CustomNode",
 		"position": {
 			"x": -375.8362292192195,
-			"y": -736.1628988950436
+			"y": -737.9571508868673
 		},
 		"data": {
 			"name": "StarAtlasUnloadCargoPiece",
@@ -5817,7 +5817,7 @@
 		"selected": false,
 		"positionAbsolute": {
 			"x": -375.8362292192195,
-			"y": -736.1628988950436
+			"y": -737.9571508868673
 		},
 		"dragging": false
 	}],
