@@ -1,0 +1,6211 @@
+{
+	"workflowPieces": {
+		"53_85209645-015f-4bbd-9d79-f9b51d3fac53": {
+			"id": 53,
+			"name": "StarAtlasFleetStatusCheckPiece",
+			"description": "Check StarAtlas Status of Fleet",
+			"dependency": {
+				"dockerfile": "Dockerfile_1",
+				"requirements_file": null
+			},
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.38-group0",
+			"input_schema": {
+				"$defs": {
+					"FleetStatusEnum": {
+						"enum": ["StarbaseLoadingBay", "ReadyToExitWarp", "MineAsteroid", "MoveWarp", "MoveSubwarp", "Respawn", "StarbaseUpgrade", "Idle"],
+						"title": "FleetStatusEnum",
+						"type": "string"
+					}
+				},
+				"description": "StarAtlas Dock Piece Input Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"required_status": {
+						"allOf": [{
+							"$ref": "#/$defs/FleetStatusEnum"
+						}],
+						"default": "",
+						"description": "Fleet Status Required"
+					}
+				},
+				"title": "StarAtlasFleetStatusCheckPiece",
+				"type": "object"
+			},
+			"output_schema": {
+				"description": "Branch Piece Output Model",
+				"properties": {
+					"branch_main": {
+						"default": true,
+						"description": "Main branch selected",
+						"title": "Branch Main",
+						"type": "boolean"
+					}
+				},
+				"title": "BaseBranchOutputModel",
+				"type": "object"
+			},
+			"secrets_schema": null,
+			"container_resources": {
+				"requests": {
+					"cpu": 100,
+					"memory": 128
+				},
+				"limits": {
+					"cpu": 500,
+					"memory": 512
+				},
+				"use_gpu": false
+			},
+			"tags": ["Star Atlas"],
+			"style": {
+				"module": "StarAtlasFleetStatusCheckPiece",
+				"label": "Status Check",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasFleetStatusCheckPiece",
+			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+			"repository_id": 7,
+			"branch_piece": true
+		},
+		"59_6340664b-b1bf-4d05-bf7e-f6e7a3f2f623": {
+			"id": 59,
+			"name": "StarAtlasFleetLocationCheckPiece",
+			"description": "Check Star Atlas Location of Fleet",
+			"dependency": {
+				"dockerfile": "Dockerfile_1",
+				"requirements_file": null
+			},
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.38-group0",
+			"input_schema": {
+				"description": "StarAtlas Dock Piece Input Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"destination_x": {
+						"default": 0,
+						"description": "Coordinate X target starbase",
+						"title": "Destination X",
+						"type": "integer"
+					},
+					"destination_y": {
+						"default": 0,
+						"description": "Coordinate Y target starbase",
+						"title": "Destination Y",
+						"type": "integer"
+					}
+				},
+				"title": "StarAtlasFleetLocationCheckPiece",
+				"type": "object"
+			},
+			"output_schema": {
+				"description": "Branch Piece Output Model",
+				"properties": {
+					"branch_main": {
+						"default": true,
+						"description": "Main branch selected",
+						"title": "Branch Main",
+						"type": "boolean"
+					}
+				},
+				"title": "BaseBranchOutputModel",
+				"type": "object"
+			},
+			"secrets_schema": null,
+			"container_resources": {
+				"requests": {
+					"cpu": 100,
+					"memory": 128
+				},
+				"limits": {
+					"cpu": 500,
+					"memory": 512
+				},
+				"use_gpu": false
+			},
+			"tags": ["Star Atlas"],
+			"style": {
+				"module": "StarAtlasFleetLocationCheckPiece",
+				"label": "Location Check",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasFleetLocationCheckPiece",
+			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+			"repository_id": 7,
+			"branch_piece": true
+		},
+		"53_95e373a3-64b7-489d-bf5c-2ddaa10fa051": {
+			"id": 53,
+			"name": "StarAtlasFleetStatusCheckPiece",
+			"description": "Check StarAtlas Status of Fleet",
+			"dependency": {
+				"dockerfile": "Dockerfile_1",
+				"requirements_file": null
+			},
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.38-group0",
+			"input_schema": {
+				"$defs": {
+					"FleetStatusEnum": {
+						"enum": ["StarbaseLoadingBay", "ReadyToExitWarp", "MineAsteroid", "MoveWarp", "MoveSubwarp", "Respawn", "StarbaseUpgrade", "Idle"],
+						"title": "FleetStatusEnum",
+						"type": "string"
+					}
+				},
+				"description": "StarAtlas Dock Piece Input Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"required_status": {
+						"allOf": [{
+							"$ref": "#/$defs/FleetStatusEnum"
+						}],
+						"default": "",
+						"description": "Fleet Status Required"
+					}
+				},
+				"title": "StarAtlasFleetStatusCheckPiece",
+				"type": "object"
+			},
+			"output_schema": {
+				"description": "Branch Piece Output Model",
+				"properties": {
+					"branch_main": {
+						"default": true,
+						"description": "Main branch selected",
+						"title": "Branch Main",
+						"type": "boolean"
+					}
+				},
+				"title": "BaseBranchOutputModel",
+				"type": "object"
+			},
+			"secrets_schema": null,
+			"container_resources": {
+				"requests": {
+					"cpu": 100,
+					"memory": 128
+				},
+				"limits": {
+					"cpu": 500,
+					"memory": 512
+				},
+				"use_gpu": false
+			},
+			"tags": ["Star Atlas"],
+			"style": {
+				"module": "StarAtlasFleetStatusCheckPiece",
+				"label": "Status Check",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasFleetStatusCheckPiece",
+			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+			"repository_id": 7,
+			"branch_piece": true
+		},
+		"53_e7bb3e85-ef6c-4aa9-9f6c-17e91b26a0d5": {
+			"id": 53,
+			"name": "StarAtlasFleetStatusCheckPiece",
+			"description": "Check StarAtlas Status of Fleet",
+			"dependency": {
+				"dockerfile": "Dockerfile_1",
+				"requirements_file": null
+			},
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.38-group0",
+			"input_schema": {
+				"$defs": {
+					"FleetStatusEnum": {
+						"enum": ["StarbaseLoadingBay", "ReadyToExitWarp", "MineAsteroid", "MoveWarp", "MoveSubwarp", "Respawn", "StarbaseUpgrade", "Idle"],
+						"title": "FleetStatusEnum",
+						"type": "string"
+					}
+				},
+				"description": "StarAtlas Dock Piece Input Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"required_status": {
+						"allOf": [{
+							"$ref": "#/$defs/FleetStatusEnum"
+						}],
+						"default": "",
+						"description": "Fleet Status Required"
+					}
+				},
+				"title": "StarAtlasFleetStatusCheckPiece",
+				"type": "object"
+			},
+			"output_schema": {
+				"description": "Branch Piece Output Model",
+				"properties": {
+					"branch_main": {
+						"default": true,
+						"description": "Main branch selected",
+						"title": "Branch Main",
+						"type": "boolean"
+					}
+				},
+				"title": "BaseBranchOutputModel",
+				"type": "object"
+			},
+			"secrets_schema": null,
+			"container_resources": {
+				"requests": {
+					"cpu": 100,
+					"memory": 128
+				},
+				"limits": {
+					"cpu": 500,
+					"memory": 512
+				},
+				"use_gpu": false
+			},
+			"tags": ["Star Atlas"],
+			"style": {
+				"module": "StarAtlasFleetStatusCheckPiece",
+				"label": "Status Check",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasFleetStatusCheckPiece",
+			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+			"repository_id": 7,
+			"branch_piece": true
+		},
+		"53_f135bc5d-97d6-40bf-a686-aaf50b744b5f": {
+			"id": 53,
+			"name": "StarAtlasFleetStatusCheckPiece",
+			"description": "Check StarAtlas Status of Fleet",
+			"dependency": {
+				"dockerfile": "Dockerfile_1",
+				"requirements_file": null
+			},
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.38-group0",
+			"input_schema": {
+				"$defs": {
+					"FleetStatusEnum": {
+						"enum": ["StarbaseLoadingBay", "ReadyToExitWarp", "MineAsteroid", "MoveWarp", "MoveSubwarp", "Respawn", "StarbaseUpgrade", "Idle"],
+						"title": "FleetStatusEnum",
+						"type": "string"
+					}
+				},
+				"description": "StarAtlas Dock Piece Input Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"required_status": {
+						"allOf": [{
+							"$ref": "#/$defs/FleetStatusEnum"
+						}],
+						"default": "",
+						"description": "Fleet Status Required"
+					}
+				},
+				"title": "StarAtlasFleetStatusCheckPiece",
+				"type": "object"
+			},
+			"output_schema": {
+				"description": "Branch Piece Output Model",
+				"properties": {
+					"branch_main": {
+						"default": true,
+						"description": "Main branch selected",
+						"title": "Branch Main",
+						"type": "boolean"
+					}
+				},
+				"title": "BaseBranchOutputModel",
+				"type": "object"
+			},
+			"secrets_schema": null,
+			"container_resources": {
+				"requests": {
+					"cpu": 100,
+					"memory": 128
+				},
+				"limits": {
+					"cpu": 500,
+					"memory": 512
+				},
+				"use_gpu": false
+			},
+			"tags": ["Star Atlas"],
+			"style": {
+				"module": "StarAtlasFleetStatusCheckPiece",
+				"label": "Status Check",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasFleetStatusCheckPiece",
+			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+			"repository_id": 7,
+			"branch_piece": true
+		},
+		"66_8ed70df0-84ff-4f1e-977c-6da346358dc0": {
+			"id": 66,
+			"name": "StarAtlasDockPiece",
+			"description": "StarAtlas Docking Fleet",
+			"dependency": {
+				"dockerfile": "Dockerfile_1",
+				"requirements_file": null
+			},
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.38-group0",
+			"input_schema": {
+				"description": "StarAtlas Dock Piece Input Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"destination_x": {
+						"default": 0,
+						"description": "Number of seconds to sleep",
+						"title": "Destination X",
+						"type": "integer"
+					},
+					"destination_y": {
+						"default": 0,
+						"description": "Number of seconds to sleep",
+						"title": "Destination Y",
+						"type": "integer"
+					}
+				},
+				"title": "StarAtlasDockPiece",
+				"type": "object"
+			},
+			"output_schema": {
+				"description": "StarAtlas Dock Piece Output Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"destination_x": {
+						"description": "Dock executed on X",
+						"title": "Destination X",
+						"type": "integer"
+					},
+					"destination_y": {
+						"description": "Dock executed on Y",
+						"title": "Destination Y",
+						"type": "integer"
+					}
+				},
+				"required": ["destination_x", "destination_y"],
+				"title": "OutputModel",
+				"type": "object"
+			},
+			"secrets_schema": null,
+			"container_resources": {
+				"requests": {
+					"cpu": 100,
+					"memory": 128
+				},
+				"limits": {
+					"cpu": 500,
+					"memory": 512
+				},
+				"use_gpu": false
+			},
+			"tags": ["Star Atlas"],
+			"style": {
+				"module": "StarAtlasDockPiece",
+				"label": "Dock",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasDockPiece",
+			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+			"repository_id": 7,
+			"branch_piece": false
+		},
+		"65_e53e6c37-4921-4ae9-82ac-f268fc2126be": {
+			"id": 65,
+			"name": "StarAtlasUndockPiece",
+			"description": "StarAtlas Undocking a Fleet",
+			"dependency": {
+				"dockerfile": "Dockerfile_1",
+				"requirements_file": null
+			},
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.38-group0",
+			"input_schema": {
+				"description": "StarAtlas Dock Piece Input Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"destination_x": {
+						"default": 0,
+						"description": "Number of seconds to sleep",
+						"title": "Destination X",
+						"type": "integer"
+					},
+					"destination_y": {
+						"default": 0,
+						"description": "Number of seconds to sleep",
+						"title": "Destination Y",
+						"type": "integer"
+					}
+				},
+				"title": "StarAtlasUndockPiece",
+				"type": "object"
+			},
+			"output_schema": {
+				"description": "StarAtlas Dock Piece Output Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"destination_x": {
+						"description": "Dock executed on X",
+						"title": "Destination X",
+						"type": "integer"
+					},
+					"destination_y": {
+						"description": "Dock executed on Y",
+						"title": "Destination Y",
+						"type": "integer"
+					}
+				},
+				"required": ["destination_x", "destination_y"],
+				"title": "OutputModel",
+				"type": "object"
+			},
+			"secrets_schema": null,
+			"container_resources": {
+				"requests": {
+					"cpu": 100,
+					"memory": 128
+				},
+				"limits": {
+					"cpu": 500,
+					"memory": 512
+				},
+				"use_gpu": false
+			},
+			"tags": ["Star Atlas"],
+			"style": {
+				"module": "StarAtlasUndockPiece",
+				"label": "Undock",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasUndockPiece",
+			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+			"repository_id": 7,
+			"branch_piece": false
+		},
+		"52_0896a285-36e1-4101-894f-90c62ce23c6e": {
+			"id": 52,
+			"name": "StarAtlasSubwarpPiece",
+			"description": "StarAtlas Subwarping a Fleet",
+			"dependency": {
+				"dockerfile": "Dockerfile_1",
+				"requirements_file": null
+			},
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.38-group0",
+			"input_schema": {
+				"description": "StarAtlas Subwarp Piece Input Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"destination_x": {
+						"default": 0,
+						"description": "Subwarp to coordinate X",
+						"title": "Destination X",
+						"type": "integer"
+					},
+					"destination_y": {
+						"default": 0,
+						"description": "Subwarp to coordinate Y",
+						"title": "Destination Y",
+						"type": "integer"
+					}
+				},
+				"title": "StarAtlasSubwarpPiece",
+				"type": "object"
+			},
+			"output_schema": {
+				"description": "StarAtlas Subwarp Piece Output Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"destination_x": {
+						"description": "Subwarped to X",
+						"title": "Destination X",
+						"type": "integer"
+					},
+					"destination_y": {
+						"description": "Subwarped to Y",
+						"title": "Destination Y",
+						"type": "integer"
+					}
+				},
+				"required": ["destination_x", "destination_y"],
+				"title": "OutputModel",
+				"type": "object"
+			},
+			"secrets_schema": null,
+			"container_resources": {
+				"requests": {
+					"cpu": 100,
+					"memory": 128
+				},
+				"limits": {
+					"cpu": 500,
+					"memory": 512
+				},
+				"use_gpu": false
+			},
+			"tags": ["Star Atlas"],
+			"style": {
+				"module": "StarAtlasSubwarpPiece",
+				"label": "Subwarp",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasSubwarpPiece",
+			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+			"repository_id": 7,
+			"branch_piece": false
+		},
+		"59_e59b7666-9d63-45f4-84dc-4ad60675a5f9": {
+			"id": 59,
+			"name": "StarAtlasFleetLocationCheckPiece",
+			"description": "Check Star Atlas Location of Fleet",
+			"dependency": {
+				"dockerfile": "Dockerfile_1",
+				"requirements_file": null
+			},
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.38-group0",
+			"input_schema": {
+				"description": "StarAtlas Dock Piece Input Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"destination_x": {
+						"default": 0,
+						"description": "Coordinate X target starbase",
+						"title": "Destination X",
+						"type": "integer"
+					},
+					"destination_y": {
+						"default": 0,
+						"description": "Coordinate Y target starbase",
+						"title": "Destination Y",
+						"type": "integer"
+					}
+				},
+				"title": "StarAtlasFleetLocationCheckPiece",
+				"type": "object"
+			},
+			"output_schema": {
+				"description": "Branch Piece Output Model",
+				"properties": {
+					"branch_main": {
+						"default": true,
+						"description": "Main branch selected",
+						"title": "Branch Main",
+						"type": "boolean"
+					}
+				},
+				"title": "BaseBranchOutputModel",
+				"type": "object"
+			},
+			"secrets_schema": null,
+			"container_resources": {
+				"requests": {
+					"cpu": 100,
+					"memory": 128
+				},
+				"limits": {
+					"cpu": 500,
+					"memory": 512
+				},
+				"use_gpu": false
+			},
+			"tags": ["Star Atlas"],
+			"style": {
+				"module": "StarAtlasFleetLocationCheckPiece",
+				"label": "Location Check",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasFleetLocationCheckPiece",
+			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+			"repository_id": 7,
+			"branch_piece": true
+		},
+		"65_844d40fa-22e2-43da-8ee9-8d75fbf49086": {
+			"id": 65,
+			"name": "StarAtlasUndockPiece",
+			"description": "StarAtlas Undocking a Fleet",
+			"dependency": {
+				"dockerfile": "Dockerfile_1",
+				"requirements_file": null
+			},
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.38-group0",
+			"input_schema": {
+				"description": "StarAtlas Dock Piece Input Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"destination_x": {
+						"default": 0,
+						"description": "Number of seconds to sleep",
+						"title": "Destination X",
+						"type": "integer"
+					},
+					"destination_y": {
+						"default": 0,
+						"description": "Number of seconds to sleep",
+						"title": "Destination Y",
+						"type": "integer"
+					}
+				},
+				"title": "StarAtlasUndockPiece",
+				"type": "object"
+			},
+			"output_schema": {
+				"description": "StarAtlas Dock Piece Output Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"destination_x": {
+						"description": "Dock executed on X",
+						"title": "Destination X",
+						"type": "integer"
+					},
+					"destination_y": {
+						"description": "Dock executed on Y",
+						"title": "Destination Y",
+						"type": "integer"
+					}
+				},
+				"required": ["destination_x", "destination_y"],
+				"title": "OutputModel",
+				"type": "object"
+			},
+			"secrets_schema": null,
+			"container_resources": {
+				"requests": {
+					"cpu": 100,
+					"memory": 128
+				},
+				"limits": {
+					"cpu": 500,
+					"memory": 512
+				},
+				"use_gpu": false
+			},
+			"tags": ["Star Atlas"],
+			"style": {
+				"module": "StarAtlasUndockPiece",
+				"label": "Undock",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasUndockPiece",
+			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+			"repository_id": 7,
+			"branch_piece": false
+		},
+		"65_1772e6c0-d5d3-41d9-984c-97d981220a25": {
+			"id": 65,
+			"name": "StarAtlasUndockPiece",
+			"description": "StarAtlas Undocking a Fleet",
+			"dependency": {
+				"dockerfile": "Dockerfile_1",
+				"requirements_file": null
+			},
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.38-group0",
+			"input_schema": {
+				"description": "StarAtlas Dock Piece Input Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"destination_x": {
+						"default": 0,
+						"description": "Number of seconds to sleep",
+						"title": "Destination X",
+						"type": "integer"
+					},
+					"destination_y": {
+						"default": 0,
+						"description": "Number of seconds to sleep",
+						"title": "Destination Y",
+						"type": "integer"
+					}
+				},
+				"title": "StarAtlasUndockPiece",
+				"type": "object"
+			},
+			"output_schema": {
+				"description": "StarAtlas Dock Piece Output Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"destination_x": {
+						"description": "Dock executed on X",
+						"title": "Destination X",
+						"type": "integer"
+					},
+					"destination_y": {
+						"description": "Dock executed on Y",
+						"title": "Destination Y",
+						"type": "integer"
+					}
+				},
+				"required": ["destination_x", "destination_y"],
+				"title": "OutputModel",
+				"type": "object"
+			},
+			"secrets_schema": null,
+			"container_resources": {
+				"requests": {
+					"cpu": 100,
+					"memory": 128
+				},
+				"limits": {
+					"cpu": 500,
+					"memory": 512
+				},
+				"use_gpu": false
+			},
+			"tags": ["Star Atlas"],
+			"style": {
+				"module": "StarAtlasUndockPiece",
+				"label": "Undock",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasUndockPiece",
+			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+			"repository_id": 7,
+			"branch_piece": false
+		},
+		"52_751c490a-81a8-49ab-b1c0-c182ae90361f": {
+			"id": 52,
+			"name": "StarAtlasSubwarpPiece",
+			"description": "StarAtlas Subwarping a Fleet",
+			"dependency": {
+				"dockerfile": "Dockerfile_1",
+				"requirements_file": null
+			},
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.38-group0",
+			"input_schema": {
+				"description": "StarAtlas Subwarp Piece Input Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"destination_x": {
+						"default": 0,
+						"description": "Subwarp to coordinate X",
+						"title": "Destination X",
+						"type": "integer"
+					},
+					"destination_y": {
+						"default": 0,
+						"description": "Subwarp to coordinate Y",
+						"title": "Destination Y",
+						"type": "integer"
+					}
+				},
+				"title": "StarAtlasSubwarpPiece",
+				"type": "object"
+			},
+			"output_schema": {
+				"description": "StarAtlas Subwarp Piece Output Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"destination_x": {
+						"description": "Subwarped to X",
+						"title": "Destination X",
+						"type": "integer"
+					},
+					"destination_y": {
+						"description": "Subwarped to Y",
+						"title": "Destination Y",
+						"type": "integer"
+					}
+				},
+				"required": ["destination_x", "destination_y"],
+				"title": "OutputModel",
+				"type": "object"
+			},
+			"secrets_schema": null,
+			"container_resources": {
+				"requests": {
+					"cpu": 100,
+					"memory": 128
+				},
+				"limits": {
+					"cpu": 500,
+					"memory": 512
+				},
+				"use_gpu": false
+			},
+			"tags": ["Star Atlas"],
+			"style": {
+				"module": "StarAtlasSubwarpPiece",
+				"label": "Subwarp",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasSubwarpPiece",
+			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+			"repository_id": 7,
+			"branch_piece": false
+		},
+		"319_95655bdb-cbe1-4a65-be8f-6fee7073b8f4": {
+			"id": 319,
+			"name": "StarAtlasExitWarpPiece",
+			"description": "StarAtlas Exit Warp a Fleet",
+			"dependency": {
+				"dockerfile": "Dockerfile_1",
+				"requirements_file": null
+			},
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.38-group0",
+			"input_schema": {
+				"description": "StarAtlas Subwarp Piece Input Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					}
+				},
+				"title": "StarAtlasExitWarpPiece",
+				"type": "object"
+			},
+			"output_schema": {
+				"description": "StarAtlas Subwarp Piece Output Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"destination_x": {
+						"description": "Subwarped to X",
+						"title": "Destination X",
+						"type": "integer"
+					},
+					"destination_y": {
+						"description": "Subwarped to Y",
+						"title": "Destination Y",
+						"type": "integer"
+					}
+				},
+				"required": ["destination_x", "destination_y"],
+				"title": "OutputModel",
+				"type": "object"
+			},
+			"secrets_schema": null,
+			"container_resources": {
+				"requests": {
+					"cpu": 100,
+					"memory": 128
+				},
+				"limits": {
+					"cpu": 500,
+					"memory": 512
+				},
+				"use_gpu": false
+			},
+			"tags": ["Star Atlas"],
+			"style": {
+				"module": "StarAtlasExitWarpPiece",
+				"label": "Exit Warp",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasExitWarpPiece",
+			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+			"repository_id": 16,
+			"branch_piece": false
+		},
+		"312_3b653d76-2281-4242-8e33-d9d19725463b": {
+			"id": 312,
+			"name": "StarAtlasFleetCargoCheckPiece",
+			"description": "Check StarAtlas Cargo of Fleet",
+			"dependency": {
+				"dockerfile": "Dockerfile_1",
+				"requirements_file": null
+			},
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.38-group0",
+			"input_schema": {
+				"description": "Star Atlas Fleet Cargo Check Piece Input Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"resource_mint": {
+						"default": "",
+						"description": "Resource to request amount",
+						"title": "Resource Mint",
+						"type": "string"
+					},
+					"resource_amount": {
+						"anyOf": [{
+							"type": "integer"
+						}, {
+							"type": "null"
+						}],
+						"default": "",
+						"description": "Resource Amount In Fleet",
+						"title": "Resource Amount"
+					},
+					"fuel_amount": {
+						"anyOf": [{
+							"type": "integer"
+						}, {
+							"type": "null"
+						}],
+						"default": "",
+						"description": "Resource Amount In Fleet",
+						"title": "Fuel Amount"
+					},
+					"ammo_amount": {
+						"anyOf": [{
+							"type": "integer"
+						}, {
+							"type": "null"
+						}],
+						"default": "",
+						"description": "Resource Amount In Fleet",
+						"title": "Ammo Amount"
+					}
+				},
+				"title": "StarAtlasFleetCargoCheckPiece",
+				"type": "object"
+			},
+			"output_schema": {
+				"description": "Branch Piece Output Model",
+				"properties": {
+					"branch_main": {
+						"default": true,
+						"description": "Main branch selected",
+						"title": "Branch Main",
+						"type": "boolean"
+					}
+				},
+				"title": "BaseBranchOutputModel",
+				"type": "object"
+			},
+			"secrets_schema": null,
+			"container_resources": {
+				"requests": {
+					"cpu": 100,
+					"memory": 128
+				},
+				"limits": {
+					"cpu": 500,
+					"memory": 512
+				},
+				"use_gpu": false
+			},
+			"tags": ["Star Atlas"],
+			"style": {
+				"module": "StarAtlasFleetCargoCheckPiece",
+				"label": "Cargo Check",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasFleetCargoCheckPiece",
+			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+			"repository_id": 16,
+			"branch_piece": true
+		},
+		"296_9dd1d976-5d5d-42a2-a4aa-84e4b22fa09f": {
+			"id": 296,
+			"name": "StarAtlasLoadFuelPiece",
+			"description": "StarAtlas Loading Fuel to Fleet",
+			"dependency": {
+				"dockerfile": "Dockerfile_1",
+				"requirements_file": null
+			},
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.38-group0",
+			"input_schema": {
+				"description": "Star Atlas Load Fuel Piece Input Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"amount": {
+						"default": "",
+						"description": "Amount of Resource",
+						"title": "Amount",
+						"type": "integer"
+					},
+					"destination_x": {
+						"default": 0,
+						"description": "Coordinate X target starbase",
+						"title": "Destination X",
+						"type": "integer"
+					},
+					"destination_y": {
+						"default": 0,
+						"description": "Coordinate Y target starbase",
+						"title": "Destination Y",
+						"type": "integer"
+					}
+				},
+				"title": "StarAtlasLoadFuelPiece",
+				"type": "object"
+			},
+			"output_schema": {
+				"description": "Star Atlas Load Fuel Piece Output Model",
+				"properties": {
+					"amount_loaded": {
+						"description": "Amount Resource loaded",
+						"title": "Amount Loaded",
+						"type": "integer"
+					},
+					"destination_x": {
+						"description": "Load Cargo executed on X",
+						"title": "Destination X",
+						"type": "integer"
+					},
+					"destination_y": {
+						"description": "Load Cargo executed on Y",
+						"title": "Destination Y",
+						"type": "integer"
+					}
+				},
+				"required": ["amount_loaded", "destination_x", "destination_y"],
+				"title": "OutputModel",
+				"type": "object"
+			},
+			"secrets_schema": null,
+			"container_resources": {
+				"requests": {
+					"cpu": 100,
+					"memory": 128
+				},
+				"limits": {
+					"cpu": 500,
+					"memory": 512
+				},
+				"use_gpu": false
+			},
+			"tags": ["Star Atlas"],
+			"style": {
+				"module": "StarAtlasLoadFuelPiece",
+				"label": "Load Fuel",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasLoadFuelPiece",
+			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+			"repository_id": 16,
+			"branch_piece": false
+		},
+		"472_cbb16f48-c940-49b1-83ea-9e7f277874b5": {
+			"id": 472,
+			"name": "StarAtlasStopMiningPiece",
+			"description": "StarAtlas Stop Mining a Resource",
+			"dependency": {
+				"dockerfile": "Dockerfile_1",
+				"requirements_file": null
+			},
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.38-group0",
+			"input_schema": {
+				"description": "StarAtlas Mining Piece Input Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					}
+				},
+				"title": "StarAtlasStopMiningPiece",
+				"type": "object"
+			},
+			"output_schema": {
+				"description": "StarAtlas Mining Piece Output Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					}
+				},
+				"title": "OutputModel",
+				"type": "object"
+			},
+			"secrets_schema": null,
+			"container_resources": {
+				"requests": {
+					"cpu": 100,
+					"memory": 128
+				},
+				"limits": {
+					"cpu": 500,
+					"memory": 512
+				},
+				"use_gpu": false
+			},
+			"tags": ["Star Atlas"],
+			"style": {
+				"module": "StarAtlasStopMiningPiece",
+				"label": "Stop Mine",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasStopMiningPiece",
+			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+			"repository_id": 22,
+			"branch_piece": false
+		},
+		"474_419b5a95-a17b-4394-b2be-fcd3f259ea8d": {
+			"id": 474,
+			"name": "StarAtlasStatFutureMiningPiece",
+			"description": "Star Atlas Mining a Resource",
+			"dependency": {
+				"dockerfile": "Dockerfile_1",
+				"requirements_file": null
+			},
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.38-group0",
+			"input_schema": {
+				"description": "StarAtlas Mining Piece Input Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"resource_mint": {
+						"default": "",
+						"description": "Resource to mine",
+						"title": "Resource Mint",
+						"type": "string"
+					},
+					"starbase_x": {
+						"default": 0,
+						"description": "Number of seconds to sleep",
+						"title": "Starbase X",
+						"type": "integer"
+					},
+					"starbase_y": {
+						"default": 0,
+						"description": "Number of seconds to sleep",
+						"title": "Starbase Y",
+						"type": "integer"
+					},
+					"planet_x": {
+						"default": 0,
+						"description": "Number of seconds to sleep",
+						"title": "Planet X",
+						"type": "integer"
+					},
+					"planet_y": {
+						"default": 0,
+						"description": "Number of seconds to sleep",
+						"title": "Planet Y",
+						"type": "integer"
+					}
+				},
+				"title": "StarAtlasStatFutureMiningPiece",
+				"type": "object"
+			},
+			"output_schema": {
+				"description": "StarAtlas Mining Piece Output Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"resource_mint_mined": {
+						"description": "Resource Mint Mined",
+						"title": "Resource Mint Mined",
+						"type": "string"
+					},
+					"mining_duration": {
+						"description": "Amount Resource Mined",
+						"title": "Mining Duration",
+						"type": "number"
+					},
+					"mining_duration_in_minutes": {
+						"description": "Amount Resource Mined",
+						"title": "Mining Duration In Minutes",
+						"type": "number"
+					},
+					"amount_mined": {
+						"description": "Amount Resource Mined",
+						"title": "Amount Mined",
+						"type": "integer"
+					},
+					"fuel_needed_warp": {
+						"description": "Amount Resource Mined",
+						"title": "Fuel Needed Warp",
+						"type": "integer"
+					},
+					"fuel_needed_half_warp": {
+						"description": "Amount Resource Mined",
+						"title": "Fuel Needed Half Warp",
+						"type": "integer"
+					},
+					"fuel_needed_subwarp": {
+						"description": "Amount Resource Mined",
+						"title": "Fuel Needed Subwarp",
+						"type": "integer"
+					},
+					"ammo_for_duration": {
+						"description": "Amount Resource Mined",
+						"title": "Ammo For Duration",
+						"type": "integer"
+					},
+					"food_for_duration": {
+						"description": "Amount Resource Mined",
+						"title": "Food For Duration",
+						"type": "integer"
+					},
+					"resource_hardness": {
+						"description": "Amount Resource Mined",
+						"title": "Resource Hardness",
+						"type": "integer"
+					},
+					"system_richness": {
+						"description": "Amount Resource Mined",
+						"title": "System Richness",
+						"type": "integer"
+					},
+					"mine_item": {
+						"description": "Amount Resource Mined",
+						"title": "Mine Item",
+						"type": "string"
+					},
+					"sage_resource": {
+						"description": "Amount Resource Mined",
+						"title": "Sage Resource",
+						"type": "string"
+					},
+					"planet": {
+						"description": "Amount Resource Mined",
+						"title": "Planet",
+						"type": "string"
+					}
+				},
+				"required": ["resource_mint_mined", "mining_duration", "mining_duration_in_minutes", "amount_mined", "fuel_needed_warp", "fuel_needed_half_warp", "fuel_needed_subwarp", "ammo_for_duration", "food_for_duration", "resource_hardness", "system_richness", "mine_item", "sage_resource", "planet"],
+				"title": "OutputModel",
+				"type": "object"
+			},
+			"secrets_schema": null,
+			"container_resources": {
+				"requests": {
+					"cpu": 100,
+					"memory": 128
+				},
+				"limits": {
+					"cpu": 500,
+					"memory": 512
+				},
+				"use_gpu": false
+			},
+			"tags": ["Star Atlas"],
+			"style": {
+				"module": "StarAtlasStatFutureMiningPiece",
+				"label": "Future Stat Mine",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasStatFutureMiningPiece",
+			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+			"repository_id": 22,
+			"branch_piece": false
+		},
+		"493_816c00e0-7be4-4b1f-907d-f980d17d502d": {
+			"id": 493,
+			"name": "StarAtlasFleetCargoCheckPiece",
+			"description": "Check StarAtlas Cargo of Fleet",
+			"dependency": {
+				"dockerfile": "Dockerfile_1",
+				"requirements_file": null
+			},
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.38-group0",
+			"input_schema": {
+				"description": "Star Atlas Fleet Cargo Check Piece Input Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"resource_mint": {
+						"default": "",
+						"description": "Resource to request amount",
+						"title": "Resource Mint",
+						"type": "string"
+					},
+					"resource_amount": {
+						"anyOf": [{
+							"type": "integer"
+						}, {
+							"type": "null"
+						}],
+						"default": "",
+						"description": "Resource Amount In Fleet",
+						"title": "Resource Amount"
+					},
+					"fuel_amount": {
+						"anyOf": [{
+							"type": "integer"
+						}, {
+							"type": "null"
+						}],
+						"default": "",
+						"description": "Resource Amount In Fleet",
+						"title": "Fuel Amount"
+					},
+					"ammo_amount": {
+						"anyOf": [{
+							"type": "integer"
+						}, {
+							"type": "null"
+						}],
+						"default": "",
+						"description": "Resource Amount In Fleet",
+						"title": "Ammo Amount"
+					}
+				},
+				"title": "StarAtlasFleetCargoCheckPiece",
+				"type": "object"
+			},
+			"output_schema": {
+				"description": "Branch Piece Output Model",
+				"properties": {
+					"branch_main": {
+						"default": true,
+						"description": "Main branch selected",
+						"title": "Branch Main",
+						"type": "boolean"
+					}
+				},
+				"title": "BaseBranchOutputModel",
+				"type": "object"
+			},
+			"secrets_schema": null,
+			"container_resources": {
+				"requests": {
+					"cpu": 100,
+					"memory": 128
+				},
+				"limits": {
+					"cpu": 500,
+					"memory": 512
+				},
+				"use_gpu": false
+			},
+			"tags": ["Star Atlas"],
+			"style": {
+				"module": "StarAtlasFleetCargoCheckPiece",
+				"label": "Cargo Check",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasFleetCargoCheckPiece",
+			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+			"repository_id": 22,
+			"branch_piece": true
+		},
+		"474_bfc33337-87aa-43c8-b636-75ca5affef1b": {
+			"id": 474,
+			"name": "StarAtlasStatFutureMiningPiece",
+			"description": "Star Atlas Mining a Resource",
+			"dependency": {
+				"dockerfile": "Dockerfile_1",
+				"requirements_file": null
+			},
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.38-group0",
+			"input_schema": {
+				"description": "StarAtlas Mining Piece Input Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"resource_mint": {
+						"default": "",
+						"description": "Resource to mine",
+						"title": "Resource Mint",
+						"type": "string"
+					},
+					"starbase_x": {
+						"default": 0,
+						"description": "Number of seconds to sleep",
+						"title": "Starbase X",
+						"type": "integer"
+					},
+					"starbase_y": {
+						"default": 0,
+						"description": "Number of seconds to sleep",
+						"title": "Starbase Y",
+						"type": "integer"
+					},
+					"planet_x": {
+						"default": 0,
+						"description": "Number of seconds to sleep",
+						"title": "Planet X",
+						"type": "integer"
+					},
+					"planet_y": {
+						"default": 0,
+						"description": "Number of seconds to sleep",
+						"title": "Planet Y",
+						"type": "integer"
+					}
+				},
+				"title": "StarAtlasStatFutureMiningPiece",
+				"type": "object"
+			},
+			"output_schema": {
+				"description": "StarAtlas Mining Piece Output Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"resource_mint_mined": {
+						"description": "Resource Mint Mined",
+						"title": "Resource Mint Mined",
+						"type": "string"
+					},
+					"mining_duration": {
+						"description": "Amount Resource Mined",
+						"title": "Mining Duration",
+						"type": "number"
+					},
+					"mining_duration_in_minutes": {
+						"description": "Amount Resource Mined",
+						"title": "Mining Duration In Minutes",
+						"type": "number"
+					},
+					"amount_mined": {
+						"description": "Amount Resource Mined",
+						"title": "Amount Mined",
+						"type": "integer"
+					},
+					"fuel_needed_warp": {
+						"description": "Amount Resource Mined",
+						"title": "Fuel Needed Warp",
+						"type": "integer"
+					},
+					"fuel_needed_half_warp": {
+						"description": "Amount Resource Mined",
+						"title": "Fuel Needed Half Warp",
+						"type": "integer"
+					},
+					"fuel_needed_subwarp": {
+						"description": "Amount Resource Mined",
+						"title": "Fuel Needed Subwarp",
+						"type": "integer"
+					},
+					"ammo_for_duration": {
+						"description": "Amount Resource Mined",
+						"title": "Ammo For Duration",
+						"type": "integer"
+					},
+					"food_for_duration": {
+						"description": "Amount Resource Mined",
+						"title": "Food For Duration",
+						"type": "integer"
+					},
+					"resource_hardness": {
+						"description": "Amount Resource Mined",
+						"title": "Resource Hardness",
+						"type": "integer"
+					},
+					"system_richness": {
+						"description": "Amount Resource Mined",
+						"title": "System Richness",
+						"type": "integer"
+					},
+					"mine_item": {
+						"description": "Amount Resource Mined",
+						"title": "Mine Item",
+						"type": "string"
+					},
+					"sage_resource": {
+						"description": "Amount Resource Mined",
+						"title": "Sage Resource",
+						"type": "string"
+					},
+					"planet": {
+						"description": "Amount Resource Mined",
+						"title": "Planet",
+						"type": "string"
+					}
+				},
+				"required": ["resource_mint_mined", "mining_duration", "mining_duration_in_minutes", "amount_mined", "fuel_needed_warp", "fuel_needed_half_warp", "fuel_needed_subwarp", "ammo_for_duration", "food_for_duration", "resource_hardness", "system_richness", "mine_item", "sage_resource", "planet"],
+				"title": "OutputModel",
+				"type": "object"
+			},
+			"secrets_schema": null,
+			"container_resources": {
+				"requests": {
+					"cpu": 100,
+					"memory": 128
+				},
+				"limits": {
+					"cpu": 500,
+					"memory": 512
+				},
+				"use_gpu": false
+			},
+			"tags": ["Star Atlas"],
+			"style": {
+				"module": "StarAtlasStatFutureMiningPiece",
+				"label": "Future Stat Mine",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasStatFutureMiningPiece",
+			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+			"repository_id": 22,
+			"branch_piece": false
+		},
+		"474_162d2939-8559-459d-9575-5d1d7096fc04": {
+			"id": 474,
+			"name": "StarAtlasStatFutureMiningPiece",
+			"description": "Star Atlas Mining a Resource",
+			"dependency": {
+				"dockerfile": "Dockerfile_1",
+				"requirements_file": null
+			},
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.38-group0",
+			"input_schema": {
+				"description": "StarAtlas Mining Piece Input Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"resource_mint": {
+						"default": "",
+						"description": "Resource to mine",
+						"title": "Resource Mint",
+						"type": "string"
+					},
+					"starbase_x": {
+						"default": 0,
+						"description": "Number of seconds to sleep",
+						"title": "Starbase X",
+						"type": "integer"
+					},
+					"starbase_y": {
+						"default": 0,
+						"description": "Number of seconds to sleep",
+						"title": "Starbase Y",
+						"type": "integer"
+					},
+					"planet_x": {
+						"default": 0,
+						"description": "Number of seconds to sleep",
+						"title": "Planet X",
+						"type": "integer"
+					},
+					"planet_y": {
+						"default": 0,
+						"description": "Number of seconds to sleep",
+						"title": "Planet Y",
+						"type": "integer"
+					}
+				},
+				"title": "StarAtlasStatFutureMiningPiece",
+				"type": "object"
+			},
+			"output_schema": {
+				"description": "StarAtlas Mining Piece Output Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"resource_mint_mined": {
+						"description": "Resource Mint Mined",
+						"title": "Resource Mint Mined",
+						"type": "string"
+					},
+					"mining_duration": {
+						"description": "Amount Resource Mined",
+						"title": "Mining Duration",
+						"type": "number"
+					},
+					"mining_duration_in_minutes": {
+						"description": "Amount Resource Mined",
+						"title": "Mining Duration In Minutes",
+						"type": "number"
+					},
+					"amount_mined": {
+						"description": "Amount Resource Mined",
+						"title": "Amount Mined",
+						"type": "integer"
+					},
+					"fuel_needed_warp": {
+						"description": "Amount Resource Mined",
+						"title": "Fuel Needed Warp",
+						"type": "integer"
+					},
+					"fuel_needed_half_warp": {
+						"description": "Amount Resource Mined",
+						"title": "Fuel Needed Half Warp",
+						"type": "integer"
+					},
+					"fuel_needed_subwarp": {
+						"description": "Amount Resource Mined",
+						"title": "Fuel Needed Subwarp",
+						"type": "integer"
+					},
+					"ammo_for_duration": {
+						"description": "Amount Resource Mined",
+						"title": "Ammo For Duration",
+						"type": "integer"
+					},
+					"food_for_duration": {
+						"description": "Amount Resource Mined",
+						"title": "Food For Duration",
+						"type": "integer"
+					},
+					"resource_hardness": {
+						"description": "Amount Resource Mined",
+						"title": "Resource Hardness",
+						"type": "integer"
+					},
+					"system_richness": {
+						"description": "Amount Resource Mined",
+						"title": "System Richness",
+						"type": "integer"
+					},
+					"mine_item": {
+						"description": "Amount Resource Mined",
+						"title": "Mine Item",
+						"type": "string"
+					},
+					"sage_resource": {
+						"description": "Amount Resource Mined",
+						"title": "Sage Resource",
+						"type": "string"
+					},
+					"planet": {
+						"description": "Amount Resource Mined",
+						"title": "Planet",
+						"type": "string"
+					}
+				},
+				"required": ["resource_mint_mined", "mining_duration", "mining_duration_in_minutes", "amount_mined", "fuel_needed_warp", "fuel_needed_half_warp", "fuel_needed_subwarp", "ammo_for_duration", "food_for_duration", "resource_hardness", "system_richness", "mine_item", "sage_resource", "planet"],
+				"title": "OutputModel",
+				"type": "object"
+			},
+			"secrets_schema": null,
+			"container_resources": {
+				"requests": {
+					"cpu": 100,
+					"memory": 128
+				},
+				"limits": {
+					"cpu": 500,
+					"memory": 512
+				},
+				"use_gpu": false
+			},
+			"tags": ["Star Atlas"],
+			"style": {
+				"module": "StarAtlasStatFutureMiningPiece",
+				"label": "Future Stat Mine",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasStatFutureMiningPiece",
+			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+			"repository_id": 22,
+			"branch_piece": false
+		},
+		"474_32930b4b-af7b-4156-8e85-5859e779e5ea": {
+			"id": 474,
+			"name": "StarAtlasStatFutureMiningPiece",
+			"description": "Star Atlas Mining a Resource",
+			"dependency": {
+				"dockerfile": "Dockerfile_1",
+				"requirements_file": null
+			},
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.38-group0",
+			"input_schema": {
+				"description": "StarAtlas Mining Piece Input Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"resource_mint": {
+						"default": "",
+						"description": "Resource to mine",
+						"title": "Resource Mint",
+						"type": "string"
+					},
+					"starbase_x": {
+						"default": 0,
+						"description": "Number of seconds to sleep",
+						"title": "Starbase X",
+						"type": "integer"
+					},
+					"starbase_y": {
+						"default": 0,
+						"description": "Number of seconds to sleep",
+						"title": "Starbase Y",
+						"type": "integer"
+					},
+					"planet_x": {
+						"default": 0,
+						"description": "Number of seconds to sleep",
+						"title": "Planet X",
+						"type": "integer"
+					},
+					"planet_y": {
+						"default": 0,
+						"description": "Number of seconds to sleep",
+						"title": "Planet Y",
+						"type": "integer"
+					}
+				},
+				"title": "StarAtlasStatFutureMiningPiece",
+				"type": "object"
+			},
+			"output_schema": {
+				"description": "StarAtlas Mining Piece Output Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"resource_mint_mined": {
+						"description": "Resource Mint Mined",
+						"title": "Resource Mint Mined",
+						"type": "string"
+					},
+					"mining_duration": {
+						"description": "Amount Resource Mined",
+						"title": "Mining Duration",
+						"type": "number"
+					},
+					"mining_duration_in_minutes": {
+						"description": "Amount Resource Mined",
+						"title": "Mining Duration In Minutes",
+						"type": "number"
+					},
+					"amount_mined": {
+						"description": "Amount Resource Mined",
+						"title": "Amount Mined",
+						"type": "integer"
+					},
+					"fuel_needed_warp": {
+						"description": "Amount Resource Mined",
+						"title": "Fuel Needed Warp",
+						"type": "integer"
+					},
+					"fuel_needed_half_warp": {
+						"description": "Amount Resource Mined",
+						"title": "Fuel Needed Half Warp",
+						"type": "integer"
+					},
+					"fuel_needed_subwarp": {
+						"description": "Amount Resource Mined",
+						"title": "Fuel Needed Subwarp",
+						"type": "integer"
+					},
+					"ammo_for_duration": {
+						"description": "Amount Resource Mined",
+						"title": "Ammo For Duration",
+						"type": "integer"
+					},
+					"food_for_duration": {
+						"description": "Amount Resource Mined",
+						"title": "Food For Duration",
+						"type": "integer"
+					},
+					"resource_hardness": {
+						"description": "Amount Resource Mined",
+						"title": "Resource Hardness",
+						"type": "integer"
+					},
+					"system_richness": {
+						"description": "Amount Resource Mined",
+						"title": "System Richness",
+						"type": "integer"
+					},
+					"mine_item": {
+						"description": "Amount Resource Mined",
+						"title": "Mine Item",
+						"type": "string"
+					},
+					"sage_resource": {
+						"description": "Amount Resource Mined",
+						"title": "Sage Resource",
+						"type": "string"
+					},
+					"planet": {
+						"description": "Amount Resource Mined",
+						"title": "Planet",
+						"type": "string"
+					}
+				},
+				"required": ["resource_mint_mined", "mining_duration", "mining_duration_in_minutes", "amount_mined", "fuel_needed_warp", "fuel_needed_half_warp", "fuel_needed_subwarp", "ammo_for_duration", "food_for_duration", "resource_hardness", "system_richness", "mine_item", "sage_resource", "planet"],
+				"title": "OutputModel",
+				"type": "object"
+			},
+			"secrets_schema": null,
+			"container_resources": {
+				"requests": {
+					"cpu": 100,
+					"memory": 128
+				},
+				"limits": {
+					"cpu": 500,
+					"memory": 512
+				},
+				"use_gpu": false
+			},
+			"tags": ["Star Atlas"],
+			"style": {
+				"module": "StarAtlasStatFutureMiningPiece",
+				"label": "Future Stat Mine",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasStatFutureMiningPiece",
+			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+			"repository_id": 22,
+			"branch_piece": false
+		},
+		"493_3306fcfe-0c4d-44d1-8115-918b6b01eea5": {
+			"id": 493,
+			"name": "StarAtlasFleetCargoCheckPiece",
+			"description": "Check StarAtlas Cargo of Fleet",
+			"dependency": {
+				"dockerfile": "Dockerfile_1",
+				"requirements_file": null
+			},
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.38-group0",
+			"input_schema": {
+				"description": "Star Atlas Fleet Cargo Check Piece Input Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"resource_mint": {
+						"default": "",
+						"description": "Resource to request amount",
+						"title": "Resource Mint",
+						"type": "string"
+					},
+					"resource_amount": {
+						"anyOf": [{
+							"type": "integer"
+						}, {
+							"type": "null"
+						}],
+						"default": "",
+						"description": "Resource Amount In Fleet",
+						"title": "Resource Amount"
+					},
+					"fuel_amount": {
+						"anyOf": [{
+							"type": "integer"
+						}, {
+							"type": "null"
+						}],
+						"default": "",
+						"description": "Resource Amount In Fleet",
+						"title": "Fuel Amount"
+					},
+					"ammo_amount": {
+						"anyOf": [{
+							"type": "integer"
+						}, {
+							"type": "null"
+						}],
+						"default": "",
+						"description": "Resource Amount In Fleet",
+						"title": "Ammo Amount"
+					}
+				},
+				"title": "StarAtlasFleetCargoCheckPiece",
+				"type": "object"
+			},
+			"output_schema": {
+				"description": "Branch Piece Output Model",
+				"properties": {
+					"branch_main": {
+						"default": true,
+						"description": "Main branch selected",
+						"title": "Branch Main",
+						"type": "boolean"
+					}
+				},
+				"title": "BaseBranchOutputModel",
+				"type": "object"
+			},
+			"secrets_schema": null,
+			"container_resources": {
+				"requests": {
+					"cpu": 100,
+					"memory": 128
+				},
+				"limits": {
+					"cpu": 500,
+					"memory": 512
+				},
+				"use_gpu": false
+			},
+			"tags": ["Star Atlas"],
+			"style": {
+				"module": "StarAtlasFleetCargoCheckPiece",
+				"label": "Cargo Check",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasFleetCargoCheckPiece",
+			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+			"repository_id": 22,
+			"branch_piece": true
+		},
+		"474_05f524f7-7075-4e45-a366-3e84b5ba41c2": {
+			"id": 474,
+			"name": "StarAtlasStatFutureMiningPiece",
+			"description": "Star Atlas Mining a Resource",
+			"dependency": {
+				"dockerfile": "Dockerfile_1",
+				"requirements_file": null
+			},
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.38-group0",
+			"input_schema": {
+				"description": "StarAtlas Mining Piece Input Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"resource_mint": {
+						"default": "",
+						"description": "Resource to mine",
+						"title": "Resource Mint",
+						"type": "string"
+					},
+					"starbase_x": {
+						"default": 0,
+						"description": "Number of seconds to sleep",
+						"title": "Starbase X",
+						"type": "integer"
+					},
+					"starbase_y": {
+						"default": 0,
+						"description": "Number of seconds to sleep",
+						"title": "Starbase Y",
+						"type": "integer"
+					},
+					"planet_x": {
+						"default": 0,
+						"description": "Number of seconds to sleep",
+						"title": "Planet X",
+						"type": "integer"
+					},
+					"planet_y": {
+						"default": 0,
+						"description": "Number of seconds to sleep",
+						"title": "Planet Y",
+						"type": "integer"
+					}
+				},
+				"title": "StarAtlasStatFutureMiningPiece",
+				"type": "object"
+			},
+			"output_schema": {
+				"description": "StarAtlas Mining Piece Output Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"resource_mint_mined": {
+						"description": "Resource Mint Mined",
+						"title": "Resource Mint Mined",
+						"type": "string"
+					},
+					"mining_duration": {
+						"description": "Amount Resource Mined",
+						"title": "Mining Duration",
+						"type": "number"
+					},
+					"mining_duration_in_minutes": {
+						"description": "Amount Resource Mined",
+						"title": "Mining Duration In Minutes",
+						"type": "number"
+					},
+					"amount_mined": {
+						"description": "Amount Resource Mined",
+						"title": "Amount Mined",
+						"type": "integer"
+					},
+					"fuel_needed_warp": {
+						"description": "Amount Resource Mined",
+						"title": "Fuel Needed Warp",
+						"type": "integer"
+					},
+					"fuel_needed_half_warp": {
+						"description": "Amount Resource Mined",
+						"title": "Fuel Needed Half Warp",
+						"type": "integer"
+					},
+					"fuel_needed_subwarp": {
+						"description": "Amount Resource Mined",
+						"title": "Fuel Needed Subwarp",
+						"type": "integer"
+					},
+					"ammo_for_duration": {
+						"description": "Amount Resource Mined",
+						"title": "Ammo For Duration",
+						"type": "integer"
+					},
+					"food_for_duration": {
+						"description": "Amount Resource Mined",
+						"title": "Food For Duration",
+						"type": "integer"
+					},
+					"resource_hardness": {
+						"description": "Amount Resource Mined",
+						"title": "Resource Hardness",
+						"type": "integer"
+					},
+					"system_richness": {
+						"description": "Amount Resource Mined",
+						"title": "System Richness",
+						"type": "integer"
+					},
+					"mine_item": {
+						"description": "Amount Resource Mined",
+						"title": "Mine Item",
+						"type": "string"
+					},
+					"sage_resource": {
+						"description": "Amount Resource Mined",
+						"title": "Sage Resource",
+						"type": "string"
+					},
+					"planet": {
+						"description": "Amount Resource Mined",
+						"title": "Planet",
+						"type": "string"
+					}
+				},
+				"required": ["resource_mint_mined", "mining_duration", "mining_duration_in_minutes", "amount_mined", "fuel_needed_warp", "fuel_needed_half_warp", "fuel_needed_subwarp", "ammo_for_duration", "food_for_duration", "resource_hardness", "system_richness", "mine_item", "sage_resource", "planet"],
+				"title": "OutputModel",
+				"type": "object"
+			},
+			"secrets_schema": null,
+			"container_resources": {
+				"requests": {
+					"cpu": 100,
+					"memory": 128
+				},
+				"limits": {
+					"cpu": 500,
+					"memory": 512
+				},
+				"use_gpu": false
+			},
+			"tags": ["Star Atlas"],
+			"style": {
+				"module": "StarAtlasStatFutureMiningPiece",
+				"label": "Future Stat Mine",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasStatFutureMiningPiece",
+			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+			"repository_id": 22,
+			"branch_piece": false
+		},
+		"476_7b64029a-9f40-4086-affb-633f9646a321": {
+			"id": 476,
+			"name": "StarAtlasLoadAmmoPiece",
+			"description": "StarAtlas Loading Ammo to Fleet",
+			"dependency": {
+				"dockerfile": "Dockerfile_1",
+				"requirements_file": null
+			},
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.38-group0",
+			"input_schema": {
+				"description": "Star Atlas Load Ammo Piece Input Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"amount": {
+						"default": "",
+						"description": "Amount of Resource",
+						"title": "Amount",
+						"type": "integer"
+					},
+					"destination_x": {
+						"default": 0,
+						"description": "Coordinate X target starbase",
+						"title": "Destination X",
+						"type": "integer"
+					},
+					"destination_y": {
+						"default": 0,
+						"description": "Coordinate Y target starbase",
+						"title": "Destination Y",
+						"type": "integer"
+					}
+				},
+				"title": "StarAtlasLoadAmmoPiece",
+				"type": "object"
+			},
+			"output_schema": {
+				"description": "Star Atlas Load Ammo Piece Output Model",
+				"properties": {
+					"amount_loaded": {
+						"description": "Amount Resource loaded",
+						"title": "Amount Loaded",
+						"type": "integer"
+					},
+					"destination_x": {
+						"description": "Load Cargo executed on X",
+						"title": "Destination X",
+						"type": "integer"
+					},
+					"destination_y": {
+						"description": "Load Cargo executed on Y",
+						"title": "Destination Y",
+						"type": "integer"
+					}
+				},
+				"required": ["amount_loaded", "destination_x", "destination_y"],
+				"title": "OutputModel",
+				"type": "object"
+			},
+			"secrets_schema": null,
+			"container_resources": {
+				"requests": {
+					"cpu": 100,
+					"memory": 128
+				},
+				"limits": {
+					"cpu": 500,
+					"memory": 512
+				},
+				"use_gpu": false
+			},
+			"tags": ["Star Atlas"],
+			"style": {
+				"module": "StarAtlasLoadAmmoPiece",
+				"label": "Load Ammo",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasLoadAmmoPiece",
+			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+			"repository_id": 22,
+			"branch_piece": false
+		},
+		"474_69d02a00-2eac-4f6a-857d-8d75ce9b8dce": {
+			"id": 474,
+			"name": "StarAtlasStatFutureMiningPiece",
+			"description": "Star Atlas Mining a Resource",
+			"dependency": {
+				"dockerfile": "Dockerfile_1",
+				"requirements_file": null
+			},
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.38-group0",
+			"input_schema": {
+				"description": "StarAtlas Mining Piece Input Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"resource_mint": {
+						"default": "",
+						"description": "Resource to mine",
+						"title": "Resource Mint",
+						"type": "string"
+					},
+					"starbase_x": {
+						"default": 0,
+						"description": "Number of seconds to sleep",
+						"title": "Starbase X",
+						"type": "integer"
+					},
+					"starbase_y": {
+						"default": 0,
+						"description": "Number of seconds to sleep",
+						"title": "Starbase Y",
+						"type": "integer"
+					},
+					"planet_x": {
+						"default": 0,
+						"description": "Number of seconds to sleep",
+						"title": "Planet X",
+						"type": "integer"
+					},
+					"planet_y": {
+						"default": 0,
+						"description": "Number of seconds to sleep",
+						"title": "Planet Y",
+						"type": "integer"
+					}
+				},
+				"title": "StarAtlasStatFutureMiningPiece",
+				"type": "object"
+			},
+			"output_schema": {
+				"description": "StarAtlas Mining Piece Output Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"resource_mint_mined": {
+						"description": "Resource Mint Mined",
+						"title": "Resource Mint Mined",
+						"type": "string"
+					},
+					"mining_duration": {
+						"description": "Amount Resource Mined",
+						"title": "Mining Duration",
+						"type": "number"
+					},
+					"mining_duration_in_minutes": {
+						"description": "Amount Resource Mined",
+						"title": "Mining Duration In Minutes",
+						"type": "number"
+					},
+					"amount_mined": {
+						"description": "Amount Resource Mined",
+						"title": "Amount Mined",
+						"type": "integer"
+					},
+					"fuel_needed_warp": {
+						"description": "Amount Resource Mined",
+						"title": "Fuel Needed Warp",
+						"type": "integer"
+					},
+					"fuel_needed_half_warp": {
+						"description": "Amount Resource Mined",
+						"title": "Fuel Needed Half Warp",
+						"type": "integer"
+					},
+					"fuel_needed_subwarp": {
+						"description": "Amount Resource Mined",
+						"title": "Fuel Needed Subwarp",
+						"type": "integer"
+					},
+					"ammo_for_duration": {
+						"description": "Amount Resource Mined",
+						"title": "Ammo For Duration",
+						"type": "integer"
+					},
+					"food_for_duration": {
+						"description": "Amount Resource Mined",
+						"title": "Food For Duration",
+						"type": "integer"
+					},
+					"resource_hardness": {
+						"description": "Amount Resource Mined",
+						"title": "Resource Hardness",
+						"type": "integer"
+					},
+					"system_richness": {
+						"description": "Amount Resource Mined",
+						"title": "System Richness",
+						"type": "integer"
+					},
+					"mine_item": {
+						"description": "Amount Resource Mined",
+						"title": "Mine Item",
+						"type": "string"
+					},
+					"sage_resource": {
+						"description": "Amount Resource Mined",
+						"title": "Sage Resource",
+						"type": "string"
+					},
+					"planet": {
+						"description": "Amount Resource Mined",
+						"title": "Planet",
+						"type": "string"
+					}
+				},
+				"required": ["resource_mint_mined", "mining_duration", "mining_duration_in_minutes", "amount_mined", "fuel_needed_warp", "fuel_needed_half_warp", "fuel_needed_subwarp", "ammo_for_duration", "food_for_duration", "resource_hardness", "system_richness", "mine_item", "sage_resource", "planet"],
+				"title": "OutputModel",
+				"type": "object"
+			},
+			"secrets_schema": null,
+			"container_resources": {
+				"requests": {
+					"cpu": 100,
+					"memory": 128
+				},
+				"limits": {
+					"cpu": 500,
+					"memory": 512
+				},
+				"use_gpu": false
+			},
+			"tags": ["Star Atlas"],
+			"style": {
+				"module": "StarAtlasStatFutureMiningPiece",
+				"label": "Future Stat Mine",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasStatFutureMiningPiece",
+			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+			"repository_id": 22,
+			"branch_piece": false
+		},
+		"484_52cf92f2-5449-4e28-aea4-c930cd826c5c": {
+			"id": 484,
+			"name": "StarAtlasLoadCargoPiece",
+			"description": "StarAtlas Loading Cargo to Fleet",
+			"dependency": {
+				"dockerfile": "Dockerfile_1",
+				"requirements_file": null
+			},
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.38-group0",
+			"input_schema": {
+				"description": "StarAtlas Load Cargo Piece Input Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"resource_mint": {
+						"default": "",
+						"description": "Resource to Load Cargo",
+						"title": "Resource Mint",
+						"type": "string"
+					},
+					"amount": {
+						"default": "",
+						"description": "Amount of Resource",
+						"title": "Amount",
+						"type": "integer"
+					},
+					"destination_x": {
+						"default": 0,
+						"description": "Coordinate X target starbase",
+						"title": "Destination X",
+						"type": "integer"
+					},
+					"destination_y": {
+						"default": 0,
+						"description": "Coordinate Y target starbase",
+						"title": "Destination Y",
+						"type": "integer"
+					}
+				},
+				"title": "StarAtlasLoadCargoPiece",
+				"type": "object"
+			},
+			"output_schema": {
+				"description": "StarAtlas Load Cargo Piece Output Model",
+				"properties": {
+					"resource_mint_loaded": {
+						"description": "Mint loaded",
+						"title": "Resource Mint Loaded",
+						"type": "string"
+					},
+					"amount_loaded": {
+						"description": "Amount loaded",
+						"title": "Amount Loaded",
+						"type": "integer"
+					},
+					"destination_x": {
+						"description": "Load Cargo executed on X",
+						"title": "Destination X",
+						"type": "integer"
+					},
+					"destination_y": {
+						"description": "Load Cargo executed on Y",
+						"title": "Destination Y",
+						"type": "integer"
+					}
+				},
+				"required": ["resource_mint_loaded", "amount_loaded", "destination_x", "destination_y"],
+				"title": "OutputModel",
+				"type": "object"
+			},
+			"secrets_schema": null,
+			"container_resources": {
+				"requests": {
+					"cpu": 100,
+					"memory": 128
+				},
+				"limits": {
+					"cpu": 500,
+					"memory": 512
+				},
+				"use_gpu": false
+			},
+			"tags": ["Star Atlas"],
+			"style": {
+				"module": "StarAtlasLoadCargoPiece",
+				"label": "Load Cargo",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasLoadCargoPiece",
+			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+			"repository_id": 22,
+			"branch_piece": false
+		},
+		"471_a65e4385-b7ee-4f83-8a0d-a53e4bca8605": {
+			"id": 471,
+			"name": "StarAtlasMiningPiece",
+			"description": "StarAtlas Mining a Resource",
+			"dependency": {
+				"dockerfile": "Dockerfile_1",
+				"requirements_file": null
+			},
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.38-group0",
+			"input_schema": {
+				"description": "StarAtlas Mining Piece Input Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"resource_mint": {
+						"default": "",
+						"description": "Resource to mine",
+						"title": "Resource Mint",
+						"type": "string"
+					},
+					"planet_pk": {
+						"default": 0,
+						"description": "Planet Public Key to Mine",
+						"title": "Planet Pk",
+						"type": "string"
+					}
+				},
+				"title": "StarAtlasMiningPiece",
+				"type": "object"
+			},
+			"output_schema": {
+				"description": "StarAtlas Mining Piece Output Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"resource_mint_mined": {
+						"description": "Resource Mint Mined",
+						"title": "Resource Mint Mined",
+						"type": "string"
+					},
+					"resource_amount_mined": {
+						"description": "Amount Resource Mined",
+						"title": "Resource Amount Mined",
+						"type": "integer"
+					}
+				},
+				"required": ["resource_mint_mined", "resource_amount_mined"],
+				"title": "OutputModel",
+				"type": "object"
+			},
+			"secrets_schema": null,
+			"container_resources": {
+				"requests": {
+					"cpu": 100,
+					"memory": 128
+				},
+				"limits": {
+					"cpu": 500,
+					"memory": 512
+				},
+				"use_gpu": false
+			},
+			"tags": ["Star Atlas"],
+			"style": {
+				"module": "StarAtlasMiningPiece",
+				"label": "Mine",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasMiningPiece",
+			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+			"repository_id": 22,
+			"branch_piece": false
+		},
+		"493_5f022e89-ab9a-4b44-911f-51befbd70845": {
+			"id": 493,
+			"name": "StarAtlasFleetCargoCheckPiece",
+			"description": "Check StarAtlas Cargo of Fleet",
+			"dependency": {
+				"dockerfile": "Dockerfile_1",
+				"requirements_file": null
+			},
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.38-group0",
+			"input_schema": {
+				"description": "Star Atlas Fleet Cargo Check Piece Input Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"resource_mint": {
+						"default": "",
+						"description": "Resource to request amount",
+						"title": "Resource Mint",
+						"type": "string"
+					},
+					"resource_amount": {
+						"anyOf": [{
+							"type": "integer"
+						}, {
+							"type": "null"
+						}],
+						"default": "",
+						"description": "Resource Amount In Fleet",
+						"title": "Resource Amount"
+					},
+					"fuel_amount": {
+						"anyOf": [{
+							"type": "integer"
+						}, {
+							"type": "null"
+						}],
+						"default": "",
+						"description": "Resource Amount In Fleet",
+						"title": "Fuel Amount"
+					},
+					"ammo_amount": {
+						"anyOf": [{
+							"type": "integer"
+						}, {
+							"type": "null"
+						}],
+						"default": "",
+						"description": "Resource Amount In Fleet",
+						"title": "Ammo Amount"
+					}
+				},
+				"title": "StarAtlasFleetCargoCheckPiece",
+				"type": "object"
+			},
+			"output_schema": {
+				"description": "Branch Piece Output Model",
+				"properties": {
+					"branch_main": {
+						"default": true,
+						"description": "Main branch selected",
+						"title": "Branch Main",
+						"type": "boolean"
+					}
+				},
+				"title": "BaseBranchOutputModel",
+				"type": "object"
+			},
+			"secrets_schema": null,
+			"container_resources": {
+				"requests": {
+					"cpu": 100,
+					"memory": 128
+				},
+				"limits": {
+					"cpu": 500,
+					"memory": 512
+				},
+				"use_gpu": false
+			},
+			"tags": ["Star Atlas"],
+			"style": {
+				"module": "StarAtlasFleetCargoCheckPiece",
+				"label": "Cargo Check",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasFleetCargoCheckPiece",
+			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+			"repository_id": 22,
+			"branch_piece": true
+		},
+		"478_77d0d751-69f7-4f44-bb4f-7445822b2dc8": {
+			"id": 478,
+			"name": "MathArithmeticPiece",
+			"description": "A MathArithmeticPiece Piece.",
+			"dependency": {
+				"dockerfile": "Dockerfile_1",
+				"requirements_file": null
+			},
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.38-group0",
+			"input_schema": {
+				"$defs": {
+					"InputEnum": {
+						"enum": ["addition", "substract", "multiply", "divide"],
+						"title": "InputEnum",
+						"type": "string"
+					}
+				},
+				"description": "MathArithmeticPiece Input Model",
+				"properties": {
+					"left_input_int": {
+						"anyOf": [{
+							"type": "integer"
+						}, {
+							"type": "null"
+						}],
+						"default": 0,
+						"description": "Left Input Int.",
+						"title": "Left Input Int"
+					},
+					"right_input_int": {
+						"anyOf": [{
+							"type": "integer"
+						}, {
+							"type": "null"
+						}],
+						"default": 0,
+						"description": "Right Input Int.",
+						"title": "Right Input Int"
+					},
+					"left_input_float": {
+						"anyOf": [{
+							"type": "number"
+						}, {
+							"type": "null"
+						}],
+						"default": 0,
+						"description": "Left Input Float.",
+						"title": "Left Input Float"
+					},
+					"right_input_float": {
+						"anyOf": [{
+							"type": "number"
+						}, {
+							"type": "null"
+						}],
+						"default": 0,
+						"description": "Right Input Float.",
+						"title": "Right Input Float"
+					},
+					"operation_enum": {
+						"allOf": [{
+							"$ref": "#/$defs/InputEnum"
+						}],
+						"default": "addition",
+						"description": "Input addition."
+					}
+				},
+				"title": "MathArithmeticPiece",
+				"type": "object"
+			},
+			"output_schema": {
+				"description": "MathArithmeticPiece Output Model",
+				"properties": {
+					"result_output_float": {
+						"description": "Result from operation.",
+						"title": "Result Output Float",
+						"type": "number"
+					},
+					"result_output_int": {
+						"description": "Result from operation.",
+						"title": "Result Output Int",
+						"type": "integer"
+					}
+				},
+				"required": ["result_output_float", "result_output_int"],
+				"title": "OutputModel",
+				"type": "object"
+			},
+			"secrets_schema": null,
+			"container_resources": {
+				"requests": {
+					"cpu": 100,
+					"memory": 128
+				},
+				"limits": {
+					"cpu": 100,
+					"memory": 128
+				},
+				"use_gpu": false
+			},
+			"tags": ["default", "mathematics"],
+			"style": {
+				"module": "MathArithmeticPiece",
+				"label": "Math Logic",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:file-alt",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/MathArithmeticPiece",
+			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+			"repository_id": 22,
+			"branch_piece": false
+		},
+		"474_c12c4f9b-77e9-455a-9adb-7323d8688d55": {
+			"id": 474,
+			"name": "StarAtlasStatFutureMiningPiece",
+			"description": "Star Atlas Mining a Resource",
+			"dependency": {
+				"dockerfile": "Dockerfile_1",
+				"requirements_file": null
+			},
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.38-group0",
+			"input_schema": {
+				"description": "StarAtlas Mining Piece Input Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"resource_mint": {
+						"default": "",
+						"description": "Resource to mine",
+						"title": "Resource Mint",
+						"type": "string"
+					},
+					"starbase_x": {
+						"default": 0,
+						"description": "Number of seconds to sleep",
+						"title": "Starbase X",
+						"type": "integer"
+					},
+					"starbase_y": {
+						"default": 0,
+						"description": "Number of seconds to sleep",
+						"title": "Starbase Y",
+						"type": "integer"
+					},
+					"planet_x": {
+						"default": 0,
+						"description": "Number of seconds to sleep",
+						"title": "Planet X",
+						"type": "integer"
+					},
+					"planet_y": {
+						"default": 0,
+						"description": "Number of seconds to sleep",
+						"title": "Planet Y",
+						"type": "integer"
+					}
+				},
+				"title": "StarAtlasStatFutureMiningPiece",
+				"type": "object"
+			},
+			"output_schema": {
+				"description": "StarAtlas Mining Piece Output Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"resource_mint_mined": {
+						"description": "Resource Mint Mined",
+						"title": "Resource Mint Mined",
+						"type": "string"
+					},
+					"mining_duration": {
+						"description": "Amount Resource Mined",
+						"title": "Mining Duration",
+						"type": "number"
+					},
+					"mining_duration_in_minutes": {
+						"description": "Amount Resource Mined",
+						"title": "Mining Duration In Minutes",
+						"type": "number"
+					},
+					"amount_mined": {
+						"description": "Amount Resource Mined",
+						"title": "Amount Mined",
+						"type": "integer"
+					},
+					"fuel_needed_warp": {
+						"description": "Amount Resource Mined",
+						"title": "Fuel Needed Warp",
+						"type": "integer"
+					},
+					"fuel_needed_half_warp": {
+						"description": "Amount Resource Mined",
+						"title": "Fuel Needed Half Warp",
+						"type": "integer"
+					},
+					"fuel_needed_subwarp": {
+						"description": "Amount Resource Mined",
+						"title": "Fuel Needed Subwarp",
+						"type": "integer"
+					},
+					"ammo_for_duration": {
+						"description": "Amount Resource Mined",
+						"title": "Ammo For Duration",
+						"type": "integer"
+					},
+					"food_for_duration": {
+						"description": "Amount Resource Mined",
+						"title": "Food For Duration",
+						"type": "integer"
+					},
+					"resource_hardness": {
+						"description": "Amount Resource Mined",
+						"title": "Resource Hardness",
+						"type": "integer"
+					},
+					"system_richness": {
+						"description": "Amount Resource Mined",
+						"title": "System Richness",
+						"type": "integer"
+					},
+					"mine_item": {
+						"description": "Amount Resource Mined",
+						"title": "Mine Item",
+						"type": "string"
+					},
+					"sage_resource": {
+						"description": "Amount Resource Mined",
+						"title": "Sage Resource",
+						"type": "string"
+					},
+					"planet": {
+						"description": "Amount Resource Mined",
+						"title": "Planet",
+						"type": "string"
+					}
+				},
+				"required": ["resource_mint_mined", "mining_duration", "mining_duration_in_minutes", "amount_mined", "fuel_needed_warp", "fuel_needed_half_warp", "fuel_needed_subwarp", "ammo_for_duration", "food_for_duration", "resource_hardness", "system_richness", "mine_item", "sage_resource", "planet"],
+				"title": "OutputModel",
+				"type": "object"
+			},
+			"secrets_schema": null,
+			"container_resources": {
+				"requests": {
+					"cpu": 100,
+					"memory": 128
+				},
+				"limits": {
+					"cpu": 500,
+					"memory": 512
+				},
+				"use_gpu": false
+			},
+			"tags": ["Star Atlas"],
+			"style": {
+				"module": "StarAtlasStatFutureMiningPiece",
+				"label": "Future Stat Mine",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasStatFutureMiningPiece",
+			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+			"repository_id": 22,
+			"branch_piece": false
+		},
+		"492_e4f9dc81-55c6-49b2-9f10-45556fd48143": {
+			"id": 492,
+			"name": "StarAtlasStatCargoPiece",
+			"description": "Star Atlas Statistic Cargo List",
+			"dependency": {
+				"dockerfile": "Dockerfile_1",
+				"requirements_file": null
+			},
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.38-group0",
+			"input_schema": {
+				"description": "StarAtlas Mining Piece Input Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"resource_mint": {
+						"anyOf": [{
+							"type": "string"
+						}, {
+							"type": "null"
+						}],
+						"default": "",
+						"description": "Resource to request amount",
+						"title": "Resource Mint"
+					}
+				},
+				"title": "StarAtlasStatCargoPiece",
+				"type": "object"
+			},
+			"output_schema": {
+				"$defs": {
+					"CargoModel": {
+						"properties": {
+							"cargo_label": {
+								"default": "",
+								"description": "Cargo Label",
+								"title": "Cargo Label",
+								"type": "string"
+							},
+							"cargo_mint": {
+								"default": "",
+								"description": "Cargo Mint",
+								"title": "Cargo Mint",
+								"type": "string"
+							},
+							"cargo_amount": {
+								"default": "",
+								"description": "Cargo Amount",
+								"title": "Cargo Amount",
+								"type": "integer"
+							}
+						},
+						"title": "CargoModel",
+						"type": "object"
+					}
+				},
+				"description": "StarAtlas Mining Piece Output Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"cargo_list": {
+						"description": "Cargo List.",
+						"items": {
+							"$ref": "#/$defs/CargoModel"
+						},
+						"title": "Cargo List",
+						"type": "array"
+					},
+					"fuel_amount": {
+						"default": "",
+						"description": "Fuel Amount In Fleet",
+						"title": "Fuel Amount",
+						"type": "integer"
+					},
+					"ammo_amount": {
+						"default": "",
+						"description": "Ammo Amount In Fleet",
+						"title": "Ammo Amount",
+						"type": "integer"
+					},
+					"resource_mint_requested": {
+						"anyOf": [{
+							"type": "string"
+						}, {
+							"type": "null"
+						}],
+						"description": "Resource Mint Requested",
+						"title": "Resource Mint Requested"
+					},
+					"resource_amount_requested": {
+						"anyOf": [{
+							"type": "integer"
+						}, {
+							"type": "null"
+						}],
+						"description": "Amount Resource Requested",
+						"title": "Resource Amount Requested"
+					}
+				},
+				"required": ["cargo_list", "resource_mint_requested", "resource_amount_requested"],
+				"title": "OutputModel",
+				"type": "object"
+			},
+			"secrets_schema": null,
+			"container_resources": {
+				"requests": {
+					"cpu": 100,
+					"memory": 128
+				},
+				"limits": {
+					"cpu": 500,
+					"memory": 512
+				},
+				"use_gpu": false
+			},
+			"tags": ["Star Atlas"],
+			"style": {
+				"module": "StarAtlasStatCargoPiece",
+				"label": "Stat Cargo",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasStatCargoPiece",
+			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+			"repository_id": 22,
+			"branch_piece": false
+		},
+		"485_8ff9b791-942b-4d10-ab45-0e48aaa0643f": {
+			"id": 485,
+			"name": "StarAtlasUnloadCargoPiece",
+			"description": "Star Atlas Unloading Cargo from Fleet",
+			"dependency": {
+				"dockerfile": "Dockerfile_1",
+				"requirements_file": null
+			},
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.38-group0",
+			"input_schema": {
+				"description": "StarAtlas Unload Cargo Piece Input Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"resource_mint": {
+						"default": "",
+						"description": "Resource to Unload Cargo",
+						"title": "Resource Mint",
+						"type": "string"
+					},
+					"amount": {
+						"default": "",
+						"description": "Amount of Resource",
+						"title": "Amount",
+						"type": "integer"
+					},
+					"destination_x": {
+						"default": 0,
+						"description": "Coordinate X target starbase",
+						"title": "Destination X",
+						"type": "integer"
+					},
+					"destination_y": {
+						"default": 0,
+						"description": "Coordinate Y target starbase",
+						"title": "Destination Y",
+						"type": "integer"
+					}
+				},
+				"title": "StarAtlasUnloadCargoPiece",
+				"type": "object"
+			},
+			"output_schema": {
+				"description": "StarAtlas Unload Cargo Piece Output Model",
+				"properties": {
+					"resource_mint_unloaded": {
+						"description": "Amount Resource loaded",
+						"title": "Resource Mint Unloaded",
+						"type": "string"
+					},
+					"amount_unloaded": {
+						"description": "Amount Resource loaded",
+						"title": "Amount Unloaded",
+						"type": "integer"
+					},
+					"destination_x": {
+						"description": "Load Cargo executed on X",
+						"title": "Destination X",
+						"type": "integer"
+					},
+					"destination_y": {
+						"description": "Load Cargo executed on Y",
+						"title": "Destination Y",
+						"type": "integer"
+					}
+				},
+				"required": ["resource_mint_unloaded", "amount_unloaded", "destination_x", "destination_y"],
+				"title": "OutputModel",
+				"type": "object"
+			},
+			"secrets_schema": null,
+			"container_resources": {
+				"requests": {
+					"cpu": 100,
+					"memory": 128
+				},
+				"limits": {
+					"cpu": 500,
+					"memory": 512
+				},
+				"use_gpu": false
+			},
+			"tags": ["Star Atlas"],
+			"style": {
+				"module": "StarAtlasUnloadCargoPiece",
+				"label": "Unload Cargo",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasUnloadCargoPiece",
+			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+			"repository_id": 22,
+			"branch_piece": false
+		}
+	},
+	"workflowPiecesData": {
+		"53_85209645-015f-4bbd-9d79-f9b51d3fac53": {
+			"storage": {
+				"storageAccessMode": "Read/Write"
+			},
+			"containerResources": {
+				"cpu": 500,
+				"memory": 512,
+				"useGpu": false
+			},
+			"inputs": {
+				"fleet_name": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "easy"
+				},
+				"required_status": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "Idle"
+				}
+			}
+		},
+		"59_6340664b-b1bf-4d05-bf7e-f6e7a3f2f623": {
+			"storage": {
+				"storageAccessMode": "Read/Write"
+			},
+			"containerResources": {
+				"cpu": 500,
+				"memory": 512,
+				"useGpu": false
+			},
+			"inputs": {
+				"fleet_name": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "easy"
+				},
+				"destination_x": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": -40
+				},
+				"destination_y": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": 30
+				}
+			}
+		},
+		"53_95e373a3-64b7-489d-bf5c-2ddaa10fa051": {
+			"storage": {
+				"storageAccessMode": "Read/Write"
+			},
+			"containerResources": {
+				"cpu": 500,
+				"memory": 512,
+				"useGpu": false
+			},
+			"inputs": {
+				"fleet_name": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "easy"
+				},
+				"required_status": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "StarbaseLoadingBay"
+				}
+			}
+		},
+		"53_e7bb3e85-ef6c-4aa9-9f6c-17e91b26a0d5": {
+			"storage": {
+				"storageAccessMode": "Read/Write"
+			},
+			"containerResources": {
+				"cpu": 500,
+				"memory": 512,
+				"useGpu": false
+			},
+			"inputs": {
+				"fleet_name": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "easy"
+				},
+				"required_status": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "MineAsteroid"
+				}
+			}
+		},
+		"53_f135bc5d-97d6-40bf-a686-aaf50b744b5f": {
+			"storage": {
+				"storageAccessMode": "Read/Write"
+			},
+			"containerResources": {
+				"cpu": 500,
+				"memory": 512,
+				"useGpu": false
+			},
+			"inputs": {
+				"fleet_name": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "easy"
+				},
+				"required_status": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "ReadyToExitWarp"
+				}
+			}
+		},
+		"66_8ed70df0-84ff-4f1e-977c-6da346358dc0": {
+			"storage": {
+				"storageAccessMode": "Read/Write"
+			},
+			"containerResources": {
+				"cpu": 500,
+				"memory": 512,
+				"useGpu": false
+			},
+			"inputs": {
+				"fleet_name": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "easy"
+				},
+				"destination_x": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": -40
+				},
+				"destination_y": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": 30
+				}
+			}
+		},
+		"65_e53e6c37-4921-4ae9-82ac-f268fc2126be": {
+			"storage": {
+				"storageAccessMode": "Read/Write"
+			},
+			"containerResources": {
+				"cpu": 500,
+				"memory": 512,
+				"useGpu": false
+			},
+			"inputs": {
+				"fleet_name": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "easy"
+				},
+				"destination_x": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": -40
+				},
+				"destination_y": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": 30
+				}
+			}
+		},
+		"52_0896a285-36e1-4101-894f-90c62ce23c6e": {
+			"storage": {
+				"storageAccessMode": "Read/Write"
+			},
+			"containerResources": {
+				"cpu": 500,
+				"memory": 512,
+				"useGpu": false
+			},
+			"inputs": {
+				"fleet_name": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "easy"
+				},
+				"destination_x": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": -47
+				},
+				"destination_y": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": 30
+				}
+			}
+		},
+		"59_e59b7666-9d63-45f4-84dc-4ad60675a5f9": {
+			"storage": {
+				"storageAccessMode": "Read/Write"
+			},
+			"containerResources": {
+				"cpu": 500,
+				"memory": 512,
+				"useGpu": false
+			},
+			"inputs": {
+				"fleet_name": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "easy"
+				},
+				"destination_x": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": -40
+				},
+				"destination_y": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": 30
+				}
+			}
+		},
+		"65_844d40fa-22e2-43da-8ee9-8d75fbf49086": {
+			"storage": {
+				"storageAccessMode": "Read/Write"
+			},
+			"containerResources": {
+				"cpu": 500,
+				"memory": 512,
+				"useGpu": false
+			},
+			"inputs": {
+				"fleet_name": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "easy"
+				},
+				"destination_x": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": -40
+				},
+				"destination_y": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": 30
+				}
+			}
+		},
+		"65_1772e6c0-d5d3-41d9-984c-97d981220a25": {
+			"storage": {
+				"storageAccessMode": "Read/Write"
+			},
+			"containerResources": {
+				"cpu": 500,
+				"memory": 512,
+				"useGpu": false
+			},
+			"inputs": {
+				"fleet_name": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "easy"
+				},
+				"destination_x": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": -47
+				},
+				"destination_y": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": 30
+				}
+			}
+		},
+		"52_751c490a-81a8-49ab-b1c0-c182ae90361f": {
+			"storage": {
+				"storageAccessMode": "Read/Write"
+			},
+			"containerResources": {
+				"cpu": 500,
+				"memory": 512,
+				"useGpu": false
+			},
+			"inputs": {
+				"fleet_name": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "easy"
+				},
+				"destination_x": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": -40
+				},
+				"destination_y": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": 30
+				}
+			}
+		},
+		"319_95655bdb-cbe1-4a65-be8f-6fee7073b8f4": {
+			"storage": {
+				"storageAccessMode": "Read/Write"
+			},
+			"containerResources": {
+				"cpu": 500,
+				"memory": 512,
+				"useGpu": false
+			},
+			"inputs": {
+				"fleet_name": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "easy"
+				}
+			}
+		},
+		"312_3b653d76-2281-4242-8e33-d9d19725463b": {
+			"storage": {
+				"storageAccessMode": "Read/Write"
+			},
+			"containerResources": {
+				"cpu": 500,
+				"memory": 512,
+				"useGpu": false
+			},
+			"inputs": {
+				"fleet_name": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "easy"
+				},
+				"resource_mint": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": ""
+				},
+				"resource_amount": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": null
+				},
+				"fuel_amount": {
+					"fromUpstream": true,
+					"upstreamId": "StarAtlasS_419b5a95a17b4394b2befcd3f259ea8d",
+					"upstreamArgument": "fuel_needed_subwarp",
+					"upstreamValue": "StarAtlasStatFutureMiningPiece (419b5a95) - Fuel Needed Subwarp",
+					"value": null
+				},
+				"ammo_amount": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": null
+				}
+			}
+		},
+		"296_9dd1d976-5d5d-42a2-a4aa-84e4b22fa09f": {
+			"storage": {
+				"storageAccessMode": "Read/Write"
+			},
+			"containerResources": {
+				"cpu": 500,
+				"memory": 512,
+				"useGpu": false
+			},
+			"inputs": {
+				"fleet_name": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "easy"
+				},
+				"amount": {
+					"fromUpstream": true,
+					"upstreamId": "StarAtlasS_bfc3333787aa43c8b63675ca5affef1b",
+					"upstreamArgument": "fuel_needed_subwarp",
+					"upstreamValue": "StarAtlasStatFutureMiningPiece (bfc33337) - Fuel Needed Subwarp",
+					"value": null
+				},
+				"destination_x": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": -40
+				},
+				"destination_y": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": 30
+				}
+			}
+		},
+		"472_cbb16f48-c940-49b1-83ea-9e7f277874b5": {
+			"storage": {
+				"storageAccessMode": "Read/Write"
+			},
+			"containerResources": {
+				"cpu": 500,
+				"memory": 512,
+				"useGpu": false
+			},
+			"inputs": {
+				"fleet_name": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "easy"
+				}
+			}
+		},
+		"474_419b5a95-a17b-4394-b2be-fcd3f259ea8d": {
+			"storage": {
+				"storageAccessMode": "Read/Write"
+			},
+			"containerResources": {
+				"cpu": 500,
+				"memory": 512,
+				"useGpu": false
+			},
+			"inputs": {
+				"fleet_name": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "easy"
+				},
+				"resource_mint": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "CUore1tNkiubxSwDEtLc3Ybs1xfWLs8uGjyydUYZ25xc"
+				},
+				"starbase_x": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": -40
+				},
+				"starbase_y": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": 30
+				},
+				"planet_x": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": -47
+				},
+				"planet_y": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": 30
+				}
+			}
+		},
+		"493_816c00e0-7be4-4b1f-907d-f980d17d502d": {
+			"storage": {
+				"storageAccessMode": "Read/Write"
+			},
+			"containerResources": {
+				"cpu": 500,
+				"memory": 512,
+				"useGpu": false
+			},
+			"inputs": {
+				"fleet_name": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "easy"
+				},
+				"resource_mint": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": ""
+				},
+				"resource_amount": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": null
+				},
+				"fuel_amount": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": null
+				},
+				"ammo_amount": {
+					"fromUpstream": true,
+					"upstreamId": "StarAtlasS_162d29398559459d95755d1d7096fc04",
+					"upstreamArgument": "ammo_for_duration",
+					"upstreamValue": "StarAtlasStatFutureMiningPiece (162d2939) - Ammo For Duration",
+					"value": null
+				}
+			}
+		},
+		"474_bfc33337-87aa-43c8-b636-75ca5affef1b": {
+			"storage": {
+				"storageAccessMode": "Read/Write"
+			},
+			"containerResources": {
+				"cpu": 500,
+				"memory": 512,
+				"useGpu": false
+			},
+			"inputs": {
+				"fleet_name": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "easy"
+				},
+				"resource_mint": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "CUore1tNkiubxSwDEtLc3Ybs1xfWLs8uGjyydUYZ25xc"
+				},
+				"starbase_x": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": -40
+				},
+				"starbase_y": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": 30
+				},
+				"planet_x": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": -47
+				},
+				"planet_y": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": 30
+				}
+			}
+		},
+		"474_162d2939-8559-459d-9575-5d1d7096fc04": {
+			"storage": {
+				"storageAccessMode": "Read/Write"
+			},
+			"containerResources": {
+				"cpu": 500,
+				"memory": 512,
+				"useGpu": false
+			},
+			"inputs": {
+				"fleet_name": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "easy"
+				},
+				"resource_mint": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "CUore1tNkiubxSwDEtLc3Ybs1xfWLs8uGjyydUYZ25xc"
+				},
+				"starbase_x": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": -40
+				},
+				"starbase_y": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": 30
+				},
+				"planet_x": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": -47
+				},
+				"planet_y": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": 30
+				}
+			}
+		},
+		"474_32930b4b-af7b-4156-8e85-5859e779e5ea": {
+			"storage": {
+				"storageAccessMode": "Read/Write"
+			},
+			"containerResources": {
+				"cpu": 500,
+				"memory": 512,
+				"useGpu": false
+			},
+			"inputs": {
+				"fleet_name": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "easy"
+				},
+				"resource_mint": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "CUore1tNkiubxSwDEtLc3Ybs1xfWLs8uGjyydUYZ25xc"
+				},
+				"starbase_x": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": -40
+				},
+				"starbase_y": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": 30
+				},
+				"planet_x": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": -47
+				},
+				"planet_y": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": 30
+				}
+			}
+		},
+		"493_3306fcfe-0c4d-44d1-8115-918b6b01eea5": {
+			"storage": {
+				"storageAccessMode": "Read/Write"
+			},
+			"containerResources": {
+				"cpu": 500,
+				"memory": 512,
+				"useGpu": false
+			},
+			"inputs": {
+				"fleet_name": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "easy"
+				},
+				"resource_mint": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "foodQJAztMzX1DKpLaiounNe2BDMds5RNuPC6jsNrDG"
+				},
+				"resource_amount": {
+					"fromUpstream": true,
+					"upstreamId": "StarAtlasS_32930b4baf7b41568e855859e779e5ea",
+					"upstreamArgument": "food_for_duration",
+					"upstreamValue": "StarAtlasStatFutureMiningPiece (32930b4b) - Food For Duration",
+					"value": null
+				},
+				"fuel_amount": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": null
+				},
+				"ammo_amount": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": null
+				}
+			}
+		},
+		"474_05f524f7-7075-4e45-a366-3e84b5ba41c2": {
+			"storage": {
+				"storageAccessMode": "Read/Write"
+			},
+			"containerResources": {
+				"cpu": 500,
+				"memory": 512,
+				"useGpu": false
+			},
+			"inputs": {
+				"fleet_name": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "easy"
+				},
+				"resource_mint": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "CUore1tNkiubxSwDEtLc3Ybs1xfWLs8uGjyydUYZ25xc"
+				},
+				"starbase_x": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": -40
+				},
+				"starbase_y": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": 30
+				},
+				"planet_x": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": -47
+				},
+				"planet_y": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": 30
+				}
+			}
+		},
+		"476_7b64029a-9f40-4086-affb-633f9646a321": {
+			"storage": {
+				"storageAccessMode": "Read/Write"
+			},
+			"containerResources": {
+				"cpu": 500,
+				"memory": 512,
+				"useGpu": false
+			},
+			"inputs": {
+				"fleet_name": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "easy"
+				},
+				"amount": {
+					"fromUpstream": true,
+					"upstreamId": "StarAtlasS_05f524f770754e45a3663e84b5ba41c2",
+					"upstreamArgument": "ammo_for_duration",
+					"upstreamValue": "StarAtlasStatFutureMiningPiece (05f524f7) - Ammo For Duration",
+					"value": null
+				},
+				"destination_x": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": -40
+				},
+				"destination_y": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": 30
+				}
+			}
+		},
+		"474_69d02a00-2eac-4f6a-857d-8d75ce9b8dce": {
+			"storage": {
+				"storageAccessMode": "Read/Write"
+			},
+			"containerResources": {
+				"cpu": 500,
+				"memory": 512,
+				"useGpu": false
+			},
+			"inputs": {
+				"fleet_name": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "easy"
+				},
+				"resource_mint": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "CUore1tNkiubxSwDEtLc3Ybs1xfWLs8uGjyydUYZ25xc"
+				},
+				"starbase_x": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": -40
+				},
+				"starbase_y": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": 30
+				},
+				"planet_x": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": -47
+				},
+				"planet_y": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": 30
+				}
+			}
+		},
+		"484_52cf92f2-5449-4e28-aea4-c930cd826c5c": {
+			"storage": {
+				"storageAccessMode": "Read/Write"
+			},
+			"containerResources": {
+				"cpu": 500,
+				"memory": 512,
+				"useGpu": false
+			},
+			"inputs": {
+				"fleet_name": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "easy"
+				},
+				"resource_mint": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "foodQJAztMzX1DKpLaiounNe2BDMds5RNuPC6jsNrDG"
+				},
+				"amount": {
+					"fromUpstream": true,
+					"upstreamId": "StarAtlasS_69d02a002eac4f6a857d8d75ce9b8dce",
+					"upstreamArgument": "food_for_duration",
+					"upstreamValue": "StarAtlasStatFutureMiningPiece (69d02a00) - Food For Duration",
+					"value": null
+				},
+				"destination_x": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": -40
+				},
+				"destination_y": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": 30
+				}
+			}
+		},
+		"471_a65e4385-b7ee-4f83-8a0d-a53e4bca8605": {
+			"storage": {
+				"storageAccessMode": "Read/Write"
+			},
+			"containerResources": {
+				"cpu": 500,
+				"memory": 512,
+				"useGpu": false
+			},
+			"inputs": {
+				"fleet_name": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "easy"
+				},
+				"resource_mint": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "CUore1tNkiubxSwDEtLc3Ybs1xfWLs8uGjyydUYZ25xc"
+				},
+				"planet_pk": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "9VWTr41JJsBe7N25EnoH4CYURhbWShkaRb6QKFhJLgXa"
+				}
+			}
+		},
+		"493_5f022e89-ab9a-4b44-911f-51befbd70845": {
+			"storage": {
+				"storageAccessMode": "Read/Write"
+			},
+			"containerResources": {
+				"cpu": 500,
+				"memory": 512,
+				"useGpu": false
+			},
+			"inputs": {
+				"fleet_name": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "easy"
+				},
+				"resource_mint": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "CUore1tNkiubxSwDEtLc3Ybs1xfWLs8uGjyydUYZ25xc"
+				},
+				"resource_amount": {
+					"fromUpstream": true,
+					"upstreamId": "MathArithm_77d0d75169f74f44bb4f7445822b2dc8",
+					"upstreamArgument": "result_output_int",
+					"upstreamValue": "MathArithmeticPiece (77d0d751) - Result Output Int",
+					"value": null
+				},
+				"fuel_amount": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": null
+				},
+				"ammo_amount": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": null
+				}
+			}
+		},
+		"478_77d0d751-69f7-4f44-bb4f-7445822b2dc8": {
+			"storage": {
+				"storageAccessMode": "Read/Write"
+			},
+			"containerResources": {
+				"cpu": 100,
+				"memory": 128,
+				"useGpu": false
+			},
+			"inputs": {
+				"left_input_int": {
+					"fromUpstream": true,
+					"upstreamId": "StarAtlasS_c12c4f9b77e9455a9adb7323d8688d55",
+					"upstreamArgument": "amount_mined",
+					"upstreamValue": "StarAtlasStatFutureMiningPiece (c12c4f9b) - Amount Mined",
+					"value": 0
+				},
+				"right_input_int": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": 2
+				},
+				"left_input_float": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": 0
+				},
+				"right_input_float": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": 0
+				},
+				"operation_enum": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "divide"
+				}
+			}
+		},
+		"474_c12c4f9b-77e9-455a-9adb-7323d8688d55": {
+			"storage": {
+				"storageAccessMode": "Read/Write"
+			},
+			"containerResources": {
+				"cpu": 500,
+				"memory": 512,
+				"useGpu": false
+			},
+			"inputs": {
+				"fleet_name": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "easy"
+				},
+				"resource_mint": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "CUore1tNkiubxSwDEtLc3Ybs1xfWLs8uGjyydUYZ25xc"
+				},
+				"starbase_x": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": -40
+				},
+				"starbase_y": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": 30
+				},
+				"planet_x": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": -47
+				},
+				"planet_y": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": 30
+				}
+			}
+		},
+		"492_e4f9dc81-55c6-49b2-9f10-45556fd48143": {
+			"storage": {
+				"storageAccessMode": "Read/Write"
+			},
+			"containerResources": {
+				"cpu": 500,
+				"memory": 512,
+				"useGpu": false
+			},
+			"inputs": {
+				"fleet_name": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "easy"
+				},
+				"resource_mint": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "CUore1tNkiubxSwDEtLc3Ybs1xfWLs8uGjyydUYZ25xc"
+				}
+			}
+		},
+		"485_8ff9b791-942b-4d10-ab45-0e48aaa0643f": {
+			"storage": {
+				"storageAccessMode": "Read/Write"
+			},
+			"containerResources": {
+				"cpu": 500,
+				"memory": 512,
+				"useGpu": false
+			},
+			"inputs": {
+				"fleet_name": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "easy"
+				},
+				"resource_mint": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "CUore1tNkiubxSwDEtLc3Ybs1xfWLs8uGjyydUYZ25xc"
+				},
+				"amount": {
+					"fromUpstream": true,
+					"upstreamId": "StarAtlasS_e4f9dc8155c649b29f1045556fd48143",
+					"upstreamArgument": "resource_amount_requested",
+					"upstreamValue": "StarAtlasStatCargoPiece (e4f9dc81) - Resource Amount Requested",
+					"value": null
+				},
+				"destination_x": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": 0
+				},
+				"destination_y": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": 0
+				}
+			}
+		}
+	},
+	"workflowNodes": [{
+		"id": "53_85209645-015f-4bbd-9d79-f9b51d3fac53",
+		"type": "CustomNode",
+		"position": {
+			"x": -1634.1246135229862,
+			"y": 135.6727441180675
+		},
+		"data": {
+			"name": "StarAtlasFleetStatusCheckPiece",
+			"style": {
+				"module": "StarAtlasFleetStatusCheckPiece",
+				"label": "Status Check",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"validationError": false,
+			"orientation": "horizontal",
+			"branch_piece": true
+		},
+		"width": 150,
+		"height": 70,
+		"selected": false,
+		"positionAbsolute": {
+			"x": -1634.1246135229862,
+			"y": 135.6727441180675
+		},
+		"dragging": false
+	}, {
+		"id": "59_6340664b-b1bf-4d05-bf7e-f6e7a3f2f623",
+		"type": "CustomNode",
+		"position": {
+			"x": -1373.2152940173305,
+			"y": -4.668657734539181
+		},
+		"data": {
+			"name": "StarAtlasFleetLocationCheckPiece",
+			"style": {
+				"module": "StarAtlasFleetLocationCheckPiece",
+				"label": "Location Check",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"validationError": false,
+			"orientation": "horizontal",
+			"branch_piece": true
+		},
+		"width": 150,
+		"height": 70,
+		"selected": false,
+		"positionAbsolute": {
+			"x": -1373.2152940173305,
+			"y": -4.668657734539181
+		},
+		"dragging": false
+	}, {
+		"id": "53_95e373a3-64b7-489d-bf5c-2ddaa10fa051",
+		"type": "CustomNode",
+		"position": {
+			"x": -756.9777559389183,
+			"y": 137.93447921302015
+		},
+		"data": {
+			"name": "StarAtlasFleetStatusCheckPiece",
+			"style": {
+				"module": "StarAtlasFleetStatusCheckPiece",
+				"label": "Status Check",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"validationError": false,
+			"orientation": "horizontal",
+			"branch_piece": true
+		},
+		"width": 150,
+		"height": 70,
+		"selected": false,
+		"positionAbsolute": {
+			"x": -756.9777559389183,
+			"y": 137.93447921302015
+		},
+		"dragging": false
+	}, {
+		"id": "53_e7bb3e85-ef6c-4aa9-9f6c-17e91b26a0d5",
+		"type": "CustomNode",
+		"position": {
+			"x": -402.5706503207237,
+			"y": 396.02052781430723
+		},
+		"data": {
+			"name": "StarAtlasFleetStatusCheckPiece",
+			"style": {
+				"module": "StarAtlasFleetStatusCheckPiece",
+				"label": "Status Check",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"validationError": false,
+			"orientation": "horizontal",
+			"branch_piece": true
+		},
+		"width": 150,
+		"height": 70,
+		"selected": false,
+		"positionAbsolute": {
+			"x": -402.5706503207237,
+			"y": 396.02052781430723
+		},
+		"dragging": false
+	}, {
+		"id": "53_f135bc5d-97d6-40bf-a686-aaf50b744b5f",
+		"type": "CustomNode",
+		"position": {
+			"x": -112.93421369452409,
+			"y": 537.459229712711
+		},
+		"data": {
+			"name": "StarAtlasFleetStatusCheckPiece",
+			"style": {
+				"module": "StarAtlasFleetStatusCheckPiece",
+				"label": "Status Check",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"validationError": false,
+			"orientation": "horizontal",
+			"branch_piece": true
+		},
+		"width": 150,
+		"height": 70,
+		"selected": false,
+		"positionAbsolute": {
+			"x": -112.93421369452409,
+			"y": 537.459229712711
+		},
+		"dragging": false
+	}, {
+		"id": "66_8ed70df0-84ff-4f1e-977c-6da346358dc0",
+		"type": "CustomNode",
+		"position": {
+			"x": -1237.6785357840636,
+			"y": -191.47363142468095
+		},
+		"data": {
+			"name": "StarAtlasDockPiece",
+			"style": {
+				"module": "StarAtlasDockPiece",
+				"label": "Dock",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"validationError": false,
+			"orientation": "horizontal",
+			"branch_piece": false
+		},
+		"width": 150,
+		"height": 70,
+		"selected": false,
+		"positionAbsolute": {
+			"x": -1237.6785357840636,
+			"y": -191.47363142468095
+		},
+		"dragging": false
+	}, {
+		"id": "65_e53e6c37-4921-4ae9-82ac-f268fc2126be",
+		"type": "CustomNode",
+		"position": {
+			"x": 1296.2635108890613,
+			"y": -860.534087889489
+		},
+		"data": {
+			"name": "StarAtlasUndockPiece",
+			"style": {
+				"module": "StarAtlasUndockPiece",
+				"label": "Undock",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"validationError": false,
+			"orientation": "horizontal",
+			"branch_piece": false
+		},
+		"width": 150,
+		"height": 70,
+		"selected": false,
+		"positionAbsolute": {
+			"x": 1296.2635108890613,
+			"y": -860.534087889489
+		},
+		"dragging": false
+	}, {
+		"id": "52_0896a285-36e1-4101-894f-90c62ce23c6e",
+		"type": "CustomNode",
+		"position": {
+			"x": 1541.7661240484035,
+			"y": -772.1407589688828
+		},
+		"data": {
+			"name": "StarAtlasSubwarpPiece",
+			"style": {
+				"module": "StarAtlasSubwarpPiece",
+				"label": "Subwarp",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"validationError": false,
+			"orientation": "horizontal",
+			"branch_piece": false
+		},
+		"width": 150,
+		"height": 70,
+		"selected": false,
+		"positionAbsolute": {
+			"x": 1541.7661240484035,
+			"y": -772.1407589688828
+		},
+		"dragging": false
+	}, {
+		"id": "59_e59b7666-9d63-45f4-84dc-4ad60675a5f9",
+		"type": "CustomNode",
+		"position": {
+			"x": -200.74957616384145,
+			"y": 92.6160548713508
+		},
+		"data": {
+			"name": "StarAtlasFleetLocationCheckPiece",
+			"style": {
+				"module": "StarAtlasFleetLocationCheckPiece",
+				"label": "Location Check",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"validationError": false,
+			"orientation": "horizontal",
+			"branch_piece": true
+		},
+		"width": 150,
+		"height": 70,
+		"selected": false,
+		"positionAbsolute": {
+			"x": -200.74957616384145,
+			"y": 92.6160548713508
+		},
+		"dragging": false
+	}, {
+		"id": "65_844d40fa-22e2-43da-8ee9-8d75fbf49086",
+		"type": "CustomNode",
+		"position": {
+			"x": 163.90716379764262,
+			"y": 20.36789129156068
+		},
+		"data": {
+			"name": "StarAtlasUndockPiece",
+			"style": {
+				"module": "StarAtlasUndockPiece",
+				"label": "Undock",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"validationError": false,
+			"orientation": "horizontal",
+			"branch_piece": false
+		},
+		"width": 150,
+		"height": 70,
+		"selected": false,
+		"positionAbsolute": {
+			"x": 163.90716379764262,
+			"y": 20.36789129156068
+		},
+		"dragging": false
+	}, {
+		"id": "65_1772e6c0-d5d3-41d9-984c-97d981220a25",
+		"type": "CustomNode",
+		"position": {
+			"x": 163.90716379764262,
+			"y": 170.36789129156068
+		},
+		"data": {
+			"name": "StarAtlasUndockPiece",
+			"style": {
+				"module": "StarAtlasUndockPiece",
+				"label": "Undock",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"validationError": false,
+			"orientation": "horizontal",
+			"branch_piece": false
+		},
+		"width": 150,
+		"height": 70,
+		"selected": false,
+		"positionAbsolute": {
+			"x": 163.90716379764262,
+			"y": 170.36789129156068
+		},
+		"dragging": false
+	}, {
+		"id": "52_751c490a-81a8-49ab-b1c0-c182ae90361f",
+		"type": "CustomNode",
+		"position": {
+			"x": -615.7716540840256,
+			"y": -64.06106998787288
+		},
+		"data": {
+			"name": "StarAtlasSubwarpPiece",
+			"style": {
+				"module": "StarAtlasSubwarpPiece",
+				"label": "Subwarp",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"validationError": false,
+			"orientation": "horizontal",
+			"branch_piece": false
+		},
+		"width": 150,
+		"height": 70,
+		"selected": false,
+		"positionAbsolute": {
+			"x": -615.7716540840256,
+			"y": -64.06106998787288
+		},
+		"dragging": false
+	}, {
+		"id": "319_95655bdb-cbe1-4a65-be8f-6fee7073b8f4",
+		"type": "CustomNode",
+		"position": {
+			"x": 226.557008629601,
+			"y": 524.2370073134293
+		},
+		"data": {
+			"name": "StarAtlasExitWarpPiece",
+			"style": {
+				"module": "StarAtlasExitWarpPiece",
+				"label": "Exit Warp",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"validationError": false,
+			"orientation": "horizontal",
+			"branch_piece": false
+		},
+		"width": 150,
+		"height": 70,
+		"selected": true,
+		"positionAbsolute": {
+			"x": 226.557008629601,
+			"y": 524.2370073134293
+		},
+		"dragging": false
+	}, {
+		"id": "312_3b653d76-2281-4242-8e33-d9d19725463b",
+		"type": "CustomNode",
+		"position": {
+			"x": -67.16934281620206,
+			"y": -708.3656793524757
+		},
+		"data": {
+			"name": "StarAtlasFleetCargoCheckPiece",
+			"style": {
+				"module": "StarAtlasFleetCargoCheckPiece",
+				"label": "Cargo Check",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"validationError": false,
+			"orientation": "horizontal",
+			"branch_piece": true
+		},
+		"width": 150,
+		"height": 70,
+		"selected": false,
+		"positionAbsolute": {
+			"x": -67.16934281620206,
+			"y": -708.3656793524757
+		},
+		"dragging": false
+	}, {
+		"id": "296_9dd1d976-5d5d-42a2-a4aa-84e4b22fa09f",
+		"type": "CustomNode",
+		"position": {
+			"x": 153.9545423044401,
+			"y": -513.7997375719705
+		},
+		"data": {
+			"name": "StarAtlasLoadFuelPiece",
+			"style": {
+				"module": "StarAtlasLoadFuelPiece",
+				"label": "Load Fuel",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"validationError": false,
+			"orientation": "horizontal",
+			"branch_piece": false
+		},
+		"width": 150,
+		"height": 70,
+		"selected": false,
+		"positionAbsolute": {
+			"x": 153.9545423044401,
+			"y": -513.7997375719705
+		},
+		"dragging": false
+	}, {
+		"id": "472_cbb16f48-c940-49b1-83ea-9e7f277874b5",
+		"type": "CustomNode",
+		"position": {
+			"x": -73.42666061854919,
+			"y": 328.4164828120198
+		},
+		"data": {
+			"name": "StarAtlasStopMiningPiece",
+			"style": {
+				"module": "StarAtlasStopMiningPiece",
+				"label": "Stop Mine",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"validationError": false,
+			"orientation": "horizontal",
+			"branch_piece": false
+		},
+		"width": 150,
+		"height": 70,
+		"selected": false,
+		"positionAbsolute": {
+			"x": -73.42666061854919,
+			"y": 328.4164828120198
+		},
+		"dragging": false
+	}, {
+		"id": "474_419b5a95-a17b-4394-b2be-fcd3f259ea8d",
+		"type": "CustomNode",
+		"position": {
+			"x": -298.4677171449666,
+			"y": -573.0437039360711
+		},
+		"data": {
+			"name": "StarAtlasStatFutureMiningPiece",
+			"style": {
+				"module": "StarAtlasStatFutureMiningPiece",
+				"label": "Future Stat Mine",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"validationError": false,
+			"orientation": "horizontal",
+			"branch_piece": false
+		},
+		"width": 150,
+		"height": 70,
+		"selected": false,
+		"positionAbsolute": {
+			"x": -298.4677171449666,
+			"y": -573.0437039360711
+		},
+		"dragging": false
+	}, {
+		"id": "493_816c00e0-7be4-4b1f-907d-f980d17d502d",
+		"type": "CustomNode",
+		"position": {
+			"x": 418.7326370134829,
+			"y": -666.2906827417946
+		},
+		"data": {
+			"name": "StarAtlasFleetCargoCheckPiece",
+			"style": {
+				"module": "StarAtlasFleetCargoCheckPiece",
+				"label": "Cargo Check",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"validationError": false,
+			"orientation": "horizontal",
+			"branch_piece": true
+		},
+		"width": 150,
+		"height": 70,
+		"selected": false,
+		"positionAbsolute": {
+			"x": 418.7326370134829,
+			"y": -666.2906827417946
+		},
+		"dragging": false
+	}, {
+		"id": "474_bfc33337-87aa-43c8-b636-75ca5affef1b",
+		"type": "CustomNode",
+		"position": {
+			"x": -55.75108575733137,
+			"y": -515.5452188132356
+		},
+		"data": {
+			"name": "StarAtlasStatFutureMiningPiece",
+			"style": {
+				"module": "StarAtlasStatFutureMiningPiece",
+				"label": "Future Stat Mine",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"validationError": false,
+			"orientation": "horizontal",
+			"branch_piece": false
+		},
+		"width": 150,
+		"height": 70,
+		"selected": false,
+		"positionAbsolute": {
+			"x": -55.75108575733137,
+			"y": -515.5452188132356
+		},
+		"dragging": false
+	}, {
+		"id": "474_162d2939-8559-459d-9575-5d1d7096fc04",
+		"type": "CustomNode",
+		"position": {
+			"x": 189.61161677183725,
+			"y": -707.2219588503089
+		},
+		"data": {
+			"name": "StarAtlasStatFutureMiningPiece",
+			"style": {
+				"module": "StarAtlasStatFutureMiningPiece",
+				"label": "Future Stat Mine",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"validationError": false,
+			"orientation": "horizontal",
+			"branch_piece": false
+		},
+		"width": 150,
+		"height": 70,
+		"selected": false,
+		"positionAbsolute": {
+			"x": 189.61161677183725,
+			"y": -707.2219588503089
+		},
+		"dragging": false
+	}, {
+		"id": "474_32930b4b-af7b-4156-8e85-5859e779e5ea",
+		"type": "CustomNode",
+		"position": {
+			"x": 647.3267943920441,
+			"y": -800.3475518161179
+		},
+		"data": {
+			"name": "StarAtlasStatFutureMiningPiece",
+			"style": {
+				"module": "StarAtlasStatFutureMiningPiece",
+				"label": "Future Stat Mine",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"validationError": false,
+			"orientation": "horizontal",
+			"branch_piece": false
+		},
+		"width": 150,
+		"height": 70,
+		"selected": false,
+		"positionAbsolute": {
+			"x": 647.3267943920441,
+			"y": -800.3475518161179
+		},
+		"dragging": false
+	}, {
+		"id": "493_3306fcfe-0c4d-44d1-8115-918b6b01eea5",
+		"type": "CustomNode",
+		"position": {
+			"x": 860.6108915916536,
+			"y": -771.9484276863877
+		},
+		"data": {
+			"name": "StarAtlasFleetCargoCheckPiece",
+			"style": {
+				"module": "StarAtlasFleetCargoCheckPiece",
+				"label": "Cargo Check",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"validationError": false,
+			"orientation": "horizontal",
+			"branch_piece": true
+		},
+		"width": 150,
+		"height": 70,
+		"selected": false,
+		"positionAbsolute": {
+			"x": 860.6108915916536,
+			"y": -771.9484276863877
+		},
+		"dragging": false
+	}, {
+		"id": "474_05f524f7-7075-4e45-a366-3e84b5ba41c2",
+		"type": "CustomNode",
+		"position": {
+			"x": 585.1738874637259,
+			"y": -533.852237042148
+		},
+		"data": {
+			"name": "StarAtlasStatFutureMiningPiece",
+			"style": {
+				"module": "StarAtlasStatFutureMiningPiece",
+				"label": "Future Stat Mine",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"validationError": false,
+			"orientation": "horizontal",
+			"branch_piece": false
+		},
+		"width": 150,
+		"height": 70,
+		"selected": false,
+		"positionAbsolute": {
+			"x": 585.1738874637259,
+			"y": -533.852237042148
+		},
+		"dragging": false
+	}, {
+		"id": "476_7b64029a-9f40-4086-affb-633f9646a321",
+		"type": "CustomNode",
+		"position": {
+			"x": 796.4702808623173,
+			"y": -530.1185117276345
+		},
+		"data": {
+			"name": "StarAtlasLoadAmmoPiece",
+			"style": {
+				"module": "StarAtlasLoadAmmoPiece",
+				"label": "Load Ammo",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"validationError": false,
+			"orientation": "horizontal",
+			"branch_piece": false
+		},
+		"width": 150,
+		"height": 70,
+		"selected": false,
+		"positionAbsolute": {
+			"x": 796.4702808623173,
+			"y": -530.1185117276345
+		},
+		"dragging": false
+	}, {
+		"id": "474_69d02a00-2eac-4f6a-857d-8d75ce9b8dce",
+		"type": "CustomNode",
+		"position": {
+			"x": 1028.5256765710005,
+			"y": -632.006309146321
+		},
+		"data": {
+			"name": "StarAtlasStatFutureMiningPiece",
+			"style": {
+				"module": "StarAtlasStatFutureMiningPiece",
+				"label": "Future Stat Mine",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"validationError": false,
+			"orientation": "horizontal",
+			"branch_piece": false
+		},
+		"width": 150,
+		"height": 70,
+		"selected": false,
+		"positionAbsolute": {
+			"x": 1028.5256765710005,
+			"y": -632.006309146321
+		},
+		"dragging": false
+	}, {
+		"id": "484_52cf92f2-5449-4e28-aea4-c930cd826c5c",
+		"type": "CustomNode",
+		"position": {
+			"x": 1243.0645274432832,
+			"y": -632.6924318311635
+		},
+		"data": {
+			"name": "StarAtlasLoadCargoPiece",
+			"style": {
+				"module": "StarAtlasLoadCargoPiece",
+				"label": "Load Cargo",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"validationError": false,
+			"orientation": "horizontal",
+			"branch_piece": false
+		},
+		"width": 150,
+		"height": 70,
+		"selected": false,
+		"positionAbsolute": {
+			"x": 1243.0645274432832,
+			"y": -632.6924318311635
+		},
+		"dragging": false
+	}, {
+		"id": "471_a65e4385-b7ee-4f83-8a0d-a53e4bca8605",
+		"type": "CustomNode",
+		"position": {
+			"x": -944.5980468601267,
+			"y": -24.62444531557071
+		},
+		"data": {
+			"name": "StarAtlasMiningPiece",
+			"style": {
+				"module": "StarAtlasMiningPiece",
+				"label": "Mine",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"validationError": false,
+			"orientation": "horizontal",
+			"branch_piece": false
+		},
+		"width": 150,
+		"height": 70,
+		"selected": false,
+		"positionAbsolute": {
+			"x": -944.5980468601267,
+			"y": -24.62444531557071
+		},
+		"dragging": false
+	}, {
+		"id": "493_5f022e89-ab9a-4b44-911f-51befbd70845",
+		"type": "CustomNode",
+		"position": {
+			"x": -790.4068592007043,
+			"y": -669.471101898022
+		},
+		"data": {
+			"name": "StarAtlasFleetCargoCheckPiece",
+			"style": {
+				"module": "StarAtlasFleetCargoCheckPiece",
+				"label": "Cargo Check",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"validationError": false,
+			"orientation": "horizontal",
+			"branch_piece": true
+		},
+		"width": 150,
+		"height": 70,
+		"selected": false,
+		"positionAbsolute": {
+			"x": -790.4068592007043,
+			"y": -669.471101898022
+		},
+		"dragging": false
+	}, {
+		"id": "478_77d0d751-69f7-4f44-bb4f-7445822b2dc8",
+		"type": "CustomNode",
+		"position": {
+			"x": -934.6053391942647,
+			"y": -516.2602169048644
+		},
+		"data": {
+			"name": "MathArithmeticPiece",
+			"style": {
+				"module": "MathArithmeticPiece",
+				"label": "Math Logic",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:file-alt",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"validationError": false,
+			"orientation": "horizontal",
+			"branch_piece": false
+		},
+		"width": 150,
+		"height": 70,
+		"selected": false,
+		"positionAbsolute": {
+			"x": -934.6053391942647,
+			"y": -516.2602169048644
+		},
+		"dragging": false
+	}, {
+		"id": "474_c12c4f9b-77e9-455a-9adb-7323d8688d55",
+		"type": "CustomNode",
+		"position": {
+			"x": -1080.6063001877442,
+			"y": -346.82700291243134
+		},
+		"data": {
+			"name": "StarAtlasStatFutureMiningPiece",
+			"style": {
+				"module": "StarAtlasStatFutureMiningPiece",
+				"label": "Future Stat Mine",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"validationError": false,
+			"orientation": "horizontal",
+			"branch_piece": false
+		},
+		"width": 150,
+		"height": 70,
+		"selected": false,
+		"positionAbsolute": {
+			"x": -1080.6063001877442,
+			"y": -346.82700291243134
+		},
+		"dragging": false
+	}, {
+		"id": "492_e4f9dc81-55c6-49b2-9f10-45556fd48143",
+		"type": "CustomNode",
+		"position": {
+			"x": -575.9116202102841,
+			"y": -759.5951518939971
+		},
+		"data": {
+			"name": "StarAtlasStatCargoPiece",
+			"style": {
+				"module": "StarAtlasStatCargoPiece",
+				"label": "Stat Cargo",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"validationError": false,
+			"orientation": "horizontal",
+			"branch_piece": false
+		},
+		"width": 150,
+		"height": 70,
+		"selected": false,
+		"positionAbsolute": {
+			"x": -575.9116202102841,
+			"y": -759.5951518939971
+		},
+		"dragging": false
+	}, {
+		"id": "485_8ff9b791-942b-4d10-ab45-0e48aaa0643f",
+		"type": "CustomNode",
+		"position": {
+			"x": -375.8362292192195,
+			"y": -736.1628988950436
+		},
+		"data": {
+			"name": "StarAtlasUnloadCargoPiece",
+			"style": {
+				"module": "StarAtlasUnloadCargoPiece",
+				"label": "Unload Cargo",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"validationError": false,
+			"orientation": "horizontal",
+			"branch_piece": false
+		},
+		"width": 150,
+		"height": 70,
+		"selected": false,
+		"positionAbsolute": {
+			"x": -375.8362292192195,
+			"y": -736.1628988950436
+		},
+		"dragging": false
+	}],
+	"workflowEdges": [{
+		"source": "53_85209645-015f-4bbd-9d79-f9b51d3fac53",
+		"sourceHandle": "source-53_85209645-015f-4bbd-9d79-f9b51d3fac53",
+		"target": "59_6340664b-b1bf-4d05-bf7e-f6e7a3f2f623",
+		"targetHandle": "target-59_6340664b-b1bf-4d05-bf7e-f6e7a3f2f623",
+		"id": "reactflow__edge-53_85209645-015f-4bbd-9d79-f9b51d3fac53source-53_85209645-015f-4bbd-9d79-f9b51d3fac53-59_6340664b-b1bf-4d05-bf7e-f6e7a3f2f623target-59_6340664b-b1bf-4d05-bf7e-f6e7a3f2f623",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		},
+		"selected": false
+	}, {
+		"source": "53_85209645-015f-4bbd-9d79-f9b51d3fac53",
+		"sourceHandle": "source-else-53_85209645-015f-4bbd-9d79-f9b51d3fac53",
+		"target": "53_95e373a3-64b7-489d-bf5c-2ddaa10fa051",
+		"targetHandle": "target-53_95e373a3-64b7-489d-bf5c-2ddaa10fa051",
+		"id": "reactflow__edge-53_85209645-015f-4bbd-9d79-f9b51d3fac53source-else-53_85209645-015f-4bbd-9d79-f9b51d3fac53-53_95e373a3-64b7-489d-bf5c-2ddaa10fa051target-53_95e373a3-64b7-489d-bf5c-2ddaa10fa051",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "59_6340664b-b1bf-4d05-bf7e-f6e7a3f2f623",
+		"sourceHandle": "source-59_6340664b-b1bf-4d05-bf7e-f6e7a3f2f623",
+		"target": "66_8ed70df0-84ff-4f1e-977c-6da346358dc0",
+		"targetHandle": "target-66_8ed70df0-84ff-4f1e-977c-6da346358dc0",
+		"id": "reactflow__edge-59_6340664b-b1bf-4d05-bf7e-f6e7a3f2f623source-59_6340664b-b1bf-4d05-bf7e-f6e7a3f2f623-66_8ed70df0-84ff-4f1e-977c-6da346358dc0target-66_8ed70df0-84ff-4f1e-977c-6da346358dc0",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "53_95e373a3-64b7-489d-bf5c-2ddaa10fa051",
+		"sourceHandle": "source-53_95e373a3-64b7-489d-bf5c-2ddaa10fa051",
+		"target": "59_e59b7666-9d63-45f4-84dc-4ad60675a5f9",
+		"targetHandle": "target-59_e59b7666-9d63-45f4-84dc-4ad60675a5f9",
+		"id": "reactflow__edge-53_95e373a3-64b7-489d-bf5c-2ddaa10fa051source-53_95e373a3-64b7-489d-bf5c-2ddaa10fa051-59_e59b7666-9d63-45f4-84dc-4ad60675a5f9target-59_e59b7666-9d63-45f4-84dc-4ad60675a5f9",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "59_e59b7666-9d63-45f4-84dc-4ad60675a5f9",
+		"sourceHandle": "source-59_e59b7666-9d63-45f4-84dc-4ad60675a5f9",
+		"target": "65_844d40fa-22e2-43da-8ee9-8d75fbf49086",
+		"targetHandle": "target-65_844d40fa-22e2-43da-8ee9-8d75fbf49086",
+		"id": "reactflow__edge-59_e59b7666-9d63-45f4-84dc-4ad60675a5f9source-59_e59b7666-9d63-45f4-84dc-4ad60675a5f9-65_844d40fa-22e2-43da-8ee9-8d75fbf49086target-65_844d40fa-22e2-43da-8ee9-8d75fbf49086",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "59_e59b7666-9d63-45f4-84dc-4ad60675a5f9",
+		"sourceHandle": "source-else-59_e59b7666-9d63-45f4-84dc-4ad60675a5f9",
+		"target": "65_1772e6c0-d5d3-41d9-984c-97d981220a25",
+		"targetHandle": "target-65_1772e6c0-d5d3-41d9-984c-97d981220a25",
+		"id": "reactflow__edge-59_e59b7666-9d63-45f4-84dc-4ad60675a5f9source-else-59_e59b7666-9d63-45f4-84dc-4ad60675a5f9-65_1772e6c0-d5d3-41d9-984c-97d981220a25target-65_1772e6c0-d5d3-41d9-984c-97d981220a25",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "53_f135bc5d-97d6-40bf-a686-aaf50b744b5f",
+		"sourceHandle": "source-53_f135bc5d-97d6-40bf-a686-aaf50b744b5f",
+		"target": "319_95655bdb-cbe1-4a65-be8f-6fee7073b8f4",
+		"targetHandle": "target-319_95655bdb-cbe1-4a65-be8f-6fee7073b8f4",
+		"id": "reactflow__edge-53_f135bc5d-97d6-40bf-a686-aaf50b744b5fsource-53_f135bc5d-97d6-40bf-a686-aaf50b744b5f-319_95655bdb-cbe1-4a65-be8f-6fee7073b8f4target-319_95655bdb-cbe1-4a65-be8f-6fee7073b8f4",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "53_95e373a3-64b7-489d-bf5c-2ddaa10fa051",
+		"sourceHandle": "source-else-53_95e373a3-64b7-489d-bf5c-2ddaa10fa051",
+		"target": "53_e7bb3e85-ef6c-4aa9-9f6c-17e91b26a0d5",
+		"targetHandle": "target-53_e7bb3e85-ef6c-4aa9-9f6c-17e91b26a0d5",
+		"id": "reactflow__edge-53_95e373a3-64b7-489d-bf5c-2ddaa10fa051source-else-53_95e373a3-64b7-489d-bf5c-2ddaa10fa051-53_e7bb3e85-ef6c-4aa9-9f6c-17e91b26a0d5target-53_e7bb3e85-ef6c-4aa9-9f6c-17e91b26a0d5",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "53_e7bb3e85-ef6c-4aa9-9f6c-17e91b26a0d5",
+		"sourceHandle": "source-else-53_e7bb3e85-ef6c-4aa9-9f6c-17e91b26a0d5",
+		"target": "53_f135bc5d-97d6-40bf-a686-aaf50b744b5f",
+		"targetHandle": "target-53_f135bc5d-97d6-40bf-a686-aaf50b744b5f",
+		"id": "reactflow__edge-53_e7bb3e85-ef6c-4aa9-9f6c-17e91b26a0d5source-else-53_e7bb3e85-ef6c-4aa9-9f6c-17e91b26a0d5-53_f135bc5d-97d6-40bf-a686-aaf50b744b5ftarget-53_f135bc5d-97d6-40bf-a686-aaf50b744b5f",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "53_e7bb3e85-ef6c-4aa9-9f6c-17e91b26a0d5",
+		"sourceHandle": "source-53_e7bb3e85-ef6c-4aa9-9f6c-17e91b26a0d5",
+		"target": "472_cbb16f48-c940-49b1-83ea-9e7f277874b5",
+		"targetHandle": "target-472_cbb16f48-c940-49b1-83ea-9e7f277874b5",
+		"id": "reactflow__edge-53_e7bb3e85-ef6c-4aa9-9f6c-17e91b26a0d5source-53_e7bb3e85-ef6c-4aa9-9f6c-17e91b26a0d5-472_cbb16f48-c940-49b1-83ea-9e7f277874b5target-472_cbb16f48-c940-49b1-83ea-9e7f277874b5",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "312_3b653d76-2281-4242-8e33-d9d19725463b",
+		"sourceHandle": "source-else-312_3b653d76-2281-4242-8e33-d9d19725463b",
+		"target": "474_bfc33337-87aa-43c8-b636-75ca5affef1b",
+		"targetHandle": "target-474_bfc33337-87aa-43c8-b636-75ca5affef1b",
+		"id": "reactflow__edge-312_3b653d76-2281-4242-8e33-d9d19725463bsource-else-312_3b653d76-2281-4242-8e33-d9d19725463b-474_bfc33337-87aa-43c8-b636-75ca5affef1btarget-474_bfc33337-87aa-43c8-b636-75ca5affef1b",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "474_419b5a95-a17b-4394-b2be-fcd3f259ea8d",
+		"sourceHandle": "source-474_419b5a95-a17b-4394-b2be-fcd3f259ea8d",
+		"target": "312_3b653d76-2281-4242-8e33-d9d19725463b",
+		"targetHandle": "target-312_3b653d76-2281-4242-8e33-d9d19725463b",
+		"id": "reactflow__edge-474_419b5a95-a17b-4394-b2be-fcd3f259ea8dsource-474_419b5a95-a17b-4394-b2be-fcd3f259ea8d-312_3b653d76-2281-4242-8e33-d9d19725463btarget-312_3b653d76-2281-4242-8e33-d9d19725463b",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "474_bfc33337-87aa-43c8-b636-75ca5affef1b",
+		"sourceHandle": "source-474_bfc33337-87aa-43c8-b636-75ca5affef1b",
+		"target": "296_9dd1d976-5d5d-42a2-a4aa-84e4b22fa09f",
+		"targetHandle": "target-296_9dd1d976-5d5d-42a2-a4aa-84e4b22fa09f",
+		"id": "reactflow__edge-474_bfc33337-87aa-43c8-b636-75ca5affef1bsource-474_bfc33337-87aa-43c8-b636-75ca5affef1b-296_9dd1d976-5d5d-42a2-a4aa-84e4b22fa09ftarget-296_9dd1d976-5d5d-42a2-a4aa-84e4b22fa09f",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "312_3b653d76-2281-4242-8e33-d9d19725463b",
+		"sourceHandle": "source-312_3b653d76-2281-4242-8e33-d9d19725463b",
+		"target": "474_162d2939-8559-459d-9575-5d1d7096fc04",
+		"targetHandle": "target-474_162d2939-8559-459d-9575-5d1d7096fc04",
+		"id": "reactflow__edge-312_3b653d76-2281-4242-8e33-d9d19725463bsource-312_3b653d76-2281-4242-8e33-d9d19725463b-474_162d2939-8559-459d-9575-5d1d7096fc04target-474_162d2939-8559-459d-9575-5d1d7096fc04",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "474_162d2939-8559-459d-9575-5d1d7096fc04",
+		"sourceHandle": "source-474_162d2939-8559-459d-9575-5d1d7096fc04",
+		"target": "493_816c00e0-7be4-4b1f-907d-f980d17d502d",
+		"targetHandle": "target-493_816c00e0-7be4-4b1f-907d-f980d17d502d",
+		"id": "reactflow__edge-474_162d2939-8559-459d-9575-5d1d7096fc04source-474_162d2939-8559-459d-9575-5d1d7096fc04-493_816c00e0-7be4-4b1f-907d-f980d17d502dtarget-493_816c00e0-7be4-4b1f-907d-f980d17d502d",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "493_816c00e0-7be4-4b1f-907d-f980d17d502d",
+		"sourceHandle": "source-493_816c00e0-7be4-4b1f-907d-f980d17d502d",
+		"target": "474_32930b4b-af7b-4156-8e85-5859e779e5ea",
+		"targetHandle": "target-474_32930b4b-af7b-4156-8e85-5859e779e5ea",
+		"id": "reactflow__edge-493_816c00e0-7be4-4b1f-907d-f980d17d502dsource-493_816c00e0-7be4-4b1f-907d-f980d17d502d-474_32930b4b-af7b-4156-8e85-5859e779e5eatarget-474_32930b4b-af7b-4156-8e85-5859e779e5ea",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "474_32930b4b-af7b-4156-8e85-5859e779e5ea",
+		"sourceHandle": "source-474_32930b4b-af7b-4156-8e85-5859e779e5ea",
+		"target": "493_3306fcfe-0c4d-44d1-8115-918b6b01eea5",
+		"targetHandle": "target-493_3306fcfe-0c4d-44d1-8115-918b6b01eea5",
+		"id": "reactflow__edge-474_32930b4b-af7b-4156-8e85-5859e779e5easource-474_32930b4b-af7b-4156-8e85-5859e779e5ea-493_3306fcfe-0c4d-44d1-8115-918b6b01eea5target-493_3306fcfe-0c4d-44d1-8115-918b6b01eea5",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "493_3306fcfe-0c4d-44d1-8115-918b6b01eea5",
+		"sourceHandle": "source-493_3306fcfe-0c4d-44d1-8115-918b6b01eea5",
+		"target": "65_e53e6c37-4921-4ae9-82ac-f268fc2126be",
+		"targetHandle": "target-65_e53e6c37-4921-4ae9-82ac-f268fc2126be",
+		"id": "reactflow__edge-493_3306fcfe-0c4d-44d1-8115-918b6b01eea5source-493_3306fcfe-0c4d-44d1-8115-918b6b01eea5-65_e53e6c37-4921-4ae9-82ac-f268fc2126betarget-65_e53e6c37-4921-4ae9-82ac-f268fc2126be",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "65_e53e6c37-4921-4ae9-82ac-f268fc2126be",
+		"sourceHandle": "source-65_e53e6c37-4921-4ae9-82ac-f268fc2126be",
+		"target": "52_0896a285-36e1-4101-894f-90c62ce23c6e",
+		"targetHandle": "target-52_0896a285-36e1-4101-894f-90c62ce23c6e",
+		"id": "reactflow__edge-65_e53e6c37-4921-4ae9-82ac-f268fc2126besource-65_e53e6c37-4921-4ae9-82ac-f268fc2126be-52_0896a285-36e1-4101-894f-90c62ce23c6etarget-52_0896a285-36e1-4101-894f-90c62ce23c6e",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "296_9dd1d976-5d5d-42a2-a4aa-84e4b22fa09f",
+		"sourceHandle": "source-296_9dd1d976-5d5d-42a2-a4aa-84e4b22fa09f",
+		"target": "474_162d2939-8559-459d-9575-5d1d7096fc04",
+		"targetHandle": "target-474_162d2939-8559-459d-9575-5d1d7096fc04",
+		"id": "reactflow__edge-296_9dd1d976-5d5d-42a2-a4aa-84e4b22fa09fsource-296_9dd1d976-5d5d-42a2-a4aa-84e4b22fa09f-474_162d2939-8559-459d-9575-5d1d7096fc04target-474_162d2939-8559-459d-9575-5d1d7096fc04",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "493_816c00e0-7be4-4b1f-907d-f980d17d502d",
+		"sourceHandle": "source-else-493_816c00e0-7be4-4b1f-907d-f980d17d502d",
+		"target": "474_05f524f7-7075-4e45-a366-3e84b5ba41c2",
+		"targetHandle": "target-474_05f524f7-7075-4e45-a366-3e84b5ba41c2",
+		"id": "reactflow__edge-493_816c00e0-7be4-4b1f-907d-f980d17d502dsource-else-493_816c00e0-7be4-4b1f-907d-f980d17d502d-474_05f524f7-7075-4e45-a366-3e84b5ba41c2target-474_05f524f7-7075-4e45-a366-3e84b5ba41c2",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "474_05f524f7-7075-4e45-a366-3e84b5ba41c2",
+		"sourceHandle": "source-474_05f524f7-7075-4e45-a366-3e84b5ba41c2",
+		"target": "476_7b64029a-9f40-4086-affb-633f9646a321",
+		"targetHandle": "target-476_7b64029a-9f40-4086-affb-633f9646a321",
+		"id": "reactflow__edge-474_05f524f7-7075-4e45-a366-3e84b5ba41c2source-474_05f524f7-7075-4e45-a366-3e84b5ba41c2-476_7b64029a-9f40-4086-affb-633f9646a321target-476_7b64029a-9f40-4086-affb-633f9646a321",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "476_7b64029a-9f40-4086-affb-633f9646a321",
+		"sourceHandle": "source-476_7b64029a-9f40-4086-affb-633f9646a321",
+		"target": "474_32930b4b-af7b-4156-8e85-5859e779e5ea",
+		"targetHandle": "target-474_32930b4b-af7b-4156-8e85-5859e779e5ea",
+		"id": "reactflow__edge-476_7b64029a-9f40-4086-affb-633f9646a321source-476_7b64029a-9f40-4086-affb-633f9646a321-474_32930b4b-af7b-4156-8e85-5859e779e5eatarget-474_32930b4b-af7b-4156-8e85-5859e779e5ea",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "493_3306fcfe-0c4d-44d1-8115-918b6b01eea5",
+		"sourceHandle": "source-else-493_3306fcfe-0c4d-44d1-8115-918b6b01eea5",
+		"target": "474_69d02a00-2eac-4f6a-857d-8d75ce9b8dce",
+		"targetHandle": "target-474_69d02a00-2eac-4f6a-857d-8d75ce9b8dce",
+		"id": "reactflow__edge-493_3306fcfe-0c4d-44d1-8115-918b6b01eea5source-else-493_3306fcfe-0c4d-44d1-8115-918b6b01eea5-474_69d02a00-2eac-4f6a-857d-8d75ce9b8dcetarget-474_69d02a00-2eac-4f6a-857d-8d75ce9b8dce",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "474_69d02a00-2eac-4f6a-857d-8d75ce9b8dce",
+		"sourceHandle": "source-474_69d02a00-2eac-4f6a-857d-8d75ce9b8dce",
+		"target": "484_52cf92f2-5449-4e28-aea4-c930cd826c5c",
+		"targetHandle": "target-484_52cf92f2-5449-4e28-aea4-c930cd826c5c",
+		"id": "reactflow__edge-474_69d02a00-2eac-4f6a-857d-8d75ce9b8dcesource-474_69d02a00-2eac-4f6a-857d-8d75ce9b8dce-484_52cf92f2-5449-4e28-aea4-c930cd826c5ctarget-484_52cf92f2-5449-4e28-aea4-c930cd826c5c",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "484_52cf92f2-5449-4e28-aea4-c930cd826c5c",
+		"sourceHandle": "source-484_52cf92f2-5449-4e28-aea4-c930cd826c5c",
+		"target": "65_e53e6c37-4921-4ae9-82ac-f268fc2126be",
+		"targetHandle": "target-65_e53e6c37-4921-4ae9-82ac-f268fc2126be",
+		"id": "reactflow__edge-484_52cf92f2-5449-4e28-aea4-c930cd826c5csource-484_52cf92f2-5449-4e28-aea4-c930cd826c5c-65_e53e6c37-4921-4ae9-82ac-f268fc2126betarget-65_e53e6c37-4921-4ae9-82ac-f268fc2126be",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "59_6340664b-b1bf-4d05-bf7e-f6e7a3f2f623",
+		"sourceHandle": "source-else-59_6340664b-b1bf-4d05-bf7e-f6e7a3f2f623",
+		"target": "471_a65e4385-b7ee-4f83-8a0d-a53e4bca8605",
+		"targetHandle": "target-471_a65e4385-b7ee-4f83-8a0d-a53e4bca8605",
+		"id": "reactflow__edge-59_6340664b-b1bf-4d05-bf7e-f6e7a3f2f623source-else-59_6340664b-b1bf-4d05-bf7e-f6e7a3f2f623-471_a65e4385-b7ee-4f83-8a0d-a53e4bca8605target-471_a65e4385-b7ee-4f83-8a0d-a53e4bca8605",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "471_a65e4385-b7ee-4f83-8a0d-a53e4bca8605",
+		"sourceHandle": "source-471_a65e4385-b7ee-4f83-8a0d-a53e4bca8605",
+		"target": "52_751c490a-81a8-49ab-b1c0-c182ae90361f",
+		"targetHandle": "target-52_751c490a-81a8-49ab-b1c0-c182ae90361f",
+		"id": "reactflow__edge-471_a65e4385-b7ee-4f83-8a0d-a53e4bca8605source-471_a65e4385-b7ee-4f83-8a0d-a53e4bca8605-52_751c490a-81a8-49ab-b1c0-c182ae90361ftarget-52_751c490a-81a8-49ab-b1c0-c182ae90361f",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "66_8ed70df0-84ff-4f1e-977c-6da346358dc0",
+		"sourceHandle": "source-66_8ed70df0-84ff-4f1e-977c-6da346358dc0",
+		"target": "474_c12c4f9b-77e9-455a-9adb-7323d8688d55",
+		"targetHandle": "target-474_c12c4f9b-77e9-455a-9adb-7323d8688d55",
+		"id": "reactflow__edge-66_8ed70df0-84ff-4f1e-977c-6da346358dc0source-66_8ed70df0-84ff-4f1e-977c-6da346358dc0-474_c12c4f9b-77e9-455a-9adb-7323d8688d55target-474_c12c4f9b-77e9-455a-9adb-7323d8688d55",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "474_c12c4f9b-77e9-455a-9adb-7323d8688d55",
+		"sourceHandle": "source-474_c12c4f9b-77e9-455a-9adb-7323d8688d55",
+		"target": "478_77d0d751-69f7-4f44-bb4f-7445822b2dc8",
+		"targetHandle": "target-478_77d0d751-69f7-4f44-bb4f-7445822b2dc8",
+		"id": "reactflow__edge-474_c12c4f9b-77e9-455a-9adb-7323d8688d55source-474_c12c4f9b-77e9-455a-9adb-7323d8688d55-478_77d0d751-69f7-4f44-bb4f-7445822b2dc8target-478_77d0d751-69f7-4f44-bb4f-7445822b2dc8",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "478_77d0d751-69f7-4f44-bb4f-7445822b2dc8",
+		"sourceHandle": "source-478_77d0d751-69f7-4f44-bb4f-7445822b2dc8",
+		"target": "493_5f022e89-ab9a-4b44-911f-51befbd70845",
+		"targetHandle": "target-493_5f022e89-ab9a-4b44-911f-51befbd70845",
+		"id": "reactflow__edge-478_77d0d751-69f7-4f44-bb4f-7445822b2dc8source-478_77d0d751-69f7-4f44-bb4f-7445822b2dc8-493_5f022e89-ab9a-4b44-911f-51befbd70845target-493_5f022e89-ab9a-4b44-911f-51befbd70845",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "493_5f022e89-ab9a-4b44-911f-51befbd70845",
+		"sourceHandle": "source-493_5f022e89-ab9a-4b44-911f-51befbd70845",
+		"target": "492_e4f9dc81-55c6-49b2-9f10-45556fd48143",
+		"targetHandle": "target-492_e4f9dc81-55c6-49b2-9f10-45556fd48143",
+		"id": "reactflow__edge-493_5f022e89-ab9a-4b44-911f-51befbd70845source-493_5f022e89-ab9a-4b44-911f-51befbd70845-492_e4f9dc81-55c6-49b2-9f10-45556fd48143target-492_e4f9dc81-55c6-49b2-9f10-45556fd48143",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "492_e4f9dc81-55c6-49b2-9f10-45556fd48143",
+		"sourceHandle": "source-492_e4f9dc81-55c6-49b2-9f10-45556fd48143",
+		"target": "485_8ff9b791-942b-4d10-ab45-0e48aaa0643f",
+		"targetHandle": "target-485_8ff9b791-942b-4d10-ab45-0e48aaa0643f",
+		"id": "reactflow__edge-492_e4f9dc81-55c6-49b2-9f10-45556fd48143source-492_e4f9dc81-55c6-49b2-9f10-45556fd48143-485_8ff9b791-942b-4d10-ab45-0e48aaa0643ftarget-485_8ff9b791-942b-4d10-ab45-0e48aaa0643f",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "485_8ff9b791-942b-4d10-ab45-0e48aaa0643f",
+		"sourceHandle": "source-485_8ff9b791-942b-4d10-ab45-0e48aaa0643f",
+		"target": "474_419b5a95-a17b-4394-b2be-fcd3f259ea8d",
+		"targetHandle": "target-474_419b5a95-a17b-4394-b2be-fcd3f259ea8d",
+		"id": "reactflow__edge-485_8ff9b791-942b-4d10-ab45-0e48aaa0643fsource-485_8ff9b791-942b-4d10-ab45-0e48aaa0643f-474_419b5a95-a17b-4394-b2be-fcd3f259ea8dtarget-474_419b5a95-a17b-4394-b2be-fcd3f259ea8d",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "493_5f022e89-ab9a-4b44-911f-51befbd70845",
+		"sourceHandle": "source-else-493_5f022e89-ab9a-4b44-911f-51befbd70845",
+		"target": "474_419b5a95-a17b-4394-b2be-fcd3f259ea8d",
+		"targetHandle": "target-474_419b5a95-a17b-4394-b2be-fcd3f259ea8d",
+		"id": "reactflow__edge-493_5f022e89-ab9a-4b44-911f-51befbd70845source-else-493_5f022e89-ab9a-4b44-911f-51befbd70845-474_419b5a95-a17b-4394-b2be-fcd3f259ea8dtarget-474_419b5a95-a17b-4394-b2be-fcd3f259ea8d",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}]
+}
