@@ -4586,14 +4586,14 @@
 					"upstreamId": "",
 					"upstreamArgument": "",
 					"upstreamValue": "",
-					"value": 0
+					"value": 1
 				},
 				"right_input_float": {
 					"fromUpstream": false,
 					"upstreamId": "",
 					"upstreamArgument": "",
 					"upstreamValue": "",
-					"value": 0
+					"value": 1
 				},
 				"operation_enum": {
 					"fromUpstream": false,
@@ -5168,7 +5168,7 @@
 		},
 		"width": 150,
 		"height": 70,
-		"selected": true,
+		"selected": false,
 		"positionAbsolute": {
 			"x": 226.557008629601,
 			"y": 524.2370073134293
@@ -5712,7 +5712,7 @@
 		},
 		"width": 150,
 		"height": 70,
-		"selected": false,
+		"selected": true,
 		"positionAbsolute": {
 			"x": -934.6053391942647,
 			"y": -516.2602169048644
