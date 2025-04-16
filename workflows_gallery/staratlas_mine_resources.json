@@ -3895,7 +3895,7 @@
 					"upstreamId": "",
 					"upstreamArgument": "",
 					"upstreamValue": "",
-					"value": null
+					"value": 0
 				},
 				"fuel_amount": {
 					"fromUpstream": true,
@@ -3909,7 +3909,7 @@
 					"upstreamId": "",
 					"upstreamArgument": "",
 					"upstreamValue": "",
-					"value": null
+					"value": 0
 				}
 			}
 		},
@@ -4055,14 +4055,14 @@
 					"upstreamId": "",
 					"upstreamArgument": "",
 					"upstreamValue": "",
-					"value": null
+					"value": 0
 				},
 				"fuel_amount": {
 					"fromUpstream": false,
 					"upstreamId": "",
 					"upstreamArgument": "",
 					"upstreamValue": "",
-					"value": null
+					"value": 0
 				},
 				"ammo_amount": {
 					"fromUpstream": true,
@@ -4271,14 +4271,14 @@
 					"upstreamId": "",
 					"upstreamArgument": "",
 					"upstreamValue": "",
-					"value": null
+					"value": 0
 				},
 				"ammo_amount": {
 					"fromUpstream": false,
 					"upstreamId": "",
 					"upstreamArgument": "",
 					"upstreamValue": "",
-					"value": null
+					"value": 0
 				}
 			}
 		},
@@ -4546,14 +4546,14 @@
 					"upstreamId": "",
 					"upstreamArgument": "",
 					"upstreamValue": "",
-					"value": null
+					"value": 0
 				},
 				"ammo_amount": {
 					"fromUpstream": false,
 					"upstreamId": "",
 					"upstreamArgument": "",
 					"upstreamValue": "",
-					"value": null
+					"value": 0
 				}
 			}
 		},
@@ -4862,7 +4862,7 @@
 		},
 		"width": 150,
 		"height": 70,
-		"selected": false,
+		"selected": true,
 		"positionAbsolute": {
 			"x": -402.5706503207237,
 			"y": 394.22627582248344
@@ -5484,8 +5484,8 @@
 		"id": "474_05f524f7-7075-4e45-a366-3e84b5ba41c2",
 		"type": "CustomNode",
 		"position": {
-			"x": 585.1738874637259,
-			"y": -533.852237042148
+			"x": 586.9681394555497,
+			"y": -530.2637330585006
 		},
 		"data": {
 			"name": "StarAtlasStatFutureMiningPiece",
@@ -5510,8 +5510,8 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 585.1738874637259,
-			"y": -533.852237042148
+			"x": 586.9681394555497,
+			"y": -530.2637330585006
 		},
 		"dragging": false
 	}, {
@@ -5712,7 +5712,7 @@
 		},
 		"width": 150,
 		"height": 70,
-		"selected": true,
+		"selected": false,
 		"positionAbsolute": {
 			"x": -934.6053391942647,
 			"y": -516.2602169048644
@@ -5757,7 +5757,7 @@
 		"type": "CustomNode",
 		"position": {
 			"x": -575.9116202102841,
-			"y": -759.5951518939971
+			"y": -761.3894038858209
 		},
 		"data": {
 			"name": "StarAtlasStatCargoPiece",
@@ -5783,7 +5783,7 @@
 		"selected": false,
 		"positionAbsolute": {
 			"x": -575.9116202102841,
-			"y": -759.5951518939971
+			"y": -761.3894038858209
 		},
 		"dragging": false
 	}, {
