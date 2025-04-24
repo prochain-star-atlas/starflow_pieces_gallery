@@ -5001,9 +5001,9 @@
 			"inputs": {
 				"left_input_int": {
 					"fromUpstream": true,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
+					"upstreamId": "StarAtlasS_c3c5705939904c2aa9f3ba6d10a72409",
+					"upstreamArgument": "amount_mined",
+					"upstreamValue": "StarAtlasStatFutureMiningPiece (c3c57059) - Amount Mined",
 					"value": 0
 				},
 				"right_input_int": {
@@ -5441,7 +5441,7 @@
 		},
 		"width": 150,
 		"height": 70,
-		"selected": true,
+		"selected": false,
 		"positionAbsolute": {
 			"x": 555.1161290322581,
 			"y": 1094.9290322580646
