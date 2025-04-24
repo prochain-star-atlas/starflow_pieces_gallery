@@ -3663,6 +3663,188 @@
 			"repository_id": 48,
 			"branch_piece": false,
 			"wait_one": true
+		},
+		"1168_9c17361e-8b34-48b8-ae64-e3ff0c6319d1": {
+			"id": 1168,
+			"name": "StarAtlasFleetCargoCheckPiece",
+			"description": "Check StarAtlas Cargo of Fleet",
+			"dependency": {
+				"dockerfile": "Dockerfile_1",
+				"requirements_file": null
+			},
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.51-group0",
+			"input_schema": {
+				"description": "Star Atlas Fleet Cargo Check Piece Input Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"resource_mint": {
+						"default": "",
+						"description": "resource_mint",
+						"title": "Resource Mint",
+						"type": "string"
+					},
+					"resource_amount": {
+						"default": 0,
+						"description": "resource_amount In Fleet",
+						"title": "Resource Amount",
+						"type": "integer"
+					},
+					"fuel_amount": {
+						"default": 0,
+						"description": "fuel_amount In Fleet",
+						"title": "Fuel Amount",
+						"type": "integer"
+					},
+					"ammo_amount": {
+						"default": 0,
+						"description": "ammo_amount In Fleet",
+						"title": "Ammo Amount",
+						"type": "integer"
+					}
+				},
+				"title": "StarAtlasFleetCargoCheckPiece",
+				"type": "object"
+			},
+			"output_schema": {
+				"description": "Branch Piece Output Model",
+				"properties": {
+					"branch_main": {
+						"default": true,
+						"description": "Main branch selected",
+						"title": "Branch Main",
+						"type": "boolean"
+					}
+				},
+				"title": "BaseBranchOutputModel",
+				"type": "object"
+			},
+			"secrets_schema": null,
+			"container_resources": {
+				"requests": {
+					"cpu": 100,
+					"memory": 128
+				},
+				"limits": {
+					"cpu": 500,
+					"memory": 512
+				},
+				"use_gpu": false
+			},
+			"tags": ["Star Atlas"],
+			"style": {
+				"module": "StarAtlasFleetCargoCheckPiece",
+				"label": "Cargo Check",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasFleetCargoCheckPiece",
+			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+			"repository_id": 48,
+			"branch_piece": true,
+			"wait_one": false
+		},
+		"1168_345eac36-3bd6-4614-b5a1-4019e8e31ddc": {
+			"id": 1168,
+			"name": "StarAtlasFleetCargoCheckPiece",
+			"description": "Check StarAtlas Cargo of Fleet",
+			"dependency": {
+				"dockerfile": "Dockerfile_1",
+				"requirements_file": null
+			},
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.51-group0",
+			"input_schema": {
+				"description": "Star Atlas Fleet Cargo Check Piece Input Model",
+				"properties": {
+					"fleet_name": {
+						"default": "",
+						"description": "Fleet Name",
+						"title": "Fleet Name",
+						"type": "string"
+					},
+					"resource_mint": {
+						"default": "",
+						"description": "resource_mint",
+						"title": "Resource Mint",
+						"type": "string"
+					},
+					"resource_amount": {
+						"default": 0,
+						"description": "resource_amount In Fleet",
+						"title": "Resource Amount",
+						"type": "integer"
+					},
+					"fuel_amount": {
+						"default": 0,
+						"description": "fuel_amount In Fleet",
+						"title": "Fuel Amount",
+						"type": "integer"
+					},
+					"ammo_amount": {
+						"default": 0,
+						"description": "ammo_amount In Fleet",
+						"title": "Ammo Amount",
+						"type": "integer"
+					}
+				},
+				"title": "StarAtlasFleetCargoCheckPiece",
+				"type": "object"
+			},
+			"output_schema": {
+				"description": "Branch Piece Output Model",
+				"properties": {
+					"branch_main": {
+						"default": true,
+						"description": "Main branch selected",
+						"title": "Branch Main",
+						"type": "boolean"
+					}
+				},
+				"title": "BaseBranchOutputModel",
+				"type": "object"
+			},
+			"secrets_schema": null,
+			"container_resources": {
+				"requests": {
+					"cpu": 100,
+					"memory": 128
+				},
+				"limits": {
+					"cpu": 500,
+					"memory": 512
+				},
+				"use_gpu": false
+			},
+			"tags": ["Star Atlas"],
+			"style": {
+				"module": "StarAtlasFleetCargoCheckPiece",
+				"label": "Cargo Check",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasFleetCargoCheckPiece",
+			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+			"repository_id": 48,
+			"branch_piece": true,
+			"wait_one": false
 		}
 	},
 	"workflowPiecesData": {
@@ -4819,9 +5001,9 @@
 			"inputs": {
 				"left_input_int": {
 					"fromUpstream": true,
-					"upstreamId": "StarAtlasS_c3c5705939904c2aa9f3ba6d10a72409",
-					"upstreamArgument": "amount_mined",
-					"upstreamValue": "StarAtlasStatFutureMiningPiece (c3c57059) - Amount Mined",
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
 					"value": 0
 				},
 				"right_input_int": {
@@ -4965,14 +5147,108 @@
 				"useGpu": false
 			},
 			"inputs": {}
+		},
+		"1168_9c17361e-8b34-48b8-ae64-e3ff0c6319d1": {
+			"storage": {
+				"storageAccessMode": "Read/Write"
+			},
+			"containerResources": {
+				"cpu": 500,
+				"memory": 512,
+				"useGpu": false
+			},
+			"inputs": {
+				"fleet_name": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "easy"
+				},
+				"resource_mint": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": ""
+				},
+				"resource_amount": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": 0
+				},
+				"fuel_amount": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": 0
+				},
+				"ammo_amount": {
+					"fromUpstream": true,
+					"upstreamId": "StarAtlasS_c3c5705939904c2aa9f3ba6d10a72409",
+					"upstreamArgument": "ammo_for_duration",
+					"upstreamValue": "StarAtlasStatFutureMiningPiece (c3c57059) - Ammo For Duration",
+					"value": 0
+				}
+			}
+		},
+		"1168_345eac36-3bd6-4614-b5a1-4019e8e31ddc": {
+			"storage": {
+				"storageAccessMode": "Read/Write"
+			},
+			"containerResources": {
+				"cpu": 500,
+				"memory": 512,
+				"useGpu": false
+			},
+			"inputs": {
+				"fleet_name": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "easy"
+				},
+				"resource_mint": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "foodQJAztMzX1DKpLaiounNe2BDMds5RNuPC6jsNrDG"
+				},
+				"resource_amount": {
+					"fromUpstream": true,
+					"upstreamId": "StarAtlasS_c3c5705939904c2aa9f3ba6d10a72409",
+					"upstreamArgument": "food_for_duration",
+					"upstreamValue": "StarAtlasStatFutureMiningPiece (c3c57059) - Food For Duration",
+					"value": 0
+				},
+				"fuel_amount": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": 0
+				},
+				"ammo_amount": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": 0
+				}
+			}
 		}
 	},
 	"workflowNodes": [{
 		"id": "53_85209645-015f-4bbd-9d79-f9b51d3fac53",
 		"type": "CustomNode",
 		"position": {
-			"x": -137.18770788614574,
-			"y": 713.5177977468155
+			"x": -580.941935483871,
+			"y": 1529.7978494623655
 		},
 		"data": {
 			"name": "StarAtlasFleetStatusCheckPiece",
@@ -4997,16 +5273,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": -137.18770788614574,
-			"y": 713.5177977468155
+			"x": -580.941935483871,
+			"y": 1529.7978494623655
 		},
 		"dragging": false
 	}, {
 		"id": "59_6340664b-b1bf-4d05-bf7e-f6e7a3f2f623",
 		"type": "CustomNode",
 		"position": {
-			"x": 120.4327139809526,
-			"y": 692.7286699966968
+			"x": 147,
+			"y": 1477.6666666666665
 		},
 		"data": {
 			"name": "StarAtlasFleetLocationCheckPiece",
@@ -5039,8 +5315,8 @@
 		"id": "53_95e373a3-64b7-489d-bf5c-2ddaa10fa051",
 		"type": "CustomNode",
 		"position": {
-			"x": 155.01395155551432,
-			"y": 1068.24843582208
+			"x": 159.57741935483875,
+			"y": 1895.4043010752684
 		},
 		"data": {
 			"name": "StarAtlasFleetStatusCheckPiece",
@@ -5065,16 +5341,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 155.01395155551432,
-			"y": 1068.24843582208
+			"x": 159.57741935483875,
+			"y": 1895.4043010752684
 		},
 		"dragging": false
 	}, {
 		"id": "53_e7bb3e85-ef6c-4aa9-9f6c-17e91b26a0d5",
 		"type": "CustomNode",
 		"position": {
-			"x": 477.4530166743342,
-			"y": 1154.608372786354
+			"x": 549.7258064516129,
+			"y": 2164.7215053763443
 		},
 		"data": {
 			"name": "StarAtlasFleetStatusCheckPiece",
@@ -5099,16 +5375,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 477.4530166743342,
-			"y": 1154.608372786354
+			"x": 549.7258064516129,
+			"y": 2164.7215053763443
 		},
 		"dragging": false
 	}, {
 		"id": "53_f135bc5d-97d6-40bf-a686-aaf50b744b5f",
 		"type": "CustomNode",
 		"position": {
-			"x": 784.69013025388,
-			"y": 1221.5944311816822
+			"x": 843.8645161290323,
+			"y": 2315.6258064516132
 		},
 		"data": {
 			"name": "StarAtlasFleetStatusCheckPiece",
@@ -5133,16 +5409,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 784.69013025388,
-			"y": 1221.5944311816822
+			"x": 843.8645161290323,
+			"y": 2315.6258064516132
 		},
 		"dragging": false
 	}, {
 		"id": "66_8ed70df0-84ff-4f1e-977c-6da346358dc0",
 		"type": "CustomNode",
 		"position": {
-			"x": 355.5854250861613,
-			"y": 365.3071005098019
+			"x": 555.1161290322581,
+			"y": 1094.9290322580646
 		},
 		"data": {
 			"name": "StarAtlasDockPiece",
@@ -5165,18 +5441,18 @@
 		},
 		"width": 150,
 		"height": 70,
-		"selected": false,
+		"selected": true,
 		"positionAbsolute": {
-			"x": 355.5854250861613,
-			"y": 365.3071005098019
+			"x": 555.1161290322581,
+			"y": 1094.9290322580646
 		},
 		"dragging": false
 	}, {
 		"id": "65_e53e6c37-4921-4ae9-82ac-f268fc2126be",
 		"type": "CustomNode",
 		"position": {
-			"x": 2130.2622250517393,
-			"y": 335.4822022531845
+			"x": 2348.9451612903226,
+			"y": 821.8387096774193
 		},
 		"data": {
 			"name": "StarAtlasUndockPiece",
@@ -5201,16 +5477,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 2130.2622250517393,
-			"y": 335.4822022531845
+			"x": 2348.9451612903226,
+			"y": 821.8387096774193
 		},
 		"dragging": false
 	}, {
 		"id": "52_0896a285-36e1-4101-894f-90c62ce23c6e",
 		"type": "CustomNode",
 		"position": {
-			"x": 2352.4046070262634,
-			"y": 337.2233033797768
+			"x": 2577.383870967742,
+			"y": 818.2451612903226
 		},
 		"data": {
 			"name": "StarAtlasSubwarpPiece",
@@ -5235,16 +5511,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 2352.4046070262634,
-			"y": 337.2233033797768
+			"x": 2577.383870967742,
+			"y": 818.2451612903226
 		},
 		"dragging": false
 	}, {
 		"id": "59_e59b7666-9d63-45f4-84dc-4ad60675a5f9",
 		"type": "CustomNode",
 		"position": {
-			"x": 788.294951458249,
-			"y": 1017.9423175437623
+			"x": 544.3354838709678,
+			"y": 1922.331182795699
 		},
 		"data": {
 			"name": "StarAtlasFleetLocationCheckPiece",
@@ -5269,16 +5545,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 788.294951458249,
-			"y": 1017.9423175437623
+			"x": 544.3354838709678,
+			"y": 1922.331182795699
 		},
 		"dragging": false
 	}, {
 		"id": "65_844d40fa-22e2-43da-8ee9-8d75fbf49086",
 		"type": "CustomNode",
 		"position": {
-			"x": 1126.8067055622673,
-			"y": 938.2821771295015
+			"x": 831.2870967741936,
+			"y": 1895.3548387096776
 		},
 		"data": {
 			"name": "StarAtlasUndockPiece",
@@ -5303,16 +5579,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 1126.8067055622673,
-			"y": 938.2821771295015
+			"x": 831.2870967741936,
+			"y": 1895.3548387096776
 		},
 		"dragging": false
 	}, {
 		"id": "65_1772e6c0-d5d3-41d9-984c-97d981220a25",
 		"type": "CustomNode",
 		"position": {
-			"x": 1126.083269266444,
-			"y": 1037.5743482548614
+			"x": 831.2870967741936,
+			"y": 2039.7283870967735
 		},
 		"data": {
 			"name": "StarAtlasUndockPiece",
@@ -5337,16 +5613,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 1126.083269266444,
-			"y": 1037.5743482548614
+			"x": 831.2870967741936,
+			"y": 2039.7283870967735
 		},
 		"dragging": false
 	}, {
 		"id": "52_751c490a-81a8-49ab-b1c0-c182ae90361f",
 		"type": "CustomNode",
 		"position": {
-			"x": 1599.2341515656951,
-			"y": 777.218773770766
+			"x": 2196.503225806452,
+			"y": 1681.1204301075268
 		},
 		"data": {
 			"name": "StarAtlasSubwarpPiece",
@@ -5371,16 +5647,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 1599.2341515656951,
-			"y": 777.218773770766
+			"x": 2196.503225806452,
+			"y": 1681.1204301075268
 		},
 		"dragging": false
 	}, {
 		"id": "312_3b653d76-2281-4242-8e33-d9d19725463b",
 		"type": "CustomNode",
 		"position": {
-			"x": 941.2289482079977,
-			"y": -19.274712133570176
+			"x": 1108.4741935483871,
+			"y": 667.6516129032257
 		},
 		"data": {
 			"name": "StarAtlasFleetCargoCheckPiece",
@@ -5405,16 +5681,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 941.2289482079977,
-			"y": -19.274712133570176
+			"x": 1108.4741935483871,
+			"y": 667.6516129032257
 		},
 		"dragging": false
 	}, {
 		"id": "296_9dd1d976-5d5d-42a2-a4aa-84e4b22fa09f",
 		"type": "CustomNode",
 		"position": {
-			"x": 1389.2068146360798,
-			"y": 58.898538172075575
+			"x": 1520.667741935484,
+			"y": 780.8236559139784
 		},
 		"data": {
 			"name": "StarAtlasLoadFuelPiece",
@@ -5439,16 +5715,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 1389.2068146360798,
-			"y": 58.898538172075575
+			"x": 1520.667741935484,
+			"y": 780.8236559139784
 		},
 		"dragging": false
 	}, {
 		"id": "472_cbb16f48-c940-49b1-83ea-9e7f277874b5",
 		"type": "CustomNode",
 		"position": {
-			"x": 1122.5053270441024,
-			"y": 1150.4898545626904
+			"x": 843.8645161290325,
+			"y": 2180.78064516129
 		},
 		"data": {
 			"name": "StarAtlasStopMiningPiece",
@@ -5473,16 +5749,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 1122.5053270441024,
-			"y": 1150.4898545626904
+			"x": 843.8645161290325,
+			"y": 2180.78064516129
 		},
 		"dragging": false
 	}, {
 		"id": "493_816c00e0-7be4-4b1f-907d-f980d17d502d",
 		"type": "CustomNode",
 		"position": {
-			"x": 934.684945613619,
-			"y": 145.37971085567773
+			"x": 1104.8806451612904,
+			"y": 932.8645161290322
 		},
 		"data": {
 			"name": "StarAtlasFleetCargoCheckPiece",
@@ -5507,16 +5783,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 934.684945613619,
-			"y": 145.37971085567773
+			"x": 1104.8806451612904,
+			"y": 932.8645161290322
 		},
 		"dragging": false
 	}, {
 		"id": "493_3306fcfe-0c4d-44d1-8115-918b6b01eea5",
 		"type": "CustomNode",
 		"position": {
-			"x": 929.81501551918,
-			"y": 292.8485910669877
+			"x": 1112.0677419354838,
+			"y": 1246.532258064516
 		},
 		"data": {
 			"name": "StarAtlasFleetCargoCheckPiece",
@@ -5541,16 +5817,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 929.81501551918,
-			"y": 292.8485910669877
+			"x": 1112.0677419354838,
+			"y": 1246.532258064516
 		},
 		"dragging": false
 	}, {
 		"id": "476_7b64029a-9f40-4086-affb-633f9646a321",
 		"type": "CustomNode",
 		"position": {
-			"x": 1384.6640719238044,
-			"y": 201.77485884432986
+			"x": 1529.651612903226,
+			"y": 1060.410752688172
 		},
 		"data": {
 			"name": "StarAtlasLoadAmmoPiece",
@@ -5575,16 +5851,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 1384.6640719238044,
-			"y": 201.77485884432986
+			"x": 1529.651612903226,
+			"y": 1060.410752688172
 		},
 		"dragging": false
 	}, {
 		"id": "484_52cf92f2-5449-4e28-aea4-c930cd826c5c",
 		"type": "CustomNode",
 		"position": {
-			"x": 1383.4140893272493,
-			"y": 340.92880901273793
+			"x": 1540.4322580645162,
+			"y": 1362.3559139784945
 		},
 		"data": {
 			"name": "StarAtlasLoadCargoPiece",
@@ -5609,16 +5885,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 1383.4140893272493,
-			"y": 340.92880901273793
+			"x": 1540.4322580645162,
+			"y": 1362.3559139784945
 		},
 		"dragging": false
 	}, {
 		"id": "493_5f022e89-ab9a-4b44-911f-51befbd70845",
 		"type": "CustomNode",
 		"position": {
-			"x": 1014.0930422150996,
-			"y": 539.2501543918698
+			"x": 1319.9612903225805,
+			"y": 480.69999999999993
 		},
 		"data": {
 			"name": "StarAtlasFleetCargoCheckPiece",
@@ -5643,16 +5919,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 1014.0930422150996,
-			"y": 539.2501543918698
+			"x": 1319.9612903225805,
+			"y": 480.69999999999993
 		},
 		"dragging": false
 	}, {
 		"id": "478_77d0d751-69f7-4f44-bb4f-7445822b2dc8",
 		"type": "CustomNode",
 		"position": {
-			"x": 799.4502614924345,
-			"y": 526.6148817856854
+			"x": 1101.2870967741937,
+			"y": 480.70000000000005
 		},
 		"data": {
 			"name": "MathArithmeticPiece",
@@ -5677,16 +5953,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 799.4502614924345,
-			"y": 526.6148817856854
+			"x": 1101.2870967741937,
+			"y": 480.70000000000005
 		},
 		"dragging": false
 	}, {
 		"id": "474_c12c4f9b-77e9-455a-9adb-7323d8688d55",
 		"type": "CustomNode",
 		"position": {
-			"x": 565.8049422325158,
-			"y": 363.7913839432913
+			"x": 791.7580645161291,
+			"y": 681.6709677419352
 		},
 		"data": {
 			"name": "StarAtlasStatFutureMiningPiece",
@@ -5711,16 +5987,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 565.8049422325158,
-			"y": 363.7913839432913
+			"x": 791.7580645161291,
+			"y": 681.6709677419352
 		},
 		"dragging": false
 	}, {
 		"id": "492_e4f9dc81-55c6-49b2-9f10-45556fd48143",
 		"type": "CustomNode",
 		"position": {
-			"x": 1264.5437467503589,
-			"y": 638.7280153320676
+			"x": 1527.8548387096776,
+			"y": 425.83010752688153
 		},
 		"data": {
 			"name": "StarAtlasStatCargoPiece",
@@ -5745,16 +6021,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 1264.5437467503589,
-			"y": 638.7280153320676
+			"x": 1527.8548387096776,
+			"y": 425.83010752688153
 		},
 		"dragging": false
 	}, {
 		"id": "485_8ff9b791-942b-4d10-ab45-0e48aaa0643f",
 		"type": "CustomNode",
 		"position": {
-			"x": 1491.7629645403663,
-			"y": 634.1808656325363
+			"x": 1795.8225806451612,
+			"y": 424.0333333333331
 		},
 		"data": {
 			"name": "StarAtlasUnloadCargoPiece",
@@ -5779,16 +6055,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 1491.7629645403663,
-			"y": 634.1808656325363
+			"x": 1795.8225806451612,
+			"y": 424.0333333333331
 		},
 		"dragging": false
 	}, {
 		"id": "599_e608b8db-bd51-47f4-896b-e02f52f4a73e",
 		"type": "CustomNode",
 		"position": {
-			"x": 1132.1725913410733,
-			"y": 814.5690590890362
+			"x": 1673.925806451613,
+			"y": 1560.362365591398
 		},
 		"data": {
 			"name": "StarAtlasMiningPiece",
@@ -5813,16 +6089,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 1132.1725913410733,
-			"y": 814.5690590890362
+			"x": 1673.925806451613,
+			"y": 1560.362365591398
 		},
 		"dragging": false
 	}, {
 		"id": "835_e43f0563-2075-46bc-b155-b86a3b49f2b5",
 		"type": "CustomNode",
 		"position": {
-			"x": 1119.4645151033105,
-			"y": 1260.2810850771807
+			"x": 1108.4741935483873,
+			"y": 2322.812903225806
 		},
 		"data": {
 			"name": "StarAtlasExitWarpPiece",
@@ -5847,16 +6123,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 1119.4645151033105,
-			"y": 1260.2810850771807
+			"x": 1108.4741935483873,
+			"y": 2322.812903225806
 		},
 		"dragging": false
 	}, {
 		"id": "903_6091f6c7-4c1d-4d69-bbb7-804a2068fe88",
 		"type": "CustomNode",
 		"position": {
-			"x": 1647.8308673920328,
-			"y": -21.76456128459637
+			"x": 1792.2290322580645,
+			"y": 708.9774193548386
 		},
 		"data": {
 			"name": "StarAtlasWaitOnePiece",
@@ -5882,16 +6158,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 1647.8308673920328,
-			"y": -21.76456128459637
+			"x": 1792.2290322580645,
+			"y": 708.9774193548386
 		},
 		"dragging": false
 	}, {
 		"id": "903_8f94a561-c81c-47d5-a24a-0ce2825f4715",
 		"type": "CustomNode",
 		"position": {
-			"x": 1650.39399105047,
-			"y": 140.4879333491524
+			"x": 1792.2290322580645,
+			"y": 931.0677419354838
 		},
 		"data": {
 			"name": "StarAtlasWaitOnePiece",
@@ -5917,16 +6193,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 1650.39399105047,
-			"y": 140.4879333491524
+			"x": 1792.2290322580645,
+			"y": 931.0677419354838
 		},
 		"dragging": false
 	}, {
 		"id": "903_3591f9b9-a964-4384-b75c-6c323d62beb3",
 		"type": "CustomNode",
 		"position": {
-			"x": 1647.6884854175087,
-			"y": 280.5527200967555
+			"x": 1801.2129032258065,
+			"y": 1237.5483870967741
 		},
 		"data": {
 			"name": "StarAtlasWaitOnePiece",
@@ -5952,16 +6228,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 1647.6884854175087,
-			"y": 280.5527200967555
+			"x": 1801.2129032258065,
+			"y": 1237.5483870967741
 		},
 		"dragging": false
 	}, {
 		"id": "903_68e97cb9-e358-4c92-b4bd-899c472600c6",
 		"type": "CustomNode",
 		"position": {
-			"x": 1698.1804180886838,
-			"y": 480.6175068443587
+			"x": 2070.9774193548387,
+			"y": 554.3677419354839
 		},
 		"data": {
 			"name": "StarAtlasWaitOnePiece",
@@ -5987,16 +6263,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 1698.1804180886838,
-			"y": 480.6175068443587
+			"x": 2070.9774193548387,
+			"y": 554.3677419354839
 		},
 		"dragging": false
 	}, {
 		"id": "889_044bf39a-6cf2-445e-975b-7941edf10516",
 		"type": "CustomNode",
 		"position": {
-			"x": 1191.3581474398343,
-			"y": 58.3778206899276
+			"x": 1325.3516129032257,
+			"y": 782.6204301075268
 		},
 		"data": {
 			"name": "StarAtlasStatFutureMiningPiece",
@@ -6022,16 +6298,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 1191.3581474398343,
-			"y": 58.3778206899276
+			"x": 1325.3516129032257,
+			"y": 782.6204301075268
 		},
 		"dragging": false
 	}, {
 		"id": "889_4e8f9bb7-837d-4d55-b9f6-e397da82e021",
 		"type": "CustomNode",
 		"position": {
-			"x": 1187.0280575791642,
-			"y": 202.0413265895989
+			"x": 1325.3516129032257,
+			"y": 1060.410752688172
 		},
 		"data": {
 			"name": "StarAtlasStatFutureMiningPiece",
@@ -6057,16 +6333,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 1187.0280575791642,
-			"y": 202.0413265895989
+			"x": 1325.3516129032257,
+			"y": 1060.410752688172
 		},
 		"dragging": false
 	}, {
 		"id": "889_bbbe7b51-280e-487a-b9f8-8b803fcb7d32",
 		"type": "CustomNode",
 		"position": {
-			"x": 1188.063653072795,
-			"y": 341.51712460312444
+			"x": 1314.5709677419354,
+			"y": 1360.5591397849462
 		},
 		"data": {
 			"name": "StarAtlasStatFutureMiningPiece",
@@ -6092,16 +6368,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 1188.063653072795,
-			"y": 341.51712460312444
+			"x": 1314.5709677419354,
+			"y": 1360.5591397849462
 		},
 		"dragging": false
 	}, {
 		"id": "1191_8e35ee21-62af-4fb5-adcf-c15ad3781856",
 		"type": "CustomNode",
 		"position": {
-			"x": 575.1049969360654,
-			"y": 731.4617177743758
+			"x": 829.4903225806453,
+			"y": 1695.145161290323
 		},
 		"data": {
 			"name": "MathArithmeticPiece",
@@ -6127,16 +6403,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 575.1049969360654,
-			"y": 731.4617177743758
+			"x": 829.4903225806453,
+			"y": 1695.145161290323
 		},
 		"dragging": false
 	}, {
 		"id": "1168_1626705b-e366-44a9-9689-4a9ef7bbf95b",
 		"type": "CustomNode",
 		"position": {
-			"x": 816.5087413988848,
-			"y": 732.4622302163596
+			"x": 1115.661290322581,
+			"y": 1767.016129032258
 		},
 		"data": {
 			"name": "StarAtlasFleetCargoCheckPiece",
@@ -6162,16 +6438,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 816.5087413988848,
-			"y": 732.4622302163596
+			"x": 1115.661290322581,
+			"y": 1767.016129032258
 		},
 		"dragging": false
 	}, {
 		"id": "1171_c3c57059-3990-4c2a-a9f3-ba6d10a72409",
 		"type": "CustomNode",
 		"position": {
-			"x": 351.9542601135275,
-			"y": 714.4689228426308
+			"x": 547.9290322580646,
+			"y": 1557.816129032258
 		},
 		"data": {
 			"name": "StarAtlasStatFutureMiningPiece",
@@ -6195,18 +6471,18 @@
 		},
 		"width": 150,
 		"height": 70,
-		"selected": true,
+		"selected": false,
 		"positionAbsolute": {
-			"x": 351.9542601135275,
-			"y": 714.4689228426308
+			"x": 547.9290322580646,
+			"y": 1557.816129032258
 		},
 		"dragging": false
 	}, {
 		"id": "1173_36bbd74d-a8da-47cc-8100-4f0211de35e1",
 		"type": "CustomNode",
 		"position": {
-			"x": 1362.8509834739177,
-			"y": 768.4488449638168
+			"x": 1926.7387096774198,
+			"y": 1738.6172043010756
 		},
 		"data": {
 			"name": "StarAtlasWaitOnePiece",
@@ -6232,8 +6508,78 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 1362.8509834739177,
-			"y": 768.4488449638168
+			"x": 1926.7387096774198,
+			"y": 1738.6172043010756
+		},
+		"dragging": false
+	}, {
+		"id": "1168_9c17361e-8b34-48b8-ae64-e3ff0c6319d1",
+		"type": "CustomNode",
+		"position": {
+			"x": 1110.2709677419355,
+			"y": 1517.1774193548388
+		},
+		"data": {
+			"name": "StarAtlasFleetCargoCheckPiece",
+			"style": {
+				"module": "StarAtlasFleetCargoCheckPiece",
+				"label": "Cargo Check",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"validationError": false,
+			"orientation": "horizontal",
+			"branch_piece": true,
+			"wait_one": false
+		},
+		"width": 150,
+		"height": 70,
+		"selected": false,
+		"positionAbsolute": {
+			"x": 1110.2709677419355,
+			"y": 1517.1774193548388
+		},
+		"dragging": false
+	}, {
+		"id": "1168_345eac36-3bd6-4614-b5a1-4019e8e31ddc",
+		"type": "CustomNode",
+		"position": {
+			"x": 1110.2709677419357,
+			"y": 1635.9387096774194
+		},
+		"data": {
+			"name": "StarAtlasFleetCargoCheckPiece",
+			"style": {
+				"module": "StarAtlasFleetCargoCheckPiece",
+				"label": "Cargo Check",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"validationError": false,
+			"orientation": "horizontal",
+			"branch_piece": true,
+			"wait_one": false
+		},
+		"width": 150,
+		"height": 70,
+		"selected": false,
+		"positionAbsolute": {
+			"x": 1110.2709677419357,
+			"y": 1635.9387096774194
 		},
 		"dragging": false
 	}],
@@ -6718,6 +7064,72 @@
 		"target": "52_751c490a-81a8-49ab-b1c0-c182ae90361f",
 		"targetHandle": "target-52_751c490a-81a8-49ab-b1c0-c182ae90361f",
 		"id": "reactflow__edge-1173_36bbd74d-a8da-47cc-8100-4f0211de35e1source-1173_36bbd74d-a8da-47cc-8100-4f0211de35e1-52_751c490a-81a8-49ab-b1c0-c182ae90361ftarget-52_751c490a-81a8-49ab-b1c0-c182ae90361f",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "1171_c3c57059-3990-4c2a-a9f3-ba6d10a72409",
+		"sourceHandle": "source-1171_c3c57059-3990-4c2a-a9f3-ba6d10a72409",
+		"target": "1168_9c17361e-8b34-48b8-ae64-e3ff0c6319d1",
+		"targetHandle": "target-1168_9c17361e-8b34-48b8-ae64-e3ff0c6319d1",
+		"id": "reactflow__edge-1171_c3c57059-3990-4c2a-a9f3-ba6d10a72409source-1171_c3c57059-3990-4c2a-a9f3-ba6d10a72409-1168_9c17361e-8b34-48b8-ae64-e3ff0c6319d1target-1168_9c17361e-8b34-48b8-ae64-e3ff0c6319d1",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "1171_c3c57059-3990-4c2a-a9f3-ba6d10a72409",
+		"sourceHandle": "source-1171_c3c57059-3990-4c2a-a9f3-ba6d10a72409",
+		"target": "1168_345eac36-3bd6-4614-b5a1-4019e8e31ddc",
+		"targetHandle": "target-1168_345eac36-3bd6-4614-b5a1-4019e8e31ddc",
+		"id": "reactflow__edge-1171_c3c57059-3990-4c2a-a9f3-ba6d10a72409source-1171_c3c57059-3990-4c2a-a9f3-ba6d10a72409-1168_345eac36-3bd6-4614-b5a1-4019e8e31ddctarget-1168_345eac36-3bd6-4614-b5a1-4019e8e31ddc",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "1168_345eac36-3bd6-4614-b5a1-4019e8e31ddc",
+		"sourceHandle": "source-1168_345eac36-3bd6-4614-b5a1-4019e8e31ddc",
+		"target": "599_e608b8db-bd51-47f4-896b-e02f52f4a73e",
+		"targetHandle": "target-599_e608b8db-bd51-47f4-896b-e02f52f4a73e",
+		"id": "reactflow__edge-1168_345eac36-3bd6-4614-b5a1-4019e8e31ddcsource-1168_345eac36-3bd6-4614-b5a1-4019e8e31ddc-599_e608b8db-bd51-47f4-896b-e02f52f4a73etarget-599_e608b8db-bd51-47f4-896b-e02f52f4a73e",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "1168_9c17361e-8b34-48b8-ae64-e3ff0c6319d1",
+		"sourceHandle": "source-1168_9c17361e-8b34-48b8-ae64-e3ff0c6319d1",
+		"target": "599_e608b8db-bd51-47f4-896b-e02f52f4a73e",
+		"targetHandle": "target-599_e608b8db-bd51-47f4-896b-e02f52f4a73e",
+		"id": "reactflow__edge-1168_9c17361e-8b34-48b8-ae64-e3ff0c6319d1source-1168_9c17361e-8b34-48b8-ae64-e3ff0c6319d1-599_e608b8db-bd51-47f4-896b-e02f52f4a73etarget-599_e608b8db-bd51-47f4-896b-e02f52f4a73e",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "1168_345eac36-3bd6-4614-b5a1-4019e8e31ddc",
+		"sourceHandle": "source-else-1168_345eac36-3bd6-4614-b5a1-4019e8e31ddc",
+		"target": "1173_36bbd74d-a8da-47cc-8100-4f0211de35e1",
+		"targetHandle": "target-1173_36bbd74d-a8da-47cc-8100-4f0211de35e1",
+		"id": "reactflow__edge-1168_345eac36-3bd6-4614-b5a1-4019e8e31ddcsource-else-1168_345eac36-3bd6-4614-b5a1-4019e8e31ddc-1173_36bbd74d-a8da-47cc-8100-4f0211de35e1target-1173_36bbd74d-a8da-47cc-8100-4f0211de35e1",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "1168_9c17361e-8b34-48b8-ae64-e3ff0c6319d1",
+		"sourceHandle": "source-else-1168_9c17361e-8b34-48b8-ae64-e3ff0c6319d1",
+		"target": "1173_36bbd74d-a8da-47cc-8100-4f0211de35e1",
+		"targetHandle": "target-1173_36bbd74d-a8da-47cc-8100-4f0211de35e1",
+		"id": "reactflow__edge-1168_9c17361e-8b34-48b8-ae64-e3ff0c6319d1source-else-1168_9c17361e-8b34-48b8-ae64-e3ff0c6319d1-1173_36bbd74d-a8da-47cc-8100-4f0211de35e1target-1173_36bbd74d-a8da-47cc-8100-4f0211de35e1",
 		"markerEnd": {
 			"type": "arrowclosed",
 			"width": 20,
