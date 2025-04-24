@@ -10,8 +10,8 @@
   {
     "title": "Star Atlas Mining Resource",
     "description":
-      "Mine Resource from a planet and store it on starbase",
-    "jsonFile": "staratlas_mine_resources.json",
+      "Mine Resource from a planet and store it on starbase (2 points)",
+    "jsonFile": "staratlas_mine_resources_starbase_planet.json",
     "levelTag": "Advanced",
     "availableOnDemo": true
   }
