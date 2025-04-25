@@ -5,7 +5,8 @@
       "Transport Resources between two planets with fuel calculation",
     "jsonFile": "staratlas_transport_resources.json",
     "levelTag": "Advanced",
-    "availableOnDemo": true
+	"template": false,
+	"templatePlaceholder": []
   },
   {
     "title": "Star Atlas Mining Resource",
@@ -13,6 +14,25 @@
       "Mine Resource from a planet and store it on starbase (2 points)",
     "jsonFile": "staratlas_mine_resources_starbase_planet.json",
     "levelTag": "Advanced",
-    "availableOnDemo": true
+	"template": false,
+	"templatePlaceholder": []
+  },
+  {
+    "title": "Star Atlas Transport Resource Template",
+    "description":
+      "Transport Resources between two planets with fuel calculation",
+    "jsonFile": "staratlas_transport_resource_templated.json",
+    "levelTag": "Advanced",
+	"template": true,
+	"templatePlaceholder": ["FLEET_NAME", "SOURCE_STARBASE_COORDINATE_X", "SOURCE_STARBASE_COORDINATE_Y", "DESTINATION_STARBASE_COORDINATE_X", "DESTINATION_STARBASE_COORDINATE_Y", "RESOURCE_MINT_TRANSPORT", "RESOURCE_AMOUNT_TRANSPORT"]
+  },
+  {
+    "title": "Star Atlas Mining Resource Template",
+    "description":
+      "Mine Resource from a planet and store it on starbase (2 points)",
+    "jsonFile": "staratlas_mine_resources_starbase_planet_templated.json",
+    "levelTag": "Advanced",
+	"template": true,
+	"templatePlaceholder": ["FLEET_NAME", "STARBASE_COORDINATE_X", "STARBASE_COORDINATE_Y", "PLANET_COORDINATE_X", "PLANET_COORDINATE_Y", "RESOURCE_MINT_MINE"]
   }
 ]
