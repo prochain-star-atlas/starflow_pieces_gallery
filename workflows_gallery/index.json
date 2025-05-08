@@ -1,9 +1,18 @@
 [
   {
-    "title": "Star Atlas Transport Resources",
+    "title": "Star Atlas Transport Resources Subwarp",
     "description":
-      "Transport Resources between two planets with fuel calculation",
-    "jsonFile": "staratlas_transport_resources.json",
+      "Transport Resources between two planets with fuel calculation with Subwarp",
+    "jsonFile": "staratlas_transport_resources_subwarp.json",
+    "levelTag": "Advanced",
+	"template": false,
+	"templatePlaceholder": []
+  },
+  {
+    "title": "Star Atlas Transport Multi Resources Warp",
+    "description":
+      "Transport Multi Resources between two planets with fuel calculation with Warp",
+    "jsonFile": "staratlas_transport_resources_warp.json",
     "levelTag": "Advanced",
 	"template": false,
 	"templatePlaceholder": []
