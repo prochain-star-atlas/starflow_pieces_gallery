@@ -8,7 +8,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.66-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
 			"input_schema": {
 				"$defs": {
 					"FleetStatusEnum": {
@@ -88,7 +88,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.66-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
 			"input_schema": {
 				"$defs": {
 					"FleetStatusEnum": {
@@ -168,7 +168,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.66-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
 			"input_schema": {
 				"$defs": {
 					"FleetStatusEnum": {
@@ -248,7 +248,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.66-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
 			"input_schema": {
 				"description": "StarAtlas Dock Piece Input Model",
 				"properties": {
@@ -329,202 +329,6 @@
 			"repository_id": 7,
 			"branch_piece": false
 		},
-		"312_3b653d76-2281-4242-8e33-d9d19725463b": {
-			"id": 312,
-			"name": "StarAtlasFleetCargoCheckPiece",
-			"description": "Check StarAtlas Cargo of Fleet",
-			"dependency": {
-				"dockerfile": "Dockerfile_1",
-				"requirements_file": null
-			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.66-group0",
-			"input_schema": {
-				"description": "Star Atlas Fleet Cargo Check Piece Input Model",
-				"properties": {
-					"fleet_name": {
-						"default": "",
-						"description": "Fleet Name",
-						"title": "Fleet Name",
-						"type": "string"
-					},
-					"resource_mint": {
-						"default": "",
-						"description": "Resource to request amount",
-						"title": "Resource Mint",
-						"type": "string"
-					},
-					"resource_amount": {
-						"anyOf": [{
-							"type": "integer"
-						}, {
-							"type": "null"
-						}],
-						"default": "",
-						"description": "Resource Amount In Fleet",
-						"title": "Resource Amount"
-					},
-					"fuel_amount": {
-						"anyOf": [{
-							"type": "integer"
-						}, {
-							"type": "null"
-						}],
-						"default": "",
-						"description": "Resource Amount In Fleet",
-						"title": "Fuel Amount"
-					},
-					"ammo_amount": {
-						"anyOf": [{
-							"type": "integer"
-						}, {
-							"type": "null"
-						}],
-						"default": "",
-						"description": "Resource Amount In Fleet",
-						"title": "Ammo Amount"
-					}
-				},
-				"title": "StarAtlasFleetCargoCheckPiece",
-				"type": "object"
-			},
-			"output_schema": {
-				"description": "Branch Piece Output Model",
-				"properties": {
-					"branch_main": {
-						"default": true,
-						"description": "Main branch selected",
-						"title": "Branch Main",
-						"type": "boolean"
-					}
-				},
-				"title": "BaseBranchOutputModel",
-				"type": "object"
-			},
-			"secrets_schema": null,
-			"container_resources": {
-				"requests": {
-					"cpu": 100,
-					"memory": 128
-				},
-				"limits": {
-					"cpu": 500,
-					"memory": 512
-				},
-				"use_gpu": false
-			},
-			"tags": ["Star Atlas"],
-			"style": {
-				"module": "StarAtlasFleetCargoCheckPiece",
-				"label": "Cargo Check",
-				"nodeType": "default",
-				"nodeStyle": {
-					"backgroundColor": "#ebebeb"
-				},
-				"useIcon": true,
-				"iconClassName": "fa-solid:database",
-				"iconStyle": {
-					"cursor": "pointer"
-				}
-			},
-			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasFleetCargoCheckPiece",
-			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
-			"repository_id": 16,
-			"branch_piece": true
-		},
-		"296_9dd1d976-5d5d-42a2-a4aa-84e4b22fa09f": {
-			"id": 296,
-			"name": "StarAtlasLoadFuelPiece",
-			"description": "StarAtlas Loading Fuel to Fleet",
-			"dependency": {
-				"dockerfile": "Dockerfile_1",
-				"requirements_file": null
-			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.66-group0",
-			"input_schema": {
-				"description": "Star Atlas Load Fuel Piece Input Model",
-				"properties": {
-					"fleet_name": {
-						"default": "",
-						"description": "Fleet Name",
-						"title": "Fleet Name",
-						"type": "string"
-					},
-					"amount": {
-						"default": "",
-						"description": "Amount of Resource",
-						"title": "Amount",
-						"type": "integer"
-					},
-					"destination_x": {
-						"default": 0,
-						"description": "Coordinate X target starbase",
-						"title": "Destination X",
-						"type": "integer"
-					},
-					"destination_y": {
-						"default": 0,
-						"description": "Coordinate Y target starbase",
-						"title": "Destination Y",
-						"type": "integer"
-					}
-				},
-				"title": "StarAtlasLoadFuelPiece",
-				"type": "object"
-			},
-			"output_schema": {
-				"description": "Star Atlas Load Fuel Piece Output Model",
-				"properties": {
-					"amount_loaded": {
-						"description": "Amount Resource loaded",
-						"title": "Amount Loaded",
-						"type": "integer"
-					},
-					"destination_x": {
-						"description": "Load Cargo executed on X",
-						"title": "Destination X",
-						"type": "integer"
-					},
-					"destination_y": {
-						"description": "Load Cargo executed on Y",
-						"title": "Destination Y",
-						"type": "integer"
-					}
-				},
-				"required": ["amount_loaded", "destination_x", "destination_y"],
-				"title": "OutputModel",
-				"type": "object"
-			},
-			"secrets_schema": null,
-			"container_resources": {
-				"requests": {
-					"cpu": 100,
-					"memory": 128
-				},
-				"limits": {
-					"cpu": 500,
-					"memory": 512
-				},
-				"use_gpu": false
-			},
-			"tags": ["Star Atlas"],
-			"style": {
-				"module": "StarAtlasLoadFuelPiece",
-				"label": "Load Fuel",
-				"nodeType": "default",
-				"nodeStyle": {
-					"backgroundColor": "#ebebeb"
-				},
-				"useIcon": true,
-				"iconClassName": "fa-solid:database",
-				"iconStyle": {
-					"cursor": "pointer"
-				}
-			},
-			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasLoadFuelPiece",
-			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
-			"repository_id": 16,
-			"branch_piece": false
-		},
 		"472_cbb16f48-c940-49b1-83ea-9e7f277874b5": {
 			"id": 472,
 			"name": "StarAtlasStopMiningPiece",
@@ -533,7 +337,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.66-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
 			"input_schema": {
 				"description": "StarAtlas Mining Piece Input Model",
 				"properties": {
@@ -599,7 +403,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.66-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
 			"input_schema": {
 				"description": "Star Atlas Fleet Cargo Check Piece Input Model",
 				"properties": {
@@ -701,7 +505,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.66-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
 			"input_schema": {
 				"description": "Star Atlas Fleet Cargo Check Piece Input Model",
 				"properties": {
@@ -803,7 +607,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.66-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
 			"input_schema": {
 				"description": "Star Atlas Load Ammo Piece Input Model",
 				"properties": {
@@ -897,7 +701,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.66-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
 			"input_schema": {
 				"description": "StarAtlas Load Cargo Piece Input Model",
 				"properties": {
@@ -994,394 +798,6 @@
 			"repository_id": 22,
 			"branch_piece": false
 		},
-		"493_5f022e89-ab9a-4b44-911f-51befbd70845": {
-			"id": 493,
-			"name": "StarAtlasFleetCargoCheckPiece",
-			"description": "Check StarAtlas Cargo of Fleet",
-			"dependency": {
-				"dockerfile": "Dockerfile_1",
-				"requirements_file": null
-			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.66-group0",
-			"input_schema": {
-				"description": "Star Atlas Fleet Cargo Check Piece Input Model",
-				"properties": {
-					"fleet_name": {
-						"default": "",
-						"description": "Fleet Name",
-						"title": "Fleet Name",
-						"type": "string"
-					},
-					"resource_mint": {
-						"default": "",
-						"description": "Resource to request amount",
-						"title": "Resource Mint",
-						"type": "string"
-					},
-					"resource_amount": {
-						"anyOf": [{
-							"type": "integer"
-						}, {
-							"type": "null"
-						}],
-						"default": "",
-						"description": "Resource Amount In Fleet",
-						"title": "Resource Amount"
-					},
-					"fuel_amount": {
-						"anyOf": [{
-							"type": "integer"
-						}, {
-							"type": "null"
-						}],
-						"default": "",
-						"description": "Resource Amount In Fleet",
-						"title": "Fuel Amount"
-					},
-					"ammo_amount": {
-						"anyOf": [{
-							"type": "integer"
-						}, {
-							"type": "null"
-						}],
-						"default": "",
-						"description": "Resource Amount In Fleet",
-						"title": "Ammo Amount"
-					}
-				},
-				"title": "StarAtlasFleetCargoCheckPiece",
-				"type": "object"
-			},
-			"output_schema": {
-				"description": "Branch Piece Output Model",
-				"properties": {
-					"branch_main": {
-						"default": true,
-						"description": "Main branch selected",
-						"title": "Branch Main",
-						"type": "boolean"
-					}
-				},
-				"title": "BaseBranchOutputModel",
-				"type": "object"
-			},
-			"secrets_schema": null,
-			"container_resources": {
-				"requests": {
-					"cpu": 100,
-					"memory": 128
-				},
-				"limits": {
-					"cpu": 500,
-					"memory": 512
-				},
-				"use_gpu": false
-			},
-			"tags": ["Star Atlas"],
-			"style": {
-				"module": "StarAtlasFleetCargoCheckPiece",
-				"label": "Cargo Check",
-				"nodeType": "default",
-				"nodeStyle": {
-					"backgroundColor": "#ebebeb"
-				},
-				"useIcon": true,
-				"iconClassName": "fa-solid:database",
-				"iconStyle": {
-					"cursor": "pointer"
-				}
-			},
-			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasFleetCargoCheckPiece",
-			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
-			"repository_id": 22,
-			"branch_piece": true
-		},
-		"478_77d0d751-69f7-4f44-bb4f-7445822b2dc8": {
-			"id": 478,
-			"name": "MathArithmeticPiece",
-			"description": "A MathArithmeticPiece Piece.",
-			"dependency": {
-				"dockerfile": "Dockerfile_1",
-				"requirements_file": null
-			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.66-group0",
-			"input_schema": {
-				"$defs": {
-					"InputEnum": {
-						"enum": ["addition", "substract", "multiply", "divide"],
-						"title": "InputEnum",
-						"type": "string"
-					}
-				},
-				"description": "MathArithmeticPiece Input Model",
-				"properties": {
-					"left_input_int": {
-						"anyOf": [{
-							"type": "integer"
-						}, {
-							"type": "null"
-						}],
-						"default": 0,
-						"description": "Left Input Int.",
-						"title": "Left Input Int"
-					},
-					"right_input_int": {
-						"anyOf": [{
-							"type": "integer"
-						}, {
-							"type": "null"
-						}],
-						"default": 0,
-						"description": "Right Input Int.",
-						"title": "Right Input Int"
-					},
-					"left_input_float": {
-						"anyOf": [{
-							"type": "number"
-						}, {
-							"type": "null"
-						}],
-						"default": 0,
-						"description": "Left Input Float.",
-						"title": "Left Input Float"
-					},
-					"right_input_float": {
-						"anyOf": [{
-							"type": "number"
-						}, {
-							"type": "null"
-						}],
-						"default": 0,
-						"description": "Right Input Float.",
-						"title": "Right Input Float"
-					},
-					"operation_enum": {
-						"allOf": [{
-							"$ref": "#/$defs/InputEnum"
-						}],
-						"default": "addition",
-						"description": "Input addition."
-					}
-				},
-				"title": "MathArithmeticPiece",
-				"type": "object"
-			},
-			"output_schema": {
-				"description": "MathArithmeticPiece Output Model",
-				"properties": {
-					"result_output_float": {
-						"description": "Result from operation.",
-						"title": "Result Output Float",
-						"type": "number"
-					},
-					"result_output_int": {
-						"description": "Result from operation.",
-						"title": "Result Output Int",
-						"type": "integer"
-					}
-				},
-				"required": ["result_output_float", "result_output_int"],
-				"title": "OutputModel",
-				"type": "object"
-			},
-			"secrets_schema": null,
-			"container_resources": {
-				"requests": {
-					"cpu": 100,
-					"memory": 128
-				},
-				"limits": {
-					"cpu": 100,
-					"memory": 128
-				},
-				"use_gpu": false
-			},
-			"tags": ["default", "mathematics"],
-			"style": {
-				"module": "MathArithmeticPiece",
-				"label": "Math Logic",
-				"nodeType": "default",
-				"nodeStyle": {
-					"backgroundColor": "#ebebeb"
-				},
-				"useIcon": true,
-				"iconClassName": "fa-solid:file-alt",
-				"iconStyle": {
-					"cursor": "pointer"
-				}
-			},
-			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/MathArithmeticPiece",
-			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
-			"repository_id": 22,
-			"branch_piece": false
-		},
-		"474_c12c4f9b-77e9-455a-9adb-7323d8688d55": {
-			"id": 474,
-			"name": "StarAtlasStatFutureMiningPiece",
-			"description": "Star Atlas Mining a Resource",
-			"dependency": {
-				"dockerfile": "Dockerfile_1",
-				"requirements_file": null
-			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.66-group0",
-			"input_schema": {
-				"description": "StarAtlas Mining Piece Input Model",
-				"properties": {
-					"fleet_name": {
-						"default": "",
-						"description": "Fleet Name",
-						"title": "Fleet Name",
-						"type": "string"
-					},
-					"resource_mint": {
-						"default": "",
-						"description": "Resource to mine",
-						"title": "Resource Mint",
-						"type": "string"
-					},
-					"starbase_x": {
-						"default": 0,
-						"description": "Number of seconds to sleep",
-						"title": "Starbase X",
-						"type": "integer"
-					},
-					"starbase_y": {
-						"default": 0,
-						"description": "Number of seconds to sleep",
-						"title": "Starbase Y",
-						"type": "integer"
-					},
-					"planet_x": {
-						"default": 0,
-						"description": "Number of seconds to sleep",
-						"title": "Planet X",
-						"type": "integer"
-					},
-					"planet_y": {
-						"default": 0,
-						"description": "Number of seconds to sleep",
-						"title": "Planet Y",
-						"type": "integer"
-					}
-				},
-				"title": "StarAtlasStatFutureMiningPiece",
-				"type": "object"
-			},
-			"output_schema": {
-				"description": "StarAtlas Mining Piece Output Model",
-				"properties": {
-					"fleet_name": {
-						"default": "",
-						"description": "Fleet Name",
-						"title": "Fleet Name",
-						"type": "string"
-					},
-					"resource_mint_mined": {
-						"description": "Resource Mint Mined",
-						"title": "Resource Mint Mined",
-						"type": "string"
-					},
-					"mining_duration": {
-						"description": "Amount Resource Mined",
-						"title": "Mining Duration",
-						"type": "number"
-					},
-					"mining_duration_in_minutes": {
-						"description": "Amount Resource Mined",
-						"title": "Mining Duration In Minutes",
-						"type": "number"
-					},
-					"amount_mined": {
-						"description": "Amount Resource Mined",
-						"title": "Amount Mined",
-						"type": "integer"
-					},
-					"fuel_needed_warp": {
-						"description": "Amount Resource Mined",
-						"title": "Fuel Needed Warp",
-						"type": "integer"
-					},
-					"fuel_needed_half_warp": {
-						"description": "Amount Resource Mined",
-						"title": "Fuel Needed Half Warp",
-						"type": "integer"
-					},
-					"fuel_needed_subwarp": {
-						"description": "Amount Resource Mined",
-						"title": "Fuel Needed Subwarp",
-						"type": "integer"
-					},
-					"ammo_for_duration": {
-						"description": "Amount Resource Mined",
-						"title": "Ammo For Duration",
-						"type": "integer"
-					},
-					"food_for_duration": {
-						"description": "Amount Resource Mined",
-						"title": "Food For Duration",
-						"type": "integer"
-					},
-					"resource_hardness": {
-						"description": "Amount Resource Mined",
-						"title": "Resource Hardness",
-						"type": "integer"
-					},
-					"system_richness": {
-						"description": "Amount Resource Mined",
-						"title": "System Richness",
-						"type": "integer"
-					},
-					"mine_item": {
-						"description": "Amount Resource Mined",
-						"title": "Mine Item",
-						"type": "string"
-					},
-					"sage_resource": {
-						"description": "Amount Resource Mined",
-						"title": "Sage Resource",
-						"type": "string"
-					},
-					"planet": {
-						"description": "Amount Resource Mined",
-						"title": "Planet",
-						"type": "string"
-					}
-				},
-				"required": ["resource_mint_mined", "mining_duration", "mining_duration_in_minutes", "amount_mined", "fuel_needed_warp", "fuel_needed_half_warp", "fuel_needed_subwarp", "ammo_for_duration", "food_for_duration", "resource_hardness", "system_richness", "mine_item", "sage_resource", "planet"],
-				"title": "OutputModel",
-				"type": "object"
-			},
-			"secrets_schema": null,
-			"container_resources": {
-				"requests": {
-					"cpu": 100,
-					"memory": 128
-				},
-				"limits": {
-					"cpu": 500,
-					"memory": 512
-				},
-				"use_gpu": false
-			},
-			"tags": ["Star Atlas"],
-			"style": {
-				"module": "StarAtlasStatFutureMiningPiece",
-				"label": "Future Stat Mine",
-				"nodeType": "default",
-				"nodeStyle": {
-					"backgroundColor": "#ebebeb"
-				},
-				"useIcon": true,
-				"iconClassName": "fa-solid:database",
-				"iconStyle": {
-					"cursor": "pointer"
-				}
-			},
-			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasStatFutureMiningPiece",
-			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
-			"repository_id": 22,
-			"branch_piece": false
-		},
 		"492_e4f9dc81-55c6-49b2-9f10-45556fd48143": {
 			"id": 492,
 			"name": "StarAtlasStatCargoPiece",
@@ -1390,7 +806,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.66-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
 			"input_schema": {
 				"description": "StarAtlas Mining Piece Input Model",
 				"properties": {
@@ -1531,7 +947,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.66-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
 			"input_schema": {
 				"description": "StarAtlas Unload Cargo Piece Input Model",
 				"properties": {
@@ -1636,7 +1052,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.66-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
 			"input_schema": {
 				"description": "StarAtlas Mining Piece Input Model",
 				"properties": {
@@ -1723,66 +1139,6 @@
 			"repository_id": 26,
 			"branch_piece": false
 		},
-		"903_6091f6c7-4c1d-4d69-bbb7-804a2068fe88": {
-			"id": 903,
-			"name": "StarAtlasWaitOnePiece",
-			"description": "StarAtlas Wait One",
-			"dependency": {
-				"dockerfile": "Dockerfile_1",
-				"requirements_file": null
-			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.66-group0",
-			"input_schema": {
-				"description": "StarAtlas Wait One Input Model",
-				"properties": {},
-				"title": "StarAtlasWaitOnePiece",
-				"type": "object"
-			},
-			"output_schema": {
-				"description": "StarAtlas Wait One Output Model",
-				"properties": {
-					"output": {
-						"description": "Output",
-						"title": "Output",
-						"type": "string"
-					}
-				},
-				"required": ["output"],
-				"title": "OutputModel",
-				"type": "object"
-			},
-			"secrets_schema": null,
-			"container_resources": {
-				"requests": {
-					"cpu": 100,
-					"memory": 128
-				},
-				"limits": {
-					"cpu": 500,
-					"memory": 512
-				},
-				"use_gpu": false
-			},
-			"tags": ["Star Atlas"],
-			"style": {
-				"module": "StarAtlasWaitOnePiece",
-				"label": "Wait One",
-				"nodeType": "default",
-				"nodeStyle": {
-					"backgroundColor": "#ebebeb"
-				},
-				"useIcon": true,
-				"iconClassName": "fa-solid:database",
-				"iconStyle": {
-					"cursor": "pointer"
-				}
-			},
-			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasWaitOnePiece",
-			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
-			"repository_id": 38,
-			"branch_piece": false,
-			"wait_one": true
-		},
 		"903_8f94a561-c81c-47d5-a24a-0ce2825f4715": {
 			"id": 903,
 			"name": "StarAtlasWaitOnePiece",
@@ -1791,7 +1147,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.66-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
 			"input_schema": {
 				"description": "StarAtlas Wait One Input Model",
 				"properties": {},
@@ -1851,7 +1207,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.66-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
 			"input_schema": {
 				"description": "StarAtlas Wait One Input Model",
 				"properties": {},
@@ -1911,7 +1267,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.66-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
 			"input_schema": {
 				"description": "StarAtlas Wait One Input Model",
 				"properties": {},
@@ -1971,7 +1327,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.66-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
 			"input_schema": {
 				"description": "StarAtlas Mining Piece Input Model",
 				"properties": {
@@ -2128,721 +1484,6 @@
 			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasStatFutureMiningPiece",
 			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
 			"repository_id": 38,
-			"branch_piece": false,
-			"wait_one": false
-		},
-		"889_4e8f9bb7-837d-4d55-b9f6-e397da82e021": {
-			"id": 889,
-			"name": "StarAtlasStatFutureMiningPiece",
-			"description": "Star Atlas Mining a Resource",
-			"dependency": {
-				"dockerfile": "Dockerfile_1",
-				"requirements_file": null
-			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.66-group0",
-			"input_schema": {
-				"description": "StarAtlas Mining Piece Input Model",
-				"properties": {
-					"fleet_name": {
-						"default": "",
-						"description": "Fleet Name",
-						"title": "Fleet Name",
-						"type": "string"
-					},
-					"resource_mint": {
-						"default": "",
-						"description": "Resource to mine",
-						"title": "Resource Mint",
-						"type": "string"
-					},
-					"starbase_x": {
-						"default": 0,
-						"description": "Number of seconds to sleep",
-						"title": "Starbase X",
-						"type": "integer"
-					},
-					"starbase_y": {
-						"default": 0,
-						"description": "Number of seconds to sleep",
-						"title": "Starbase Y",
-						"type": "integer"
-					},
-					"planet_x": {
-						"default": 0,
-						"description": "Number of seconds to sleep",
-						"title": "Planet X",
-						"type": "integer"
-					},
-					"planet_y": {
-						"default": 0,
-						"description": "Number of seconds to sleep",
-						"title": "Planet Y",
-						"type": "integer"
-					}
-				},
-				"title": "StarAtlasStatFutureMiningPiece",
-				"type": "object"
-			},
-			"output_schema": {
-				"description": "StarAtlas Mining Piece Output Model",
-				"properties": {
-					"fleet_name": {
-						"default": "",
-						"description": "Fleet Name",
-						"title": "Fleet Name",
-						"type": "string"
-					},
-					"resource_mint_mined": {
-						"description": "Resource Mint Mined",
-						"title": "Resource Mint Mined",
-						"type": "string"
-					},
-					"mining_duration": {
-						"description": "Amount Resource Mined",
-						"title": "Mining Duration",
-						"type": "number"
-					},
-					"mining_duration_in_minutes": {
-						"description": "Amount Resource Mined",
-						"title": "Mining Duration In Minutes",
-						"type": "number"
-					},
-					"amount_mined": {
-						"description": "Amount Resource Mined",
-						"title": "Amount Mined",
-						"type": "integer"
-					},
-					"fuel_needed_warp": {
-						"description": "Amount Resource Mined",
-						"title": "Fuel Needed Warp",
-						"type": "integer"
-					},
-					"fuel_needed_half_warp": {
-						"description": "Amount Resource Mined",
-						"title": "Fuel Needed Half Warp",
-						"type": "integer"
-					},
-					"fuel_needed_subwarp": {
-						"description": "Amount Resource Mined",
-						"title": "Fuel Needed Subwarp",
-						"type": "integer"
-					},
-					"ammo_for_duration": {
-						"description": "Amount Resource Mined",
-						"title": "Ammo For Duration",
-						"type": "integer"
-					},
-					"food_for_duration": {
-						"description": "Amount Resource Mined",
-						"title": "Food For Duration",
-						"type": "integer"
-					},
-					"resource_hardness": {
-						"description": "Amount Resource Mined",
-						"title": "Resource Hardness",
-						"type": "integer"
-					},
-					"system_richness": {
-						"description": "Amount Resource Mined",
-						"title": "System Richness",
-						"type": "integer"
-					},
-					"mine_item": {
-						"description": "Amount Resource Mined",
-						"title": "Mine Item",
-						"type": "string"
-					},
-					"sage_resource": {
-						"description": "Amount Resource Mined",
-						"title": "Sage Resource",
-						"type": "string"
-					},
-					"planet": {
-						"description": "Amount Resource Mined",
-						"title": "Planet",
-						"type": "string"
-					}
-				},
-				"required": ["resource_mint_mined", "mining_duration", "mining_duration_in_minutes", "amount_mined", "fuel_needed_warp", "fuel_needed_half_warp", "fuel_needed_subwarp", "ammo_for_duration", "food_for_duration", "resource_hardness", "system_richness", "mine_item", "sage_resource", "planet"],
-				"title": "OutputModel",
-				"type": "object"
-			},
-			"secrets_schema": null,
-			"container_resources": {
-				"requests": {
-					"cpu": 100,
-					"memory": 128
-				},
-				"limits": {
-					"cpu": 500,
-					"memory": 512
-				},
-				"use_gpu": false
-			},
-			"tags": ["Star Atlas"],
-			"style": {
-				"module": "StarAtlasStatFutureMiningPiece",
-				"label": "Future Stat Mine",
-				"nodeType": "default",
-				"nodeStyle": {
-					"backgroundColor": "#ebebeb"
-				},
-				"useIcon": true,
-				"iconClassName": "fa-solid:database",
-				"iconStyle": {
-					"cursor": "pointer"
-				}
-			},
-			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasStatFutureMiningPiece",
-			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
-			"repository_id": 38,
-			"branch_piece": false,
-			"wait_one": false
-		},
-		"889_bbbe7b51-280e-487a-b9f8-8b803fcb7d32": {
-			"id": 889,
-			"name": "StarAtlasStatFutureMiningPiece",
-			"description": "Star Atlas Mining a Resource",
-			"dependency": {
-				"dockerfile": "Dockerfile_1",
-				"requirements_file": null
-			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.66-group0",
-			"input_schema": {
-				"description": "StarAtlas Mining Piece Input Model",
-				"properties": {
-					"fleet_name": {
-						"default": "",
-						"description": "Fleet Name",
-						"title": "Fleet Name",
-						"type": "string"
-					},
-					"resource_mint": {
-						"default": "",
-						"description": "Resource to mine",
-						"title": "Resource Mint",
-						"type": "string"
-					},
-					"starbase_x": {
-						"default": 0,
-						"description": "Number of seconds to sleep",
-						"title": "Starbase X",
-						"type": "integer"
-					},
-					"starbase_y": {
-						"default": 0,
-						"description": "Number of seconds to sleep",
-						"title": "Starbase Y",
-						"type": "integer"
-					},
-					"planet_x": {
-						"default": 0,
-						"description": "Number of seconds to sleep",
-						"title": "Planet X",
-						"type": "integer"
-					},
-					"planet_y": {
-						"default": 0,
-						"description": "Number of seconds to sleep",
-						"title": "Planet Y",
-						"type": "integer"
-					}
-				},
-				"title": "StarAtlasStatFutureMiningPiece",
-				"type": "object"
-			},
-			"output_schema": {
-				"description": "StarAtlas Mining Piece Output Model",
-				"properties": {
-					"fleet_name": {
-						"default": "",
-						"description": "Fleet Name",
-						"title": "Fleet Name",
-						"type": "string"
-					},
-					"resource_mint_mined": {
-						"description": "Resource Mint Mined",
-						"title": "Resource Mint Mined",
-						"type": "string"
-					},
-					"mining_duration": {
-						"description": "Amount Resource Mined",
-						"title": "Mining Duration",
-						"type": "number"
-					},
-					"mining_duration_in_minutes": {
-						"description": "Amount Resource Mined",
-						"title": "Mining Duration In Minutes",
-						"type": "number"
-					},
-					"amount_mined": {
-						"description": "Amount Resource Mined",
-						"title": "Amount Mined",
-						"type": "integer"
-					},
-					"fuel_needed_warp": {
-						"description": "Amount Resource Mined",
-						"title": "Fuel Needed Warp",
-						"type": "integer"
-					},
-					"fuel_needed_half_warp": {
-						"description": "Amount Resource Mined",
-						"title": "Fuel Needed Half Warp",
-						"type": "integer"
-					},
-					"fuel_needed_subwarp": {
-						"description": "Amount Resource Mined",
-						"title": "Fuel Needed Subwarp",
-						"type": "integer"
-					},
-					"ammo_for_duration": {
-						"description": "Amount Resource Mined",
-						"title": "Ammo For Duration",
-						"type": "integer"
-					},
-					"food_for_duration": {
-						"description": "Amount Resource Mined",
-						"title": "Food For Duration",
-						"type": "integer"
-					},
-					"resource_hardness": {
-						"description": "Amount Resource Mined",
-						"title": "Resource Hardness",
-						"type": "integer"
-					},
-					"system_richness": {
-						"description": "Amount Resource Mined",
-						"title": "System Richness",
-						"type": "integer"
-					},
-					"mine_item": {
-						"description": "Amount Resource Mined",
-						"title": "Mine Item",
-						"type": "string"
-					},
-					"sage_resource": {
-						"description": "Amount Resource Mined",
-						"title": "Sage Resource",
-						"type": "string"
-					},
-					"planet": {
-						"description": "Amount Resource Mined",
-						"title": "Planet",
-						"type": "string"
-					}
-				},
-				"required": ["resource_mint_mined", "mining_duration", "mining_duration_in_minutes", "amount_mined", "fuel_needed_warp", "fuel_needed_half_warp", "fuel_needed_subwarp", "ammo_for_duration", "food_for_duration", "resource_hardness", "system_richness", "mine_item", "sage_resource", "planet"],
-				"title": "OutputModel",
-				"type": "object"
-			},
-			"secrets_schema": null,
-			"container_resources": {
-				"requests": {
-					"cpu": 100,
-					"memory": 128
-				},
-				"limits": {
-					"cpu": 500,
-					"memory": 512
-				},
-				"use_gpu": false
-			},
-			"tags": ["Star Atlas"],
-			"style": {
-				"module": "StarAtlasStatFutureMiningPiece",
-				"label": "Future Stat Mine",
-				"nodeType": "default",
-				"nodeStyle": {
-					"backgroundColor": "#ebebeb"
-				},
-				"useIcon": true,
-				"iconClassName": "fa-solid:database",
-				"iconStyle": {
-					"cursor": "pointer"
-				}
-			},
-			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasStatFutureMiningPiece",
-			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
-			"repository_id": 38,
-			"branch_piece": false,
-			"wait_one": false
-		},
-		"1191_8e35ee21-62af-4fb5-adcf-c15ad3781856": {
-			"id": 1191,
-			"name": "MathArithmeticPiece",
-			"description": "A MathArithmeticPiece Piece.",
-			"dependency": {
-				"dockerfile": "Dockerfile_1",
-				"requirements_file": null
-			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.66-group0",
-			"input_schema": {
-				"$defs": {
-					"InputEnum": {
-						"enum": ["addition", "substract", "multiply", "divide"],
-						"title": "InputEnum",
-						"type": "string"
-					}
-				},
-				"description": "MathArithmeticPiece Input Model",
-				"properties": {
-					"left_input_int": {
-						"anyOf": [{
-							"type": "integer"
-						}, {
-							"type": "null"
-						}],
-						"default": 0,
-						"description": "Left Input Int.",
-						"title": "Left Input Int"
-					},
-					"right_input_int": {
-						"anyOf": [{
-							"type": "integer"
-						}, {
-							"type": "null"
-						}],
-						"default": 0,
-						"description": "Right Input Int.",
-						"title": "Right Input Int"
-					},
-					"left_input_float": {
-						"anyOf": [{
-							"type": "number"
-						}, {
-							"type": "null"
-						}],
-						"default": 0,
-						"description": "Left Input Float.",
-						"title": "Left Input Float"
-					},
-					"right_input_float": {
-						"anyOf": [{
-							"type": "number"
-						}, {
-							"type": "null"
-						}],
-						"default": 0,
-						"description": "Right Input Float.",
-						"title": "Right Input Float"
-					},
-					"operation_enum": {
-						"allOf": [{
-							"$ref": "#/$defs/InputEnum"
-						}],
-						"default": "addition",
-						"description": "Input addition."
-					}
-				},
-				"title": "MathArithmeticPiece",
-				"type": "object"
-			},
-			"output_schema": {
-				"description": "MathArithmeticPiece Output Model",
-				"properties": {
-					"result_output_float": {
-						"description": "Result from operation.",
-						"title": "Result Output Float",
-						"type": "number"
-					},
-					"result_output_int": {
-						"description": "Result from operation.",
-						"title": "Result Output Int",
-						"type": "integer"
-					}
-				},
-				"required": ["result_output_float", "result_output_int"],
-				"title": "OutputModel",
-				"type": "object"
-			},
-			"secrets_schema": null,
-			"container_resources": {
-				"requests": {
-					"cpu": 100,
-					"memory": 128
-				},
-				"limits": {
-					"cpu": 100,
-					"memory": 128
-				},
-				"use_gpu": false
-			},
-			"tags": ["default", "mathematics"],
-			"style": {
-				"module": "MathArithmeticPiece",
-				"label": "Math Logic",
-				"nodeType": "default",
-				"nodeStyle": {
-					"backgroundColor": "#ebebeb"
-				},
-				"useIcon": true,
-				"iconClassName": "fa-solid:file-alt",
-				"iconStyle": {
-					"cursor": "pointer"
-				}
-			},
-			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/MathArithmeticPiece",
-			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
-			"repository_id": 48,
-			"branch_piece": false,
-			"wait_one": false
-		},
-		"1168_1626705b-e366-44a9-9689-4a9ef7bbf95b": {
-			"id": 1168,
-			"name": "StarAtlasFleetCargoCheckPiece",
-			"description": "Check StarAtlas Cargo of Fleet",
-			"dependency": {
-				"dockerfile": "Dockerfile_1",
-				"requirements_file": null
-			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.66-group0",
-			"input_schema": {
-				"description": "Star Atlas Fleet Cargo Check Piece Input Model",
-				"properties": {
-					"fleet_name": {
-						"default": "",
-						"description": "Fleet Name",
-						"title": "Fleet Name",
-						"type": "string"
-					},
-					"resource_mint": {
-						"default": "",
-						"description": "resource_mint",
-						"title": "Resource Mint",
-						"type": "string"
-					},
-					"resource_amount": {
-						"default": 0,
-						"description": "resource_amount In Fleet",
-						"title": "Resource Amount",
-						"type": "integer"
-					},
-					"fuel_amount": {
-						"default": 0,
-						"description": "fuel_amount In Fleet",
-						"title": "Fuel Amount",
-						"type": "integer"
-					},
-					"ammo_amount": {
-						"default": 0,
-						"description": "ammo_amount In Fleet",
-						"title": "Ammo Amount",
-						"type": "integer"
-					}
-				},
-				"title": "StarAtlasFleetCargoCheckPiece",
-				"type": "object"
-			},
-			"output_schema": {
-				"description": "Branch Piece Output Model",
-				"properties": {
-					"branch_main": {
-						"default": true,
-						"description": "Main branch selected",
-						"title": "Branch Main",
-						"type": "boolean"
-					}
-				},
-				"title": "BaseBranchOutputModel",
-				"type": "object"
-			},
-			"secrets_schema": null,
-			"container_resources": {
-				"requests": {
-					"cpu": 100,
-					"memory": 128
-				},
-				"limits": {
-					"cpu": 500,
-					"memory": 512
-				},
-				"use_gpu": false
-			},
-			"tags": ["Star Atlas"],
-			"style": {
-				"module": "StarAtlasFleetCargoCheckPiece",
-				"label": "Cargo Check",
-				"nodeType": "default",
-				"nodeStyle": {
-					"backgroundColor": "#ebebeb"
-				},
-				"useIcon": true,
-				"iconClassName": "fa-solid:database",
-				"iconStyle": {
-					"cursor": "pointer"
-				}
-			},
-			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasFleetCargoCheckPiece",
-			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
-			"repository_id": 48,
-			"branch_piece": true,
-			"wait_one": false
-		},
-		"1171_c3c57059-3990-4c2a-a9f3-ba6d10a72409": {
-			"id": 1171,
-			"name": "StarAtlasStatFutureMiningPiece",
-			"description": "Star Atlas Mining a Resource",
-			"dependency": {
-				"dockerfile": "Dockerfile_1",
-				"requirements_file": null
-			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.66-group0",
-			"input_schema": {
-				"description": "StarAtlas Mining Piece Input Model",
-				"properties": {
-					"fleet_name": {
-						"default": "",
-						"description": "Fleet Name",
-						"title": "Fleet Name",
-						"type": "string"
-					},
-					"resource_mint": {
-						"default": "",
-						"description": "Resource to mine",
-						"title": "Resource Mint",
-						"type": "string"
-					},
-					"starbase_x": {
-						"default": 0,
-						"description": "Number of seconds to sleep",
-						"title": "Starbase X",
-						"type": "integer"
-					},
-					"starbase_y": {
-						"default": 0,
-						"description": "Number of seconds to sleep",
-						"title": "Starbase Y",
-						"type": "integer"
-					},
-					"planet_x": {
-						"default": 0,
-						"description": "Number of seconds to sleep",
-						"title": "Planet X",
-						"type": "integer"
-					},
-					"planet_y": {
-						"default": 0,
-						"description": "Number of seconds to sleep",
-						"title": "Planet Y",
-						"type": "integer"
-					}
-				},
-				"title": "StarAtlasStatFutureMiningPiece",
-				"type": "object"
-			},
-			"output_schema": {
-				"description": "StarAtlas Mining Piece Output Model",
-				"properties": {
-					"fleet_name": {
-						"default": "",
-						"description": "Fleet Name",
-						"title": "Fleet Name",
-						"type": "string"
-					},
-					"resource_mint_mined": {
-						"description": "Resource Mint Mined",
-						"title": "Resource Mint Mined",
-						"type": "string"
-					},
-					"mining_duration": {
-						"description": "Amount Resource Mined",
-						"title": "Mining Duration",
-						"type": "number"
-					},
-					"mining_duration_in_minutes": {
-						"description": "Amount Resource Mined",
-						"title": "Mining Duration In Minutes",
-						"type": "number"
-					},
-					"amount_mined": {
-						"description": "Amount Resource Mined",
-						"title": "Amount Mined",
-						"type": "integer"
-					},
-					"fuel_needed_warp": {
-						"description": "Amount Resource Mined",
-						"title": "Fuel Needed Warp",
-						"type": "integer"
-					},
-					"fuel_needed_half_warp": {
-						"description": "Amount Resource Mined",
-						"title": "Fuel Needed Half Warp",
-						"type": "integer"
-					},
-					"fuel_needed_subwarp": {
-						"description": "Amount Resource Mined",
-						"title": "Fuel Needed Subwarp",
-						"type": "integer"
-					},
-					"ammo_for_duration": {
-						"description": "Amount Resource Mined",
-						"title": "Ammo For Duration",
-						"type": "integer"
-					},
-					"food_for_duration": {
-						"description": "Amount Resource Mined",
-						"title": "Food For Duration",
-						"type": "integer"
-					},
-					"resource_hardness": {
-						"description": "Amount Resource Mined",
-						"title": "Resource Hardness",
-						"type": "integer"
-					},
-					"system_richness": {
-						"description": "Amount Resource Mined",
-						"title": "System Richness",
-						"type": "integer"
-					},
-					"mine_item": {
-						"description": "Amount Resource Mined",
-						"title": "Mine Item",
-						"type": "string"
-					},
-					"sage_resource": {
-						"description": "Amount Resource Mined",
-						"title": "Sage Resource",
-						"type": "string"
-					},
-					"planet": {
-						"description": "Amount Resource Mined",
-						"title": "Planet",
-						"type": "string"
-					}
-				},
-				"required": ["resource_mint_mined", "mining_duration", "mining_duration_in_minutes", "amount_mined", "fuel_needed_warp", "fuel_needed_half_warp", "fuel_needed_subwarp", "ammo_for_duration", "food_for_duration", "resource_hardness", "system_richness", "mine_item", "sage_resource", "planet"],
-				"title": "OutputModel",
-				"type": "object"
-			},
-			"secrets_schema": null,
-			"container_resources": {
-				"requests": {
-					"cpu": 100,
-					"memory": 128
-				},
-				"limits": {
-					"cpu": 500,
-					"memory": 512
-				},
-				"use_gpu": false
-			},
-			"tags": ["Star Atlas"],
-			"style": {
-				"module": "StarAtlasStatFutureMiningPiece",
-				"label": "Future Stat Mine",
-				"nodeType": "default",
-				"nodeStyle": {
-					"backgroundColor": "#ebebeb"
-				},
-				"useIcon": true,
-				"iconClassName": "fa-solid:database",
-				"iconStyle": {
-					"cursor": "pointer"
-				}
-			},
-			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasStatFutureMiningPiece",
-			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
-			"repository_id": 48,
 			"branch_piece": false,
 			"wait_one": false
 		},
@@ -2854,7 +1495,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.66-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
 			"input_schema": {
 				"description": "StarAtlas Wait One Input Model",
 				"properties": {},
@@ -2914,7 +1555,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.66-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
 			"input_schema": {
 				"description": "Star Atlas Fleet Cargo Check Piece Input Model",
 				"properties": {
@@ -3005,7 +1646,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.66-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
 			"input_schema": {
 				"description": "Star Atlas Fleet Cargo Check Piece Input Model",
 				"properties": {
@@ -3096,7 +1737,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.66-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
 			"input_schema": {
 				"description": "StarAtlas Dock Piece Input Model",
 				"properties": {
@@ -3176,6 +1817,231 @@
 			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
 			"repository_id": 48,
 			"branch_piece": false,
+			"wait_one": false
+		},
+		"2000_12ba03db-f215-4855-b86a-86e54e10b0d4": {
+			"id": 2000,
+			"name": "LogPiece",
+			"description": "A Piece that logs its inputs.",
+			"dependency": {
+				"dockerfile": "Dockerfile_1",
+				"requirements_file": null
+			},
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"input_schema": {
+				"description": "LogPiece Input Model",
+				"properties": {
+					"input_str": {
+						"default": "default value",
+						"description": "Input string to be logged.",
+						"title": "Input Str",
+						"type": "string"
+					},
+					"input_int": {
+						"default": 0,
+						"description": "Input string to be logged.",
+						"title": "Input Int",
+						"type": "integer"
+					},
+					"input_float": {
+						"default": 0,
+						"description": "Input string to be logged.",
+						"title": "Input Float",
+						"type": "number"
+					}
+				},
+				"title": "LogPiece",
+				"type": "object"
+			},
+			"output_schema": {
+				"description": "LogPiece Output Model",
+				"properties": {
+					"output_log": {
+						"description": "All values logged.",
+						"title": "Output Log",
+						"type": "string"
+					}
+				},
+				"required": ["output_log"],
+				"title": "OutputModel",
+				"type": "object"
+			},
+			"secrets_schema": null,
+			"container_resources": {
+				"requests": {
+					"cpu": 100,
+					"memory": 128
+				},
+				"limits": {
+					"cpu": 100,
+					"memory": 128
+				},
+				"use_gpu": false
+			},
+			"tags": ["default", "log"],
+			"style": {
+				"module": "LogPiece",
+				"label": "Log",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:file-alt",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/LogPiece",
+			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+			"repository_id": 78,
+			"branch_piece": false,
+			"wait_one": false
+		},
+		"2001_3b3f695a-3b3c-4a0b-817f-1f963573ecf0": {
+			"id": 2001,
+			"name": "StarAtlasGenericCheckIntegerPiece",
+			"description": "Check Generic Integer",
+			"dependency": {
+				"dockerfile": "Dockerfile_1",
+				"requirements_file": null
+			},
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"input_schema": {
+				"description": "StarAtlas Dock Piece Input Model",
+				"properties": {
+					"value_to_test": {
+						"default": 0,
+						"description": "Value To Test",
+						"title": "Value To Test",
+						"type": "integer"
+					},
+					"required_field": {
+						"default": 0,
+						"description": "Required Field",
+						"title": "Required Field",
+						"type": "integer"
+					}
+				},
+				"title": "StarAtlasGenericCheckIntegerPiece",
+				"type": "object"
+			},
+			"output_schema": {
+				"description": "Branch Piece Output Model",
+				"properties": {
+					"branch_main": {
+						"default": true,
+						"description": "Main branch selected",
+						"title": "Branch Main",
+						"type": "boolean"
+					}
+				},
+				"title": "BaseBranchOutputModel",
+				"type": "object"
+			},
+			"secrets_schema": null,
+			"container_resources": {
+				"requests": {
+					"cpu": 100,
+					"memory": 128
+				},
+				"limits": {
+					"cpu": 500,
+					"memory": 512
+				},
+				"use_gpu": false
+			},
+			"tags": ["Star Atlas"],
+			"style": {
+				"module": "StarAtlasGenericCheckIntegerPiece",
+				"label": "Generic Check Integer",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasGenericCheckIntegerPiece",
+			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+			"repository_id": 78,
+			"branch_piece": true,
+			"wait_one": false
+		},
+		"2001_41a1b13c-5e38-4b5e-8676-30c25950054d": {
+			"id": 2001,
+			"name": "StarAtlasGenericCheckIntegerPiece",
+			"description": "Check Generic Integer",
+			"dependency": {
+				"dockerfile": "Dockerfile_1",
+				"requirements_file": null
+			},
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"input_schema": {
+				"description": "StarAtlas Dock Piece Input Model",
+				"properties": {
+					"value_to_test": {
+						"default": 0,
+						"description": "Value To Test",
+						"title": "Value To Test",
+						"type": "integer"
+					},
+					"required_field": {
+						"default": 0,
+						"description": "Required Field",
+						"title": "Required Field",
+						"type": "integer"
+					}
+				},
+				"title": "StarAtlasGenericCheckIntegerPiece",
+				"type": "object"
+			},
+			"output_schema": {
+				"description": "Branch Piece Output Model",
+				"properties": {
+					"branch_main": {
+						"default": true,
+						"description": "Main branch selected",
+						"title": "Branch Main",
+						"type": "boolean"
+					}
+				},
+				"title": "BaseBranchOutputModel",
+				"type": "object"
+			},
+			"secrets_schema": null,
+			"container_resources": {
+				"requests": {
+					"cpu": 100,
+					"memory": 128
+				},
+				"limits": {
+					"cpu": 500,
+					"memory": 512
+				},
+				"use_gpu": false
+			},
+			"tags": ["Star Atlas"],
+			"style": {
+				"module": "StarAtlasGenericCheckIntegerPiece",
+				"label": "Generic Check Integer",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"source_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository/tree/main/pieces/StarAtlasGenericCheckIntegerPiece",
+			"repository_url": "https://github.com/prochain-star-atlas/prochain-starflow-pieces-repository",
+			"repository_id": 78,
+			"branch_piece": true,
 			"wait_one": false
 		}
 	},
@@ -3291,93 +2157,6 @@
 				}
 			}
 		},
-		"312_3b653d76-2281-4242-8e33-d9d19725463b": {
-			"storage": {
-				"storageAccessMode": "Read/Write"
-			},
-			"containerResources": {
-				"cpu": 500,
-				"memory": 512,
-				"useGpu": false
-			},
-			"inputs": {
-				"fleet_name": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": "%FLEET_NAME%"
-				},
-				"resource_mint": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": ""
-				},
-				"resource_amount": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": 0
-				},
-				"fuel_amount": {
-					"fromUpstream": true,
-					"upstreamId": "StarAtlasS_c12c4f9b77e9455a9adb7323d8688d55",
-					"upstreamArgument": "fuel_needed_subwarp",
-					"upstreamValue": "StarAtlasStatFutureMiningPiece (c12c4f9b) - Fuel Needed Subwarp",
-					"value": null
-				},
-				"ammo_amount": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": 0
-				}
-			}
-		},
-		"296_9dd1d976-5d5d-42a2-a4aa-84e4b22fa09f": {
-			"storage": {
-				"storageAccessMode": "Read/Write"
-			},
-			"containerResources": {
-				"cpu": 500,
-				"memory": 512,
-				"useGpu": false
-			},
-			"inputs": {
-				"fleet_name": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": "%FLEET_NAME%"
-				},
-				"amount": {
-					"fromUpstream": true,
-					"upstreamId": "StarAtlasS_044bf39a6cf2445e975b7941edf10516",
-					"upstreamArgument": "fuel_needed_subwarp",
-					"upstreamValue": "StarAtlasStatFutureMiningPiece (044bf39a) - Fuel Needed Subwarp",
-					"value": null
-				},
-				"destination_x": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": %STARBASE_COORDINATE_X%
-				},
-				"destination_y": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": %STARBASE_COORDINATE_Y%
-				}
-			}
-		},
 		"472_cbb16f48-c940-49b1-83ea-9e7f277874b5": {
 			"storage": {
 				"storageAccessMode": "Read/Write"
@@ -3437,9 +2216,9 @@
 				},
 				"ammo_amount": {
 					"fromUpstream": true,
-					"upstreamId": "StarAtlasS_c12c4f9b77e9455a9adb7323d8688d55",
+					"upstreamId": "StarAtlasS_044bf39a6cf2445e975b7941edf10516",
 					"upstreamArgument": "ammo_for_duration",
-					"upstreamValue": "StarAtlasStatFutureMiningPiece (c12c4f9b) - Ammo For Duration",
+					"upstreamValue": "StarAtlasStatFutureMiningPiece (044bf39a) - Ammo For Duration",
 					"value": null
 				}
 			}
@@ -3470,9 +2249,9 @@
 				},
 				"resource_amount": {
 					"fromUpstream": true,
-					"upstreamId": "StarAtlasS_c12c4f9b77e9455a9adb7323d8688d55",
+					"upstreamId": "StarAtlasS_044bf39a6cf2445e975b7941edf10516",
 					"upstreamArgument": "food_for_duration",
-					"upstreamValue": "StarAtlasStatFutureMiningPiece (c12c4f9b) - Food For Duration",
+					"upstreamValue": "StarAtlasStatFutureMiningPiece (044bf39a) - Food For Duration",
 					"value": null
 				},
 				"fuel_amount": {
@@ -3510,9 +2289,9 @@
 				},
 				"amount": {
 					"fromUpstream": true,
-					"upstreamId": "StarAtlasS_4e8f9bb7837d4d55b9f6e397da82e021",
+					"upstreamId": "StarAtlasS_044bf39a6cf2445e975b7941edf10516",
 					"upstreamArgument": "ammo_for_duration",
-					"upstreamValue": "StarAtlasStatFutureMiningPiece (4e8f9bb7) - Ammo For Duration",
+					"upstreamValue": "StarAtlasStatFutureMiningPiece (044bf39a) - Ammo For Duration",
 					"value": null
 				},
 				"destination_x": {
@@ -3557,9 +2336,9 @@
 				},
 				"amount": {
 					"fromUpstream": true,
-					"upstreamId": "StarAtlasS_bbbe7b51280e487ab9f88b803fcb7d32",
+					"upstreamId": "StarAtlasS_044bf39a6cf2445e975b7941edf10516",
 					"upstreamArgument": "food_for_duration",
-					"upstreamValue": "StarAtlasStatFutureMiningPiece (bbbe7b51) - Food For Duration",
+					"upstreamValue": "StarAtlasStatFutureMiningPiece (044bf39a) - Food For Duration",
 					"value": null
 				},
 				"destination_x": {
@@ -3570,154 +2349,6 @@
 					"value": %STARBASE_COORDINATE_X%
 				},
 				"destination_y": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": %STARBASE_COORDINATE_Y%
-				}
-			}
-		},
-		"493_5f022e89-ab9a-4b44-911f-51befbd70845": {
-			"storage": {
-				"storageAccessMode": "Read/Write"
-			},
-			"containerResources": {
-				"cpu": 500,
-				"memory": 512,
-				"useGpu": false
-			},
-			"inputs": {
-				"fleet_name": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": "%FLEET_NAME%"
-				},
-				"resource_mint": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": "%RESOURCE_MINT_MINE%"
-				},
-				"resource_amount": {
-					"fromUpstream": true,
-					"upstreamId": "MathArithm_77d0d75169f74f44bb4f7445822b2dc8",
-					"upstreamArgument": "result_output_int",
-					"upstreamValue": "MathArithmeticPiece (77d0d751) - Result Output Int",
-					"value": null
-				},
-				"fuel_amount": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": 0
-				},
-				"ammo_amount": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": 0
-				}
-			}
-		},
-		"478_77d0d751-69f7-4f44-bb4f-7445822b2dc8": {
-			"storage": {
-				"storageAccessMode": "Read/Write"
-			},
-			"containerResources": {
-				"cpu": 100,
-				"memory": 128,
-				"useGpu": false
-			},
-			"inputs": {
-				"left_input_int": {
-					"fromUpstream": true,
-					"upstreamId": "StarAtlasS_c12c4f9b77e9455a9adb7323d8688d55",
-					"upstreamArgument": "amount_mined",
-					"upstreamValue": "StarAtlasStatFutureMiningPiece (c12c4f9b) - Amount Mined",
-					"value": 0
-				},
-				"right_input_int": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": 2
-				},
-				"left_input_float": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": 1
-				},
-				"right_input_float": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": 1
-				},
-				"operation_enum": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": "divide"
-				}
-			}
-		},
-		"474_c12c4f9b-77e9-455a-9adb-7323d8688d55": {
-			"storage": {
-				"storageAccessMode": "Read/Write"
-			},
-			"containerResources": {
-				"cpu": 500,
-				"memory": 512,
-				"useGpu": false
-			},
-			"inputs": {
-				"fleet_name": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": "%FLEET_NAME%"
-				},
-				"resource_mint": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": "%RESOURCE_MINT_MINE%"
-				},
-				"starbase_x": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": %STARBASE_COORDINATE_X%
-				},
-				"starbase_y": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": %STARBASE_COORDINATE_Y%
-				},
-				"planet_x": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": %STARBASE_COORDINATE_X%
-				},
-				"planet_y": {
 					"fromUpstream": false,
 					"upstreamId": "",
 					"upstreamArgument": "",
@@ -3839,17 +2470,6 @@
 				}
 			}
 		},
-		"903_6091f6c7-4c1d-4d69-bbb7-804a2068fe88": {
-			"storage": {
-				"storageAccessMode": "Read/Write"
-			},
-			"containerResources": {
-				"cpu": 500,
-				"memory": 512,
-				"useGpu": false
-			},
-			"inputs": {}
-		},
 		"903_8f94a561-c81c-47d5-a24a-0ce2825f4715": {
 			"storage": {
 				"storageAccessMode": "Read/Write"
@@ -3884,262 +2504,6 @@
 			"inputs": {}
 		},
 		"889_044bf39a-6cf2-445e-975b-7941edf10516": {
-			"storage": {
-				"storageAccessMode": "Read/Write"
-			},
-			"containerResources": {
-				"cpu": 500,
-				"memory": 512,
-				"useGpu": false
-			},
-			"inputs": {
-				"fleet_name": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": "%FLEET_NAME%"
-				},
-				"resource_mint": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": "%RESOURCE_MINT_MINE%"
-				},
-				"starbase_x": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": %STARBASE_COORDINATE_X%
-				},
-				"starbase_y": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": %STARBASE_COORDINATE_Y%
-				},
-				"planet_x": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": %STARBASE_COORDINATE_X%
-				},
-				"planet_y": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": %STARBASE_COORDINATE_Y%
-				}
-			}
-		},
-		"889_4e8f9bb7-837d-4d55-b9f6-e397da82e021": {
-			"storage": {
-				"storageAccessMode": "Read/Write"
-			},
-			"containerResources": {
-				"cpu": 500,
-				"memory": 512,
-				"useGpu": false
-			},
-			"inputs": {
-				"fleet_name": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": "%FLEET_NAME%"
-				},
-				"resource_mint": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": "%RESOURCE_MINT_MINE%"
-				},
-				"starbase_x": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": %STARBASE_COORDINATE_X%
-				},
-				"starbase_y": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": %STARBASE_COORDINATE_Y%
-				},
-				"planet_x": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": %STARBASE_COORDINATE_X%
-				},
-				"planet_y": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": %STARBASE_COORDINATE_Y%
-				}
-			}
-		},
-		"889_bbbe7b51-280e-487a-b9f8-8b803fcb7d32": {
-			"storage": {
-				"storageAccessMode": "Read/Write"
-			},
-			"containerResources": {
-				"cpu": 500,
-				"memory": 512,
-				"useGpu": false
-			},
-			"inputs": {
-				"fleet_name": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": "%FLEET_NAME%"
-				},
-				"resource_mint": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": "%RESOURCE_MINT_MINE%"
-				},
-				"starbase_x": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": %STARBASE_COORDINATE_X%
-				},
-				"starbase_y": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": %STARBASE_COORDINATE_Y%
-				},
-				"planet_x": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": %STARBASE_COORDINATE_X%
-				},
-				"planet_y": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": %STARBASE_COORDINATE_Y%
-				}
-			}
-		},
-		"1191_8e35ee21-62af-4fb5-adcf-c15ad3781856": {
-			"storage": {
-				"storageAccessMode": "Read/Write"
-			},
-			"containerResources": {
-				"cpu": 100,
-				"memory": 128,
-				"useGpu": false
-			},
-			"inputs": {
-				"left_input_int": {
-					"fromUpstream": true,
-					"upstreamId": "StarAtlasS_c3c5705939904c2aa9f3ba6d10a72409",
-					"upstreamArgument": "amount_mined",
-					"upstreamValue": "StarAtlasStatFutureMiningPiece (c3c57059) - Amount Mined",
-					"value": 0
-				},
-				"right_input_int": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": 2
-				},
-				"left_input_float": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": 1
-				},
-				"right_input_float": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": 1
-				},
-				"operation_enum": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": "divide"
-				}
-			}
-		},
-		"1168_1626705b-e366-44a9-9689-4a9ef7bbf95b": {
-			"storage": {
-				"storageAccessMode": "Read/Write"
-			},
-			"containerResources": {
-				"cpu": 500,
-				"memory": 512,
-				"useGpu": false
-			},
-			"inputs": {
-				"fleet_name": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": "%FLEET_NAME%"
-				},
-				"resource_mint": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": "%RESOURCE_MINT_MINE%"
-				},
-				"resource_amount": {
-					"fromUpstream": true,
-					"upstreamId": "MathArithm_8e35ee2162af4fb5adcfc15ad3781856",
-					"upstreamArgument": "result_output_int",
-					"upstreamValue": "MathArithmeticPiece (8e35ee21) - Result Output Int",
-					"value": 0
-				},
-				"fuel_amount": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": 0
-				},
-				"ammo_amount": {
-					"fromUpstream": false,
-					"upstreamId": "",
-					"upstreamArgument": "",
-					"upstreamValue": "",
-					"value": 0
-				}
-			}
-		},
-		"1171_c3c57059-3990-4c2a-a9f3-ba6d10a72409": {
 			"storage": {
 				"storageAccessMode": "Read/Write"
 			},
@@ -4244,9 +2608,9 @@
 				},
 				"ammo_amount": {
 					"fromUpstream": true,
-					"upstreamId": "StarAtlasS_c3c5705939904c2aa9f3ba6d10a72409",
+					"upstreamId": "StarAtlasS_044bf39a6cf2445e975b7941edf10516",
 					"upstreamArgument": "ammo_for_duration",
-					"upstreamValue": "StarAtlasStatFutureMiningPiece (c3c57059) - Ammo For Duration",
+					"upstreamValue": "StarAtlasStatFutureMiningPiece (044bf39a) - Ammo For Duration",
 					"value": 0
 				}
 			}
@@ -4277,9 +2641,9 @@
 				},
 				"resource_amount": {
 					"fromUpstream": true,
-					"upstreamId": "StarAtlasS_c3c5705939904c2aa9f3ba6d10a72409",
+					"upstreamId": "StarAtlasS_044bf39a6cf2445e975b7941edf10516",
 					"upstreamArgument": "food_for_duration",
-					"upstreamValue": "StarAtlasStatFutureMiningPiece (c3c57059) - Food For Duration",
+					"upstreamValue": "StarAtlasStatFutureMiningPiece (044bf39a) - Food For Duration",
 					"value": 0
 				},
 				"fuel_amount": {
@@ -4330,14 +2694,99 @@
 					"value": %STARBASE_COORDINATE_Y%
 				}
 			}
+		},
+		"2000_12ba03db-f215-4855-b86a-86e54e10b0d4": {
+			"storage": {
+				"storageAccessMode": "Read/Write"
+			},
+			"containerResources": {
+				"cpu": 100,
+				"memory": 128,
+				"useGpu": false
+			},
+			"inputs": {
+				"input_str": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": "stop workflow"
+				},
+				"input_int": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": 0
+				},
+				"input_float": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": 0
+				}
+			}
+		},
+		"2001_3b3f695a-3b3c-4a0b-817f-1f963573ecf0": {
+			"storage": {
+				"storageAccessMode": "Read/Write"
+			},
+			"containerResources": {
+				"cpu": 500,
+				"memory": 512,
+				"useGpu": false
+			},
+			"inputs": {
+				"value_to_test": {
+					"fromUpstream": true,
+					"upstreamId": "StarAtlasS_e4f9dc8155c649b29f1045556fd48143",
+					"upstreamArgument": "resource_amount_requested",
+					"upstreamValue": "StarAtlasStatCargoPiece (e4f9dc81) - Resource Amount Requested",
+					"value": 0
+				},
+				"required_field": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": 0
+				}
+			}
+		},
+		"2001_41a1b13c-5e38-4b5e-8676-30c25950054d": {
+			"storage": {
+				"storageAccessMode": "Read/Write"
+			},
+			"containerResources": {
+				"cpu": 500,
+				"memory": 512,
+				"useGpu": false
+			},
+			"inputs": {
+				"value_to_test": {
+					"fromUpstream": true,
+					"upstreamId": "StarAtlasS_e4f9dc8155c649b29f1045556fd48143",
+					"upstreamArgument": "resource_amount_requested",
+					"upstreamValue": "StarAtlasStatCargoPiece (e4f9dc81) - Resource Amount Requested",
+					"value": 0
+				},
+				"required_field": {
+					"fromUpstream": false,
+					"upstreamId": "",
+					"upstreamArgument": "",
+					"upstreamValue": "",
+					"value": 0
+				}
+			}
 		}
 	},
 	"workflowNodes": [{
 		"id": "53_85209645-015f-4bbd-9d79-f9b51d3fac53",
 		"type": "CustomNode",
 		"position": {
-			"x": 35.05806451612898,
-			"y": 1435.7978494623655
+			"x": 29.109919513350405,
+			"y": 1421.9188444558822
 		},
 		"data": {
 			"name": "StarAtlasFleetStatusCheckPiece",
@@ -4362,16 +2811,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 35.05806451612898,
-			"y": 1435.7978494623655
+			"x": 29.109919513350405,
+			"y": 1421.9188444558822
 		},
 		"dragging": false
 	}, {
 		"id": "53_95e373a3-64b7-489d-bf5c-2ddaa10fa051",
 		"type": "CustomNode",
 		"position": {
-			"x": -334.42258064516125,
-			"y": 1099.4043010752684
+			"x": -397.8694606747998,
+			"y": 1186.6437611160216
 		},
 		"data": {
 			"name": "StarAtlasFleetStatusCheckPiece",
@@ -4396,16 +2845,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": -334.42258064516125,
-			"y": 1099.4043010752684
+			"x": -397.8694606747998,
+			"y": 1186.6437611160216
 		},
 		"dragging": false
 	}, {
 		"id": "53_e7bb3e85-ef6c-4aa9-9f6c-17e91b26a0d5",
 		"type": "CustomNode",
 		"position": {
-			"x": 421.7258064516129,
-			"y": 1784.7215053763443
+			"x": 425.6912364534653,
+			"y": 1764.894355367082
 		},
 		"data": {
 			"name": "StarAtlasFleetStatusCheckPiece",
@@ -4428,10 +2877,10 @@
 		},
 		"width": 150,
 		"height": 70,
-		"selected": true,
+		"selected": false,
 		"positionAbsolute": {
-			"x": 421.7258064516129,
-			"y": 1784.7215053763443
+			"x": 425.6912364534653,
+			"y": 1764.894355367082
 		},
 		"dragging": false
 	}, {
@@ -4469,79 +2918,11 @@
 		},
 		"dragging": false
 	}, {
-		"id": "312_3b653d76-2281-4242-8e33-d9d19725463b",
-		"type": "CustomNode",
-		"position": {
-			"x": 1108.4741935483871,
-			"y": 667.6516129032257
-		},
-		"data": {
-			"name": "StarAtlasFleetCargoCheckPiece",
-			"style": {
-				"module": "StarAtlasFleetCargoCheckPiece",
-				"label": "Cargo Check",
-				"nodeType": "default",
-				"nodeStyle": {
-					"backgroundColor": "#ebebeb"
-				},
-				"useIcon": true,
-				"iconClassName": "fa-solid:database",
-				"iconStyle": {
-					"cursor": "pointer"
-				}
-			},
-			"validationError": false,
-			"orientation": "horizontal",
-			"branch_piece": true
-		},
-		"width": 150,
-		"height": 70,
-		"selected": false,
-		"positionAbsolute": {
-			"x": 1108.4741935483871,
-			"y": 667.6516129032257
-		},
-		"dragging": false
-	}, {
-		"id": "296_9dd1d976-5d5d-42a2-a4aa-84e4b22fa09f",
-		"type": "CustomNode",
-		"position": {
-			"x": 1520.667741935484,
-			"y": 780.8236559139784
-		},
-		"data": {
-			"name": "StarAtlasLoadFuelPiece",
-			"style": {
-				"module": "StarAtlasLoadFuelPiece",
-				"label": "Load Fuel",
-				"nodeType": "default",
-				"nodeStyle": {
-					"backgroundColor": "#ebebeb"
-				},
-				"useIcon": true,
-				"iconClassName": "fa-solid:database",
-				"iconStyle": {
-					"cursor": "pointer"
-				}
-			},
-			"validationError": false,
-			"orientation": "horizontal",
-			"branch_piece": false
-		},
-		"width": 150,
-		"height": 70,
-		"selected": false,
-		"positionAbsolute": {
-			"x": 1520.667741935484,
-			"y": 780.8236559139784
-		},
-		"dragging": false
-	}, {
 		"id": "472_cbb16f48-c940-49b1-83ea-9e7f277874b5",
 		"type": "CustomNode",
 		"position": {
-			"x": 817.8645161290325,
-			"y": 2024.78064516129
+			"x": 863.4669611503351,
+			"y": 1770.9931250427353
 		},
 		"data": {
 			"name": "StarAtlasStopMiningPiece",
@@ -4566,16 +2947,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 817.8645161290325,
-			"y": 2024.78064516129
+			"x": 863.4669611503351,
+			"y": 1770.9931250427353
 		},
 		"dragging": false
 	}, {
 		"id": "493_816c00e0-7be4-4b1f-907d-f980d17d502d",
 		"type": "CustomNode",
 		"position": {
-			"x": 1104.8806451612904,
-			"y": 932.8645161290322
+			"x": 1121.0491675338192,
+			"y": 862.8009191814083
 		},
 		"data": {
 			"name": "StarAtlasFleetCargoCheckPiece",
@@ -4600,16 +2981,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 1104.8806451612904,
-			"y": 932.8645161290322
+			"x": 1121.0491675338192,
+			"y": 862.8009191814083
 		},
 		"dragging": false
 	}, {
 		"id": "493_3306fcfe-0c4d-44d1-8115-918b6b01eea5",
 		"type": "CustomNode",
 		"position": {
-			"x": 1112.0677419354838,
-			"y": 1246.532258064516
+			"x": 1146.2012891663776,
+			"y": 1099.2190542259223
 		},
 		"data": {
 			"name": "StarAtlasFleetCargoCheckPiece",
@@ -4634,16 +3015,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 1112.0677419354838,
-			"y": 1246.532258064516
+			"x": 1146.2012891663776,
+			"y": 1099.2190542259223
 		},
 		"dragging": false
 	}, {
 		"id": "476_7b64029a-9f40-4086-affb-633f9646a321",
 		"type": "CustomNode",
 		"position": {
-			"x": 1529.651612903226,
-			"y": 1060.410752688172
+			"x": 1493.9627428865542,
+			"y": 992.9984426566807
 		},
 		"data": {
 			"name": "StarAtlasLoadAmmoPiece",
@@ -4668,16 +3049,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 1529.651612903226,
-			"y": 1060.410752688172
+			"x": 1493.9627428865542,
+			"y": 992.9984426566807
 		},
 		"dragging": false
 	}, {
 		"id": "484_52cf92f2-5449-4e28-aea4-c930cd826c5c",
 		"type": "CustomNode",
 		"position": {
-			"x": 1540.4322580645162,
-			"y": 1362.3559139784945
+			"x": 1509.8917158052955,
+			"y": 1337.2048791767834
 		},
 		"data": {
 			"name": "StarAtlasLoadCargoPiece",
@@ -4702,118 +3083,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 1540.4322580645162,
-			"y": 1362.3559139784945
-		},
-		"dragging": false
-	}, {
-		"id": "493_5f022e89-ab9a-4b44-911f-51befbd70845",
-		"type": "CustomNode",
-		"position": {
-			"x": 1319.9612903225805,
-			"y": 480.69999999999993
-		},
-		"data": {
-			"name": "StarAtlasFleetCargoCheckPiece",
-			"style": {
-				"module": "StarAtlasFleetCargoCheckPiece",
-				"label": "Cargo Check",
-				"nodeType": "default",
-				"nodeStyle": {
-					"backgroundColor": "#ebebeb"
-				},
-				"useIcon": true,
-				"iconClassName": "fa-solid:database",
-				"iconStyle": {
-					"cursor": "pointer"
-				}
-			},
-			"validationError": false,
-			"orientation": "horizontal",
-			"branch_piece": true
-		},
-		"width": 150,
-		"height": 70,
-		"selected": false,
-		"positionAbsolute": {
-			"x": 1319.9612903225805,
-			"y": 480.69999999999993
-		},
-		"dragging": false
-	}, {
-		"id": "478_77d0d751-69f7-4f44-bb4f-7445822b2dc8",
-		"type": "CustomNode",
-		"position": {
-			"x": 1101.2870967741937,
-			"y": 480.70000000000005
-		},
-		"data": {
-			"name": "MathArithmeticPiece",
-			"style": {
-				"module": "MathArithmeticPiece",
-				"label": "Math Logic",
-				"nodeType": "default",
-				"nodeStyle": {
-					"backgroundColor": "#ebebeb"
-				},
-				"useIcon": true,
-				"iconClassName": "fa-solid:file-alt",
-				"iconStyle": {
-					"cursor": "pointer"
-				}
-			},
-			"validationError": false,
-			"orientation": "horizontal",
-			"branch_piece": false
-		},
-		"width": 150,
-		"height": 70,
-		"selected": false,
-		"positionAbsolute": {
-			"x": 1101.2870967741937,
-			"y": 480.70000000000005
-		},
-		"dragging": false
-	}, {
-		"id": "474_c12c4f9b-77e9-455a-9adb-7323d8688d55",
-		"type": "CustomNode",
-		"position": {
-			"x": 551.7580645161291,
-			"y": 835.6709677419352
-		},
-		"data": {
-			"name": "StarAtlasStatFutureMiningPiece",
-			"style": {
-				"module": "StarAtlasStatFutureMiningPiece",
-				"label": "Future Stat Mine",
-				"nodeType": "default",
-				"nodeStyle": {
-					"backgroundColor": "#ebebeb"
-				},
-				"useIcon": true,
-				"iconClassName": "fa-solid:database",
-				"iconStyle": {
-					"cursor": "pointer"
-				}
-			},
-			"validationError": false,
-			"orientation": "horizontal",
-			"branch_piece": false
-		},
-		"width": 150,
-		"height": 70,
-		"selected": false,
-		"positionAbsolute": {
-			"x": 551.7580645161291,
-			"y": 835.6709677419352
+			"x": 1509.8917158052955,
+			"y": 1337.2048791767834
 		},
 		"dragging": false
 	}, {
 		"id": "492_e4f9dc81-55c6-49b2-9f10-45556fd48143",
 		"type": "CustomNode",
 		"position": {
-			"x": 1527.8548387096776,
-			"y": 425.83010752688153
+			"x": -241.67879887910485,
+			"y": 537.0926717987161
 		},
 		"data": {
 			"name": "StarAtlasStatCargoPiece",
@@ -4838,16 +3117,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 1527.8548387096776,
-			"y": 425.83010752688153
+			"x": -241.67879887910485,
+			"y": 537.0926717987161
 		},
 		"dragging": false
 	}, {
 		"id": "485_8ff9b791-942b-4d10-ab45-0e48aaa0643f",
 		"type": "CustomNode",
 		"position": {
-			"x": 1795.8225806451612,
-			"y": 424.0333333333331
+			"x": 1533.082601779012,
+			"y": 718.7678478328799
 		},
 		"data": {
 			"name": "StarAtlasUnloadCargoPiece",
@@ -4872,16 +3151,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 1795.8225806451612,
-			"y": 424.0333333333331
+			"x": 1533.082601779012,
+			"y": 718.7678478328799
 		},
 		"dragging": false
 	}, {
 		"id": "599_e608b8db-bd51-47f4-896b-e02f52f4a73e",
 		"type": "CustomNode",
 		"position": {
-			"x": 1673.925806451613,
-			"y": 1560.362365591398
+			"x": %STARBASE_COORDINATE_Y%61.3502890507573,
+			"y": 1508.2637935021394
 		},
 		"data": {
 			"name": "StarAtlasMiningPiece",
@@ -4906,43 +3185,8 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 1673.925806451613,
-			"y": 1560.362365591398
-		},
-		"dragging": false
-	}, {
-		"id": "903_6091f6c7-4c1d-4d69-bbb7-804a2068fe88",
-		"type": "CustomNode",
-		"position": {
-			"x": 1792.2290322580645,
-			"y": 708.9774193548386
-		},
-		"data": {
-			"name": "StarAtlasWaitOnePiece",
-			"style": {
-				"module": "StarAtlasWaitOnePiece",
-				"label": "Wait One",
-				"nodeType": "default",
-				"nodeStyle": {
-					"backgroundColor": "#ebebeb"
-				},
-				"useIcon": true,
-				"iconClassName": "fa-solid:database",
-				"iconStyle": {
-					"cursor": "pointer"
-				}
-			},
-			"validationError": false,
-			"orientation": "horizontal",
-			"branch_piece": false,
-			"wait_one": true
-		},
-		"width": 150,
-		"height": 70,
-		"selected": false,
-		"positionAbsolute": {
-			"x": 1792.2290322580645,
-			"y": 708.9774193548386
+			"x": %STARBASE_COORDINATE_Y%61.3502890507573,
+			"y": 1508.2637935021394
 		},
 		"dragging": false
 	}, {
@@ -5019,8 +3263,8 @@
 		"id": "903_68e97cb9-e358-4c92-b4bd-899c472600c6",
 		"type": "CustomNode",
 		"position": {
-			"x": 2070.9774193548387,
-			"y": 554.3677419354839
+			"x": 1865.9400350156134,
+			"y": 587.9193139182662
 		},
 		"data": {
 			"name": "StarAtlasWaitOnePiece",
@@ -5046,16 +3290,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 2070.9774193548387,
-			"y": 554.3677419354839
+			"x": 1865.9400350156134,
+			"y": 587.9193139182662
 		},
 		"dragging": false
 	}, {
 		"id": "889_044bf39a-6cf2-445e-975b-7941edf10516",
 		"type": "CustomNode",
 		"position": {
-			"x": 1325.3516129032257,
-			"y": 782.6204301075268
+			"x": 62.41036536015693,
+			"y": 250.8556942999187
 		},
 		"data": {
 			"name": "StarAtlasStatFutureMiningPiece",
@@ -5081,183 +3325,8 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 1325.3516129032257,
-			"y": 782.6204301075268
-		},
-		"dragging": false
-	}, {
-		"id": "889_4e8f9bb7-837d-4d55-b9f6-e397da82e021",
-		"type": "CustomNode",
-		"position": {
-			"x": 1325.3516129032257,
-			"y": 1060.410752688172
-		},
-		"data": {
-			"name": "StarAtlasStatFutureMiningPiece",
-			"style": {
-				"module": "StarAtlasStatFutureMiningPiece",
-				"label": "Future Stat Mine",
-				"nodeType": "default",
-				"nodeStyle": {
-					"backgroundColor": "#ebebeb"
-				},
-				"useIcon": true,
-				"iconClassName": "fa-solid:database",
-				"iconStyle": {
-					"cursor": "pointer"
-				}
-			},
-			"validationError": false,
-			"orientation": "horizontal",
-			"branch_piece": false,
-			"wait_one": false
-		},
-		"width": 150,
-		"height": 70,
-		"selected": false,
-		"positionAbsolute": {
-			"x": 1325.3516129032257,
-			"y": 1060.410752688172
-		},
-		"dragging": false
-	}, {
-		"id": "889_bbbe7b51-280e-487a-b9f8-8b803fcb7d32",
-		"type": "CustomNode",
-		"position": {
-			"x": 1314.5709677419354,
-			"y": 1360.5591397849462
-		},
-		"data": {
-			"name": "StarAtlasStatFutureMiningPiece",
-			"style": {
-				"module": "StarAtlasStatFutureMiningPiece",
-				"label": "Future Stat Mine",
-				"nodeType": "default",
-				"nodeStyle": {
-					"backgroundColor": "#ebebeb"
-				},
-				"useIcon": true,
-				"iconClassName": "fa-solid:database",
-				"iconStyle": {
-					"cursor": "pointer"
-				}
-			},
-			"validationError": false,
-			"orientation": "horizontal",
-			"branch_piece": false,
-			"wait_one": false
-		},
-		"width": 150,
-		"height": 70,
-		"selected": false,
-		"positionAbsolute": {
-			"x": 1314.5709677419354,
-			"y": 1360.5591397849462
-		},
-		"dragging": false
-	}, {
-		"id": "1191_8e35ee21-62af-4fb5-adcf-c15ad3781856",
-		"type": "CustomNode",
-		"position": {
-			"x": 829.4903225806453,
-			"y": 1695.145161290323
-		},
-		"data": {
-			"name": "MathArithmeticPiece",
-			"style": {
-				"module": "MathArithmeticPiece",
-				"label": "Math Logic",
-				"nodeType": "default",
-				"nodeStyle": {
-					"backgroundColor": "#ebebeb"
-				},
-				"useIcon": true,
-				"iconClassName": "fa-solid:file-alt",
-				"iconStyle": {
-					"cursor": "pointer"
-				}
-			},
-			"validationError": false,
-			"orientation": "horizontal",
-			"branch_piece": false,
-			"wait_one": false
-		},
-		"width": 150,
-		"height": 70,
-		"selected": false,
-		"positionAbsolute": {
-			"x": 829.4903225806453,
-			"y": 1695.145161290323
-		},
-		"dragging": false
-	}, {
-		"id": "1168_1626705b-e366-44a9-9689-4a9ef7bbf95b",
-		"type": "CustomNode",
-		"position": {
-			"x": 1115.661290322581,
-			"y": 1767.016129032258
-		},
-		"data": {
-			"name": "StarAtlasFleetCargoCheckPiece",
-			"style": {
-				"module": "StarAtlasFleetCargoCheckPiece",
-				"label": "Cargo Check",
-				"nodeType": "default",
-				"nodeStyle": {
-					"backgroundColor": "#ebebeb"
-				},
-				"useIcon": true,
-				"iconClassName": "fa-solid:database",
-				"iconStyle": {
-					"cursor": "pointer"
-				}
-			},
-			"validationError": false,
-			"orientation": "horizontal",
-			"branch_piece": true,
-			"wait_one": false
-		},
-		"width": 150,
-		"height": 70,
-		"selected": false,
-		"positionAbsolute": {
-			"x": 1115.661290322581,
-			"y": 1767.016129032258
-		},
-		"dragging": false
-	}, {
-		"id": "1171_c3c57059-3990-4c2a-a9f3-ba6d10a72409",
-		"type": "CustomNode",
-		"position": {
-			"x": 467.9290322580646,
-			"y": 1425.816129032258
-		},
-		"data": {
-			"name": "StarAtlasStatFutureMiningPiece",
-			"style": {
-				"module": "StarAtlasStatFutureMiningPiece",
-				"label": "Future Stat Mine",
-				"nodeType": "default",
-				"nodeStyle": {
-					"backgroundColor": "#ebebeb"
-				},
-				"useIcon": true,
-				"iconClassName": "fa-solid:database",
-				"iconStyle": {
-					"cursor": "pointer"
-				}
-			},
-			"validationError": false,
-			"orientation": "horizontal",
-			"branch_piece": false,
-			"wait_one": false
-		},
-		"width": 150,
-		"height": 70,
-		"selected": false,
-		"positionAbsolute": {
-			"x": 467.9290322580646,
-			"y": 1425.816129032258
+			"x": 62.41036536015693,
+			"y": 250.8556942999187
 		},
 		"dragging": false
 	}, {
@@ -5299,8 +3368,8 @@
 		"id": "1168_9c17361e-8b34-48b8-ae64-e3ff0c6319d1",
 		"type": "CustomNode",
 		"position": {
-			"x": 1110.2709677419355,
-			"y": 1517.1774193548388
+			"x": 883.8673428216574,
+			"y": 1347.8981379909667
 		},
 		"data": {
 			"name": "StarAtlasFleetCargoCheckPiece",
@@ -5326,16 +3395,16 @@
 		"height": 70,
 		"selected": false,
 		"positionAbsolute": {
-			"x": 1110.2709677419355,
-			"y": 1517.1774193548388
+			"x": 883.8673428216574,
+			"y": 1347.8981379909667
 		},
 		"dragging": false
 	}, {
 		"id": "1168_345eac36-3bd6-4614-b5a1-4019e8e31ddc",
 		"type": "CustomNode",
 		"position": {
-			"x": 1110.2709677419357,
-			"y": 1635.9387096774194
+			"x": 873.767555301937,
+			"y": 1479.818550444641
 		},
 		"data": {
 			"name": "StarAtlasFleetCargoCheckPiece",
@@ -5359,10 +3428,10 @@
 		},
 		"width": 150,
 		"height": 70,
-		"selected": false,
+		"selected": true,
 		"positionAbsolute": {
-			"x": 1110.2709677419357,
-			"y": 1635.9387096774194
+			"x": 873.767555301937,
+			"y": 1479.818550444641
 		},
 		"dragging": false
 	}, {
@@ -5400,6 +3469,111 @@
 			"y": 1728.4231182795697
 		},
 		"dragging": false
+	}, {
+		"id": "2000_12ba03db-f215-4855-b86a-86e54e10b0d4",
+		"type": "CustomNode",
+		"position": {
+			"x": 780.6666985430596,
+			"y": 1914.3535800770057
+		},
+		"data": {
+			"name": "LogPiece",
+			"style": {
+				"module": "LogPiece",
+				"label": "Log",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:file-alt",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"validationError": false,
+			"orientation": "horizontal",
+			"branch_piece": false,
+			"wait_one": false
+		},
+		"width": 150,
+		"height": 70,
+		"selected": false,
+		"positionAbsolute": {
+			"x": 780.6666985430596,
+			"y": 1914.3535800770057
+		},
+		"dragging": false
+	}, {
+		"id": "2001_3b3f695a-3b3c-4a0b-817f-1f963573ecf0",
+		"type": "CustomNode",
+		"position": {
+			"x": 1158.3324589563233,
+			"y": 563.6721213671221
+		},
+		"data": {
+			"name": "StarAtlasGenericCheckIntegerPiece",
+			"style": {
+				"module": "StarAtlasGenericCheckIntegerPiece",
+				"label": "Generic Check Integer",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"validationError": false,
+			"orientation": "horizontal",
+			"branch_piece": true,
+			"wait_one": false
+		},
+		"width": 150,
+		"height": 70,
+		"selected": false,
+		"positionAbsolute": {
+			"x": 1158.3324589563233,
+			"y": 563.6721213671221
+		},
+		"dragging": false
+	}, {
+		"id": "2001_41a1b13c-5e38-4b5e-8676-30c25950054d",
+		"type": "CustomNode",
+		"position": {
+			"x": 848.0790085745509,
+			"y": %STARBASE_COORDINATE_Y%10.9981849352962
+		},
+		"data": {
+			"name": "StarAtlasGenericCheckIntegerPiece",
+			"style": {
+				"module": "StarAtlasGenericCheckIntegerPiece",
+				"label": "Generic Check Integer",
+				"nodeType": "default",
+				"nodeStyle": {
+					"backgroundColor": "#ebebeb"
+				},
+				"useIcon": true,
+				"iconClassName": "fa-solid:database",
+				"iconStyle": {
+					"cursor": "pointer"
+				}
+			},
+			"validationError": false,
+			"orientation": "horizontal",
+			"branch_piece": true,
+			"wait_one": false
+		},
+		"width": 150,
+		"height": 70,
+		"selected": false,
+		"positionAbsolute": {
+			"x": 848.0790085745509,
+			"y": %STARBASE_COORDINATE_Y%10.9981849352962
+		},
+		"dragging": false
 	}],
 	"workflowEdges": [{
 		"source": "53_e7bb3e85-ef6c-4aa9-9f6c-17e91b26a0d5",
@@ -5413,111 +3587,11 @@
 			"height": 20
 		}
 	}, {
-		"source": "474_c12c4f9b-77e9-455a-9adb-7323d8688d55",
-		"sourceHandle": "source-474_c12c4f9b-77e9-455a-9adb-7323d8688d55",
-		"target": "478_77d0d751-69f7-4f44-bb4f-7445822b2dc8",
-		"targetHandle": "target-478_77d0d751-69f7-4f44-bb4f-7445822b2dc8",
-		"id": "reactflow__edge-474_c12c4f9b-77e9-455a-9adb-7323d8688d55source-474_c12c4f9b-77e9-455a-9adb-7323d8688d55-478_77d0d751-69f7-4f44-bb4f-7445822b2dc8target-478_77d0d751-69f7-4f44-bb4f-7445822b2dc8",
-		"markerEnd": {
-			"type": "arrowclosed",
-			"width": 20,
-			"height": 20
-		}
-	}, {
-		"source": "478_77d0d751-69f7-4f44-bb4f-7445822b2dc8",
-		"sourceHandle": "source-478_77d0d751-69f7-4f44-bb4f-7445822b2dc8",
-		"target": "493_5f022e89-ab9a-4b44-911f-51befbd70845",
-		"targetHandle": "target-493_5f022e89-ab9a-4b44-911f-51befbd70845",
-		"id": "reactflow__edge-478_77d0d751-69f7-4f44-bb4f-7445822b2dc8source-478_77d0d751-69f7-4f44-bb4f-7445822b2dc8-493_5f022e89-ab9a-4b44-911f-51befbd70845target-493_5f022e89-ab9a-4b44-911f-51befbd70845",
-		"markerEnd": {
-			"type": "arrowclosed",
-			"width": 20,
-			"height": 20
-		}
-	}, {
-		"source": "493_5f022e89-ab9a-4b44-911f-51befbd70845",
-		"sourceHandle": "source-493_5f022e89-ab9a-4b44-911f-51befbd70845",
-		"target": "492_e4f9dc81-55c6-49b2-9f10-45556fd48143",
-		"targetHandle": "target-492_e4f9dc81-55c6-49b2-9f10-45556fd48143",
-		"id": "reactflow__edge-493_5f022e89-ab9a-4b44-911f-51befbd70845source-493_5f022e89-ab9a-4b44-911f-51befbd70845-492_e4f9dc81-55c6-49b2-9f10-45556fd48143target-492_e4f9dc81-55c6-49b2-9f10-45556fd48143",
-		"markerEnd": {
-			"type": "arrowclosed",
-			"width": 20,
-			"height": 20
-		},
-		"selected": false
-	}, {
 		"source": "492_e4f9dc81-55c6-49b2-9f10-45556fd48143",
 		"sourceHandle": "source-492_e4f9dc81-55c6-49b2-9f10-45556fd48143",
 		"target": "485_8ff9b791-942b-4d10-ab45-0e48aaa0643f",
 		"targetHandle": "target-485_8ff9b791-942b-4d10-ab45-0e48aaa0643f",
 		"id": "reactflow__edge-492_e4f9dc81-55c6-49b2-9f10-45556fd48143source-492_e4f9dc81-55c6-49b2-9f10-45556fd48143-485_8ff9b791-942b-4d10-ab45-0e48aaa0643ftarget-485_8ff9b791-942b-4d10-ab45-0e48aaa0643f",
-		"markerEnd": {
-			"type": "arrowclosed",
-			"width": 20,
-			"height": 20
-		}
-	}, {
-		"source": "474_c12c4f9b-77e9-455a-9adb-7323d8688d55",
-		"sourceHandle": "source-474_c12c4f9b-77e9-455a-9adb-7323d8688d55",
-		"target": "312_3b653d76-2281-4242-8e33-d9d19725463b",
-		"targetHandle": "target-312_3b653d76-2281-4242-8e33-d9d19725463b",
-		"id": "reactflow__edge-474_c12c4f9b-77e9-455a-9adb-7323d8688d55source-474_c12c4f9b-77e9-455a-9adb-7323d8688d55-312_3b653d76-2281-4242-8e33-d9d19725463btarget-312_3b653d76-2281-4242-8e33-d9d19725463b",
-		"markerEnd": {
-			"type": "arrowclosed",
-			"width": 20,
-			"height": 20
-		}
-	}, {
-		"source": "474_c12c4f9b-77e9-455a-9adb-7323d8688d55",
-		"sourceHandle": "source-474_c12c4f9b-77e9-455a-9adb-7323d8688d55",
-		"target": "493_3306fcfe-0c4d-44d1-8115-918b6b01eea5",
-		"targetHandle": "target-493_3306fcfe-0c4d-44d1-8115-918b6b01eea5",
-		"id": "reactflow__edge-474_c12c4f9b-77e9-455a-9adb-7323d8688d55source-474_c12c4f9b-77e9-455a-9adb-7323d8688d55-493_3306fcfe-0c4d-44d1-8115-918b6b01eea5target-493_3306fcfe-0c4d-44d1-8115-918b6b01eea5",
-		"markerEnd": {
-			"type": "arrowclosed",
-			"width": 20,
-			"height": 20
-		}
-	}, {
-		"source": "474_c12c4f9b-77e9-455a-9adb-7323d8688d55",
-		"sourceHandle": "source-474_c12c4f9b-77e9-455a-9adb-7323d8688d55",
-		"target": "493_816c00e0-7be4-4b1f-907d-f980d17d502d",
-		"targetHandle": "target-493_816c00e0-7be4-4b1f-907d-f980d17d502d",
-		"id": "reactflow__edge-474_c12c4f9b-77e9-455a-9adb-7323d8688d55source-474_c12c4f9b-77e9-455a-9adb-7323d8688d55-493_816c00e0-7be4-4b1f-907d-f980d17d502dtarget-493_816c00e0-7be4-4b1f-907d-f980d17d502d",
-		"markerEnd": {
-			"type": "arrowclosed",
-			"width": 20,
-			"height": 20
-		}
-	}, {
-		"source": "296_9dd1d976-5d5d-42a2-a4aa-84e4b22fa09f",
-		"sourceHandle": "source-296_9dd1d976-5d5d-42a2-a4aa-84e4b22fa09f",
-		"target": "903_6091f6c7-4c1d-4d69-bbb7-804a2068fe88",
-		"targetHandle": "target-903_6091f6c7-4c1d-4d69-bbb7-804a2068fe88",
-		"id": "reactflow__edge-296_9dd1d976-5d5d-42a2-a4aa-84e4b22fa09fsource-296_9dd1d976-5d5d-42a2-a4aa-84e4b22fa09f-903_6091f6c7-4c1d-4d69-bbb7-804a2068fe88target-903_6091f6c7-4c1d-4d69-bbb7-804a2068fe88",
-		"markerEnd": {
-			"type": "arrowclosed",
-			"width": 20,
-			"height": 20
-		}
-	}, {
-		"source": "312_3b653d76-2281-4242-8e33-d9d19725463b",
-		"sourceHandle": "source-312_3b653d76-2281-4242-8e33-d9d19725463b",
-		"target": "903_6091f6c7-4c1d-4d69-bbb7-804a2068fe88",
-		"targetHandle": "target-903_6091f6c7-4c1d-4d69-bbb7-804a2068fe88",
-		"id": "reactflow__edge-312_3b653d76-2281-4242-8e33-d9d19725463bsource-312_3b653d76-2281-4242-8e33-d9d19725463b-903_6091f6c7-4c1d-4d69-bbb7-804a2068fe88target-903_6091f6c7-4c1d-4d69-bbb7-804a2068fe88",
-		"markerEnd": {
-			"type": "arrowclosed",
-			"width": 20,
-			"height": 20
-		}
-	}, {
-		"source": "903_6091f6c7-4c1d-4d69-bbb7-804a2068fe88",
-		"sourceHandle": "source-903_6091f6c7-4c1d-4d69-bbb7-804a2068fe88",
-		"target": "65_e53e6c37-4921-4ae9-82ac-f268fc2126be",
-		"targetHandle": "target-65_e53e6c37-4921-4ae9-82ac-f268fc2126be",
-		"id": "reactflow__edge-903_6091f6c7-4c1d-4d69-bbb7-804a2068fe88source-903_6091f6c7-4c1d-4d69-bbb7-804a2068fe88-65_e53e6c37-4921-4ae9-82ac-f268fc2126betarget-65_e53e6c37-4921-4ae9-82ac-f268fc2126be",
 		"markerEnd": {
 			"type": "arrowclosed",
 			"width": 20,
@@ -5590,17 +3664,6 @@
 			"height": 20
 		}
 	}, {
-		"source": "493_5f022e89-ab9a-4b44-911f-51befbd70845",
-		"sourceHandle": "source-else-493_5f022e89-ab9a-4b44-911f-51befbd70845",
-		"target": "903_68e97cb9-e358-4c92-b4bd-899c472600c6",
-		"targetHandle": "target-903_68e97cb9-e358-4c92-b4bd-899c472600c6",
-		"id": "reactflow__edge-493_5f022e89-ab9a-4b44-911f-51befbd70845source-else-493_5f022e89-ab9a-4b44-911f-51befbd70845-903_68e97cb9-e358-4c92-b4bd-899c472600c6target-903_68e97cb9-e358-4c92-b4bd-899c472600c6",
-		"markerEnd": {
-			"type": "arrowclosed",
-			"width": 20,
-			"height": 20
-		}
-	}, {
 		"source": "485_8ff9b791-942b-4d10-ab45-0e48aaa0643f",
 		"sourceHandle": "source-485_8ff9b791-942b-4d10-ab45-0e48aaa0643f",
 		"target": "903_68e97cb9-e358-4c92-b4bd-899c472600c6",
@@ -5623,143 +3686,11 @@
 			"height": 20
 		}
 	}, {
-		"source": "312_3b653d76-2281-4242-8e33-d9d19725463b",
-		"sourceHandle": "source-else-312_3b653d76-2281-4242-8e33-d9d19725463b",
-		"target": "889_044bf39a-6cf2-445e-975b-7941edf10516",
-		"targetHandle": "target-889_044bf39a-6cf2-445e-975b-7941edf10516",
-		"id": "reactflow__edge-312_3b653d76-2281-4242-8e33-d9d19725463bsource-else-312_3b653d76-2281-4242-8e33-d9d19725463b-889_044bf39a-6cf2-445e-975b-7941edf10516target-889_044bf39a-6cf2-445e-975b-7941edf10516",
-		"markerEnd": {
-			"type": "arrowclosed",
-			"width": 20,
-			"height": 20
-		}
-	}, {
-		"source": "889_044bf39a-6cf2-445e-975b-7941edf10516",
-		"sourceHandle": "source-889_044bf39a-6cf2-445e-975b-7941edf10516",
-		"target": "296_9dd1d976-5d5d-42a2-a4aa-84e4b22fa09f",
-		"targetHandle": "target-296_9dd1d976-5d5d-42a2-a4aa-84e4b22fa09f",
-		"id": "reactflow__edge-889_044bf39a-6cf2-445e-975b-7941edf10516source-889_044bf39a-6cf2-445e-975b-7941edf10516-296_9dd1d976-5d5d-42a2-a4aa-84e4b22fa09ftarget-296_9dd1d976-5d5d-42a2-a4aa-84e4b22fa09f",
-		"markerEnd": {
-			"type": "arrowclosed",
-			"width": 20,
-			"height": 20
-		}
-	}, {
-		"source": "493_816c00e0-7be4-4b1f-907d-f980d17d502d",
-		"sourceHandle": "source-else-493_816c00e0-7be4-4b1f-907d-f980d17d502d",
-		"target": "889_4e8f9bb7-837d-4d55-b9f6-e397da82e021",
-		"targetHandle": "target-889_4e8f9bb7-837d-4d55-b9f6-e397da82e021",
-		"id": "reactflow__edge-493_816c00e0-7be4-4b1f-907d-f980d17d502dsource-else-493_816c00e0-7be4-4b1f-907d-f980d17d502d-889_4e8f9bb7-837d-4d55-b9f6-e397da82e021target-889_4e8f9bb7-837d-4d55-b9f6-e397da82e021",
-		"markerEnd": {
-			"type": "arrowclosed",
-			"width": 20,
-			"height": 20
-		}
-	}, {
-		"source": "889_4e8f9bb7-837d-4d55-b9f6-e397da82e021",
-		"sourceHandle": "source-889_4e8f9bb7-837d-4d55-b9f6-e397da82e021",
-		"target": "476_7b64029a-9f40-4086-affb-633f9646a321",
-		"targetHandle": "target-476_7b64029a-9f40-4086-affb-633f9646a321",
-		"id": "reactflow__edge-889_4e8f9bb7-837d-4d55-b9f6-e397da82e021source-889_4e8f9bb7-837d-4d55-b9f6-e397da82e021-476_7b64029a-9f40-4086-affb-633f9646a321target-476_7b64029a-9f40-4086-affb-633f9646a321",
-		"markerEnd": {
-			"type": "arrowclosed",
-			"width": 20,
-			"height": 20
-		}
-	}, {
-		"source": "493_3306fcfe-0c4d-44d1-8115-918b6b01eea5",
-		"sourceHandle": "source-else-493_3306fcfe-0c4d-44d1-8115-918b6b01eea5",
-		"target": "889_bbbe7b51-280e-487a-b9f8-8b803fcb7d32",
-		"targetHandle": "target-889_bbbe7b51-280e-487a-b9f8-8b803fcb7d32",
-		"id": "reactflow__edge-493_3306fcfe-0c4d-44d1-8115-918b6b01eea5source-else-493_3306fcfe-0c4d-44d1-8115-918b6b01eea5-889_bbbe7b51-280e-487a-b9f8-8b803fcb7d32target-889_bbbe7b51-280e-487a-b9f8-8b803fcb7d32",
-		"markerEnd": {
-			"type": "arrowclosed",
-			"width": 20,
-			"height": 20
-		}
-	}, {
-		"source": "889_bbbe7b51-280e-487a-b9f8-8b803fcb7d32",
-		"sourceHandle": "source-889_bbbe7b51-280e-487a-b9f8-8b803fcb7d32",
-		"target": "484_52cf92f2-5449-4e28-aea4-c930cd826c5c",
-		"targetHandle": "target-484_52cf92f2-5449-4e28-aea4-c930cd826c5c",
-		"id": "reactflow__edge-889_bbbe7b51-280e-487a-b9f8-8b803fcb7d32source-889_bbbe7b51-280e-487a-b9f8-8b803fcb7d32-484_52cf92f2-5449-4e28-aea4-c930cd826c5ctarget-484_52cf92f2-5449-4e28-aea4-c930cd826c5c",
-		"markerEnd": {
-			"type": "arrowclosed",
-			"width": 20,
-			"height": 20
-		}
-	}, {
-		"source": "1171_c3c57059-3990-4c2a-a9f3-ba6d10a72409",
-		"sourceHandle": "source-1171_c3c57059-3990-4c2a-a9f3-ba6d10a72409",
-		"target": "1191_8e35ee21-62af-4fb5-adcf-c15ad3781856",
-		"targetHandle": "target-1191_8e35ee21-62af-4fb5-adcf-c15ad3781856",
-		"id": "reactflow__edge-1171_c3c57059-3990-4c2a-a9f3-ba6d10a72409source-1171_c3c57059-3990-4c2a-a9f3-ba6d10a72409-1191_8e35ee21-62af-4fb5-adcf-c15ad3781856target-1191_8e35ee21-62af-4fb5-adcf-c15ad3781856",
-		"markerEnd": {
-			"type": "arrowclosed",
-			"width": 20,
-			"height": 20
-		}
-	}, {
-		"source": "1191_8e35ee21-62af-4fb5-adcf-c15ad3781856",
-		"sourceHandle": "source-1191_8e35ee21-62af-4fb5-adcf-c15ad3781856",
-		"target": "1168_1626705b-e366-44a9-9689-4a9ef7bbf95b",
-		"targetHandle": "target-1168_1626705b-e366-44a9-9689-4a9ef7bbf95b",
-		"id": "reactflow__edge-1191_8e35ee21-62af-4fb5-adcf-c15ad3781856source-1191_8e35ee21-62af-4fb5-adcf-c15ad3781856-1168_1626705b-e366-44a9-9689-4a9ef7bbf95btarget-1168_1626705b-e366-44a9-9689-4a9ef7bbf95b",
-		"markerEnd": {
-			"type": "arrowclosed",
-			"width": 20,
-			"height": 20
-		}
-	}, {
-		"source": "1168_1626705b-e366-44a9-9689-4a9ef7bbf95b",
-		"sourceHandle": "source-else-1168_1626705b-e366-44a9-9689-4a9ef7bbf95b",
-		"target": "599_e608b8db-bd51-47f4-896b-e02f52f4a73e",
-		"targetHandle": "target-599_e608b8db-bd51-47f4-896b-e02f52f4a73e",
-		"id": "reactflow__edge-1168_1626705b-e366-44a9-9689-4a9ef7bbf95bsource-else-1168_1626705b-e366-44a9-9689-4a9ef7bbf95b-599_e608b8db-bd51-47f4-896b-e02f52f4a73etarget-599_e608b8db-bd51-47f4-896b-e02f52f4a73e",
-		"markerEnd": {
-			"type": "arrowclosed",
-			"width": 20,
-			"height": 20
-		}
-	}, {
-		"source": "1168_1626705b-e366-44a9-9689-4a9ef7bbf95b",
-		"sourceHandle": "source-1168_1626705b-e366-44a9-9689-4a9ef7bbf95b",
-		"target": "1173_36bbd74d-a8da-47cc-8100-4f0211de35e1",
-		"targetHandle": "target-1173_36bbd74d-a8da-47cc-8100-4f0211de35e1",
-		"id": "reactflow__edge-1168_1626705b-e366-44a9-9689-4a9ef7bbf95bsource-1168_1626705b-e366-44a9-9689-4a9ef7bbf95b-1173_36bbd74d-a8da-47cc-8100-4f0211de35e1target-1173_36bbd74d-a8da-47cc-8100-4f0211de35e1",
-		"markerEnd": {
-			"type": "arrowclosed",
-			"width": 20,
-			"height": 20
-		}
-	}, {
 		"source": "599_e608b8db-bd51-47f4-896b-e02f52f4a73e",
 		"sourceHandle": "source-599_e608b8db-bd51-47f4-896b-e02f52f4a73e",
 		"target": "1173_36bbd74d-a8da-47cc-8100-4f0211de35e1",
 		"targetHandle": "target-1173_36bbd74d-a8da-47cc-8100-4f0211de35e1",
 		"id": "reactflow__edge-599_e608b8db-bd51-47f4-896b-e02f52f4a73esource-599_e608b8db-bd51-47f4-896b-e02f52f4a73e-1173_36bbd74d-a8da-47cc-8100-4f0211de35e1target-1173_36bbd74d-a8da-47cc-8100-4f0211de35e1",
-		"markerEnd": {
-			"type": "arrowclosed",
-			"width": 20,
-			"height": 20
-		}
-	}, {
-		"source": "1171_c3c57059-3990-4c2a-a9f3-ba6d10a72409",
-		"sourceHandle": "source-1171_c3c57059-3990-4c2a-a9f3-ba6d10a72409",
-		"target": "1168_9c17361e-8b34-48b8-ae64-e3ff0c6319d1",
-		"targetHandle": "target-1168_9c17361e-8b34-48b8-ae64-e3ff0c6319d1",
-		"id": "reactflow__edge-1171_c3c57059-3990-4c2a-a9f3-ba6d10a72409source-1171_c3c57059-3990-4c2a-a9f3-ba6d10a72409-1168_9c17361e-8b34-48b8-ae64-e3ff0c6319d1target-1168_9c17361e-8b34-48b8-ae64-e3ff0c6319d1",
-		"markerEnd": {
-			"type": "arrowclosed",
-			"width": 20,
-			"height": 20
-		}
-	}, {
-		"source": "1171_c3c57059-3990-4c2a-a9f3-ba6d10a72409",
-		"sourceHandle": "source-1171_c3c57059-3990-4c2a-a9f3-ba6d10a72409",
-		"target": "1168_345eac36-3bd6-4614-b5a1-4019e8e31ddc",
-		"targetHandle": "target-1168_345eac36-3bd6-4614-b5a1-4019e8e31ddc",
-		"id": "reactflow__edge-1171_c3c57059-3990-4c2a-a9f3-ba6d10a72409source-1171_c3c57059-3990-4c2a-a9f3-ba6d10a72409-1168_345eac36-3bd6-4614-b5a1-4019e8e31ddctarget-1168_345eac36-3bd6-4614-b5a1-4019e8e31ddc",
 		"markerEnd": {
 			"type": "arrowclosed",
 			"width": 20,
@@ -5821,28 +3752,6 @@
 			"height": 20
 		}
 	}, {
-		"source": "53_95e373a3-64b7-489d-bf5c-2ddaa10fa051",
-		"sourceHandle": "source-53_95e373a3-64b7-489d-bf5c-2ddaa10fa051",
-		"target": "474_c12c4f9b-77e9-455a-9adb-7323d8688d55",
-		"targetHandle": "target-474_c12c4f9b-77e9-455a-9adb-7323d8688d55",
-		"id": "reactflow__edge-53_95e373a3-64b7-489d-bf5c-2ddaa10fa051source-53_95e373a3-64b7-489d-bf5c-2ddaa10fa051-474_c12c4f9b-77e9-455a-9adb-7323d8688d55target-474_c12c4f9b-77e9-455a-9adb-7323d8688d55",
-		"markerEnd": {
-			"type": "arrowclosed",
-			"width": 20,
-			"height": 20
-		}
-	}, {
-		"source": "53_85209645-015f-4bbd-9d79-f9b51d3fac53",
-		"sourceHandle": "source-53_85209645-015f-4bbd-9d79-f9b51d3fac53",
-		"target": "1171_c3c57059-3990-4c2a-a9f3-ba6d10a72409",
-		"targetHandle": "target-1171_c3c57059-3990-4c2a-a9f3-ba6d10a72409",
-		"id": "reactflow__edge-53_85209645-015f-4bbd-9d79-f9b51d3fac53source-53_85209645-015f-4bbd-9d79-f9b51d3fac53-1171_c3c57059-3990-4c2a-a9f3-ba6d10a72409target-1171_c3c57059-3990-4c2a-a9f3-ba6d10a72409",
-		"markerEnd": {
-			"type": "arrowclosed",
-			"width": 20,
-			"height": 20
-		}
-	}, {
 		"source": "53_85209645-015f-4bbd-9d79-f9b51d3fac53",
 		"sourceHandle": "source-else-53_85209645-015f-4bbd-9d79-f9b51d3fac53",
 		"target": "53_e7bb3e85-ef6c-4aa9-9f6c-17e91b26a0d5",
@@ -5859,6 +3768,237 @@
 		"target": "1187_916b5767-ba35-4221-9cda-1243b188ed20",
 		"targetHandle": "target-1187_916b5767-ba35-4221-9cda-1243b188ed20",
 		"id": "reactflow__edge-1173_36bbd74d-a8da-47cc-8100-4f0211de35e1source-1173_36bbd74d-a8da-47cc-8100-4f0211de35e1-1187_916b5767-ba35-4221-9cda-1243b188ed20target-1187_916b5767-ba35-4221-9cda-1243b188ed20",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "889_044bf39a-6cf2-445e-975b-7941edf10516",
+		"sourceHandle": "source-889_044bf39a-6cf2-445e-975b-7941edf10516",
+		"target": "476_7b64029a-9f40-4086-affb-633f9646a321",
+		"targetHandle": "target-476_7b64029a-9f40-4086-affb-633f9646a321",
+		"id": "reactflow__edge-889_044bf39a-6cf2-445e-975b-7941edf10516source-889_044bf39a-6cf2-445e-975b-7941edf10516-476_7b64029a-9f40-4086-affb-633f9646a321target-476_7b64029a-9f40-4086-affb-633f9646a321",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "889_044bf39a-6cf2-445e-975b-7941edf10516",
+		"sourceHandle": "source-889_044bf39a-6cf2-445e-975b-7941edf10516",
+		"target": "484_52cf92f2-5449-4e28-aea4-c930cd826c5c",
+		"targetHandle": "target-484_52cf92f2-5449-4e28-aea4-c930cd826c5c",
+		"id": "reactflow__edge-889_044bf39a-6cf2-445e-975b-7941edf10516source-889_044bf39a-6cf2-445e-975b-7941edf10516-484_52cf92f2-5449-4e28-aea4-c930cd826c5ctarget-484_52cf92f2-5449-4e28-aea4-c930cd826c5c",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "493_816c00e0-7be4-4b1f-907d-f980d17d502d",
+		"sourceHandle": "source-else-493_816c00e0-7be4-4b1f-907d-f980d17d502d",
+		"target": "476_7b64029a-9f40-4086-affb-633f9646a321",
+		"targetHandle": "target-476_7b64029a-9f40-4086-affb-633f9646a321",
+		"id": "reactflow__edge-493_816c00e0-7be4-4b1f-907d-f980d17d502dsource-else-493_816c00e0-7be4-4b1f-907d-f980d17d502d-476_7b64029a-9f40-4086-affb-633f9646a321target-476_7b64029a-9f40-4086-affb-633f9646a321",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "493_3306fcfe-0c4d-44d1-8115-918b6b01eea5",
+		"sourceHandle": "source-else-493_3306fcfe-0c4d-44d1-8115-918b6b01eea5",
+		"target": "484_52cf92f2-5449-4e28-aea4-c930cd826c5c",
+		"targetHandle": "target-484_52cf92f2-5449-4e28-aea4-c930cd826c5c",
+		"id": "reactflow__edge-493_3306fcfe-0c4d-44d1-8115-918b6b01eea5source-else-493_3306fcfe-0c4d-44d1-8115-918b6b01eea5-484_52cf92f2-5449-4e28-aea4-c930cd826c5ctarget-484_52cf92f2-5449-4e28-aea4-c930cd826c5c",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "53_95e373a3-64b7-489d-bf5c-2ddaa10fa051",
+		"sourceHandle": "source-53_95e373a3-64b7-489d-bf5c-2ddaa10fa051",
+		"target": "493_816c00e0-7be4-4b1f-907d-f980d17d502d",
+		"targetHandle": "target-493_816c00e0-7be4-4b1f-907d-f980d17d502d",
+		"id": "reactflow__edge-53_95e373a3-64b7-489d-bf5c-2ddaa10fa051source-53_95e373a3-64b7-489d-bf5c-2ddaa10fa051-493_816c00e0-7be4-4b1f-907d-f980d17d502dtarget-493_816c00e0-7be4-4b1f-907d-f980d17d502d",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "53_95e373a3-64b7-489d-bf5c-2ddaa10fa051",
+		"sourceHandle": "source-53_95e373a3-64b7-489d-bf5c-2ddaa10fa051",
+		"target": "493_3306fcfe-0c4d-44d1-8115-918b6b01eea5",
+		"targetHandle": "target-493_3306fcfe-0c4d-44d1-8115-918b6b01eea5",
+		"id": "reactflow__edge-53_95e373a3-64b7-489d-bf5c-2ddaa10fa051source-53_95e373a3-64b7-489d-bf5c-2ddaa10fa051-493_3306fcfe-0c4d-44d1-8115-918b6b01eea5target-493_3306fcfe-0c4d-44d1-8115-918b6b01eea5",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "889_044bf39a-6cf2-445e-975b-7941edf10516",
+		"sourceHandle": "source-889_044bf39a-6cf2-445e-975b-7941edf10516",
+		"target": "493_816c00e0-7be4-4b1f-907d-f980d17d502d",
+		"targetHandle": "target-493_816c00e0-7be4-4b1f-907d-f980d17d502d",
+		"id": "reactflow__edge-889_044bf39a-6cf2-445e-975b-7941edf10516source-889_044bf39a-6cf2-445e-975b-7941edf10516-493_816c00e0-7be4-4b1f-907d-f980d17d502dtarget-493_816c00e0-7be4-4b1f-907d-f980d17d502d",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "889_044bf39a-6cf2-445e-975b-7941edf10516",
+		"sourceHandle": "source-889_044bf39a-6cf2-445e-975b-7941edf10516",
+		"target": "493_3306fcfe-0c4d-44d1-8115-918b6b01eea5",
+		"targetHandle": "target-493_3306fcfe-0c4d-44d1-8115-918b6b01eea5",
+		"id": "reactflow__edge-889_044bf39a-6cf2-445e-975b-7941edf10516source-889_044bf39a-6cf2-445e-975b-7941edf10516-493_3306fcfe-0c4d-44d1-8115-918b6b01eea5target-493_3306fcfe-0c4d-44d1-8115-918b6b01eea5",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "889_044bf39a-6cf2-445e-975b-7941edf10516",
+		"sourceHandle": "source-889_044bf39a-6cf2-445e-975b-7941edf10516",
+		"target": "1168_9c17361e-8b34-48b8-ae64-e3ff0c6319d1",
+		"targetHandle": "target-1168_9c17361e-8b34-48b8-ae64-e3ff0c6319d1",
+		"id": "reactflow__edge-889_044bf39a-6cf2-445e-975b-7941edf10516source-889_044bf39a-6cf2-445e-975b-7941edf10516-1168_9c17361e-8b34-48b8-ae64-e3ff0c6319d1target-1168_9c17361e-8b34-48b8-ae64-e3ff0c6319d1",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "889_044bf39a-6cf2-445e-975b-7941edf10516",
+		"sourceHandle": "source-889_044bf39a-6cf2-445e-975b-7941edf10516",
+		"target": "1168_345eac36-3bd6-4614-b5a1-4019e8e31ddc",
+		"targetHandle": "target-1168_345eac36-3bd6-4614-b5a1-4019e8e31ddc",
+		"id": "reactflow__edge-889_044bf39a-6cf2-445e-975b-7941edf10516source-889_044bf39a-6cf2-445e-975b-7941edf10516-1168_345eac36-3bd6-4614-b5a1-4019e8e31ddctarget-1168_345eac36-3bd6-4614-b5a1-4019e8e31ddc",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "53_85209645-015f-4bbd-9d79-f9b51d3fac53",
+		"sourceHandle": "source-53_85209645-015f-4bbd-9d79-f9b51d3fac53",
+		"target": "1168_9c17361e-8b34-48b8-ae64-e3ff0c6319d1",
+		"targetHandle": "target-1168_9c17361e-8b34-48b8-ae64-e3ff0c6319d1",
+		"id": "reactflow__edge-53_85209645-015f-4bbd-9d79-f9b51d3fac53source-53_85209645-015f-4bbd-9d79-f9b51d3fac53-1168_9c17361e-8b34-48b8-ae64-e3ff0c6319d1target-1168_9c17361e-8b34-48b8-ae64-e3ff0c6319d1",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "53_85209645-015f-4bbd-9d79-f9b51d3fac53",
+		"sourceHandle": "source-53_85209645-015f-4bbd-9d79-f9b51d3fac53",
+		"target": "1168_345eac36-3bd6-4614-b5a1-4019e8e31ddc",
+		"targetHandle": "target-1168_345eac36-3bd6-4614-b5a1-4019e8e31ddc",
+		"id": "reactflow__edge-53_85209645-015f-4bbd-9d79-f9b51d3fac53source-53_85209645-015f-4bbd-9d79-f9b51d3fac53-1168_345eac36-3bd6-4614-b5a1-4019e8e31ddctarget-1168_345eac36-3bd6-4614-b5a1-4019e8e31ddc",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "53_e7bb3e85-ef6c-4aa9-9f6c-17e91b26a0d5",
+		"sourceHandle": "source-else-53_e7bb3e85-ef6c-4aa9-9f6c-17e91b26a0d5",
+		"target": "2000_12ba03db-f215-4855-b86a-86e54e10b0d4",
+		"targetHandle": "target-2000_12ba03db-f215-4855-b86a-86e54e10b0d4",
+		"id": "reactflow__edge-53_e7bb3e85-ef6c-4aa9-9f6c-17e91b26a0d5source-else-53_e7bb3e85-ef6c-4aa9-9f6c-17e91b26a0d5-2000_12ba03db-f215-4855-b86a-86e54e10b0d4target-2000_12ba03db-f215-4855-b86a-86e54e10b0d4",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "492_e4f9dc81-55c6-49b2-9f10-45556fd48143",
+		"sourceHandle": "source-492_e4f9dc81-55c6-49b2-9f10-45556fd48143",
+		"target": "2001_3b3f695a-3b3c-4a0b-817f-1f963573ecf0",
+		"targetHandle": "target-2001_3b3f695a-3b3c-4a0b-817f-1f963573ecf0",
+		"id": "reactflow__edge-492_e4f9dc81-55c6-49b2-9f10-45556fd48143source-492_e4f9dc81-55c6-49b2-9f10-45556fd48143-2001_3b3f695a-3b3c-4a0b-817f-1f963573ecf0target-2001_3b3f695a-3b3c-4a0b-817f-1f963573ecf0",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "2001_3b3f695a-3b3c-4a0b-817f-1f963573ecf0",
+		"sourceHandle": "source-2001_3b3f695a-3b3c-4a0b-817f-1f963573ecf0",
+		"target": "903_68e97cb9-e358-4c92-b4bd-899c472600c6",
+		"targetHandle": "target-903_68e97cb9-e358-4c92-b4bd-899c472600c6",
+		"id": "reactflow__edge-2001_3b3f695a-3b3c-4a0b-817f-1f963573ecf0source-2001_3b3f695a-3b3c-4a0b-817f-1f963573ecf0-903_68e97cb9-e358-4c92-b4bd-899c472600c6target-903_68e97cb9-e358-4c92-b4bd-899c472600c6",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "2001_3b3f695a-3b3c-4a0b-817f-1f963573ecf0",
+		"sourceHandle": "source-else-2001_3b3f695a-3b3c-4a0b-817f-1f963573ecf0",
+		"target": "485_8ff9b791-942b-4d10-ab45-0e48aaa0643f",
+		"targetHandle": "target-485_8ff9b791-942b-4d10-ab45-0e48aaa0643f",
+		"id": "reactflow__edge-2001_3b3f695a-3b3c-4a0b-817f-1f963573ecf0source-else-2001_3b3f695a-3b3c-4a0b-817f-1f963573ecf0-485_8ff9b791-942b-4d10-ab45-0e48aaa0643ftarget-485_8ff9b791-942b-4d10-ab45-0e48aaa0643f",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "492_e4f9dc81-55c6-49b2-9f10-45556fd48143",
+		"sourceHandle": "source-492_e4f9dc81-55c6-49b2-9f10-45556fd48143",
+		"target": "2001_41a1b13c-5e38-4b5e-8676-30c25950054d",
+		"targetHandle": "target-2001_41a1b13c-5e38-4b5e-8676-30c25950054d",
+		"id": "reactflow__edge-492_e4f9dc81-55c6-49b2-9f10-45556fd48143source-492_e4f9dc81-55c6-49b2-9f10-45556fd48143-2001_41a1b13c-5e38-4b5e-8676-30c25950054dtarget-2001_41a1b13c-5e38-4b5e-8676-30c25950054d",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "2001_41a1b13c-5e38-4b5e-8676-30c25950054d",
+		"sourceHandle": "source-2001_41a1b13c-5e38-4b5e-8676-30c25950054d",
+		"target": "599_e608b8db-bd51-47f4-896b-e02f52f4a73e",
+		"targetHandle": "target-599_e608b8db-bd51-47f4-896b-e02f52f4a73e",
+		"id": "reactflow__edge-2001_41a1b13c-5e38-4b5e-8676-30c25950054dsource-2001_41a1b13c-5e38-4b5e-8676-30c25950054d-599_e608b8db-bd51-47f4-896b-e02f52f4a73etarget-599_e608b8db-bd51-47f4-896b-e02f52f4a73e",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "2001_41a1b13c-5e38-4b5e-8676-30c25950054d",
+		"sourceHandle": "source-else-2001_41a1b13c-5e38-4b5e-8676-30c25950054d",
+		"target": "1173_36bbd74d-a8da-47cc-8100-4f0211de35e1",
+		"targetHandle": "target-1173_36bbd74d-a8da-47cc-8100-4f0211de35e1",
+		"id": "reactflow__edge-2001_41a1b13c-5e38-4b5e-8676-30c25950054dsource-else-2001_41a1b13c-5e38-4b5e-8676-30c25950054d-1173_36bbd74d-a8da-47cc-8100-4f0211de35e1target-1173_36bbd74d-a8da-47cc-8100-4f0211de35e1",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "53_85209645-015f-4bbd-9d79-f9b51d3fac53",
+		"sourceHandle": "source-53_85209645-015f-4bbd-9d79-f9b51d3fac53",
+		"target": "2001_41a1b13c-5e38-4b5e-8676-30c25950054d",
+		"targetHandle": "target-2001_41a1b13c-5e38-4b5e-8676-30c25950054d",
+		"id": "reactflow__edge-53_85209645-015f-4bbd-9d79-f9b51d3fac53source-53_85209645-015f-4bbd-9d79-f9b51d3fac53-2001_41a1b13c-5e38-4b5e-8676-30c25950054dtarget-2001_41a1b13c-5e38-4b5e-8676-30c25950054d",
+		"markerEnd": {
+			"type": "arrowclosed",
+			"width": 20,
+			"height": 20
+		}
+	}, {
+		"source": "53_95e373a3-64b7-489d-bf5c-2ddaa10fa051",
+		"sourceHandle": "source-53_95e373a3-64b7-489d-bf5c-2ddaa10fa051",
+		"target": "2001_3b3f695a-3b3c-4a0b-817f-1f963573ecf0",
+		"targetHandle": "target-2001_3b3f695a-3b3c-4a0b-817f-1f963573ecf0",
+		"id": "reactflow__edge-53_95e373a3-64b7-489d-bf5c-2ddaa10fa051source-53_95e373a3-64b7-489d-bf5c-2ddaa10fa051-2001_3b3f695a-3b3c-4a0b-817f-1f963573ecf0target-2001_3b3f695a-3b3c-4a0b-817f-1f963573ecf0",
 		"markerEnd": {
 			"type": "arrowclosed",
 			"width": 20,
