@@ -8,7 +8,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"$defs": {
 					"FleetStatusEnum": {
@@ -88,7 +88,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"description": "StarAtlas Dock Piece Input Model",
 				"properties": {
@@ -166,7 +166,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"$defs": {
 					"FleetStatusEnum": {
@@ -246,7 +246,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"$defs": {
 					"FleetStatusEnum": {
@@ -326,7 +326,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"$defs": {
 					"FleetStatusEnum": {
@@ -406,7 +406,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"$defs": {
 					"FleetStatusEnum": {
@@ -486,7 +486,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"$defs": {
 					"FleetStatusEnum": {
@@ -566,7 +566,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"description": "StarAtlas Dock Piece Input Model",
 				"properties": {
@@ -655,7 +655,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"description": "StarAtlas Load Cargo Piece Input Model",
 				"properties": {
@@ -760,7 +760,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"description": "LogPiece Input Model",
 				"properties": {
@@ -826,7 +826,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"description": "LogPiece Input Model",
 				"properties": {
@@ -892,7 +892,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"description": "LogPiece Input Model",
 				"properties": {
@@ -958,7 +958,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"description": "StarAtlas Dock Piece Input Model",
 				"properties": {
@@ -1036,7 +1036,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"description": "StarAtlas Dock Piece Input Model",
 				"properties": {
@@ -1125,7 +1125,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"description": "StarAtlas Dock Piece Input Model",
 				"properties": {
@@ -1214,7 +1214,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"description": "StarAtlas Dock Piece Input Model",
 				"properties": {
@@ -1303,7 +1303,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"description": "StarAtlas Subwarp Piece Input Model",
 				"properties": {
@@ -1380,7 +1380,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"description": "StarAtlas Mining Piece Input Model",
 				"properties": {
@@ -1548,7 +1548,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"description": "Star Atlas Fleet Cargo Check Piece Input Model",
 				"properties": {
@@ -1650,7 +1650,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"description": "Star Atlas Load Fuel Piece Input Model",
 				"properties": {
@@ -1744,7 +1744,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"description": "StarAtlas Wait One Input Model",
 				"properties": {},
@@ -1804,7 +1804,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"description": "StarAtlas Load Cargo Piece Input Model",
 				"properties": {
@@ -1910,7 +1910,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"description": "StarAtlas Unload Cargo Piece Input Model",
 				"properties": {
@@ -2016,7 +2016,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"description": "Star Atlas Fleet Cargo Check Piece Input Model",
 				"properties": {
@@ -2107,7 +2107,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"description": "StarAtlas Wait One Input Model",
 				"properties": {},
@@ -2167,7 +2167,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"description": "Star Atlas Fleet Cargo Check Piece Input Model",
 				"properties": {
@@ -2258,7 +2258,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"description": "StarAtlas Wait One Input Model",
 				"properties": {},
@@ -2318,7 +2318,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"description": "StarAtlas Warp Piece Input Model",
 				"properties": {
@@ -2408,7 +2408,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"description": "Star Atlas Fleet Cargo Check Piece Input Model",
 				"properties": {
@@ -2499,7 +2499,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"description": "StarAtlas Wait One Input Model",
 				"properties": {},
@@ -2559,7 +2559,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"description": "StarAtlas Unload Cargo Piece Input Model",
 				"properties": {
@@ -2665,7 +2665,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"description": "Star Atlas Fleet Cargo Check Piece Input Model",
 				"properties": {
@@ -2756,7 +2756,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"description": "StarAtlas Wait One Input Model",
 				"properties": {},
@@ -2816,7 +2816,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"description": "StarAtlas Dock Piece Input Model",
 				"properties": {
@@ -2906,7 +2906,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"description": "StarAtlas Dock Piece Input Model",
 				"properties": {
@@ -2996,7 +2996,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"description": "StarAtlas Warp Piece Input Model",
 				"properties": {
@@ -3086,7 +3086,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"description": "Star Atlas Fleet Cargo Check Piece Input Model",
 				"properties": {
@@ -3177,7 +3177,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"description": "StarAtlas Unload Cargo Piece Input Model",
 				"properties": {
@@ -3283,7 +3283,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"description": "StarAtlas Wait One Input Model",
 				"properties": {},
@@ -3343,7 +3343,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"description": "Star Atlas Fleet Cargo Check Piece Input Model",
 				"properties": {
@@ -3434,7 +3434,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"description": "StarAtlas Load Cargo Piece Input Model",
 				"properties": {
@@ -3540,7 +3540,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"description": "StarAtlas Wait One Input Model",
 				"properties": {},
@@ -3600,7 +3600,7 @@
 				"dockerfile": "Dockerfile_1",
 				"requirements_file": null
 			},
-			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.69-group0",
+			"source_image": "ghcr.io/prochain-star-atlas/prochain-starflow-pieces:0.1.75-group0",
 			"input_schema": {
 				"$defs": {
 					"InputEnum": {
