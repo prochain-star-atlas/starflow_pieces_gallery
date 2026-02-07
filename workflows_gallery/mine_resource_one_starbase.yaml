@@ -1,0 +1,323 @@
+template:
+  description: Mining resource at one starbase
+  fields:
+    FLEET_NAME:
+      description: ""
+      default: Mining1
+    DESTINATION_X:
+      description: ""
+      default: "-25"
+    DESTINATION_Y:
+      description: ""
+      default: "15"
+    RESOURCE_MINT:
+      description: ""
+      default: HYDR4EPHJcDPcaLYUcNCtrXUdt1PnaN4MvE655pevBYp
+nodes:
+  StarAtlasFleetStatusCheckPiece_85209645:
+    piece: StarAtlasFleetStatusCheckPiece
+    pos:
+      - 29
+      - 1422
+    inputs:
+      fleet_name: "{{FLEET_NAME}}"
+      required_status: Idle
+  StarAtlasFleetStatusCheckPiece_95e373a3:
+    piece: StarAtlasFleetStatusCheckPiece
+    pos:
+      - -398
+      - 1187
+    inputs:
+      fleet_name: "{{FLEET_NAME}}"
+      required_status: StarbaseLoadingBay
+  StarAtlasFleetStatusCheckPiece_e7bb3e85:
+    piece: StarAtlasFleetStatusCheckPiece
+    pos:
+      - 426
+      - 1765
+    inputs:
+      fleet_name: "{{FLEET_NAME}}"
+      required_status: MineAsteroid
+  StarAtlasUndockPiece_e53e6c37:
+    piece: StarAtlasUndockPiece
+    pos:
+      - 2349
+      - 822
+    inputs:
+      fleet_name: "{{FLEET_NAME}}"
+      destination_x: "{{DESTINATION_X}}"
+      destination_y: "{{DESTINATION_Y}}"
+  StarAtlasStopMiningPiece_cbb16f48:
+    piece: StarAtlasStopMiningPiece
+    pos:
+      - 863
+      - 1771
+    inputs:
+      fleet_name: "{{FLEET_NAME}}"
+  StarAtlasFleetCargoCheckPiece_816c00e0:
+    piece: StarAtlasFleetCargoCheckPiece
+    pos:
+      - 1121
+      - 863
+    inputs:
+      fleet_name: "{{FLEET_NAME}}"
+      resource_amount: 0
+      fuel_amount: 0
+      ammo_amount:
+        upstream: StarAtlasStatFutureMiningPiece_044bf39a
+        arg: ammo_for_duration
+  StarAtlasFleetCargoCheckPiece_3306fcfe:
+    piece: StarAtlasFleetCargoCheckPiece
+    pos:
+      - 1146
+      - 1099
+    inputs:
+      fleet_name: "{{FLEET_NAME}}"
+      resource_mint: foodQJAztMzX1DKpLaiounNe2BDMds5RNuPC6jsNrDG
+      resource_amount:
+        upstream: StarAtlasStatFutureMiningPiece_044bf39a
+        arg: food_for_duration
+      fuel_amount: 0
+      ammo_amount: 0
+  StarAtlasLoadAmmoPiece_7b64029a:
+    piece: StarAtlasLoadAmmoPiece
+    pos:
+      - 1494
+      - 993
+    inputs:
+      fleet_name: "{{FLEET_NAME}}"
+      amount:
+        upstream: StarAtlasStatFutureMiningPiece_044bf39a
+        arg: ammo_for_duration
+      destination_x: "{{DESTINATION_X}}"
+      destination_y: "{{DESTINATION_Y}}"
+  StarAtlasLoadCargoPiece_52cf92f2:
+    piece: StarAtlasLoadCargoPiece
+    pos:
+      - 1510
+      - 1337
+    inputs:
+      fleet_name: "{{FLEET_NAME}}"
+      resource_mint: foodQJAztMzX1DKpLaiounNe2BDMds5RNuPC6jsNrDG
+      amount:
+        upstream: StarAtlasStatFutureMiningPiece_044bf39a
+        arg: food_for_duration
+      destination_x: "{{DESTINATION_X}}"
+      destination_y: "{{DESTINATION_Y}}"
+  StarAtlasStatCargoPiece_e4f9dc81:
+    piece: StarAtlasStatCargoPiece
+    pos:
+      - -242
+      - 537
+    inputs:
+      fleet_name: "{{FLEET_NAME}}"
+      resource_mint: "{{RESOURCE_MINT}}"
+  StarAtlasUnloadCargoPiece_8ff9b791:
+    piece: StarAtlasUnloadCargoPiece
+    pos:
+      - 1533
+      - 719
+    inputs:
+      fleet_name: "{{FLEET_NAME}}"
+      resource_mint: "{{RESOURCE_MINT}}"
+      amount:
+        upstream: StarAtlasStatCargoPiece_e4f9dc81
+        arg: resource_amount_requested
+      destination_x: "{{DESTINATION_X}}"
+      destination_y: "{{DESTINATION_Y}}"
+  StarAtlasMiningPiece_e608b8db:
+    piece: StarAtlasMiningPiece
+    pos:
+      - 1561
+      - 1508
+    inputs:
+      fleet_name: "{{FLEET_NAME}}"
+      resource_mint: "{{RESOURCE_MINT}}"
+      destination_x: "{{DESTINATION_X}}"
+      destination_y: "{{DESTINATION_Y}}"
+  StarAtlasWaitOnePiece_8f94a561:
+    piece: StarAtlasWaitOnePiece
+    pos:
+      - 1792
+      - 931
+  StarAtlasWaitOnePiece_3591f9b9:
+    piece: StarAtlasWaitOnePiece
+    pos:
+      - 1801
+      - 1238
+  StarAtlasWaitOnePiece_68e97cb9:
+    piece: StarAtlasWaitOnePiece
+    pos:
+      - 1866
+      - 588
+  StarAtlasStatFutureMiningPiece_044bf39a:
+    piece: StarAtlasStatFutureMiningPiece
+    pos:
+      - 62
+      - 251
+    inputs:
+      fleet_name: "{{FLEET_NAME}}"
+      resource_mint: "{{RESOURCE_MINT}}"
+      starbase_x: "{{DESTINATION_X}}"
+      starbase_y: "{{DESTINATION_Y}}"
+      planet_x: "{{DESTINATION_X}}"
+      planet_y: "{{DESTINATION_Y}}"
+  StarAtlasWaitOnePiece_36bbd74d:
+    piece: StarAtlasWaitOnePiece
+    pos:
+      - 1927
+      - 1739
+  StarAtlasFleetCargoCheckPiece_9c17361e:
+    piece: StarAtlasFleetCargoCheckPiece
+    pos:
+      - 890
+      - 1210
+    inputs:
+      fleet_name: "{{FLEET_NAME}}"
+      resource_amount: 0
+      fuel_amount: 0
+      ammo_amount:
+        upstream: StarAtlasStatFutureMiningPiece_044bf39a
+        arg: ammo_for_duration
+  StarAtlasFleetCargoCheckPiece_345eac36:
+    piece: StarAtlasFleetCargoCheckPiece
+    pos:
+      - 868
+      - 1348
+    inputs:
+      fleet_name: "{{FLEET_NAME}}"
+      resource_mint: foodQJAztMzX1DKpLaiounNe2BDMds5RNuPC6jsNrDG
+      resource_amount:
+        upstream: StarAtlasStatFutureMiningPiece_044bf39a
+        arg: food_for_duration
+      fuel_amount: 0
+      ammo_amount: 0
+  StarAtlasDockPiece_916b5767:
+    piece: StarAtlasDockPiece
+    pos:
+      - 2294
+      - 1728
+    inputs:
+      fleet_name: "{{FLEET_NAME}}"
+      destination_x: "{{DESTINATION_X}}"
+      destination_y: "{{DESTINATION_Y}}"
+  LogPiece_12ba03db:
+    piece: LogPiece
+    pos:
+      - 781
+      - 1914
+    inputs:
+      input_str: stop workflow
+      input_int: 0
+      input_float: 0
+    resources:
+      cpu: 100
+      mem: 128
+  StarAtlasGenericCheckIntegerPiece_3b3f695a:
+    piece: StarAtlasGenericCheckIntegerPiece
+    pos:
+      - 1158
+      - 564
+    inputs:
+      value_to_test:
+        upstream: StarAtlasStatCargoPiece_e4f9dc81
+        arg: resource_amount_requested
+      required_field: 0
+  StarAtlasGenericCheckIntegerPiece_41a1b13c:
+    piece: StarAtlasGenericCheckIntegerPiece
+    pos:
+      - 884
+      - 1499
+    inputs:
+      value_to_test:
+        upstream: StarAtlasStatCargoPiece_e4f9dc81
+        arg: resource_amount_requested
+      required_field: 0
+edges:
+  - src: StarAtlasFleetStatusCheckPiece_e7bb3e85
+    tgt: StarAtlasStopMiningPiece_cbb16f48
+  - src: StarAtlasStatCargoPiece_e4f9dc81
+    tgt: StarAtlasUnloadCargoPiece_8ff9b791
+  - src: StarAtlasLoadAmmoPiece_7b64029a
+    tgt: StarAtlasWaitOnePiece_8f94a561
+  - src: StarAtlasFleetCargoCheckPiece_816c00e0
+    tgt: StarAtlasWaitOnePiece_8f94a561
+  - src: StarAtlasWaitOnePiece_8f94a561
+    tgt: StarAtlasUndockPiece_e53e6c37
+  - src: StarAtlasFleetCargoCheckPiece_3306fcfe
+    tgt: StarAtlasWaitOnePiece_3591f9b9
+  - src: StarAtlasLoadCargoPiece_52cf92f2
+    tgt: StarAtlasWaitOnePiece_3591f9b9
+  - src: StarAtlasWaitOnePiece_3591f9b9
+    tgt: StarAtlasUndockPiece_e53e6c37
+  - src: StarAtlasUnloadCargoPiece_8ff9b791
+    tgt: StarAtlasWaitOnePiece_68e97cb9
+  - src: StarAtlasWaitOnePiece_68e97cb9
+    tgt: StarAtlasUndockPiece_e53e6c37
+  - src: StarAtlasMiningPiece_e608b8db
+    tgt: StarAtlasWaitOnePiece_36bbd74d
+  - src: StarAtlasFleetCargoCheckPiece_345eac36
+    tgt: StarAtlasMiningPiece_e608b8db
+  - src: StarAtlasFleetCargoCheckPiece_9c17361e
+    tgt: StarAtlasMiningPiece_e608b8db
+  - src: StarAtlasFleetCargoCheckPiece_345eac36
+    tgt: StarAtlasWaitOnePiece_36bbd74d
+    else: true
+  - src: StarAtlasFleetCargoCheckPiece_9c17361e
+    tgt: StarAtlasWaitOnePiece_36bbd74d
+    else: true
+  - src: StarAtlasFleetStatusCheckPiece_95e373a3
+    tgt: StarAtlasFleetStatusCheckPiece_85209645
+    else: true
+  - src: StarAtlasFleetStatusCheckPiece_85209645
+    tgt: StarAtlasFleetStatusCheckPiece_e7bb3e85
+    else: true
+  - src: StarAtlasWaitOnePiece_36bbd74d
+    tgt: StarAtlasDockPiece_916b5767
+  - src: StarAtlasStatFutureMiningPiece_044bf39a
+    tgt: StarAtlasLoadAmmoPiece_7b64029a
+  - src: StarAtlasStatFutureMiningPiece_044bf39a
+    tgt: StarAtlasLoadCargoPiece_52cf92f2
+  - src: StarAtlasFleetCargoCheckPiece_816c00e0
+    tgt: StarAtlasLoadAmmoPiece_7b64029a
+    else: true
+  - src: StarAtlasFleetCargoCheckPiece_3306fcfe
+    tgt: StarAtlasLoadCargoPiece_52cf92f2
+    else: true
+  - src: StarAtlasFleetStatusCheckPiece_95e373a3
+    tgt: StarAtlasFleetCargoCheckPiece_816c00e0
+  - src: StarAtlasFleetStatusCheckPiece_95e373a3
+    tgt: StarAtlasFleetCargoCheckPiece_3306fcfe
+  - src: StarAtlasStatFutureMiningPiece_044bf39a
+    tgt: StarAtlasFleetCargoCheckPiece_816c00e0
+  - src: StarAtlasStatFutureMiningPiece_044bf39a
+    tgt: StarAtlasFleetCargoCheckPiece_3306fcfe
+  - src: StarAtlasStatFutureMiningPiece_044bf39a
+    tgt: StarAtlasFleetCargoCheckPiece_9c17361e
+  - src: StarAtlasStatFutureMiningPiece_044bf39a
+    tgt: StarAtlasFleetCargoCheckPiece_345eac36
+  - src: StarAtlasFleetStatusCheckPiece_85209645
+    tgt: StarAtlasFleetCargoCheckPiece_9c17361e
+  - src: StarAtlasFleetStatusCheckPiece_85209645
+    tgt: StarAtlasFleetCargoCheckPiece_345eac36
+  - src: StarAtlasFleetStatusCheckPiece_e7bb3e85
+    tgt: LogPiece_12ba03db
+    else: true
+  - src: StarAtlasStatCargoPiece_e4f9dc81
+    tgt: StarAtlasGenericCheckIntegerPiece_3b3f695a
+  - src: StarAtlasGenericCheckIntegerPiece_3b3f695a
+    tgt: StarAtlasWaitOnePiece_68e97cb9
+  - src: StarAtlasGenericCheckIntegerPiece_3b3f695a
+    tgt: StarAtlasUnloadCargoPiece_8ff9b791
+    else: true
+  - src: StarAtlasStatCargoPiece_e4f9dc81
+    tgt: StarAtlasGenericCheckIntegerPiece_41a1b13c
+  - src: StarAtlasGenericCheckIntegerPiece_41a1b13c
+    tgt: StarAtlasMiningPiece_e608b8db
+  - src: StarAtlasGenericCheckIntegerPiece_41a1b13c
+    tgt: StarAtlasWaitOnePiece_36bbd74d
+    else: true
+  - src: StarAtlasFleetStatusCheckPiece_85209645
+    tgt: StarAtlasGenericCheckIntegerPiece_41a1b13c
+  - src: StarAtlasFleetStatusCheckPiece_95e373a3
+    tgt: StarAtlasGenericCheckIntegerPiece_3b3f695a
