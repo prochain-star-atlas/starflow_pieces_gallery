@@ -1,0 +1,298 @@
+template:
+  description: Transport resource from one starbase to another (2 Points)
+  fields:
+    FLEET_NAME:
+      description: ""
+      default: Transport1
+    SOURCE_X:
+      description: ""
+      default: "-35"
+    SOURCE_Y:
+      description: ""
+      default: "12"
+    RESOURCE_MINT:
+      description: ""
+      default: fueL3hBZjLLLJHiFH9cqZoozTG3XQZ53diwFPwbzNim
+    RESOURCE_AMOUNT:
+      description: ""
+      default: "200000"
+    DESTINATION_X:
+      description: ""
+      default: "-40"
+    DESTINATION_Y:
+      description: ""
+      default: "3"
+nodes:
+  StarAtlasFleetStatusCheckPiece_85209645:
+    piece: StarAtlasFleetStatusCheckPiece
+    pos:
+      - -984
+      - -4
+    inputs:
+      fleet_name: "{{FLEET_NAME}}"
+      required_status: Idle
+  StarAtlasFleetLocationCheckPiece_6340664b:
+    piece: StarAtlasFleetLocationCheckPiece
+    pos:
+      - -631
+      - -222
+    inputs:
+      fleet_name: "{{FLEET_NAME}}"
+      destination_x: "{{SOURCE_X}}"
+      destination_y: "{{SOURCE_Y}}"
+  StarAtlasFleetStatusCheckPiece_95e373a3:
+    piece: StarAtlasFleetStatusCheckPiece
+    pos:
+      - -596
+      - 222
+    inputs:
+      fleet_name: "{{FLEET_NAME}}"
+      required_status: StarbaseLoadingBay
+  StarAtlasFleetStatusCheckPiece_f135bc5d:
+    piece: StarAtlasFleetStatusCheckPiece
+    pos:
+      - -338
+      - 427
+    inputs:
+      fleet_name: "{{FLEET_NAME}}"
+      required_status: ReadyToExitWarp
+  StarAtlasDockPiece_8ed70df0:
+    piece: StarAtlasDockPiece
+    pos:
+      - -257
+      - -448
+    inputs:
+      fleet_name: "{{FLEET_NAME}}"
+      destination_x: "{{SOURCE_X}}"
+      destination_y: "{{SOURCE_Y}}"
+  StarAtlasLoadCargoPiece_6d19e4d5:
+    piece: StarAtlasLoadCargoPiece
+    pos:
+      - 1049
+      - -574
+    inputs:
+      fleet_name: "{{FLEET_NAME}}"
+      resource_mint: "{{RESOURCE_MINT}}"
+      amount: "{{RESOURCE_AMOUNT}}"
+      destination_x: "{{SOURCE_X}}"
+      destination_y: "{{SOURCE_Y}}"
+  StarAtlasUndockPiece_e53e6c37:
+    piece: StarAtlasUndockPiece
+    pos:
+      - 1307
+      - -580
+    inputs:
+      fleet_name: "{{FLEET_NAME}}"
+      destination_x: "{{SOURCE_X}}"
+      destination_y: "{{SOURCE_Y}}"
+  StarAtlasFleetLocationCheckPiece_e59b7666:
+    piece: StarAtlasFleetLocationCheckPiece
+    pos:
+      - -96
+      - 85
+    inputs:
+      fleet_name: "{{FLEET_NAME}}"
+      destination_x: "{{SOURCE_X}}"
+      destination_y: "{{SOURCE_Y}}"
+  StarAtlasUndockPiece_844d40fa:
+    piece: StarAtlasUndockPiece
+    pos:
+      - 164
+      - 20
+    inputs:
+      fleet_name: "{{FLEET_NAME}}"
+      destination_x: "{{SOURCE_X}}"
+      destination_y: "{{SOURCE_Y}}"
+  StarAtlasUndockPiece_1772e6c0:
+    piece: StarAtlasUndockPiece
+    pos:
+      - 164
+      - 170
+    inputs:
+      fleet_name: "{{FLEET_NAME}}"
+      destination_x: "{{DESTINATION_X}}"
+      destination_y: "{{DESTINATION_Y}}"
+  StarAtlasDockPiece_8afa2fa3:
+    piece: StarAtlasDockPiece
+    pos:
+      - -201
+      - -245
+    inputs:
+      fleet_name: "{{FLEET_NAME}}"
+      destination_x: "{{DESTINATION_X}}"
+      destination_y: "{{DESTINATION_Y}}"
+  StarAtlasUnloadCargoPiece_d3531b3a:
+    piece: StarAtlasUnloadCargoPiece
+    pos:
+      - 306
+      - -243
+    inputs:
+      fleet_name: "{{FLEET_NAME}}"
+      resource_mint: "{{RESOURCE_MINT}}"
+      amount: "{{RESOURCE_AMOUNT}}"
+      destination_x: "{{DESTINATION_X}}"
+      destination_y: "{{DESTINATION_Y}}"
+  StarAtlasUndockPiece_1c11f932:
+    piece: StarAtlasUndockPiece
+    pos:
+      - 695
+      - -228
+    inputs:
+      fleet_name: "{{FLEET_NAME}}"
+      destination_x: "{{DESTINATION_X}}"
+      destination_y: "{{DESTINATION_Y}}"
+  StarAtlasExitWarpPiece_95655bdb:
+    piece: StarAtlasExitWarpPiece
+    pos:
+      - -3
+      - 367
+    inputs:
+      fleet_name: "{{FLEET_NAME}}"
+  StarAtlasStatFutureMovementPiece_e6d43a64:
+    piece: StarAtlasStatFutureMovementPiece
+    pos:
+      - -754
+      - -644
+    inputs:
+      fleet_name: "{{FLEET_NAME}}"
+      position_x: "{{SOURCE_X}}"
+      position_y: "{{SOURCE_Y}}"
+      destination_x: "{{DESTINATION_X}}"
+      destination_y: "{{DESTINATION_Y}}"
+  StarAtlasFleetCargoCheckPiece_3b653d76:
+    piece: StarAtlasFleetCargoCheckPiece
+    pos:
+      - 223
+      - -593
+    inputs:
+      fleet_name: "{{FLEET_NAME}}"
+      resource_amount: 0
+      fuel_amount:
+        upstream: MathArithmeticPiece_48ae0350
+        arg: result_output_int
+      ammo_amount: 0
+  StarAtlasLoadFuelPiece_9dd1d976:
+    piece: StarAtlasLoadFuelPiece
+    pos:
+      - 526
+      - -459
+    inputs:
+      fleet_name: "{{FLEET_NAME}}"
+      amount:
+        upstream: MathArithmeticPiece_48ae0350
+        arg: result_output_int
+      destination_x: "{{SOURCE_X}}"
+      destination_y: "{{SOURCE_Y}}"
+  StarAtlasWarpPiece_b5d31f7b:
+    piece: StarAtlasWarpPiece
+    pos:
+      - 1767
+      - -549
+    inputs:
+      fleet_name: "{{FLEET_NAME}}"
+      destination_x: "{{DESTINATION_X}}"
+      destination_y: "{{DESTINATION_Y}}"
+  StarAtlasWarpPiece_bfb1bb75:
+    piece: StarAtlasWarpPiece
+    pos:
+      - 1311
+      - -137
+    inputs:
+      fleet_name: "{{FLEET_NAME}}"
+      destination_x: "{{SOURCE_X}}"
+      destination_y: "{{SOURCE_Y}}"
+  StarAtlasWaitOnePiece_128fcaa8:
+    piece: StarAtlasWaitOnePiece
+    pos:
+      - 748
+      - -590
+  MathArithmeticPiece_48ae0350:
+    piece: MathArithmeticPiece
+    pos:
+      - -437
+      - -628
+    inputs:
+      left_input_int:
+        upstream: StarAtlasStatFutureMovementPiece_e6d43a64
+        arg: warp_fuel_required
+      right_input_int: 2
+      left_input_float: 1
+      right_input_float: 1
+      operation_enum: multiply
+    resources:
+      cpu: 100
+      mem: 128
+  SleepPiece_86cf74b5:
+    piece: SleepPiece
+    pos:
+      - 1029
+      - -193
+    inputs:
+      sleep_time: 300
+    resources:
+      cpu: 100
+      mem: 128
+  SleepPiece_03d5c735:
+    piece: SleepPiece
+    pos:
+      - 1528
+      - -561
+    inputs:
+      sleep_time: 300
+    resources:
+      cpu: 100
+      mem: 128
+edges:
+  - src: StarAtlasFleetStatusCheckPiece_85209645
+    tgt: StarAtlasFleetLocationCheckPiece_6340664b
+  - src: StarAtlasFleetStatusCheckPiece_85209645
+    tgt: StarAtlasFleetStatusCheckPiece_95e373a3
+    else: true
+  - src: StarAtlasFleetLocationCheckPiece_6340664b
+    tgt: StarAtlasDockPiece_8ed70df0
+  - src: StarAtlasFleetStatusCheckPiece_95e373a3
+    tgt: StarAtlasFleetLocationCheckPiece_e59b7666
+  - src: StarAtlasFleetLocationCheckPiece_e59b7666
+    tgt: StarAtlasUndockPiece_844d40fa
+  - src: StarAtlasFleetLocationCheckPiece_e59b7666
+    tgt: StarAtlasUndockPiece_1772e6c0
+    else: true
+  - src: StarAtlasFleetLocationCheckPiece_6340664b
+    tgt: StarAtlasDockPiece_8afa2fa3
+    else: true
+  - src: StarAtlasDockPiece_8afa2fa3
+    tgt: StarAtlasUnloadCargoPiece_d3531b3a
+  - src: StarAtlasUnloadCargoPiece_d3531b3a
+    tgt: StarAtlasUndockPiece_1c11f932
+  - src: StarAtlasFleetStatusCheckPiece_95e373a3
+    tgt: StarAtlasFleetStatusCheckPiece_f135bc5d
+    else: true
+  - src: StarAtlasFleetStatusCheckPiece_f135bc5d
+    tgt: StarAtlasExitWarpPiece_95655bdb
+  - src: StarAtlasFleetCargoCheckPiece_3b653d76
+    tgt: StarAtlasWaitOnePiece_128fcaa8
+  - src: StarAtlasLoadFuelPiece_9dd1d976
+    tgt: StarAtlasWaitOnePiece_128fcaa8
+  - src: StarAtlasWaitOnePiece_128fcaa8
+    tgt: StarAtlasLoadCargoPiece_6d19e4d5
+  - src: StarAtlasLoadCargoPiece_6d19e4d5
+    tgt: StarAtlasUndockPiece_e53e6c37
+  - src: StarAtlasDockPiece_8ed70df0
+    tgt: StarAtlasFleetCargoCheckPiece_3b653d76
+  - src: StarAtlasFleetCargoCheckPiece_3b653d76
+    tgt: StarAtlasLoadFuelPiece_9dd1d976
+    else: true
+  - src: StarAtlasStatFutureMovementPiece_e6d43a64
+    tgt: MathArithmeticPiece_48ae0350
+  - src: MathArithmeticPiece_48ae0350
+    tgt: StarAtlasFleetCargoCheckPiece_3b653d76
+  - src: MathArithmeticPiece_48ae0350
+    tgt: StarAtlasLoadFuelPiece_9dd1d976
+  - src: StarAtlasUndockPiece_1c11f932
+    tgt: SleepPiece_86cf74b5
+  - src: SleepPiece_86cf74b5
+    tgt: StarAtlasWarpPiece_bfb1bb75
+  - src: StarAtlasUndockPiece_e53e6c37
+    tgt: SleepPiece_03d5c735
+  - src: SleepPiece_03d5c735
+    tgt: StarAtlasWarpPiece_b5d31f7b
